@@ -32,7 +32,7 @@ Para probarlo en local: `npx serve .` (o cualquier servidor estático) y abre `h
 | Pendiente | Dónde se cambia |
 |---|---|
 | Enlace del formulario de inscripción | `assets/js/main.js` → variable `FORMULARIO` (hoy apunta a la aplicación de Google Apps Script de la organización). Se puede usar un enlace distinto por modalidad en `CONFIG.inscripcion`. |
-| Conferencistas | `index.html`, sección `#conferencistas`: cambia `[Nombre del conferencista]`, `[Profesión]`, `[Institución] · [País]` y reemplaza cada bloque «Fotografía pendiente» por `<img src="/assets/img/conferencistas/nombre.webp" alt="Nombre del conferencista" width="800" height="1000">`. Fotos en proporción 4:5, mínimo 800 × 1000 px. Publicar nombres y fotos solo con confirmación y autorización. |
+| Conferencistas | **Sección oculta por ahora.** En `index.html` está comentada entre «SECCIÓN OCULTA» y «FIN SECCIÓN OCULTA»: para mostrarla, borra esas dos líneas. Luego cambia `[Nombre del conferencista]`, `[Profesión]`, `[Institución] · [País]` y reemplaza cada bloque «Fotografía pendiente» por `<img src="/assets/img/conferencistas/nombre.webp" alt="Nombre del conferencista" width="800" height="1000">` (fotos 4:5, mínimo 800 × 1000 px). Al reactivarla, conviene volver a poner fondo blanco a la sección «Instituciones» para alternar colores. |
 | Texto de Instituciones | `index.html`, sección `#instituciones`: el texto menciona «Congreso … de Productividad, Desarrollo e Innovación»; verificar con la organización. |
 | Agenda definitiva | `agenda.html`: cada franja aparece dos veces (vista de escritorio y vista móvil) dentro de `#dia-1` y `#dia-2`. Horarios en formato de 12 horas, hora de Colombia (UTC−5). |
 
