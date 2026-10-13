@@ -3,13 +3,14 @@
   'use strict';
 
   /* ===== CONFIGURACIÓN =====
-     Pega aquí los enlaces del formulario de inscripción de cada modalidad.
-     Mientras estén vacíos, el botón «Continuar a la inscripción» no navega. */
+     Enlace del formulario de inscripción para cada modalidad.
+     Si un enlace queda vacío, el botón «Continuar a la inscripción» no navega. */
+  var FORMULARIO = 'https://script.google.com/macros/s/AKfycbzFbuIHIGAt6Qzu0JEtdtC7xSiuY-aFxTGHKP4vpxh0lcrqjanJ0_molqV-YIMtSb0hdQ/exec';
   var CONFIG = {
     inscripcion: {
-      asistente: '',
-      oral: '',
-      poster: ''
+      asistente: FORMULARIO,
+      oral: FORMULARIO,
+      poster: FORMULARIO
     }
   };
 

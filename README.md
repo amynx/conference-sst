@@ -20,7 +20,10 @@ vercel.json           URLs limpias (/agenda) y cabeceras
 
 1. En [vercel.com](https://vercel.com) → **Add New… → Project → Import** y elige este repositorio.
 2. Framework Preset: **Other**. No hace falta comando de build ni directorio de salida.
-3. Pulsa **Deploy**. Cada `git push` a la rama principal publica una nueva versión automáticamente.
+3. Pulsa **Deploy**.
+4. Dominio propio: **Settings → Domains** del proyecto en Vercel, con `cnisstunipaz.com` y `www.cnisstunipaz.com`; los registros DNS se crean en Hostinger.
+
+Si cambia el dominio, actualiza `canonical`/`og:url` en `index.html` y `agenda.html`, `robots.txt` y `sitemap.xml`. Cada `git push` a la rama principal publica una nueva versión automáticamente.
 
 Para probarlo en local: `npx serve .` (o cualquier servidor estático) y abre `http://localhost:3000`.
 
@@ -28,7 +31,7 @@ Para probarlo en local: `npx serve .` (o cualquier servidor estático) y abre `h
 
 | Pendiente | Dónde se cambia |
 |---|---|
-| Enlaces del formulario de inscripción | `assets/js/main.js` → objeto `CONFIG.inscripcion` (`asistente`, `oral`, `poster`). Mientras estén vacíos, el botón «Continuar a la inscripción» no navega. Luego quita el texto «[Enlace de inscripción pendiente]» de `index.html`. |
+| Enlace del formulario de inscripción | `assets/js/main.js` → variable `FORMULARIO` (hoy apunta a la aplicación de Google Apps Script de la organización). Se puede usar un enlace distinto por modalidad en `CONFIG.inscripcion`. |
 | Conferencistas | `index.html`, sección `#conferencistas`: cambia `[Nombre del conferencista]`, `[Profesión]`, `[Institución] · [País]` y reemplaza cada bloque «Fotografía pendiente» por `<img src="/assets/img/conferencistas/nombre.webp" alt="Nombre del conferencista" width="800" height="1000">`. Fotos en proporción 4:5, mínimo 800 × 1000 px. Publicar nombres y fotos solo con confirmación y autorización. |
 | Texto de Instituciones | `index.html`, sección `#instituciones`: el texto menciona «Congreso … de Productividad, Desarrollo e Innovación»; verificar con la organización. |
 | Agenda definitiva | `agenda.html`: cada franja aparece dos veces (vista de escritorio y vista móvil) dentro de `#dia-1` y `#dia-2`. Horarios en formato de 12 horas, hora de Colombia (UTC−5). |
