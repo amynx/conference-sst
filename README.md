@@ -39,3 +39,7 @@ Para probarlo en local: `npx serve .` (o cualquier servidor estático) y abre `h
 ## Accesibilidad
 
 Barra de navegación fija al desplazarse. Navegación por teclado (incluida la ventana de inscripción: `Esc` cierra, el foco queda dentro), enlace «Saltar al contenido», textos alternativos en logos, etiquetas de texto en la agenda (no solo color) y respeto por `prefers-reduced-motion`.
+
+## Animaciones
+
+Entrada escalonada de la portada, aparición suave de secciones y tarjetas al desplazarse, realce de tarjetas al pasar el cursor, sombra en la barra fija, y transiciones en la ventana de inscripción, el menú móvil y las pestañas de la agenda. Están en `assets/css/styles.css` (bloque «Movimiento») y `assets/js/main.js`; se desactivan si el sistema pide reducir el movimiento, y si JavaScript no carga el contenido se muestra igual.

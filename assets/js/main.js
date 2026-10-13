@@ -17,6 +17,39 @@
   var $ = function (s, r) { return (r || document).querySelector(s); };
   var $$ = function (s, r) { return Array.prototype.slice.call((r || document).querySelectorAll(s)); };
 
+  var reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* ---------- Aparición suave al desplazarse ---------- */
+  var revealEls = $$('[data-reveal]');
+  if (revealEls.length && 'IntersectionObserver' in window && !reduceMotion) {
+    document.documentElement.classList.add('reveal-ready');
+    revealEls.forEach(function (el) {
+      var sibs = $$(':scope > [data-reveal]', el.parentElement);
+      var i = sibs.indexOf(el);
+      if (i > 0) el.style.setProperty('--reveal-delay', ((i % 3) * 0.08) + 's');
+    });
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (!e.isIntersecting) return;
+        var el = e.target;
+        el.classList.add('is-visible');
+        io.unobserve(el);
+        var done = function () { el.classList.add('revealed'); el.removeEventListener('transitionend', done); };
+        el.addEventListener('transitionend', done);
+        setTimeout(done, 1200);
+      });
+    }, { rootMargin: '0px 0px -8% 0px', threshold: 0.12 });
+    revealEls.forEach(function (el) { io.observe(el); });
+  }
+
+  /* ---------- Sombra en la barra fija al desplazarse ---------- */
+  var header = $('header');
+  if (header) {
+    var onScroll = function () { header.classList.toggle('is-scrolled', window.scrollY > 8); };
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+  }
+
   /* ---------- Menú móvil ---------- */
   var menu = $('#menu-movil');
   var toggle = $('[data-action="toggleMenu"]');
@@ -112,7 +145,11 @@
     var current = 0;
     var showDay = function (i, scroll) {
       current = i;
-      panels.forEach(function (p) { p.hidden = p.getAttribute('data-day-panel') !== String(i); });
+      panels.forEach(function (p) {
+        var show = p.getAttribute('data-day-panel') === String(i);
+        p.hidden = !show;
+        if (show && !reduceMotion) { p.classList.remove('day-enter'); void p.offsetWidth; p.classList.add('day-enter'); }
+      });
       tabs.forEach(function (t, j) {
         var on = j === i;
         t.setAttribute('aria-pressed', String(on));
