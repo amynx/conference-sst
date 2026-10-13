@@ -89,7 +89,7 @@
       noSel.hidden = !!sel;
       hasSel.hidden = !sel;
       if (sel) {
-        titleEl.textContent = sel.closest('label').querySelector('strong').textContent.toLowerCase();
+        titleEl.textContent = sel.closest('label').querySelector('strong').textContent;
         var url = CONFIG.inscripcion[sel.value];
         link.setAttribute('href', url || '#');
         if (url) link.removeAttribute('aria-disabled'); else link.setAttribute('aria-disabled', 'true');
