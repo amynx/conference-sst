@@ -23,7 +23,7 @@
 <a class="skip-link" href="#contenido">Saltar al contenido</a>
 <div style="min-height: 100vh; background: #F5F8FA; color: #102A43; font-family: Inter, system-ui, sans-serif; font-size: 17px; line-height: 1.6; position: relative">
 
-<header class="dark" style="background: #102A43; color: #FFFFFF; position: relative; z-index: 5">
+<header class="dark" style="background: #102A43; color: #FFFFFF; position: sticky; top: 0; z-index: 40; box-shadow: 0 1px 0 rgba(255,255,255,0.08)">
 <div style="max-width: 1200px; margin: 0 auto; padding: 12px 24px; display: flex; align-items: center; justify-content: space-between; gap: 16px">
 <a href="#inicio" aria-label="Congreso SST 2026 — ir a Inicio" style="display: flex; align-items: center; gap: 12px; color: #FFFFFF; text-decoration: none">
 <img src="/assets/img/logo-congreso.webp" alt="" width="543" height="640" style="height: 48px; width: auto; display: block">
@@ -107,7 +107,7 @@
 </div>
 </section>
 
-<section id="modalidades" aria-labelledby="h-mod" style="padding: 104px 0 96px; scroll-margin-top: 16px">
+<section id="modalidades" aria-labelledby="h-mod" style="padding: 104px 0 96px">
 <div style="max-width: 1200px; margin: 0 auto; padding: 0 24px; display: flex; flex-direction: column; gap: 48px">
 <div style="display: flex; flex-wrap: wrap; gap: 20px 64px; align-items: flex-end">
 <div style="flex: 1 1 380px; display: flex; flex-direction: column; gap: 12px">
@@ -323,10 +323,6 @@
 <div style="display: flex; align-items: center; gap: 10px; font-family: Manrope, sans-serif; font-weight: 800; font-size: 14px; letter-spacing: 0.14em; color: #066F7A"><span style="width: 24px; height: 3px; background: #D99A27"></span>INVITADOS</div>
 <h2 id="h-conf" style="margin: 0; font-family: Manrope, sans-serif; font-weight: 800; font-size: clamp(30px, 3.6vw, 44px); line-height: 1.1; letter-spacing: -0.01em">Conferencistas invitados</h2>
 </div>
-<div style="display: flex; flex-direction: column; gap: 10px; max-width: 46ch">
-<p style="margin: 0; color: #3E5468">Esta sección se actualizará a medida que se confirmen oficialmente los invitados.</p>
-<span style="align-self: flex-start; display: inline-flex; align-items: center; gap: 8px; font-size: 14px; font-weight: 600; padding: 6px 12px; border-radius: 999px; background: #FBF1DF; color: #6B4A0E; border: 1px solid #D99A27"><span aria-hidden="true" style="width: 8px; height: 8px; border-radius: 999px; background: #D99A27"></span>Invitados por confirmar</span>
-</div>
 </div>
 
 <article aria-labelledby="sp-main" class="dark" style="background: #102A43; color: #FFFFFF; border-radius: 22px; overflow: hidden; display: flex; flex-wrap: wrap; position: relative">
@@ -341,7 +337,7 @@
 <div style="flex: 999 1 420px; min-width: 0; padding: 40px 40px 40px 16px; display: flex; flex-direction: column; justify-content: center; gap: 14px; position: relative">
 <div style="display: flex; flex-wrap: wrap; gap: 8px">
 <span style="font-size: 13px; font-weight: 700; padding: 4px 10px; border-radius: 6px; background: #D99A27; color: #102A43">Conferencia inaugural</span>
-<span style="font-size: 13px; font-weight: 600; padding: 4px 10px; border-radius: 6px; border: 1px solid rgba(255,255,255,0.35); color: #FFFFFF">Jueves 29 de octubre · 8:00–9:00 · Ambas salas</span>
+<span style="font-size: 13px; font-weight: 600; padding: 4px 10px; border-radius: 6px; border: 1px solid rgba(255,255,255,0.35); color: #FFFFFF">Jueves 29 de octubre · 8:00–9:00 a. m. · Ambas salas</span>
 </div>
 <h3 id="sp-main" style="margin: 0; font-family: Manrope, sans-serif; font-weight: 800; font-size: clamp(28px, 3.2vw, 40px); line-height: 1.1">[Nombre del conferencista]</h3>
 <div style="display: flex; flex-direction: column; gap: 2px">
@@ -494,7 +490,6 @@
 
 </ul>
 
-<p style="margin: 0; font-size: 14px; color: #52667A">Las fotografías y los nombres se publicarán únicamente tras la confirmación oficial y la autorización de cada invitado.</p>
 
 </div>
 </section>
@@ -535,7 +530,7 @@
 <div style="flex: 1 1 300px; display: flex; flex-direction: column; gap: 14px">
 <div style="display: flex; align-items: center; gap: 10px; font-family: Manrope, sans-serif; font-weight: 800; font-size: 14px; letter-spacing: 0.14em"><span style="width: 24px; height: 3px; background: #D99A27"></span>CONTACTO</div>
 <h2 id="h-cont" style="margin: 0; font-family: Manrope, sans-serif; font-weight: 800; font-size: 34px; line-height: 1.15">¿Tienes preguntas sobre el Congreso?</h2>
-<p style="margin: 0; color: #C9D6E2; max-width: 40ch">Escríbenos o llámanos. También puedes seguir a la Escuela de Ingeniería de Producción (EIPR) de UNIPAZ.</p>
+<p style="margin: 0; color: #C9D6E2; max-width: 40ch">Escríbenos o llámanos. También puedes seguir a UNIPAZ en sus redes sociales.</p>
 </div>
 <address style="flex: 1 1 320px; font-style: normal; display: flex; flex-direction: column; gap: 4px">
 <div style="display: flex; gap: 14px; align-items: flex-start; padding: 12px 0">
@@ -552,18 +547,17 @@
 </div>
 </address>
 <div style="flex: 1 1 260px; display: flex; flex-direction: column; gap: 14px">
-<div style="font-size: 13px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #C9D6E2">Redes sociales · EIPR UNIPAZ</div>
+<div style="font-size: 13px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #C9D6E2">Redes sociales · UNIPAZ</div>
 <ul style="list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px">
-<li><a href="#" class="ghost" style="min-height: 48px; display: flex; align-items: center; gap: 10px; padding: 0 14px; border: 1px solid rgba(255,255,255,0.3); border-radius: 12px; color: #FFFFFF; text-decoration: none; font-weight: 600; font-size: 15px">
+<li><a href="https://www.facebook.com/people/Instituto-Universitario-de-la-Paz/100064522486908/" target="_blank" rel="noopener noreferrer" aria-label="Facebook de UNIPAZ (se abre en una pestaña nueva)" class="ghost" style="min-height: 48px; display: flex; align-items: center; gap: 10px; padding: 0 14px; border: 1px solid rgba(255,255,255,0.3); border-radius: 12px; color: #FFFFFF; text-decoration: none; font-weight: 600; font-size: 15px">
 <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>Facebook</a></li>
-<li><a href="#" class="ghost" style="min-height: 48px; display: flex; align-items: center; gap: 10px; padding: 0 14px; border: 1px solid rgba(255,255,255,0.3); border-radius: 12px; color: #FFFFFF; text-decoration: none; font-weight: 600; font-size: 15px">
+<li><a href="https://www.instagram.com/unipaznoticias/?hl=es" target="_blank" rel="noopener noreferrer" aria-label="Instagram de UNIPAZ (se abre en una pestaña nueva)" class="ghost" style="min-height: 48px; display: flex; align-items: center; gap: 10px; padding: 0 14px; border: 1px solid rgba(255,255,255,0.3); border-radius: 12px; color: #FFFFFF; text-decoration: none; font-weight: 600; font-size: 15px">
 <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><path d="M17.5 6.5h.01"></path></svg>Instagram</a></li>
-<li><a href="#" class="ghost" style="min-height: 48px; display: flex; align-items: center; gap: 10px; padding: 0 14px; border: 1px solid rgba(255,255,255,0.3); border-radius: 12px; color: #FFFFFF; text-decoration: none; font-weight: 600; font-size: 15px">
+<li><a href="https://x.com/UNIPAZnoticias" target="_blank" rel="noopener noreferrer" aria-label="X de UNIPAZ (se abre en una pestaña nueva)" class="ghost" style="min-height: 48px; display: flex; align-items: center; gap: 10px; padding: 0 14px; border: 1px solid rgba(255,255,255,0.3); border-radius: 12px; color: #FFFFFF; text-decoration: none; font-weight: 600; font-size: 15px">
 <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4l16 16M20 4 4 20"></path></svg>X</a></li>
-<li><a href="#" class="ghost" style="min-height: 48px; display: flex; align-items: center; gap: 10px; padding: 0 14px; border: 1px solid rgba(255,255,255,0.3); border-radius: 12px; color: #FFFFFF; text-decoration: none; font-weight: 600; font-size: 15px">
+<li><a href="https://www.youtube.com/channel/UC9EH2zVkgzGZCJWPAw2Dauw" target="_blank" rel="noopener noreferrer" aria-label="YouTube de UNIPAZ (se abre en una pestaña nueva)" class="ghost" style="min-height: 48px; display: flex; align-items: center; gap: 10px; padding: 0 14px; border: 1px solid rgba(255,255,255,0.3); border-radius: 12px; color: #FFFFFF; text-decoration: none; font-weight: 600; font-size: 15px">
 <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="14" rx="4"></rect><path d="m10 9 5 3-5 3z"></path></svg>YouTube</a></li>
 </ul>
-<div style="font-size: 13px; color: #C9D6E2">[Enlaces oficiales pendientes de verificar]</div>
 </div>
 </div>
 <div style="border-top: 1px solid rgba(255,255,255,0.18); padding-top: 24px; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 16px; font-size: 14px; color: #C9D6E2">
