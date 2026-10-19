@@ -9,6 +9,7 @@ Es un sitio estático (HTML, CSS y JavaScript sin dependencias ni proceso de com
 ```
 index.html            Inicio: presentación, modalidades, líneas, conferencistas, instituciones, contacto
 agenda.html           Agenda de las dos jornadas (pestañas Día 1 / Día 2)
+organizadores.html    Comité Organizador y Comité Científico
 404.html              Página de error
 assets/css/styles.css Estilos base, estados de foco y adaptación a móvil
 assets/js/main.js     Menú móvil, ventana de inscripción y pestañas de la agenda
@@ -35,6 +36,10 @@ Para probarlo en local: `npx serve .` (o cualquier servidor estático) y abre `h
 | Conferencistas | `index.html`, sección `#conferencistas`: 14 conferencistas tomados del Excel de la organización (14/10/2026). Las fotos van en `assets/img/conferencistas/` (cuadradas, 400 × 400 px, `.webp`); quien no tiene foto muestra sus iniciales. Para agregar una foto, reemplaza el bloque de iniciales de esa persona por `<img src="/assets/img/conferencistas/nombre.webp" alt="Fotografía de Nombre" width="400" height="400" loading="lazy" …>` copiando el estilo de una tarjeta que ya tenga foto. |
 | Texto de Instituciones | `index.html`, sección `#instituciones`: el texto menciona «Congreso … de Productividad, Desarrollo e Innovación»; verificar con la organización. |
 | Agenda definitiva | `agenda.html`: cada franja aparece dos veces (vista de escritorio y vista móvil) dentro de `#dia-1` y `#dia-2`. Horarios en formato de 12 horas, hora de Colombia (UTC−5). |
+
+## Página Organizadores
+
+`organizadores.html` (dirección `/organizadores`): Comité Organizador (descripción, funciones e integrantes) y Comité Científico (internacional y nacional). Quien aún no tiene foto muestra sus iniciales. Para poner una foto: guárdala cuadrada en `assets/img/organizadores/` (`.webp`, 400–600 px) y reemplaza el círculo de iniciales de esa persona por un `<img … width="400" height="400" loading="lazy">` con el mismo estilo que el de Reynaldo Concha o Carlos Nacache.
 
 ## Accesibilidad
 
