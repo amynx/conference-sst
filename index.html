@@ -18,690 +18,525 @@
 <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@600;700;800&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;0,8..60,500;0,8..60,600;1,8..60,400&amp;display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/assets/css/styles.css">
 <script src="/assets/js/main.js" defer></script>
 </head>
 <body data-page="inicio">
 <a class="skip-link" href="#contenido">Saltar al contenido</a>
-<div style="min-height: 100vh; background: #F5F8FA; color: #102A43; font-family: Inter, system-ui, sans-serif; font-size: 17px; line-height: 1.6; position: relative">
-
-<header class="dark" style="background: #102A43; color: #FFFFFF; position: sticky; top: 0; z-index: 40; box-shadow: 0 1px 0 rgba(255,255,255,0.08)">
-<div style="max-width: 1200px; margin: 0 auto; padding: 12px 24px; display: flex; align-items: center; justify-content: space-between; gap: 16px">
-<a href="#inicio" aria-label="Congreso SST 2026 — ir a Inicio" style="display: flex; align-items: center; gap: 12px; color: #FFFFFF; text-decoration: none">
-<img src="/assets/img/logo-congreso.webp" alt="" width="543" height="640" style="height: 48px; width: auto; display: block">
-<div style="font-family: Manrope, sans-serif; font-weight: 800; font-size: 16px; line-height: 1.15">Congreso SST<br><span style="font-weight: 600; font-size: 13px; color: #C9D6E2">UNIPAZ · 2026</span></div>
+<div class="site">
+<header class="top dark">
+<div class="wrap top-in">
+<a href="#inicio" class="brand" aria-label="Congreso SST 2026 — ir a Inicio">
+<img src="/assets/img/logo-congreso.webp" alt="" width="543" height="640">
+<span class="brand-t">Congreso SST<span>UNIPAZ · 2026</span></span>
 </a>
 <div class="only-desktop">
-<nav aria-label="Navegación principal" style="display: flex; align-items: center; gap: 6px">
-<a href="#inicio" aria-current="page" class="ghost" style="position: relative; color: #FFFFFF; text-decoration: none; font-weight: 700; font-size: 16px; padding: 10px 16px; border-radius: 8px">Inicio<span aria-hidden="true" style="position: absolute; left: 16px; right: 16px; bottom: 0; height: 3px; background: #D99A27; border-radius: 3px 3px 0 0"></span></a>
-<a href="/agenda" class="ghost" style="color: #FFFFFF; text-decoration: none; font-weight: 500; font-size: 16px; padding: 10px 16px; border-radius: 8px">Agenda</a>
-<a href="/organizadores" class="ghost" style="color: #FFFFFF; text-decoration: none; font-weight: 500; font-size: 16px; padding: 10px 16px; border-radius: 8px">Organizadores</a>
-<button type="button" data-action="openReg" class="lift" style="margin-left: 10px; min-height: 44px; padding: 0 22px; border: 0; border-radius: 10px; background: #087E8B; color: #FFFFFF; font-family: Inter, sans-serif; font-weight: 600; font-size: 16px; cursor: pointer">Inscríbete</button>
+<nav class="nav" aria-label="Navegación principal">
+<a href="#inicio" aria-current="page" class="nl">Inicio</a>
+<a href="/agenda" class="nl">Agenda</a>
+<a href="/organizadores" class="nl">Organizadores</a>
+<button type="button" data-action="openReg" class="btn btn-primary">Inscríbete</button>
 </nav>
 </div>
 <div class="only-mobile">
-<div style="display: flex; align-items: center; gap: 8px">
-<button type="button" data-action="openReg" class="lift" style="min-height: 44px; padding: 0 16px; border: 0; border-radius: 10px; background: #087E8B; color: #FFFFFF; font-family: Inter, sans-serif; font-weight: 600; font-size: 15px; cursor: pointer">Inscríbete</button>
-<button type="button" aria-label="Abrir menú" aria-controls="menu-movil" aria-expanded="false" data-action="toggleMenu" class="ghost" style="width: 44px; height: 44px; border: 1px solid rgba(255,255,255,0.35); border-radius: 10px; background: transparent; color: #FFFFFF; display: flex; align-items: center; justify-content: center; cursor: pointer">
+<div class="top-m">
+<button type="button" data-action="openReg" class="btn btn-primary">Inscríbete</button>
+<button type="button" aria-label="Abrir menú" aria-controls="menu-movil" aria-expanded="false" data-action="toggleMenu" class="menu-btn">
 <svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"></path></svg></button>
 </div>
 </div>
 </div>
 <div data-if="menuOpen" id="menu-movil" hidden>
 <div class="only-mobile">
-<nav aria-label="Menú móvil" style="border-top: 1px solid rgba(255,255,255,0.15); padding: 8px 24px 16px; display: flex; flex-direction: column">
-<a href="#inicio" aria-current="page" data-action="closeMenu" style="color: #FFFFFF; text-decoration: none; font-weight: 600; padding: 14px 0; border-bottom: 1px solid rgba(255,255,255,0.12)">Inicio</a>
-<a href="/agenda" style="color: #FFFFFF; text-decoration: none; font-weight: 500; padding: 14px 0; border-bottom: 1px solid rgba(255,255,255,0.12)">Agenda</a>
-<a href="/organizadores" style="color: #FFFFFF; text-decoration: none; font-weight: 500; padding: 14px 0; border-bottom: 1px solid rgba(255,255,255,0.12)">Organizadores</a>
-<a href="#modalidades" data-action="closeMenu" style="color: #FFFFFF; text-decoration: none; font-weight: 500; padding: 14px 0">Modalidades de participación</a>
+<nav class="mnav" aria-label="Menú móvil">
+<a href="#inicio" aria-current="page" data-action="closeMenu">Inicio</a>
+<a href="/agenda">Agenda</a>
+<a href="/organizadores">Organizadores</a>
+<a href="#modalidades" data-action="closeMenu">Modalidades de participación</a>
 </nav>
 </div>
 </div>
 </header>
 
 <main id="contenido">
-<section id="inicio" aria-labelledby="h-hero" class="dark" style="background: #102A43; color: #FFFFFF; position: relative; overflow: hidden">
-<svg aria-hidden="true" width="100%" height="100%" style="position: absolute; inset: 0; pointer-events: none">
-<defs>
-<pattern id="bp-minor" width="20" height="20" patternUnits="userSpaceOnUse"><path d="M20 0H0V20" fill="none" stroke="#9FD3DA" stroke-opacity="0.07" stroke-width="1"></path></pattern>
-<pattern id="bp-major" width="100" height="100" patternUnits="userSpaceOnUse"><rect width="100" height="100" fill="url(#bp-minor)"></rect><path d="M100 0H0V100" fill="none" stroke="#9FD3DA" stroke-opacity="0.14" stroke-width="1"></path></pattern>
-</defs>
-<rect width="100%" height="100%" fill="url(#bp-major)"></rect>
-</svg>
-<div style="position: relative; max-width: 1200px; margin: 0 auto; padding: 80px 24px 0; display: flex; flex-wrap: wrap; gap: 48px; align-items: center">
-<div class="hero-stagger" style="flex: 999 1 560px; min-width: 0; display: flex; flex-direction: column; gap: 24px">
-<div style="display: flex; flex-direction: column; gap: 4px">
-<div style="display: flex; align-items: center; gap: 10px; font-family: Manrope, sans-serif; font-weight: 800; font-size: 14px; letter-spacing: 0.14em; color: #FFFFFF"><span style="width: 24px; height: 3px; background: #D99A27"></span>UNIPAZ · CONGRESO SST</div>
-<div style="font-size: 15px; color: #C9D6E2; padding-left: 34px">Encuentro académico internacional</div>
+<section id="inicio" aria-labelledby="h-hero" class="hero dark">
+<div class="wrap">
+<div class="hero-in hero-stagger">
+<p class="kicker"><span><strong>UNIPAZ</strong> · Programas de Seguridad y Salud en el Trabajo</span><span>Encuentro académico internacional</span></p>
+<h1 id="h-hero"><span class="h1-pre">I Congreso Nacional e Internacional en</span><span class="h1-main">Seguridad y Salud en el Trabajo</span></h1>
+<div class="hero-date">
+<div class="hd-num" aria-hidden="true">29<span>–</span>30</div>
+<div class="hd-month"><span class="sr-only">29 y 30 de </span>octubre de 2026</div>
+<div class="hd-sub">Jueves y viernes · hora de Colombia</div>
 </div>
-<div style="font-family: Manrope, sans-serif; font-weight: 800; font-size: 18px; letter-spacing: 0.08em; color: #F0BD5C">29 Y 30 DE OCTUBRE DE 2026</div>
-<h1 id="h-hero" style="margin: 0; font-family: Manrope, sans-serif; font-weight: 800; font-size: clamp(36px, 5.4vw, 68px); line-height: 1.04; letter-spacing: -0.02em; max-width: 16ch">I Congreso Nacional e Internacional en Seguridad y Salud en el Trabajo</h1>
-<ul aria-label="Condiciones del Congreso" style="list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 10px">
-<li style="display: flex; align-items: center; gap: 8px; padding: 8px 14px; border: 1px solid rgba(255,255,255,0.28); border-radius: 999px; font-weight: 600; font-size: 16px">
-<svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#F0BD5C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="13" rx="2"></rect><path d="M8 21h8M12 17v4"></path></svg>Modalidad virtual</li>
-<li style="display: flex; align-items: center; gap: 8px; padding: 8px 14px; border: 1px solid rgba(255,255,255,0.28); border-radius: 999px; font-weight: 600; font-size: 16px">
-<svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#F0BD5C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg>Inscripción gratuita</li>
-</ul>
-<div style="display: flex; flex-wrap: wrap; gap: 12px; align-items: center; padding-top: 4px">
-<button type="button" data-action="openReg" class="lift" style="min-height: 54px; padding: 0 30px; border: 0; border-radius: 12px; background: #087E8B; color: #FFFFFF; font-family: Inter, sans-serif; font-weight: 700; font-size: 18px; cursor: pointer; display: inline-flex; align-items: center; gap: 10px">Inscríbete
-<svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"></path></svg></button>
-<a href="#modalidades" class="ghost" style="min-height: 54px; display: inline-flex; align-items: center; padding: 0 22px; border: 1.5px solid rgba(255,255,255,0.5); border-radius: 12px; color: #FFFFFF; text-decoration: none; font-weight: 600">Conoce las modalidades de participación</a>
+<div class="hero-cta">
+<button type="button" data-action="openReg" class="btn btn-primary btn-lg">Inscríbete <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"></path></svg></button>
+<a href="#modalidades" class="btn btn-quiet btn-lg">Conoce las modalidades de participación <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M6 13l6 6 6-6"></path></svg></a>
 </div>
 </div>
-</div>
-<div style="position: relative; max-width: 1200px; margin: 0 auto; padding: 56px 24px 0">
-<dl class="hero-stats" style="margin: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(180px, 100%), 1fr)); border-top: 1px solid rgba(255,255,255,0.18)">
-<div style="padding: 22px 0 28px; display: flex; flex-direction: column-reverse; gap: 2px">
-<dt style="font-size: 15px; color: #C9D6E2">jornadas académicas</dt>
-<dd style="margin: 0; font-family: Manrope, sans-serif; font-weight: 800; font-size: 34px; line-height: 1">2</dd>
-</div>
-<div style="padding: 22px 0 28px; display: flex; flex-direction: column-reverse; gap: 2px">
-<dt style="font-size: 15px; color: #C9D6E2">salas virtuales simultáneas</dt>
-<dd style="margin: 0; font-family: Manrope, sans-serif; font-weight: 800; font-size: 34px; line-height: 1">2</dd>
-</div>
-<div style="padding: 22px 0 28px; display: flex; flex-direction: column-reverse; gap: 2px">
-<dt style="font-size: 15px; color: #C9D6E2">líneas temáticas</dt>
-<dd style="margin: 0; font-family: Manrope, sans-serif; font-weight: 800; font-size: 34px; line-height: 1">10</dd>
-</div>
-<div style="padding: 22px 0 28px; display: flex; flex-direction: column-reverse; gap: 2px">
-<dt style="font-size: 15px; color: #C9D6E2">modalidades de participación</dt>
-<dd style="margin: 0; font-family: Manrope, sans-serif; font-weight: 800; font-size: 34px; line-height: 1">3</dd>
-</div>
+<dl class="facts hero-stats">
+<div><dt>Modalidad</dt><dd><strong>100 % virtual</strong><span>2 salas virtuales simultáneas</span></dd></div>
+<div><dt>Inscripción</dt><dd><strong>Gratuita</strong><span>3 modalidades de participación</span></dd></div>
+<div><dt>Programa</dt><dd><strong>10 líneas temáticas</strong><span>2 jornadas académicas</span></dd></div>
 </dl>
 </div>
 </section>
 
-<section id="modalidades" aria-labelledby="h-mod" style="padding: 104px 0 96px">
-<div style="max-width: 1200px; margin: 0 auto; padding: 0 24px; display: flex; flex-direction: column; gap: 48px">
-<div data-reveal style="display: flex; flex-wrap: wrap; gap: 20px 64px; align-items: flex-end">
-<div style="flex: 1 1 380px; display: flex; flex-direction: column; gap: 12px">
-<div style="display: flex; align-items: center; gap: 10px; font-family: Manrope, sans-serif; font-weight: 800; font-size: 14px; letter-spacing: 0.14em; color: #066F7A"><span style="width: 24px; height: 3px; background: #D99A27"></span>FORMAS DE PARTICIPACIÓN</div>
-<h2 id="h-mod" style="margin: 0; font-family: Manrope, sans-serif; font-weight: 800; font-size: clamp(30px, 3.6vw, 44px); line-height: 1.1; letter-spacing: -0.01em">Elige cómo quieres hacer parte del Congreso</h2>
+<section id="modalidades" aria-labelledby="h-mod" class="sec">
+<div class="wrap">
+<div class="sec-head" data-reveal>
+<p class="label"><span class="n">01</span>Formas de participación</p>
+<h2 id="h-mod" class="h2">Elige cómo quieres hacer parte del Congreso</h2>
+<div class="intro"><p>Participa como asistente o comparte tus investigaciones terminadas o en curso, trabajos de grado, proyectos de aula o semillero, estudios de caso, experiencias profesionales, buenas prácticas, innovaciones y desarrollos tecnológicos, reflexiones académicas o profesionales, entre otros, mediante una ponencia oral o un póster virtual.</p><p>Tu conocimiento, experiencia e ideas pueden aportar a la construcción de entornos de trabajo más seguros, saludables e innovadores.</p></div>
 </div>
-<div style="flex: 1.25 1 460px; display: flex; flex-direction: column; gap: 12px; color: #3E5468; max-width: 68ch">
-<p style="margin: 0">Participa como asistente o comparte tus investigaciones terminadas o en curso, trabajos de grado, proyectos de aula o semillero, estudios de caso, experiencias profesionales, buenas prácticas, innovaciones y desarrollos tecnológicos, reflexiones académicas o profesionales, entre otros, mediante una ponencia oral o un póster virtual.</p>
-<p style="margin: 0">Tu conocimiento, experiencia e ideas pueden aportar a la construcción de entornos de trabajo más seguros, saludables e innovadores.</p>
-</div>
-</div>
-
-<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(310px, 100%), 1fr)); gap: 24px; align-items: stretch">
-
-<article class="card-hover" data-reveal aria-labelledby="m1" style="background: #FFFFFF; border: 1px solid #D5DEE6; border-radius: 18px; display: flex; flex-direction: column; overflow: hidden">
-<div style="padding: 28px 28px 22px; display: flex; flex-direction: column; gap: 6px; border-bottom: 1px solid #E4EAF0">
-<div style="font-size: 14px; font-weight: 600; color: #52667A">Modalidad 1</div>
-<h3 id="m1" style="margin: 0; font-family: Manrope, sans-serif; font-weight: 800; font-size: 22px; letter-spacing: 0.01em">Participante / Asistente</h3>
-<div style="color: #3E5468">Participa en el Congreso.</div>
-</div>
-<div style="padding: 20px 28px; background: #EEF6F7; display: flex; align-items: baseline; gap: 12px">
-<span style="font-family: Manrope, sans-serif; font-weight: 800; font-size: 32px; line-height: 1; color: #102A43">40 %</span>
-<span style="font-size: 15px; color: #3E5468">asistencia mínima para obtener certificado</span>
-</div>
-<div style="padding: 22px 28px 28px; display: flex; flex-direction: column; gap: 18px; flex: 1">
-<div><div style="font-size: 13px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: #52667A">Dirigido a</div><div style="font-size: 16px">Estudiantes, docentes, investigadores, profesionales y demás interesados en la Seguridad y Salud en el Trabajo.</div></div>
-<div><div style="font-size: 13px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: #52667A">Incluye</div>
-<ul style="margin: 6px 0 0; padding: 0 0 0 18px; display: flex; flex-direction: column; gap: 4px; font-size: 16px">
+<div class="mods">
+<article aria-labelledby="m1" class="mod" data-reveal>
+<div class="mod-h"><div class="mod-n">Modalidad 01</div><h3 id="m1">Participante / Asistente</h3></div>
+<p class="mod-d">Participa en el Congreso.</p>
+<div class="mod-fig"><strong>40 %</strong><span>asistencia mínima para obtener certificado</span></div>
+<div class="mod-r"><p class="k">Dirigido a</p><p>Estudiantes, docentes, investigadores, profesionales y demás interesados en la Seguridad y Salud en el Trabajo.</p></div>
+<div class="mod-r"><p class="k">Incluye</p><ul class="ticks">
 <li>Acceso a las actividades académicas durante los dos días.</li>
 <li>Participación en conferencias, ponencias y espacios de intercambio.</li>
 <li>Modalidad 100 % virtual.</li>
 <li>Inscripción gratuita.</li>
 <li>Certificación de asistencia, cumpliendo el requisito de participación mínima.</li>
 </ul></div>
-<div><div style="font-size: 13px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: #52667A">Requisito de certificación</div><div style="font-size: 16px">Se otorgará a quienes acrediten una asistencia mínima del 40 % de las ponencias programadas durante los dos días del Congreso.</div></div>
-<button type="button" data-action="open0" class="lift" style="margin-top: auto; min-height: 48px; border: 0; border-radius: 12px; background: #102A43; color: #FFFFFF; font-family: Inter, sans-serif; font-weight: 600; font-size: 16px; cursor: pointer">Elegir esta modalidad</button>
-</div>
+<div class="mod-r"><p class="k">Requisito de certificación</p><p>Se otorgará a quienes acrediten una asistencia mínima del 40 % de las ponencias programadas durante los dos días del Congreso.</p></div>
+<div class="mod-a"><button type="button" data-action="open0" class="btn btn-navy">Elegir esta modalidad</button></div>
 </article>
-
-<article class="card-hover" data-reveal aria-labelledby="m2" style="background: #FFFFFF; border: 1px solid #D5DEE6; border-radius: 18px; display: flex; flex-direction: column; overflow: hidden">
-<div style="padding: 28px 28px 22px; display: flex; flex-direction: column; gap: 6px; border-bottom: 1px solid #E4EAF0">
-<div style="font-size: 14px; font-weight: 600; color: #52667A">Modalidad 2</div>
-<h3 id="m2" style="margin: 0; font-family: Manrope, sans-serif; font-weight: 800; font-size: 22px; letter-spacing: 0.01em">Ponente oral</h3>
-<div style="color: #3E5468">Presenta tu investigación o experiencia.</div>
-</div>
-<div style="padding: 20px 28px; background: #EEF6F7; display: flex; align-items: baseline; gap: 12px">
-<span style="font-family: Manrope, sans-serif; font-weight: 800; font-size: 32px; line-height: 1; color: #102A43">20 + 5 min</span>
-<span style="font-size: 15px; color: #3E5468">presentación oral y preguntas</span>
-</div>
-<div style="padding: 22px 28px 28px; display: flex; flex-direction: column; gap: 18px; flex: 1">
-<div><div style="font-size: 13px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: #52667A">Dirigido a</div><div style="font-size: 16px">Estudiantes de posgrado, docentes, investigadores y profesionales nacionales e internacionales.</div></div>
-<div><div style="font-size: 13px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: #52667A">Incluye</div>
-<ul style="margin: 6px 0 0; padding: 0 0 0 18px; display: flex; flex-direction: column; gap: 4px; font-size: 16px">
+<article aria-labelledby="m2" class="mod" data-reveal>
+<div class="mod-h"><div class="mod-n">Modalidad 02</div><h3 id="m2">Ponente oral</h3></div>
+<p class="mod-d">Presenta tu investigación o experiencia.</p>
+<div class="mod-fig"><strong>20 + 5 min</strong><span>presentación oral y preguntas</span></div>
+<div class="mod-r"><p class="k">Dirigido a</p><p>Estudiantes de posgrado, docentes, investigadores y profesionales nacionales e internacionales.</p></div>
+<div class="mod-r"><p class="k">Incluye</p><ul class="ticks">
 <li>Presentación oral virtual: <strong>20 minutos</strong>.</li>
 <li>Preguntas e interacción: <strong>5 minutos</strong>.</li>
 <li>Trabajo relacionado con uno de los 10 ejes temáticos.</li>
 <li>Inscripción gratuita.</li>
 <li>Certificación como ponente.</li>
 </ul></div>
-<div><div style="font-size: 13px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: #52667A">Proceso de selección</div><div style="font-size: 16px">Los trabajos serán evaluados por el Comité Académico del Congreso. Los trabajos aceptados serán presentados en la sala virtual asignada por la organización.</div></div>
-<button type="button" data-action="open1" class="lift" style="margin-top: auto; min-height: 48px; border: 0; border-radius: 12px; background: #102A43; color: #FFFFFF; font-family: Inter, sans-serif; font-weight: 600; font-size: 16px; cursor: pointer">Elegir esta modalidad</button>
-</div>
+<div class="mod-r"><p class="k">Proceso de selección</p><p>Los trabajos serán evaluados por el Comité Académico del Congreso. Los trabajos aceptados serán presentados en la sala virtual asignada por la organización.</p></div>
+<div class="mod-a"><button type="button" data-action="open1" class="btn btn-navy">Elegir esta modalidad</button></div>
 </article>
-
-<article class="card-hover" data-reveal aria-labelledby="m3" style="background: #FFFFFF; border: 1px solid #D5DEE6; border-radius: 18px; display: flex; flex-direction: column; overflow: hidden">
-<div style="padding: 28px 28px 22px; display: flex; flex-direction: column; gap: 6px; border-bottom: 1px solid #E4EAF0">
-<div style="font-size: 14px; font-weight: 600; color: #52667A">Modalidad 3</div>
-<h3 id="m3" style="margin: 0; font-family: Manrope, sans-serif; font-weight: 800; font-size: 22px; letter-spacing: 0.01em">Póster virtual</h3>
-<div style="color: #3E5468">Presenta tu investigación o experiencia.</div>
-</div>
-<div style="padding: 20px 28px; background: #EEF6F7; display: flex; align-items: baseline; gap: 12px">
-<span style="font-family: Manrope, sans-serif; font-weight: 800; font-size: 32px; line-height: 1; color: #102A43">Póster</span>
-<span style="font-size: 15px; color: #3E5468">virtual, con preguntas e interacción</span>
-</div>
-<div style="padding: 22px 28px 28px; display: flex; flex-direction: column; gap: 18px; flex: 1">
-<div><div style="font-size: 13px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: #52667A">Dirigido a</div><div style="font-size: 16px">Estudiantes de posgrado, docentes, investigadores y profesionales nacionales e internacionales.</div></div>
-<div><div style="font-size: 13px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: #52667A">Incluye</div>
-<ul style="margin: 6px 0 0; padding: 0 0 0 18px; display: flex; flex-direction: column; gap: 4px; font-size: 16px">
+<article aria-labelledby="m3" class="mod" data-reveal>
+<div class="mod-h"><div class="mod-n">Modalidad 03</div><h3 id="m3">Póster virtual</h3></div>
+<p class="mod-d">Presenta tu investigación o experiencia.</p>
+<div class="mod-fig"><strong>Póster</strong><span>virtual, con preguntas e interacción</span></div>
+<div class="mod-r"><p class="k">Dirigido a</p><p>Estudiantes de posgrado, docentes, investigadores y profesionales nacionales e internacionales.</p></div>
+<div class="mod-r"><p class="k">Incluye</p><ul class="ticks">
 <li>Presentación de póster virtual.</li>
 <li>Preguntas e interacción durante la presentación.</li>
 <li>Trabajo relacionado con uno de los 10 ejes temáticos.</li>
 <li>Inscripción gratuita.</li>
 <li>Certificación como ponente de póster virtual.</li>
 </ul></div>
-<div><div style="font-size: 13px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: #52667A">Proceso de selección</div><div style="font-size: 16px">Los trabajos serán evaluados por el Comité Académico del Congreso. Los trabajos aceptados recibirán la confirmación y las indicaciones para su presentación en la sala virtual asignada por la organización.</div></div>
-<button type="button" data-action="open2" class="lift" style="margin-top: auto; min-height: 48px; border: 0; border-radius: 12px; background: #102A43; color: #FFFFFF; font-family: Inter, sans-serif; font-weight: 600; font-size: 16px; cursor: pointer">Elegir esta modalidad</button>
-</div>
+<div class="mod-r"><p class="k">Proceso de selección</p><p>Los trabajos serán evaluados por el Comité Académico del Congreso. Los trabajos aceptados recibirán la confirmación y las indicaciones para su presentación en la sala virtual asignada por la organización.</p></div>
+<div class="mod-a"><button type="button" data-action="open2" class="btn btn-navy">Elegir esta modalidad</button></div>
 </article>
-
 </div>
 </div>
 </section>
 
-<section id="lineas" aria-labelledby="h-lin" style="padding: 104px 0; background: #FFFFFF; border-top: 1px solid #E4EAF0; border-bottom: 1px solid #E4EAF0">
-<div style="max-width: 1200px; margin: 0 auto; padding: 0 24px; display: flex; flex-direction: column; gap: 48px">
-<div data-reveal style="display: flex; flex-wrap: wrap; gap: 20px 64px; align-items: flex-end; justify-content: space-between">
-<div style="display: flex; flex-direction: column; gap: 12px">
-<div style="display: flex; align-items: center; gap: 10px; font-family: Manrope, sans-serif; font-weight: 800; font-size: 14px; letter-spacing: 0.14em; color: #066F7A"><span style="width: 24px; height: 3px; background: #D99A27"></span>EJES TEMÁTICOS</div>
-<h2 id="h-lin" style="margin: 0; font-family: Manrope, sans-serif; font-weight: 800; font-size: clamp(30px, 3.6vw, 44px); line-height: 1.1; letter-spacing: -0.01em">Líneas del Congreso</h2>
+<section id="lineas" aria-labelledby="h-lin" class="sec sec-mist">
+<div class="wrap">
+<div class="sec-head" data-reveal>
+<p class="label"><span class="n">02</span>Ejes temáticos</p>
+<h2 id="h-lin" class="h2">Líneas del Congreso</h2>
+<div class="intro"><p>Los trabajos de ponencia oral y póster virtual deben relacionarse con una de estas diez líneas.</p></div>
 </div>
-<p style="margin: 0; max-width: 46ch; color: #3E5468">Los trabajos de ponencia oral y póster virtual deben relacionarse con una de estas diez líneas.</p>
-</div>
-<ol style="list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(min(270px, 100%), 1fr)); gap: 16px">
-
-<li class="card-hover" data-reveal style="border: 1px solid #D5DEE6; border-radius: 16px; padding: 24px; display: flex; flex-direction: column; gap: 14px; background: #F5F8FA">
-<div style="display: flex; align-items: center; justify-content: space-between">
-<div style="width: 48px; height: 48px; border-radius: 12px; background: #DDEFF1; display: flex; align-items: center; justify-content: center">
-<svg aria-hidden="true" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#066F7A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18h6M10 22h4M12 2a7 7 0 0 0-4 12.7c.6.5 1 1.3 1 2.3h6c0-1 .4-1.8 1-2.3A7 7 0 0 0 12 2z"></path></svg></div>
-<span style="font-family: Manrope, sans-serif; font-weight: 800; font-size: 15px; color: #52667A">Línea 01</span>
-</div>
-<h3 style="margin: 0; font-family: Manrope, sans-serif; font-weight: 800; font-size: 19px; line-height: 1.25">Transformación e innovación en SST</h3>
-<p style="margin: 0; font-size: 15px; line-height: 1.55; color: #3E5468">Transformación del SG-SST, innovación en prevención y aplicación de inteligencia artificial, digitalización, analítica de datos y nuevas tecnologías para la gestión de riesgos laborales.</p>
+<ol class="lines">
+<li class="line" data-reveal>
+<span class="line-n" aria-hidden="true">01</span>
+<div><h3><span class="sr-only">Línea 01: </span>Transformación e innovación en SST</h3>
+<p>Transformación del SG-SST, innovación en prevención y aplicación de inteligencia artificial, digitalización, analítica de datos y nuevas tecnologías para la gestión de riesgos laborales.</p></div>
 </li>
-
-<li class="card-hover" data-reveal style="border: 1px solid #D5DEE6; border-radius: 16px; padding: 24px; display: flex; flex-direction: column; gap: 14px; background: #F5F8FA">
-<div style="display: flex; align-items: center; justify-content: space-between">
-<div style="width: 48px; height: 48px; border-radius: 12px; background: #DDEFF1; display: flex; align-items: center; justify-content: center">
-<svg aria-hidden="true" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#066F7A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z"></path><path d="M12 9v4M12 17h.01"></path></svg></div>
-<span style="font-family: Manrope, sans-serif; font-weight: 800; font-size: 15px; color: #52667A">Línea 02</span>
-</div>
-<h3 style="margin: 0; font-family: Manrope, sans-serif; font-weight: 800; font-size: 19px; line-height: 1.25">Riesgos emergentes en SST</h3>
-<p style="margin: 0; font-size: 15px; line-height: 1.55; color: #3E5468">Abordaje de riesgos emergentes, seguridad industrial e higiene ocupacional, peligros físicos, químicos y biológicos, seguridad de procesos y prevención de accidentes y emergencias.</p>
+<li class="line" data-reveal>
+<span class="line-n" aria-hidden="true">02</span>
+<div><h3><span class="sr-only">Línea 02: </span>Riesgos emergentes en SST</h3>
+<p>Abordaje de riesgos emergentes, seguridad industrial e higiene ocupacional, peligros físicos, químicos y biológicos, seguridad de procesos y prevención de accidentes y emergencias.</p></div>
 </li>
-
-<li class="card-hover" data-reveal style="border: 1px solid #D5DEE6; border-radius: 16px; padding: 24px; display: flex; flex-direction: column; gap: 14px; background: #F5F8FA">
-<div style="display: flex; align-items: center; justify-content: space-between">
-<div style="width: 48px; height: 48px; border-radius: 12px; background: #DDEFF1; display: flex; align-items: center; justify-content: center">
-<svg aria-hidden="true" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#066F7A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8L12 21l8.8-8.6a5.5 5.5 0 0 0 0-7.8z"></path><path d="M3.5 12h4l2-3 3 6 2-3h6"></path></svg></div>
-<span style="font-family: Manrope, sans-serif; font-weight: 800; font-size: 15px; color: #52667A">Línea 03</span>
-</div>
-<h3 style="margin: 0; font-family: Manrope, sans-serif; font-weight: 800; font-size: 19px; line-height: 1.25">Salud integral, bienestar y factor humano</h3>
-<p style="margin: 0; font-size: 15px; line-height: 1.55; color: #3E5468">Promoción de la salud laboral, prevención de enfermedades, salud mental, ergonomía, hábitos saludables, fatiga laboral y fortalecimiento de la cultura y el comportamiento seguro.</p>
+<li class="line" data-reveal>
+<span class="line-n" aria-hidden="true">03</span>
+<div><h3><span class="sr-only">Línea 03: </span>Salud integral, bienestar y factor humano</h3>
+<p>Promoción de la salud laboral, prevención de enfermedades, salud mental, ergonomía, hábitos saludables, fatiga laboral y fortalecimiento de la cultura y el comportamiento seguro.</p></div>
 </li>
-
-<li class="card-hover" data-reveal style="border: 1px solid #D5DEE6; border-radius: 16px; padding: 24px; display: flex; flex-direction: column; gap: 14px; background: #F5F8FA">
-<div style="display: flex; align-items: center; justify-content: space-between">
-<div style="width: 48px; height: 48px; border-radius: 12px; background: #DDEFF1; display: flex; align-items: center; justify-content: center">
-<svg aria-hidden="true" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#066F7A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M2 12h20M12 2a15 15 0 0 1 0 20M12 2a15 15 0 0 0 0 20"></path></svg></div>
-<span style="font-family: Manrope, sans-serif; font-weight: 800; font-size: 15px; color: #52667A">Línea 04</span>
-</div>
-<h3 style="margin: 0; font-family: Manrope, sans-serif; font-weight: 800; font-size: 19px; line-height: 1.25">Cambio climático y sostenibilidad</h3>
-<p style="margin: 0; font-size: 15px; line-height: 1.55; color: #3E5468">Gestión de los riesgos laborales asociados al cambio climático, estrés térmico, eventos extremos, calidad del aire, radiación UV y adaptación hacia entornos de trabajo sostenibles.</p>
+<li class="line" data-reveal>
+<span class="line-n" aria-hidden="true">04</span>
+<div><h3><span class="sr-only">Línea 04: </span>Cambio climático y sostenibilidad</h3>
+<p>Gestión de los riesgos laborales asociados al cambio climático, estrés térmico, eventos extremos, calidad del aire, radiación UV y adaptación hacia entornos de trabajo sostenibles.</p></div>
 </li>
-
-<li class="card-hover" data-reveal style="border: 1px solid #D5DEE6; border-radius: 16px; padding: 24px; display: flex; flex-direction: column; gap: 14px; background: #F5F8FA">
-<div style="display: flex; align-items: center; justify-content: space-between">
-<div style="width: 48px; height: 48px; border-radius: 12px; background: #DDEFF1; display: flex; align-items: center; justify-content: center">
-<svg aria-hidden="true" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#066F7A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 22V3"></path><path d="M4 4h12l-2 4 2 4H4"></path></svg></div>
-<span style="font-family: Manrope, sans-serif; font-weight: 800; font-size: 15px; color: #52667A">Línea 05</span>
-</div>
-<h3 style="margin: 0; font-family: Manrope, sans-serif; font-weight: 800; font-size: 19px; line-height: 1.25">Gestión estratégica y liderazgo en SST</h3>
-<p style="margin: 0; font-size: 15px; line-height: 1.55; color: #3E5468">Liderazgo y cultura organizacional, gestión estratégica del riesgo, indicadores de desempeño, auditoría, mejora continua e integración de sistemas de gestión en SST.</p>
+<li class="line" data-reveal>
+<span class="line-n" aria-hidden="true">05</span>
+<div><h3><span class="sr-only">Línea 05: </span>Gestión estratégica y liderazgo en SST</h3>
+<p>Liderazgo y cultura organizacional, gestión estratégica del riesgo, indicadores de desempeño, auditoría, mejora continua e integración de sistemas de gestión en SST.</p></div>
 </li>
-
-<li class="card-hover" data-reveal style="border: 1px solid #D5DEE6; border-radius: 16px; padding: 24px; display: flex; flex-direction: column; gap: 14px; background: #F5F8FA">
-<div style="display: flex; align-items: center; justify-content: space-between">
-<div style="width: 48px; height: 48px; border-radius: 12px; background: #DDEFF1; display: flex; align-items: center; justify-content: center">
-<svg aria-hidden="true" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#066F7A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="7" r="4"></circle><path d="M2 21v-2a4 4 0 0 1 4-4h6a4 4 0 0 1 4 4v2M16 3.1a4 4 0 0 1 0 7.8M22 21v-2a4 4 0 0 0-3-3.9"></path></svg></div>
-<span style="font-family: Manrope, sans-serif; font-weight: 800; font-size: 15px; color: #52667A">Línea 06</span>
-</div>
-<h3 style="margin: 0; font-family: Manrope, sans-serif; font-weight: 800; font-size: 19px; line-height: 1.25">Psicosociología del trabajo y las organizaciones</h3>
-<p style="margin: 0; font-size: 15px; line-height: 1.55; color: #3E5468">Convivencia y comunicación laboral, prevención del acoso, nuevos modelos empresariales y aplicación de la psicosociología en los diferentes entornos productivos.</p>
+<li class="line" data-reveal>
+<span class="line-n" aria-hidden="true">06</span>
+<div><h3><span class="sr-only">Línea 06: </span>Psicosociología del trabajo y las organizaciones</h3>
+<p>Convivencia y comunicación laboral, prevención del acoso, nuevos modelos empresariales y aplicación de la psicosociología en los diferentes entornos productivos.</p></div>
 </li>
-
-<li class="card-hover" data-reveal style="border: 1px solid #D5DEE6; border-radius: 16px; padding: 24px; display: flex; flex-direction: column; gap: 14px; background: #F5F8FA">
-<div style="display: flex; align-items: center; justify-content: space-between">
-<div style="width: 48px; height: 48px; border-radius: 12px; background: #DDEFF1; display: flex; align-items: center; justify-content: center">
-<svg aria-hidden="true" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#066F7A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="5" width="14" height="14" rx="2"></rect><rect x="9" y="9" width="6" height="6"></rect><path d="M9 1v4M15 1v4M9 19v4M15 19v4M1 9h4M1 15h4M19 9h4M19 15h4"></path></svg></div>
-<span style="font-family: Manrope, sans-serif; font-weight: 800; font-size: 15px; color: #52667A">Línea 07</span>
-</div>
-<h3 style="margin: 0; font-family: Manrope, sans-serif; font-weight: 800; font-size: 19px; line-height: 1.25">Controles de ingeniería y nuevas tecnologías</h3>
-<p style="margin: 0; font-size: 15px; line-height: 1.55; color: #3E5468">Aplicación de inteligencia artificial y nuevas tecnologías para la identificación de peligros, planificación y control de tareas y fortalecimiento de los controles de ingeniería.</p>
+<li class="line" data-reveal>
+<span class="line-n" aria-hidden="true">07</span>
+<div><h3><span class="sr-only">Línea 07: </span>Controles de ingeniería y nuevas tecnologías</h3>
+<p>Aplicación de inteligencia artificial y nuevas tecnologías para la identificación de peligros, planificación y control de tareas y fortalecimiento de los controles de ingeniería.</p></div>
 </li>
-
-<li class="card-hover" data-reveal style="border: 1px solid #D5DEE6; border-radius: 16px; padding: 24px; display: flex; flex-direction: column; gap: 14px; background: #F5F8FA">
-<div style="display: flex; align-items: center; justify-content: space-between">
-<div style="width: 48px; height: 48px; border-radius: 12px; background: #DDEFF1; display: flex; align-items: center; justify-content: center">
-<svg aria-hidden="true" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#066F7A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 18h20v3H2z"></path><path d="M4 18v-3a8 8 0 0 1 16 0v3"></path><path d="M10 7V4h4v3M10 7v6M14 7v6"></path></svg></div>
-<span style="font-family: Manrope, sans-serif; font-weight: 800; font-size: 15px; color: #52667A">Línea 08</span>
-</div>
-<h3 style="margin: 0; font-family: Manrope, sans-serif; font-weight: 800; font-size: 19px; line-height: 1.25">Tareas de alto riesgo y operaciones especiales</h3>
-<p style="margin: 0; font-size: 15px; line-height: 1.55; color: #3E5468">Gestión de la seguridad en minería a cielo abierto y subterránea, operaciones fluviales y marítimas, sector oil &amp; gas y tareas críticas con compromiso de la seguridad humana.</p>
+<li class="line" data-reveal>
+<span class="line-n" aria-hidden="true">08</span>
+<div><h3><span class="sr-only">Línea 08: </span>Tareas de alto riesgo y operaciones especiales</h3>
+<p>Gestión de la seguridad en minería a cielo abierto y subterránea, operaciones fluviales y marítimas, sector oil &amp; gas y tareas críticas con compromiso de la seguridad humana.</p></div>
 </li>
-
-<li class="card-hover" data-reveal style="border: 1px solid #D5DEE6; border-radius: 16px; padding: 24px; display: flex; flex-direction: column; gap: 14px; background: #F5F8FA">
-<div style="display: flex; align-items: center; justify-content: space-between">
-<div style="width: 48px; height: 48px; border-radius: 12px; background: #DDEFF1; display: flex; align-items: center; justify-content: center">
-<svg aria-hidden="true" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#066F7A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 7 13.5 15.5l-5-5L2 17"></path><path d="M16 7h6v6"></path></svg></div>
-<span style="font-family: Manrope, sans-serif; font-weight: 800; font-size: 15px; color: #52667A">Línea 09</span>
-</div>
-<h3 style="margin: 0; font-family: Manrope, sans-serif; font-weight: 800; font-size: 19px; line-height: 1.25">Futuro del trabajo y desarrollo profesional</h3>
-<p style="margin: 0; font-size: 15px; line-height: 1.55; color: #3E5468">Nuevas formas de trabajo, transformación de las ocupaciones, competencias profesionales, formación, investigación aplicada, inteligencia artificial, empleabilidad y ética profesional.</p>
+<li class="line" data-reveal>
+<span class="line-n" aria-hidden="true">09</span>
+<div><h3><span class="sr-only">Línea 09: </span>Futuro del trabajo y desarrollo profesional</h3>
+<p>Nuevas formas de trabajo, transformación de las ocupaciones, competencias profesionales, formación, investigación aplicada, inteligencia artificial, empleabilidad y ética profesional.</p></div>
 </li>
-
-<li class="card-hover" data-reveal style="border: 1px solid #D5DEE6; border-radius: 16px; padding: 24px; display: flex; flex-direction: column; gap: 14px; background: #F5F8FA">
-<div style="display: flex; align-items: center; justify-content: space-between">
-<div style="width: 48px; height: 48px; border-radius: 12px; background: #DDEFF1; display: flex; align-items: center; justify-content: center">
-<svg aria-hidden="true" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#066F7A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="3"></rect><path d="M12 8v8M8 12h8"></path></svg></div>
-<span style="font-family: Manrope, sans-serif; font-weight: 800; font-size: 15px; color: #52667A">Línea 10</span>
-</div>
-<h3 style="margin: 0; font-family: Manrope, sans-serif; font-weight: 800; font-size: 19px; line-height: 1.25">Prevención, atención y respuesta a emergencias</h3>
-<p style="margin: 0; font-size: 15px; line-height: 1.55; color: #3E5468">Estrategias para la prevención y atención de emergencias, implementación del Sistema Comando de Incidentes y fortalecimiento de la gestión comunitaria del riesgo.</p>
+<li class="line" data-reveal>
+<span class="line-n" aria-hidden="true">10</span>
+<div><h3><span class="sr-only">Línea 10: </span>Prevención, atención y respuesta a emergencias</h3>
+<p>Estrategias para la prevención y atención de emergencias, implementación del Sistema Comando de Incidentes y fortalecimiento de la gestión comunitaria del riesgo.</p></div>
 </li>
-
 </ol>
 </div>
 </section>
 
-<section id="conferencistas" aria-labelledby="h-conf" style="padding: 104px 0">
-<div style="max-width: 1200px; margin: 0 auto; padding: 0 24px; display: flex; flex-direction: column; gap: 40px">
-<div data-reveal style="display: flex; flex-wrap: wrap; gap: 20px 64px; align-items: flex-end; justify-content: space-between">
-<div style="display: flex; flex-direction: column; gap: 12px">
-<div style="display: flex; align-items: center; gap: 10px; font-family: Manrope, sans-serif; font-weight: 800; font-size: 14px; letter-spacing: 0.14em; color: #066F7A"><span style="width: 24px; height: 3px; background: #D99A27"></span>INVITADOS</div>
-<h2 id="h-conf" style="margin: 0; font-family: Manrope, sans-serif; font-weight: 800; font-size: clamp(30px, 3.6vw, 44px); line-height: 1.1; letter-spacing: -0.01em">Conferencistas invitados</h2>
+<section id="conferencistas" aria-labelledby="h-conf" class="sec">
+<div class="wrap">
+<div class="sec-head" data-reveal>
+<p class="label"><span class="n">03</span>Invitados</p>
+<h2 id="h-conf" class="h2">Conferencistas invitados</h2>
+<div class="intro"><p><strong>14 conferencistas</strong> de 6 países.</p><ul class="flags" aria-label="Países representados">
+
+<li><img src="/assets/img/banderas/brasil.svg" alt="" width="21" height="14" class="flag">Brasil</li>
+
+<li><img src="/assets/img/banderas/chile.svg" alt="" width="21" height="14" class="flag">Chile</li>
+
+<li><img src="/assets/img/banderas/colombia.svg" alt="" width="21" height="14" class="flag">Colombia</li>
+
+<li><img src="/assets/img/banderas/honduras.svg" alt="" width="21" height="14" class="flag">Honduras</li>
+
+<li><img src="/assets/img/banderas/panama.svg" alt="" width="21" height="14" class="flag">Panamá</li>
+
+<li><img src="/assets/img/banderas/peru.svg" alt="" width="21" height="14" class="flag">Perú</li>
+
+</ul></div>
 </div>
-<div style="display: flex; flex-direction: column; gap: 10px; max-width: 46ch">
-<p style="margin: 0; color: #3E5468"><strong style="color: #102A43">14 conferencistas</strong> de 6 países.</p>
-<ul aria-label="Países representados" style="list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 8px">
+<article aria-labelledby="sp-main" class="feat" data-reveal>
+<div class="feat-ph">
 
-<li style="display: inline-flex; align-items: center; gap: 6px; padding: 4px 10px 4px 6px; border: 1px solid #D5DEE6; border-radius: 999px; background: #FFFFFF; font-size: 13px; font-weight: 600; color: #3E5468"><img src="/assets/img/banderas/brasil.svg" alt="" width="21" height="14" style="width: 21px; height: 14px; border-radius: 2px; box-shadow: 0 0 0 1px rgba(16,42,67,0.16); display: block">Brasil</li>
-
-<li style="display: inline-flex; align-items: center; gap: 6px; padding: 4px 10px 4px 6px; border: 1px solid #D5DEE6; border-radius: 999px; background: #FFFFFF; font-size: 13px; font-weight: 600; color: #3E5468"><img src="/assets/img/banderas/chile.svg" alt="" width="21" height="14" style="width: 21px; height: 14px; border-radius: 2px; box-shadow: 0 0 0 1px rgba(16,42,67,0.16); display: block">Chile</li>
-
-<li style="display: inline-flex; align-items: center; gap: 6px; padding: 4px 10px 4px 6px; border: 1px solid #D5DEE6; border-radius: 999px; background: #FFFFFF; font-size: 13px; font-weight: 600; color: #3E5468"><img src="/assets/img/banderas/colombia.svg" alt="" width="21" height="14" style="width: 21px; height: 14px; border-radius: 2px; box-shadow: 0 0 0 1px rgba(16,42,67,0.16); display: block">Colombia</li>
-
-<li style="display: inline-flex; align-items: center; gap: 6px; padding: 4px 10px 4px 6px; border: 1px solid #D5DEE6; border-radius: 999px; background: #FFFFFF; font-size: 13px; font-weight: 600; color: #3E5468"><img src="/assets/img/banderas/honduras.svg" alt="" width="21" height="14" style="width: 21px; height: 14px; border-radius: 2px; box-shadow: 0 0 0 1px rgba(16,42,67,0.16); display: block">Honduras</li>
-
-<li style="display: inline-flex; align-items: center; gap: 6px; padding: 4px 10px 4px 6px; border: 1px solid #D5DEE6; border-radius: 999px; background: #FFFFFF; font-size: 13px; font-weight: 600; color: #3E5468"><img src="/assets/img/banderas/panama.svg" alt="" width="21" height="14" style="width: 21px; height: 14px; border-radius: 2px; box-shadow: 0 0 0 1px rgba(16,42,67,0.16); display: block">Panamá</li>
-
-<li style="display: inline-flex; align-items: center; gap: 6px; padding: 4px 10px 4px 6px; border: 1px solid #D5DEE6; border-radius: 999px; background: #FFFFFF; font-size: 13px; font-weight: 600; color: #3E5468"><img src="/assets/img/banderas/peru.svg" alt="" width="21" height="14" style="width: 21px; height: 14px; border-radius: 2px; box-shadow: 0 0 0 1px rgba(16,42,67,0.16); display: block">Perú</li>
-
-</ul>
-</div>
-</div>
-
-<article data-reveal aria-labelledby="sp-main" class="dark" style="background: #102A43; color: #FFFFFF; border-radius: 22px; overflow: hidden; display: flex; flex-wrap: wrap">
-<div style="flex: 0 1 300px; min-width: 220px; padding: 24px">
-
-<img src="/assets/img/conferencistas/pablo-ochoa.webp" alt="Fotografía de Ing. Pablo Ochoa" width="400" height="400" style="width: 100%; height: auto; aspect-ratio: 4 / 5; object-fit: cover; object-position: 50% 30%; border-radius: 16px; display: block">
+<img src="/assets/img/conferencistas/pablo-ochoa.webp" alt="Fotografía de Ing. Pablo Ochoa" width="400" height="400" class="portrait">
 
 
 </div>
-<div style="flex: 999 1 420px; min-width: 0; padding: 36px 36px 36px 12px; display: flex; flex-direction: column; justify-content: center; gap: 14px">
-<div style="display: flex; flex-wrap: wrap; gap: 8px">
-<span style="font-size: 13px; font-weight: 700; padding: 4px 10px; border-radius: 6px; background: #D99A27; color: #102A43">Conferencia inaugural</span>
-<span style="font-size: 13px; font-weight: 600; padding: 4px 10px; border-radius: 6px; border: 1px solid rgba(255,255,255,0.35); color: #FFFFFF">Jueves 29 de octubre · 8:00–9:00 a. m. · Ambas salas</span>
-</div>
-<h3 id="sp-main" style="margin: 0; font-family: Manrope, sans-serif; font-weight: 800; font-size: clamp(26px, 3vw, 38px); line-height: 1.1">Ing. Pablo Ochoa</h3>
-<div style="font-size: 16px; color: #DCE5EE; display: flex; flex-wrap: wrap; align-items: center; gap: 4px 10px"><span>PROYSEG LATAM</span><span style="display: inline-flex; align-items: center; gap: 7px"><img src="/assets/img/banderas/panama.svg" alt="" width="24" height="16" style="width: 24px; height: 16px; border-radius: 2px; box-shadow: 0 0 0 1px rgba(255,255,255,0.35); display: block"><strong style="color: #FFFFFF">Panamá</strong></span></div>
-<p style="margin: 0; font-family: Manrope, sans-serif; font-weight: 700; font-size: 20px; line-height: 1.35; color: #FFFFFF; max-width: 48ch">Atención a emergencias · título por confirmar</p>
-<p style="margin: 0; font-size: 15px; color: #C9D6E2; max-width: 62ch">Ingeniero Industrial; especialista en respuesta a emergencias industriales, seguridad de procesos y gestión de riesgos críticos</p>
+<div>
+<p class="feat-k" style="margin: 0"><span>Conferencia inaugural</span></p>
+<h3 id="sp-main">Ing. Pablo Ochoa</h3>
+<div class="aff"><span>PROYSEG LATAM</span><span class="ctry"><img src="/assets/img/banderas/panama.svg" alt="" width="21" height="14" class="flag">Panamá</span></div>
+<p class="feat-topic">Atención a emergencias · título por confirmar</p>
+<p class="when">Jueves 29 de octubre · 8:00–9:00 a. m. · Ambas salas</p>
+<p class="prof">Ingeniero Industrial; especialista en respuesta a emergencias industriales, seguridad de procesos y gestión de riesgos críticos</p>
 
 </div>
 </article>
+<h3 class="sub-h">Conferencias y actividades de cierre</h3>
+<ul class="dir" aria-label="Conferencistas invitados">
 
-<div style="display: flex; align-items: center; gap: 12px; font-size: 13px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: #066F7A">Conferencias y actividades de cierre<span style="flex: 1; height: 1px; background: #D5DEE6"></span></div>
-
-<ul aria-label="Conferencistas invitados" style="list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(min(340px, 100%), 1fr)); gap: 20px">
-
-<li class="card-hover" data-reveal style="background: #FFFFFF; border: 1px solid #D5DEE6; border-radius: 18px; padding: 22px; display: flex; flex-direction: column; gap: 14px">
-<div style="display: flex; gap: 16px; align-items: center">
+<li class="sp" data-reveal>
+<div>
 
 
-<div aria-hidden="true" style="width: 84px; height: 84px; flex: none; border-radius: 999px; background: #DDEFF1; color: #066F7A; display: flex; align-items: center; justify-content: center; font-family: Manrope, sans-serif; font-weight: 800; font-size: 26px; letter-spacing: 0.04em">CC</div>
+<div aria-hidden="true" class="ini">CC</div>
 
-<div style="display: flex; flex-direction: column; gap: 2px; min-width: 0">
-<h3 style="margin: 0; font-family: Manrope, sans-serif; font-weight: 800; font-size: 18px; line-height: 1.25">Claudia Inés Carrero Beltrán</h3>
-<div style="font-size: 14px; color: #3E5468">ICONTEC</div>
-<div style="display: flex; align-items: center; gap: 7px; margin-top: 2px; font-size: 13px; font-weight: 700; color: #066F7A; letter-spacing: 0.04em; text-transform: uppercase"><img src="/assets/img/banderas/colombia.svg" alt="" width="21" height="14" style="width: 21px; height: 14px; border-radius: 2px; box-shadow: 0 0 0 1px rgba(16,42,67,0.16); display: block">Colombia</div>
 </div>
-</div>
-<div style="display: flex; flex-wrap: wrap; align-items: center; gap: 6px 10px; font-size: 14px; color: #3E5468">
-<span style="font-size: 12px; font-weight: 700; padding: 3px 9px; border-radius: 6px; background: #087E8B; color: #FFFFFF">Conferencia</span>Jueves 29 de octubre · 9:00–10:00 a. m.
-</div>
+<div>
+<h4>Claudia Inés Carrero Beltrán</h4>
+<p class="sp-inst">ICONTEC</p>
+<span class="ctry"><img src="/assets/img/banderas/colombia.svg" alt="" width="21" height="14" class="flag">Colombia</span>
+<p class="sp-topic">Plataforma E-collect</p>
+<p class="when"><b>Conferencia</b> · Jueves 29 de octubre · 9:00–10:00 a. m.</p>
 
-<p style="margin: 0; font-family: Manrope, sans-serif; font-weight: 700; font-size: 16px; line-height: 1.4; color: #102A43">Plataforma E-collect</p>
-<details style="margin-top: auto; border-top: 1px solid #E4EAF0; padding-top: 4px">
-<summary style="cursor: pointer; padding: 10px 0; font-size: 14px; font-weight: 600; color: #066F7A">Perfil profesional</summary>
-<p style="margin: 0 0 4px; font-size: 14px; line-height: 1.55; color: #3E5468">Profesional en Ciencias de la Información (2012); Técnico de Normas y Publicaciones</p>
+<details>
+<summary>Perfil profesional</summary>
+<p>Profesional en Ciencias de la Información (2012); Técnico de Normas y Publicaciones</p>
 </details>
+</div>
 </li>
 
-<li class="card-hover" data-reveal style="background: #FFFFFF; border: 1px solid #D5DEE6; border-radius: 18px; padding: 22px; display: flex; flex-direction: column; gap: 14px">
-<div style="display: flex; gap: 16px; align-items: center">
+<li class="sp" data-reveal>
+<div>
 
-<img src="/assets/img/conferencistas/roney-de-souza.webp" alt="Fotografía de Roney De Souza" width="400" height="400" loading="lazy" style="width: 84px; height: 84px; flex: none; border-radius: 999px; object-fit: cover; display: block; box-shadow: 0 0 0 3px #FFFFFF, 0 0 0 4px #D5DEE6">
+<img src="/assets/img/conferencistas/roney-de-souza.webp" alt="Fotografía de Roney De Souza" width="400" height="400" loading="lazy" class="portrait">
 
 
-<div style="display: flex; flex-direction: column; gap: 2px; min-width: 0">
-<h3 style="margin: 0; font-family: Manrope, sans-serif; font-weight: 800; font-size: 18px; line-height: 1.25">Roney De Souza</h3>
-<div style="font-size: 14px; color: #3E5468">INTROSEG Treinamentos Ltda</div>
-<div style="display: flex; align-items: center; gap: 7px; margin-top: 2px; font-size: 13px; font-weight: 700; color: #066F7A; letter-spacing: 0.04em; text-transform: uppercase"><img src="/assets/img/banderas/brasil.svg" alt="" width="21" height="14" style="width: 21px; height: 14px; border-radius: 2px; box-shadow: 0 0 0 1px rgba(16,42,67,0.16); display: block">Brasil</div>
 </div>
-</div>
-<div style="display: flex; flex-wrap: wrap; align-items: center; gap: 6px 10px; font-size: 14px; color: #3E5468">
-<span style="font-size: 12px; font-weight: 700; padding: 3px 9px; border-radius: 6px; background: #087E8B; color: #FFFFFF">Conferencia</span>Jueves 29 de octubre · 11:00 a. m.–12:00 m.
-</div>
+<div>
+<h4>Roney De Souza</h4>
+<p class="sp-inst">INTROSEG Treinamentos Ltda</p>
+<span class="ctry"><img src="/assets/img/banderas/brasil.svg" alt="" width="21" height="14" class="flag">Brasil</span>
+<p class="sp-topic">Cultura de emergencia en las empresas: algo de lo que nadie habla, pero que todos necesitan</p>
+<p class="when"><b>Conferencia</b> · Jueves 29 de octubre · 11:00 a. m.–12:00 m.</p>
 
-<p style="margin: 0; font-family: Manrope, sans-serif; font-weight: 700; font-size: 16px; line-height: 1.4; color: #102A43">Cultura de emergencia en las empresas: algo de lo que nadie habla, pero que todos necesitan</p>
-<details style="margin-top: auto; border-top: 1px solid #E4EAF0; padding-top: 4px">
-<summary style="cursor: pointer; padding: 10px 0; font-size: 14px; font-weight: 600; color: #066F7A">Perfil profesional</summary>
-<p style="margin: 0 0 4px; font-size: 14px; line-height: 1.55; color: #3E5468">Técnico en Seguridad del Trabajo y Bombero Civil; especialista en respuesta a emergencias (formación en TEEX, Texas, EE. UU.)</p>
+<details>
+<summary>Perfil profesional</summary>
+<p>Técnico en Seguridad del Trabajo y Bombero Civil; especialista en respuesta a emergencias (formación en TEEX, Texas, EE. UU.)</p>
 </details>
+</div>
 </li>
 
-<li class="card-hover" data-reveal style="background: #FFFFFF; border: 1px solid #D5DEE6; border-radius: 18px; padding: 22px; display: flex; flex-direction: column; gap: 14px">
-<div style="display: flex; gap: 16px; align-items: center">
+<li class="sp" data-reveal>
+<div>
 
-<img src="/assets/img/conferencistas/carlos-nacache.webp" alt="Fotografía de Carlos Nacache" width="400" height="400" loading="lazy" style="width: 84px; height: 84px; flex: none; border-radius: 999px; object-fit: cover; display: block; box-shadow: 0 0 0 3px #FFFFFF, 0 0 0 4px #D5DEE6">
+<img src="/assets/img/conferencistas/carlos-nacache.webp" alt="Fotografía de Carlos Nacache" width="400" height="400" loading="lazy" class="portrait">
 
 
-<div style="display: flex; flex-direction: column; gap: 2px; min-width: 0">
-<h3 style="margin: 0; font-family: Manrope, sans-serif; font-weight: 800; font-size: 18px; line-height: 1.25">Carlos Nacache</h3>
-<div style="font-size: 14px; color: #3E5468">Docente del INADEH y UMECIT de Panamá, y consultor asociado acreditado de la CLASST</div>
-<div style="display: flex; align-items: center; gap: 7px; margin-top: 2px; font-size: 13px; font-weight: 700; color: #066F7A; letter-spacing: 0.04em; text-transform: uppercase"><img src="/assets/img/banderas/panama.svg" alt="" width="21" height="14" style="width: 21px; height: 14px; border-radius: 2px; box-shadow: 0 0 0 1px rgba(16,42,67,0.16); display: block">Panamá</div>
 </div>
-</div>
-<div style="display: flex; flex-wrap: wrap; align-items: center; gap: 6px 10px; font-size: 14px; color: #3E5468">
-<span style="font-size: 12px; font-weight: 700; padding: 3px 9px; border-radius: 6px; background: #087E8B; color: #FFFFFF">Conferencia</span>Jueves 29 de octubre · 1:00–2:00 p. m.
-</div>
+<div>
+<h4>Carlos Nacache</h4>
+<p class="sp-inst">Docente del INADEH y UMECIT de Panamá, y consultor asociado acreditado de la CLASST</p>
+<span class="ctry"><img src="/assets/img/banderas/panama.svg" alt="" width="21" height="14" class="flag">Panamá</span>
+<p class="sp-topic">Rigor Léxico y Etimológico en la Gestión de Riesgos</p>
+<p class="when"><b>Conferencia</b> · Jueves 29 de octubre · 1:00–2:00 p. m.</p>
 
-<p style="margin: 0; font-family: Manrope, sans-serif; font-weight: 700; font-size: 16px; line-height: 1.4; color: #102A43">Rigor Léxico y Etimológico en la Gestión de Riesgos</p>
-<details style="margin-top: auto; border-top: 1px solid #E4EAF0; padding-top: 4px">
-<summary style="cursor: pointer; padding: 10px 0; font-size: 14px; font-weight: 600; color: #066F7A">Perfil profesional</summary>
-<p style="margin: 0 0 4px; font-size: 14px; line-height: 1.55; color: #3E5468">Consultor e instructor en Seguridad y Salud en el Trabajo (SST), especialista en gestión de riesgos y seguridad marítima y portuaria, con amplia experiencia en formación profesional, auditorías y sistemas de gestión bajo estándares internacionales.</p>
+<details>
+<summary>Perfil profesional</summary>
+<p>Consultor e instructor en Seguridad y Salud en el Trabajo (SST), especialista en gestión de riesgos y seguridad marítima y portuaria, con amplia experiencia en formación profesional, auditorías y sistemas de gestión bajo estándares internacionales.</p>
 </details>
+</div>
 </li>
 
-<li class="card-hover" data-reveal style="background: #FFFFFF; border: 1px solid #D5DEE6; border-radius: 18px; padding: 22px; display: flex; flex-direction: column; gap: 14px">
-<div style="display: flex; gap: 16px; align-items: center">
+<li class="sp" data-reveal>
+<div>
 
-<img src="/assets/img/conferencistas/moises-lopez-quintana.webp" alt="Fotografía de Moisés López Quintana" width="400" height="400" loading="lazy" style="width: 84px; height: 84px; flex: none; border-radius: 999px; object-fit: cover; display: block; box-shadow: 0 0 0 3px #FFFFFF, 0 0 0 4px #D5DEE6">
+<img src="/assets/img/conferencistas/moises-lopez-quintana.webp" alt="Fotografía de Moisés López Quintana" width="400" height="400" loading="lazy" class="portrait">
 
 
-<div style="display: flex; flex-direction: column; gap: 2px; min-width: 0">
-<h3 style="margin: 0; font-family: Manrope, sans-serif; font-weight: 800; font-size: 18px; line-height: 1.25">Moisés López Quintana</h3>
-<div style="font-size: 14px; color: #3E5468">Draguer</div>
-<div style="display: flex; align-items: center; gap: 7px; margin-top: 2px; font-size: 13px; font-weight: 700; color: #066F7A; letter-spacing: 0.04em; text-transform: uppercase"><img src="/assets/img/banderas/colombia.svg" alt="" width="21" height="14" style="width: 21px; height: 14px; border-radius: 2px; box-shadow: 0 0 0 1px rgba(16,42,67,0.16); display: block">Colombia</div>
 </div>
-</div>
-<div style="display: flex; flex-wrap: wrap; align-items: center; gap: 6px 10px; font-size: 14px; color: #3E5468">
-<span style="font-size: 12px; font-weight: 700; padding: 3px 9px; border-radius: 6px; background: #087E8B; color: #FFFFFF">Conferencia</span>Jueves 29 de octubre · 4:00–5:00 p. m.
-</div>
+<div>
+<h4>Moisés López Quintana</h4>
+<p class="sp-inst">Draguer</p>
+<span class="ctry"><img src="/assets/img/banderas/colombia.svg" alt="" width="21" height="14" class="flag">Colombia</span>
+<p class="sp-topic">Detección de atmósferas peligrosas en espacios confinados</p>
+<p class="when"><b>Conferencia</b> · Jueves 29 de octubre · 4:00–5:00 p. m.</p>
 
-<p style="margin: 0; font-family: Manrope, sans-serif; font-weight: 700; font-size: 16px; line-height: 1.4; color: #102A43">Detección de atmósferas peligrosas en espacios confinados</p>
-<details style="margin-top: auto; border-top: 1px solid #E4EAF0; padding-top: 4px">
-<summary style="cursor: pointer; padding: 10px 0; font-size: 14px; font-weight: 600; color: #066F7A">Perfil profesional</summary>
-<p style="margin: 0 0 4px; font-size: 14px; line-height: 1.55; color: #3E5468">Ingeniero Electrónico, especialista en comunicación industrial y sistemas Fire &amp; Gas, con maestría en control y extinción de incendios.</p>
+<details>
+<summary>Perfil profesional</summary>
+<p>Ingeniero Electrónico, especialista en comunicación industrial y sistemas Fire &amp; Gas, con maestría en control y extinción de incendios.</p>
 </details>
+</div>
 </li>
 
-<li class="card-hover" data-reveal style="background: #FFFFFF; border: 1px solid #D5DEE6; border-radius: 18px; padding: 22px; display: flex; flex-direction: column; gap: 14px">
-<div style="display: flex; gap: 16px; align-items: center">
+<li class="sp" data-reveal>
+<div>
 
-<img src="/assets/img/conferencistas/leonardo-gutierrez-lobo.webp" alt="Fotografía de Leonardo Gutiérrez Lobo" width="400" height="400" loading="lazy" style="width: 84px; height: 84px; flex: none; border-radius: 999px; object-fit: cover; display: block; box-shadow: 0 0 0 3px #FFFFFF, 0 0 0 4px #D5DEE6">
+<img src="/assets/img/conferencistas/leonardo-gutierrez-lobo.webp" alt="Fotografía de Leonardo Gutiérrez Lobo" width="400" height="400" loading="lazy" class="portrait">
 
 
-<div style="display: flex; flex-direction: column; gap: 2px; min-width: 0">
-<h3 style="margin: 0; font-family: Manrope, sans-serif; font-weight: 800; font-size: 18px; line-height: 1.25">Leonardo Gutiérrez Lobo</h3>
-<div style="font-size: 14px; color: #3E5468">SURA</div>
-<div style="display: flex; align-items: center; gap: 7px; margin-top: 2px; font-size: 13px; font-weight: 700; color: #066F7A; letter-spacing: 0.04em; text-transform: uppercase"><img src="/assets/img/banderas/colombia.svg" alt="" width="21" height="14" style="width: 21px; height: 14px; border-radius: 2px; box-shadow: 0 0 0 1px rgba(16,42,67,0.16); display: block">Colombia</div>
 </div>
-</div>
-<div style="display: flex; flex-wrap: wrap; align-items: center; gap: 6px 10px; font-size: 14px; color: #3E5468">
-<span style="font-size: 12px; font-weight: 700; padding: 3px 9px; border-radius: 6px; background: #087E8B; color: #FFFFFF">Conferencia</span>Jueves 29 de octubre · 7:00–8:00 p. m.
-</div>
+<div>
+<h4>Leonardo Gutiérrez Lobo</h4>
+<p class="sp-inst">SURA</p>
+<span class="ctry"><img src="/assets/img/banderas/colombia.svg" alt="" width="21" height="14" class="flag">Colombia</span>
+<p class="sp-topic">Cuando el error no es una opción: Seguridad de Procesos y la nueva era de prevención de accidentes mayores en Colombia</p>
+<p class="when"><b>Conferencia</b> · Jueves 29 de octubre · 7:00–8:00 p. m.</p>
 
-<p style="margin: 0; font-family: Manrope, sans-serif; font-weight: 700; font-size: 16px; line-height: 1.4; color: #102A43">Cuando el error no es una opción: Seguridad de Procesos y la nueva era de prevención de accidentes mayores en Colombia</p>
-<details style="margin-top: auto; border-top: 1px solid #E4EAF0; padding-top: 4px">
-<summary style="cursor: pointer; padding: 10px 0; font-size: 14px; font-weight: 600; color: #066F7A">Perfil profesional</summary>
-<p style="margin: 0 0 4px; font-size: 14px; line-height: 1.55; color: #3E5468">Ingeniero ambiental y de saneamiento; especialista en Prevención, Reducción y Atención de Desastres y en Seguridad Industrial, Higiene y Gestión Ambiental, estudiante de maestría en Gerencia Integral del Riesgo.</p>
+<details>
+<summary>Perfil profesional</summary>
+<p>Ingeniero ambiental y de saneamiento; especialista en Prevención, Reducción y Atención de Desastres y en Seguridad Industrial, Higiene y Gestión Ambiental, estudiante de maestría en Gerencia Integral del Riesgo.</p>
 </details>
+</div>
 </li>
 
-<li class="card-hover" data-reveal style="background: #FFFFFF; border: 1px solid #D5DEE6; border-radius: 18px; padding: 22px; display: flex; flex-direction: column; gap: 14px">
-<div style="display: flex; gap: 16px; align-items: center">
+<li class="sp" data-reveal>
+<div>
 
 
-<div aria-hidden="true" style="width: 84px; height: 84px; flex: none; border-radius: 999px; background: #DDEFF1; color: #066F7A; display: flex; align-items: center; justify-content: center; font-family: Manrope, sans-serif; font-weight: 800; font-size: 26px; letter-spacing: 0.04em">BA</div>
+<div aria-hidden="true" class="ini">BA</div>
 
-<div style="display: flex; flex-direction: column; gap: 2px; min-width: 0">
-<h3 style="margin: 0; font-family: Manrope, sans-serif; font-weight: 800; font-size: 18px; line-height: 1.25">Belinda Alberty</h3>
-<div style="font-size: 14px; color: #3E5468">BAF &amp; Asociados y coordinadora de Ciencias de la Salud en la Universidad Cristiana Evangélica Nuevo Milenio (UCENM), Honduras</div>
-<div style="display: flex; align-items: center; gap: 7px; margin-top: 2px; font-size: 13px; font-weight: 700; color: #066F7A; letter-spacing: 0.04em; text-transform: uppercase"><img src="/assets/img/banderas/honduras.svg" alt="" width="21" height="14" style="width: 21px; height: 14px; border-radius: 2px; box-shadow: 0 0 0 1px rgba(16,42,67,0.16); display: block">Honduras</div>
 </div>
-</div>
-<div style="display: flex; flex-wrap: wrap; align-items: center; gap: 6px 10px; font-size: 14px; color: #3E5468">
-<span style="font-size: 12px; font-weight: 700; padding: 3px 9px; border-radius: 6px; background: #087E8B; color: #FFFFFF">Conferencia</span>Jueves 29 de octubre · 8:00–9:00 p. m.
-</div>
+<div>
+<h4>Belinda Alberty</h4>
+<p class="sp-inst">BAF &amp; Asociados y coordinadora de Ciencias de la Salud en la Universidad Cristiana Evangélica Nuevo Milenio (UCENM), Honduras</p>
+<span class="ctry"><img src="/assets/img/banderas/honduras.svg" alt="" width="21" height="14" class="flag">Honduras</span>
+<p class="sp-topic">Prevención de riesgos en SST desde la edad infantil</p>
+<p class="when"><b>Conferencia</b> · Jueves 29 de octubre · 8:00–9:00 p. m.</p>
 
-<p style="margin: 0; font-family: Manrope, sans-serif; font-weight: 700; font-size: 16px; line-height: 1.4; color: #102A43">Prevención de riesgos en SST desde la edad infantil</p>
-<details style="margin-top: auto; border-top: 1px solid #E4EAF0; padding-top: 4px">
-<summary style="cursor: pointer; padding: 10px 0; font-size: 14px; font-weight: 600; color: #066F7A">Perfil profesional</summary>
-<p style="margin: 0 0 4px; font-size: 14px; line-height: 1.55; color: #3E5468">Médica especialista y máster en Salud Ocupacional, con amplia experiencia en medicina laboral, consultoría en Seguridad y Salud Ocupacional, ergonomía y vigilancia médica basada en riesgos.</p>
+<details>
+<summary>Perfil profesional</summary>
+<p>Médica especialista y máster en Salud Ocupacional, con amplia experiencia en medicina laboral, consultoría en Seguridad y Salud Ocupacional, ergonomía y vigilancia médica basada en riesgos.</p>
 </details>
+</div>
 </li>
 
-<li class="card-hover" data-reveal style="background: #FFFFFF; border: 1px solid #D5DEE6; border-radius: 18px; padding: 22px; display: flex; flex-direction: column; gap: 14px">
-<div style="display: flex; gap: 16px; align-items: center">
+<li class="sp" data-reveal>
+<div>
 
 
-<div aria-hidden="true" style="width: 84px; height: 84px; flex: none; border-radius: 999px; background: #DDEFF1; color: #066F7A; display: flex; align-items: center; justify-content: center; font-family: Manrope, sans-serif; font-weight: 800; font-size: 26px; letter-spacing: 0.04em">EA</div>
+<div aria-hidden="true" class="ini">EA</div>
 
-<div style="display: flex; flex-direction: column; gap: 2px; min-width: 0">
-<h3 style="margin: 0; font-family: Manrope, sans-serif; font-weight: 800; font-size: 18px; line-height: 1.25">Elenisa Aldana Mora</h3>
-<div style="font-size: 14px; color: #3E5468">Adecco Outsourcing</div>
-<div style="display: flex; align-items: center; gap: 7px; margin-top: 2px; font-size: 13px; font-weight: 700; color: #066F7A; letter-spacing: 0.04em; text-transform: uppercase"><img src="/assets/img/banderas/colombia.svg" alt="" width="21" height="14" style="width: 21px; height: 14px; border-radius: 2px; box-shadow: 0 0 0 1px rgba(16,42,67,0.16); display: block">Colombia</div>
 </div>
-</div>
-<div style="display: flex; flex-wrap: wrap; align-items: center; gap: 6px 10px; font-size: 14px; color: #3E5468">
-<span style="font-size: 12px; font-weight: 700; padding: 3px 9px; border-radius: 6px; background: #087E8B; color: #FFFFFF">Actividad de cierre</span>Jueves 29 de octubre · 9:00–10:00 p. m.
-</div>
+<div>
+<h4>Elenisa Aldana Mora</h4>
+<p class="sp-inst">Adecco Outsourcing</p>
+<span class="ctry"><img src="/assets/img/banderas/colombia.svg" alt="" width="21" height="14" class="flag">Colombia</span>
+<p class="sp-topic">Actividad de cierre del día 1</p>
+<p class="when"><b>Actividad de cierre</b> · Jueves 29 de octubre · 9:00–10:00 p. m.</p>
 
-<p style="margin: 0; font-family: Manrope, sans-serif; font-weight: 700; font-size: 16px; line-height: 1.4; color: #102A43">Actividad de cierre del día 1</p>
-<details style="margin-top: auto; border-top: 1px solid #E4EAF0; padding-top: 4px">
-<summary style="cursor: pointer; padding: 10px 0; font-size: 14px; font-weight: 600; color: #066F7A">Perfil profesional</summary>
-<p style="margin: 0 0 4px; font-size: 14px; line-height: 1.55; color: #3E5468">Psicóloga especialista en Seguridad y Salud en el Trabajo (SST), con 19 años de experiencia laboral.</p>
+<details>
+<summary>Perfil profesional</summary>
+<p>Psicóloga especialista en Seguridad y Salud en el Trabajo (SST), con 19 años de experiencia laboral.</p>
 </details>
+</div>
 </li>
 
-<li class="card-hover" data-reveal style="background: #FFFFFF; border: 1px solid #D5DEE6; border-radius: 18px; padding: 22px; display: flex; flex-direction: column; gap: 14px">
-<div style="display: flex; gap: 16px; align-items: center">
+<li class="sp" data-reveal>
+<div>
 
-<img src="/assets/img/conferencistas/fernando-m-torres-gonzalez.webp" alt="Fotografía de Ing. Fernando M. Torres González, Mg." width="400" height="400" loading="lazy" style="width: 84px; height: 84px; flex: none; border-radius: 999px; object-fit: cover; display: block; box-shadow: 0 0 0 3px #FFFFFF, 0 0 0 4px #D5DEE6">
+<img src="/assets/img/conferencistas/fernando-m-torres-gonzalez.webp" alt="Fotografía de Ing. Fernando M. Torres González, Mg." width="400" height="400" loading="lazy" class="portrait">
 
 
-<div style="display: flex; flex-direction: column; gap: 2px; min-width: 0">
-<h3 style="margin: 0; font-family: Manrope, sans-serif; font-weight: 800; font-size: 18px; line-height: 1.25">Ing. Fernando M. Torres González, Mg.</h3>
-<div style="font-size: 14px; color: #3E5468">FTorres Servicios de Ingeniería / SIMA Ingeniería</div>
-<div style="display: flex; align-items: center; gap: 7px; margin-top: 2px; font-size: 13px; font-weight: 700; color: #066F7A; letter-spacing: 0.04em; text-transform: uppercase"><img src="/assets/img/banderas/chile.svg" alt="" width="21" height="14" style="width: 21px; height: 14px; border-radius: 2px; box-shadow: 0 0 0 1px rgba(16,42,67,0.16); display: block">Chile</div>
 </div>
-</div>
-<div style="display: flex; flex-wrap: wrap; align-items: center; gap: 6px 10px; font-size: 14px; color: #3E5468">
-<span style="font-size: 12px; font-weight: 700; padding: 3px 9px; border-radius: 6px; background: #087E8B; color: #FFFFFF">Conferencia</span>Viernes 30 de octubre · 8:00–9:00 a. m.
-</div>
+<div>
+<h4>Ing. Fernando M. Torres González, Mg.</h4>
+<p class="sp-inst">FTorres Servicios de Ingeniería / SIMA Ingeniería</p>
+<span class="ctry"><img src="/assets/img/banderas/chile.svg" alt="" width="21" height="14" class="flag">Chile</span>
+<p class="sp-topic">Procedimientos de Gestión Integral e Investigación Avanzada de Incidentes HSEC</p>
+<p class="when"><b>Conferencia</b> · Viernes 30 de octubre · 8:00–9:00 a. m.</p>
 
-<div style="font-size: 13px; color: #3E5468; margin-top: -6px"><strong style="color: #066F7A">Segunda intervención:</strong> Viernes 30 de octubre · 7:00–8:00 p. m. — Modelo dinámico de riesgos para la minería</div>
+<p class="sp-extra"><b>Segunda intervención:</b> Viernes 30 de octubre · 7:00–8:00 p. m. — Modelo dinámico de riesgos para la minería</p>
 
-<p style="margin: 0; font-family: Manrope, sans-serif; font-weight: 700; font-size: 16px; line-height: 1.4; color: #102A43">Procedimientos de Gestión Integral e Investigación Avanzada de Incidentes HSEC</p>
-<details style="margin-top: auto; border-top: 1px solid #E4EAF0; padding-top: 4px">
-<summary style="cursor: pointer; padding: 10px 0; font-size: 14px; font-weight: 600; color: #066F7A">Perfil profesional</summary>
-<p style="margin: 0 0 4px; font-size: 14px; line-height: 1.55; color: #3E5468">Ingeniero en Prevención de Riesgos y Medioambiente, Magíster en Gestión de Riesgos y Magíster en Gestión Ambiental.</p>
+<details>
+<summary>Perfil profesional</summary>
+<p>Ingeniero en Prevención de Riesgos y Medioambiente, Magíster en Gestión de Riesgos y Magíster en Gestión Ambiental.</p>
 </details>
+</div>
 </li>
 
-<li class="card-hover" data-reveal style="background: #FFFFFF; border: 1px solid #D5DEE6; border-radius: 18px; padding: 22px; display: flex; flex-direction: column; gap: 14px">
-<div style="display: flex; gap: 16px; align-items: center">
+<li class="sp" data-reveal>
+<div>
 
 
-<div aria-hidden="true" style="width: 84px; height: 84px; flex: none; border-radius: 999px; background: #DDEFF1; color: #066F7A; display: flex; align-items: center; justify-content: center; font-family: Manrope, sans-serif; font-weight: 800; font-size: 26px; letter-spacing: 0.04em">RH</div>
+<div aria-hidden="true" class="ini">RH</div>
 
-<div style="display: flex; flex-direction: column; gap: 2px; min-width: 0">
-<h3 style="margin: 0; font-family: Manrope, sans-serif; font-weight: 800; font-size: 18px; line-height: 1.25">Regis Hernández</h3>
-<div style="font-size: 14px; color: #3E5468">Ecopetrol SA</div>
-<div style="display: flex; align-items: center; gap: 7px; margin-top: 2px; font-size: 13px; font-weight: 700; color: #066F7A; letter-spacing: 0.04em; text-transform: uppercase"><img src="/assets/img/banderas/colombia.svg" alt="" width="21" height="14" style="width: 21px; height: 14px; border-radius: 2px; box-shadow: 0 0 0 1px rgba(16,42,67,0.16); display: block">Colombia</div>
 </div>
-</div>
-<div style="display: flex; flex-wrap: wrap; align-items: center; gap: 6px 10px; font-size: 14px; color: #3E5468">
-<span style="font-size: 12px; font-weight: 700; padding: 3px 9px; border-radius: 6px; background: #087E8B; color: #FFFFFF">Conferencia</span>Viernes 30 de octubre · 11:00 a. m.–12:00 m.
-</div>
+<div>
+<h4>Regis Hernández</h4>
+<p class="sp-inst">Ecopetrol SA</p>
+<span class="ctry"><img src="/assets/img/banderas/colombia.svg" alt="" width="21" height="14" class="flag">Colombia</span>
+<p class="sp-topic">Título por confirmar</p>
+<p class="when"><b>Conferencia</b> · Viernes 30 de octubre · 11:00 a. m.–12:00 m.</p>
 
-<p style="margin: 0; font-family: Manrope, sans-serif; font-weight: 700; font-size: 16px; line-height: 1.4; color: #102A43">Título por confirmar</p>
-<details style="margin-top: auto; border-top: 1px solid #E4EAF0; padding-top: 4px">
-<summary style="cursor: pointer; padding: 10px 0; font-size: 14px; font-weight: 600; color: #066F7A">Perfil profesional</summary>
-<p style="margin: 0 0 4px; font-size: 14px; line-height: 1.55; color: #3E5468">Profesional en Salud Ocupacional, Tecnólogo en Producción, especialista en Higiene Industrial y en Tareas Críticas, magíster en Administración y Calidad. Formación en Transferencia de Conocimiento mediante convenio entre la Universidad Javeriana, el Instituto Tecnológico de Massachusetts (MIT), OSHA y la Universidad Ecopetrol.</p>
+<details>
+<summary>Perfil profesional</summary>
+<p>Profesional en Salud Ocupacional, Tecnólogo en Producción, especialista en Higiene Industrial y en Tareas Críticas, magíster en Administración y Calidad. Formación en Transferencia de Conocimiento mediante convenio entre la Universidad Javeriana, el Instituto Tecnológico de Massachusetts (MIT), OSHA y la Universidad Ecopetrol.</p>
 </details>
+</div>
 </li>
 
-<li class="card-hover" data-reveal style="background: #FFFFFF; border: 1px solid #D5DEE6; border-radius: 18px; padding: 22px; display: flex; flex-direction: column; gap: 14px">
-<div style="display: flex; gap: 16px; align-items: center">
+<li class="sp" data-reveal>
+<div>
 
-<img src="/assets/img/conferencistas/reynaldo-andres-concha-maureira.webp" alt="Fotografía de Dr. Reynaldo Andrés Concha Maureira" width="400" height="400" loading="lazy" style="width: 84px; height: 84px; flex: none; border-radius: 999px; object-fit: cover; display: block; box-shadow: 0 0 0 3px #FFFFFF, 0 0 0 4px #D5DEE6">
+<img src="/assets/img/conferencistas/reynaldo-andres-concha-maureira.webp" alt="Fotografía de Dr. Reynaldo Andrés Concha Maureira" width="400" height="400" loading="lazy" class="portrait">
 
 
-<div style="display: flex; flex-direction: column; gap: 2px; min-width: 0">
-<h3 style="margin: 0; font-family: Manrope, sans-serif; font-weight: 800; font-size: 18px; line-height: 1.25">Dr. Reynaldo Andrés Concha Maureira</h3>
-<div style="font-size: 14px; color: #3E5468">Universidad de Valparaíso / Universidad de Concepción</div>
-<div style="display: flex; align-items: center; gap: 7px; margin-top: 2px; font-size: 13px; font-weight: 700; color: #066F7A; letter-spacing: 0.04em; text-transform: uppercase"><img src="/assets/img/banderas/chile.svg" alt="" width="21" height="14" style="width: 21px; height: 14px; border-radius: 2px; box-shadow: 0 0 0 1px rgba(16,42,67,0.16); display: block">Chile</div>
 </div>
-</div>
-<div style="display: flex; flex-wrap: wrap; align-items: center; gap: 6px 10px; font-size: 14px; color: #3E5468">
-<span style="font-size: 12px; font-weight: 700; padding: 3px 9px; border-radius: 6px; background: #087E8B; color: #FFFFFF">Conferencia</span>Viernes 30 de octubre · 1:00–2:00 p. m.
-</div>
+<div>
+<h4>Dr. Reynaldo Andrés Concha Maureira</h4>
+<p class="sp-inst">Universidad de Valparaíso / Universidad de Concepción</p>
+<span class="ctry"><img src="/assets/img/banderas/chile.svg" alt="" width="21" height="14" class="flag">Chile</span>
+<p class="sp-topic">La toxicología en la Salud Laboral, su pasado y sus desafíos futuros</p>
+<p class="when"><b>Conferencia</b> · Viernes 30 de octubre · 1:00–2:00 p. m.</p>
 
-<p style="margin: 0; font-family: Manrope, sans-serif; font-weight: 700; font-size: 16px; line-height: 1.4; color: #102A43">La toxicología en la Salud Laboral, su pasado y sus desafíos futuros</p>
-<details style="margin-top: auto; border-top: 1px solid #E4EAF0; padding-top: 4px">
-<summary style="cursor: pointer; padding: 10px 0; font-size: 14px; font-weight: 600; color: #066F7A">Perfil profesional</summary>
-<p style="margin: 0 0 4px; font-size: 14px; line-height: 1.55; color: #3E5468">Médico Cirujano, especialista en Salud Ocupacional (Magíster en Ergonomía)</p>
+<details>
+<summary>Perfil profesional</summary>
+<p>Médico Cirujano, especialista en Salud Ocupacional (Magíster en Ergonomía)</p>
 </details>
+</div>
 </li>
 
-<li class="card-hover" data-reveal style="background: #FFFFFF; border: 1px solid #D5DEE6; border-radius: 18px; padding: 22px; display: flex; flex-direction: column; gap: 14px">
-<div style="display: flex; gap: 16px; align-items: center">
+<li class="sp" data-reveal>
+<div>
 
 
-<div aria-hidden="true" style="width: 84px; height: 84px; flex: none; border-radius: 999px; background: #DDEFF1; color: #066F7A; display: flex; align-items: center; justify-content: center; font-family: Manrope, sans-serif; font-weight: 800; font-size: 26px; letter-spacing: 0.04em">ER</div>
+<div aria-hidden="true" class="ini">ER</div>
 
-<div style="display: flex; flex-direction: column; gap: 2px; min-width: 0">
-<h3 style="margin: 0; font-family: Manrope, sans-serif; font-weight: 800; font-size: 18px; line-height: 1.25">Eylin Rodríguez</h3>
-<div style="font-size: 14px; color: #3E5468">Universidad Cristiana Evangélica Nuevo Milenio (UCENM)</div>
-<div style="display: flex; align-items: center; gap: 7px; margin-top: 2px; font-size: 13px; font-weight: 700; color: #066F7A; letter-spacing: 0.04em; text-transform: uppercase"><img src="/assets/img/banderas/honduras.svg" alt="" width="21" height="14" style="width: 21px; height: 14px; border-radius: 2px; box-shadow: 0 0 0 1px rgba(16,42,67,0.16); display: block">Honduras</div>
 </div>
-</div>
-<div style="display: flex; flex-wrap: wrap; align-items: center; gap: 6px 10px; font-size: 14px; color: #3E5468">
-<span style="font-size: 12px; font-weight: 700; padding: 3px 9px; border-radius: 6px; background: #087E8B; color: #FFFFFF">Conferencia</span>Viernes 30 de octubre · 4:00–5:00 p. m.
-</div>
+<div>
+<h4>Eylin Rodríguez</h4>
+<p class="sp-inst">Universidad Cristiana Evangélica Nuevo Milenio (UCENM)</p>
+<span class="ctry"><img src="/assets/img/banderas/honduras.svg" alt="" width="21" height="14" class="flag">Honduras</span>
+<p class="sp-topic">Envejecimiento de la fuerza laboral: el reto emergente de la salud ocupacional</p>
+<p class="when"><b>Conferencia</b> · Viernes 30 de octubre · 4:00–5:00 p. m.</p>
 
-<p style="margin: 0; font-family: Manrope, sans-serif; font-weight: 700; font-size: 16px; line-height: 1.4; color: #102A43">Envejecimiento de la fuerza laboral: el reto emergente de la salud ocupacional</p>
-<details style="margin-top: auto; border-top: 1px solid #E4EAF0; padding-top: 4px">
-<summary style="cursor: pointer; padding: 10px 0; font-size: 14px; font-weight: 600; color: #066F7A">Perfil profesional</summary>
-<p style="margin: 0 0 4px; font-size: 14px; line-height: 1.55; color: #3E5468">Médica y cirujana; magíster en Salud Ocupacional, con experiencia en medicina laboral, docencia universitaria, dirección médica y coordinación académica en asistencia geriátrica.</p>
+<details>
+<summary>Perfil profesional</summary>
+<p>Médica y cirujana; magíster en Salud Ocupacional, con experiencia en medicina laboral, docencia universitaria, dirección médica y coordinación académica en asistencia geriátrica.</p>
 </details>
+</div>
 </li>
 
-<li class="card-hover" data-reveal style="background: #FFFFFF; border: 1px solid #D5DEE6; border-radius: 18px; padding: 22px; display: flex; flex-direction: column; gap: 14px">
-<div style="display: flex; gap: 16px; align-items: center">
+<li class="sp" data-reveal>
+<div>
 
 
-<div aria-hidden="true" style="width: 84px; height: 84px; flex: none; border-radius: 999px; background: #DDEFF1; color: #066F7A; display: flex; align-items: center; justify-content: center; font-family: Manrope, sans-serif; font-weight: 800; font-size: 26px; letter-spacing: 0.04em">JR</div>
+<div aria-hidden="true" class="ini">JR</div>
 
-<div style="display: flex; flex-direction: column; gap: 2px; min-width: 0">
-<h3 style="margin: 0; font-family: Manrope, sans-serif; font-weight: 800; font-size: 18px; line-height: 1.25">José Fernando Rojas</h3>
-<div style="font-size: 14px; color: #3E5468">Salgado Melendez asociados</div>
-<div style="display: flex; align-items: center; gap: 7px; margin-top: 2px; font-size: 13px; font-weight: 700; color: #066F7A; letter-spacing: 0.04em; text-transform: uppercase"><img src="/assets/img/banderas/colombia.svg" alt="" width="21" height="14" style="width: 21px; height: 14px; border-radius: 2px; box-shadow: 0 0 0 1px rgba(16,42,67,0.16); display: block">Colombia</div>
 </div>
-</div>
-<div style="display: flex; flex-wrap: wrap; align-items: center; gap: 6px 10px; font-size: 14px; color: #3E5468">
-<span style="font-size: 12px; font-weight: 700; padding: 3px 9px; border-radius: 6px; background: #087E8B; color: #FFFFFF">Conferencia</span>Viernes 30 de octubre · 8:00–9:00 p. m.
-</div>
+<div>
+<h4>José Fernando Rojas</h4>
+<p class="sp-inst">Salgado Melendez asociados</p>
+<span class="ctry"><img src="/assets/img/banderas/colombia.svg" alt="" width="21" height="14" class="flag">Colombia</span>
+<p class="sp-topic">Seguridad en las operaciones marítimas y fluviales, y el papel del profesional y/o especialista en la seguridad y la salud en el trabajo en estos escenarios</p>
+<p class="when"><b>Conferencia</b> · Viernes 30 de octubre · 8:00–9:00 p. m.</p>
 
-<p style="margin: 0; font-family: Manrope, sans-serif; font-weight: 700; font-size: 16px; line-height: 1.4; color: #102A43">Seguridad en las operaciones marítimas y fluviales, y el papel del profesional y/o especialista en la seguridad y la salud en el trabajo en estos escenarios</p>
-<details style="margin-top: auto; border-top: 1px solid #E4EAF0; padding-top: 4px">
-<summary style="cursor: pointer; padding: 10px 0; font-size: 14px; font-weight: 600; color: #066F7A">Perfil profesional</summary>
-<p style="margin: 0 0 4px; font-size: 14px; line-height: 1.55; color: #3E5468">Licenciado en Educación; especialista en Gerencia de Seguridad y Salud en el Trabajo, máster en Emergencias y técnico en Emergencias Médicas, con experiencia en gestión HSE/PRE, tareas de alto riesgo, emergencias y seguridad de operaciones marítimas y fluviales.</p>
+<details>
+<summary>Perfil profesional</summary>
+<p>Licenciado en Educación; especialista en Gerencia de Seguridad y Salud en el Trabajo, máster en Emergencias y técnico en Emergencias Médicas, con experiencia en gestión HSE/PRE, tareas de alto riesgo, emergencias y seguridad de operaciones marítimas y fluviales.</p>
 </details>
+</div>
 </li>
 
-<li class="card-hover" data-reveal style="background: #FFFFFF; border: 1px solid #D5DEE6; border-radius: 18px; padding: 22px; display: flex; flex-direction: column; gap: 14px">
-<div style="display: flex; gap: 16px; align-items: center">
+<li class="sp" data-reveal>
+<div>
 
-<img src="/assets/img/conferencistas/luigi-prado-zapata.webp" alt="Fotografía de Luigi Prado Zapata" width="400" height="400" loading="lazy" style="width: 84px; height: 84px; flex: none; border-radius: 999px; object-fit: cover; display: block; box-shadow: 0 0 0 3px #FFFFFF, 0 0 0 4px #D5DEE6">
+<img src="/assets/img/conferencistas/luigi-prado-zapata.webp" alt="Fotografía de Luigi Prado Zapata" width="400" height="400" loading="lazy" class="portrait">
 
 
-<div style="display: flex; flex-direction: column; gap: 2px; min-width: 0">
-<h3 style="margin: 0; font-family: Manrope, sans-serif; font-weight: 800; font-size: 18px; line-height: 1.25">Luigi Prado Zapata</h3>
-<div style="font-size: 14px; color: #3E5468">SST Asesores SAC</div>
-<div style="display: flex; align-items: center; gap: 7px; margin-top: 2px; font-size: 13px; font-weight: 700; color: #066F7A; letter-spacing: 0.04em; text-transform: uppercase"><img src="/assets/img/banderas/peru.svg" alt="" width="21" height="14" style="width: 21px; height: 14px; border-radius: 2px; box-shadow: 0 0 0 1px rgba(16,42,67,0.16); display: block">Perú</div>
 </div>
-</div>
-<div style="display: flex; flex-wrap: wrap; align-items: center; gap: 6px 10px; font-size: 14px; color: #3E5468">
-<span style="font-size: 12px; font-weight: 700; padding: 3px 9px; border-radius: 6px; background: #087E8B; color: #FFFFFF">Actividad de cierre</span>Viernes 30 de octubre · 9:00–10:00 p. m.
-</div>
+<div>
+<h4>Luigi Prado Zapata</h4>
+<p class="sp-inst">SST Asesores SAC</p>
+<span class="ctry"><img src="/assets/img/banderas/peru.svg" alt="" width="21" height="14" class="flag">Perú</span>
+<p class="sp-topic">Ludoprevención – actividad de cierre del Congreso</p>
+<p class="when"><b>Actividad de cierre</b> · Viernes 30 de octubre · 9:00–10:00 p. m.</p>
 
-<p style="margin: 0; font-family: Manrope, sans-serif; font-weight: 700; font-size: 16px; line-height: 1.4; color: #102A43">Ludoprevención – actividad de cierre del Congreso</p>
-<details style="margin-top: auto; border-top: 1px solid #E4EAF0; padding-top: 4px">
-<summary style="cursor: pointer; padding: 10px 0; font-size: 14px; font-weight: 600; color: #066F7A">Perfil profesional</summary>
-<p style="margin: 0 0 4px; font-size: 14px; line-height: 1.55; color: #3E5468">Ingeniero Ambiental; Magíster en Seguridad y Salud en el Trabajo y en Gestión Ambiental y Minera</p>
+<details>
+<summary>Perfil profesional</summary>
+<p>Ingeniero Ambiental; Magíster en Seguridad y Salud en el Trabajo y en Gestión Ambiental y Minera</p>
 </details>
+</div>
 </li>
 
 </ul>
 </div>
 </section>
 
-<section id="instituciones" aria-labelledby="h-inst" style="padding: 104px 0; background: #FFFFFF; border-top: 1px solid #E4EAF0">
-<div style="max-width: 1200px; margin: 0 auto; padding: 0 24px; display: flex; flex-wrap: wrap; gap: 48px; align-items: center">
-<div data-reveal style="flex: 1 1 440px; display: flex; flex-direction: column; gap: 16px">
-<div style="display: flex; align-items: center; gap: 10px; font-family: Manrope, sans-serif; font-weight: 800; font-size: 14px; letter-spacing: 0.14em; color: #066F7A"><span style="width: 24px; height: 3px; background: #D99A27"></span>ORGANIZA</div>
-<h2 id="h-inst" style="margin: 0; font-family: Manrope, sans-serif; font-weight: 800; font-size: clamp(28px, 3.3vw, 40px); line-height: 1.12; letter-spacing: -0.01em">Una iniciativa de los programas de SST de UNIPAZ</h2>
-<p style="margin: 0; color: #3E5468; max-width: 62ch">El I Congreso Nacional e Internacional de Seguridad y Salud en el Trabajo es una iniciativa de los programas de Tecnología en Seguridad y Salud en el Trabajo, Ingeniería en Seguridad y Salud en el Trabajo y Especialización en Seguridad y Salud en el Trabajo del Instituto Universitario de la Paz – UNIPAZ, con el apoyo del Grupo de Investigación GREIP. Nace como un espacio para llevar la formación en SST de nuestra región a escenarios nacionales e internacionales, y para promover el diálogo entre la academia, el sector productivo y los profesionales comprometidos con entornos de trabajo más seguros y saludables.</p>
+<section id="instituciones" aria-labelledby="h-inst" class="sec sec-mist">
+<div class="wrap">
+<div class="sec-head" data-reveal>
+<p class="label"><span class="n">04</span>Organiza</p>
+<h2 id="h-inst" class="h2">Una iniciativa de los programas de SST de UNIPAZ</h2>
+<div class="intro"><p>El I Congreso Nacional e Internacional de Seguridad y Salud en el Trabajo es una iniciativa de los programas de Tecnología en Seguridad y Salud en el Trabajo, Ingeniería en Seguridad y Salud en el Trabajo y Especialización en Seguridad y Salud en el Trabajo del Instituto Universitario de la Paz – UNIPAZ, con el apoyo del Grupo de Investigación GREIP. Nace como un espacio para llevar la formación en SST de nuestra región a escenarios nacionales e internacionales, y para promover el diálogo entre la academia, el sector productivo y los profesionales comprometidos con entornos de trabajo más seguros y saludables.</p></div>
 </div>
-<div style="flex: 1 1 460px; display: flex; flex-wrap: wrap; gap: 20px; align-items: center">
-<div class="card-hover" data-reveal style="flex: 1.35 1 260px; border: 1.5px solid #8CC3CA; border-radius: 20px; padding: 30px; display: flex; flex-direction: column; gap: 20px; background: #FFFFFF; box-shadow: 0 12px 32px rgba(16,42,67,0.08)">
-<div style="height: 132px; box-sizing: border-box; background: #FFFFFF; border: 1px solid #E4EAF0; border-radius: 12px; display: flex; align-items: center; justify-content: center; padding: 20px">
-<img src="/assets/img/logo-unipaz.webp" alt="Logotipo de UNIPAZ, Instituto Universitario de la Paz" width="900" height="187" style="width: 100%; max-width: 280px; height: auto; display: block"></div>
-<div style="display: flex; flex-direction: column; gap: 4px">
-<div style="font-size: 12px; font-weight: 700; letter-spacing: 0.12em; color: #066F7A">ORGANIZA</div>
-<div style="font-family: Manrope, sans-serif; font-weight: 800; font-size: 24px">UNIPAZ</div>
-<div style="color: #3E5468">Programas de Seguridad y Salud en el Trabajo · Instituto Universitario de la Paz</div>
+<div class="partners">
+<div class="partner" data-reveal>
+<div class="plate plate-lg"><img src="/assets/img/logo-unipaz.webp" alt="Logotipo de UNIPAZ, Instituto Universitario de la Paz" width="900" height="187"></div>
+<div><div class="p-k">Organiza</div><p class="p-n">UNIPAZ</p><p class="p-d">Programas de Seguridad y Salud en el Trabajo · Instituto Universitario de la Paz</p></div>
 </div>
-</div>
-<div data-reveal style="flex: 1 1 200px; border: 1px solid #E4EAF0; border-radius: 18px; padding: 22px; display: flex; flex-direction: column; gap: 16px; background: #F5F8FA">
-<div style="height: 92px; box-sizing: border-box; background: #FFFFFF; border: 1px solid #E4EAF0; border-radius: 12px; display: flex; align-items: center; justify-content: center; padding: 14px">
-<img src="/assets/img/logo-greip.webp" alt="Logotipo de GREIP, Grupo de Investigación en Reingeniería, Innovación y Productividad" width="600" height="245" style="height: 100%; width: auto; max-width: 100%; display: block; object-fit: contain"></div>
-<div style="display: flex; flex-direction: column; gap: 4px">
-<div style="font-size: 12px; font-weight: 700; letter-spacing: 0.12em; color: #52667A">CON EL APOYO DE</div>
-<div style="font-family: Manrope, sans-serif; font-weight: 800; font-size: 19px; color: #3E5468">GREIP</div>
-<div style="font-size: 15px; color: #52667A">Grupo de Investigación en Reingeniería, Innovación y Productividad</div>
-</div>
+<div class="partner" data-reveal>
+<div class="plate plate-sm"><img src="/assets/img/logo-greip.webp" alt="Logotipo de GREIP, Grupo de Investigación en Reingeniería, Innovación y Productividad" width="600" height="245"></div>
+<div><div class="p-k">Con el apoyo de</div><p class="p-n">GREIP</p><p class="p-d">Grupo de Investigación en Reingeniería, Innovación y Productividad</p></div>
 </div>
 </div>
 </div>
@@ -709,93 +544,84 @@
 
 </main>
 
-<footer id="contacto" aria-labelledby="h-cont" class="dark" style="background: #102A43; color: #FFFFFF; padding: 88px 0 36px; position: relative; overflow: hidden">
-<div style="position: relative; max-width: 1200px; margin: 0 auto; padding: 0 24px; display: flex; flex-direction: column; gap: 56px">
-<div style="display: flex; flex-wrap: wrap; gap: 48px; justify-content: space-between">
-<div data-reveal style="flex: 1 1 300px; display: flex; flex-direction: column; gap: 14px">
-<div style="display: flex; align-items: center; gap: 10px; font-family: Manrope, sans-serif; font-weight: 800; font-size: 14px; letter-spacing: 0.14em"><span style="width: 24px; height: 3px; background: #D99A27"></span>CONTACTO</div>
-<h2 id="h-cont" style="margin: 0; font-family: Manrope, sans-serif; font-weight: 800; font-size: 34px; line-height: 1.15">¿Tienes preguntas sobre el Congreso?</h2>
-<p style="margin: 0; color: #C9D6E2; max-width: 40ch">Escríbenos o llámanos. También puedes seguir a UNIPAZ en sus redes sociales.</p>
+<footer id="contacto" aria-labelledby="h-cont" class="foot dark">
+<div class="wrap">
+<div class="foot-grid" data-reveal>
+<div class="foot-lead">
+<p class="fk">Contacto</p>
+<h2 id="h-cont">¿Tienes preguntas sobre el Congreso?</h2>
+<p>Escríbenos o llámanos. También puedes seguir a UNIPAZ en sus redes sociales.</p>
 </div>
-<address style="flex: 1 1 320px; font-style: normal; display: flex; flex-direction: column; gap: 4px">
-<div style="display: flex; gap: 14px; align-items: flex-start; padding: 12px 0">
-<svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#F0BD5C" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="flex: none; margin-top: 3px"><path d="M12 22s7-6.2 7-12a7 7 0 0 0-14 0c0 5.8 7 12 7 12z"></path><circle cx="12" cy="10" r="2.5"></circle></svg>
-<div><div style="font-size: 13px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #C9D6E2">Ubicación</div>Barrancabermeja, Santander, Colombia</div>
-</div>
-<div style="display: flex; gap: 14px; align-items: flex-start; padding: 12px 0">
-<svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#F0BD5C" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="flex: none; margin-top: 3px"><rect x="2" y="4" width="20" height="16" rx="2"></rect><path d="m22 6-10 7L2 6"></path></svg>
-<div><div style="font-size: 13px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #C9D6E2">Correo electrónico</div><a href="mailto:esp.sst@unipaz.edu.co" style="color: #FFFFFF; font-weight: 600">esp.sst@unipaz.edu.co</a></div>
-</div>
-<div style="display: flex; gap: 14px; align-items: flex-start; padding: 12px 0">
-<svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#F0BD5C" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="flex: none; margin-top: 3px"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"></path></svg>
-<div><div style="font-size: 13px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #C9D6E2">Teléfono</div><a href="tel:+576076118210,109" style="color: #FFFFFF; font-weight: 600">607 - 611 82 10, extensión 109</a></div>
-</div>
+<address>
+<div><p class="fk" style="margin-bottom: 4px">Correo electrónico</p><a href="mailto:esp.sst@unipaz.edu.co">esp.sst@unipaz.edu.co</a></div>
+<div><p class="fk" style="margin-bottom: 4px">Teléfono</p><a href="tel:+576076118210,109">607 - 611 82 10, extensión 109</a></div>
 </address>
-<div data-reveal style="flex: 1 1 260px; display: flex; flex-direction: column; gap: 14px">
-<div style="font-size: 13px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #C9D6E2">Redes sociales · UNIPAZ</div>
-<ul style="list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px">
-<li><a href="https://www.facebook.com/people/Instituto-Universitario-de-la-Paz/100064522486908/" target="_blank" rel="noopener noreferrer" aria-label="Facebook de UNIPAZ (se abre en una pestaña nueva)" class="ghost" style="min-height: 48px; display: flex; align-items: center; gap: 10px; padding: 0 14px; border: 1px solid rgba(255,255,255,0.3); border-radius: 12px; color: #FFFFFF; text-decoration: none; font-weight: 600; font-size: 15px">
-<svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>Facebook</a></li>
-<li><a href="https://www.instagram.com/unipaznoticias/?hl=es" target="_blank" rel="noopener noreferrer" aria-label="Instagram de UNIPAZ (se abre en una pestaña nueva)" class="ghost" style="min-height: 48px; display: flex; align-items: center; gap: 10px; padding: 0 14px; border: 1px solid rgba(255,255,255,0.3); border-radius: 12px; color: #FFFFFF; text-decoration: none; font-weight: 600; font-size: 15px">
-<svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><path d="M17.5 6.5h.01"></path></svg>Instagram</a></li>
-<li><a href="https://x.com/UNIPAZnoticias" target="_blank" rel="noopener noreferrer" aria-label="X de UNIPAZ (se abre en una pestaña nueva)" class="ghost" style="min-height: 48px; display: flex; align-items: center; gap: 10px; padding: 0 14px; border: 1px solid rgba(255,255,255,0.3); border-radius: 12px; color: #FFFFFF; text-decoration: none; font-weight: 600; font-size: 15px">
-<svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4l16 16M20 4 4 20"></path></svg>X</a></li>
-<li><a href="https://www.youtube.com/channel/UC9EH2zVkgzGZCJWPAw2Dauw" target="_blank" rel="noopener noreferrer" aria-label="YouTube de UNIPAZ (se abre en una pestaña nueva)" class="ghost" style="min-height: 48px; display: flex; align-items: center; gap: 10px; padding: 0 14px; border: 1px solid rgba(255,255,255,0.3); border-radius: 12px; color: #FFFFFF; text-decoration: none; font-weight: 600; font-size: 15px">
-<svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="14" rx="4"></rect><path d="m10 9 5 3-5 3z"></path></svg>YouTube</a></li>
+<div>
+<p class="fk" style="margin-bottom: 4px">Ubicación</p>
+<p style="margin: 0">Barrancabermeja, Santander, Colombia</p>
+<p style="margin: 6px 0 0; font-size: 14px; color: var(--on-dark)">Congreso 100 % virtual · hora de Colombia (UTC−5)</p>
+</div>
+<div>
+<p class="fk">Redes sociales · UNIPAZ</p>
+<ul class="social">
+<li><a href="https://www.facebook.com/people/Instituto-Universitario-de-la-Paz/100064522486908/" target="_blank" rel="noopener noreferrer" aria-label="Facebook de UNIPAZ (se abre en una pestaña nueva)"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>Facebook</a></li>
+<li><a href="https://www.instagram.com/unipaznoticias/?hl=es" target="_blank" rel="noopener noreferrer" aria-label="Instagram de UNIPAZ (se abre en una pestaña nueva)"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><path d="M17.5 6.5h.01"></path></svg>Instagram</a></li>
+<li><a href="https://x.com/UNIPAZnoticias" target="_blank" rel="noopener noreferrer" aria-label="X de UNIPAZ (se abre en una pestaña nueva)"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4l16 16M20 4 4 20"></path></svg>X</a></li>
+<li><a href="https://www.youtube.com/channel/UC9EH2zVkgzGZCJWPAw2Dauw" target="_blank" rel="noopener noreferrer" aria-label="YouTube de UNIPAZ (se abre en una pestaña nueva)"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="14" rx="4"></rect><path d="m10 9 5 3-5 3z"></path></svg>YouTube</a></li>
 </ul>
 </div>
 </div>
-<div style="border-top: 1px solid rgba(255,255,255,0.18); padding-top: 24px; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 16px; font-size: 14px; color: #C9D6E2">
-<div>© 2026 UNIPAZ · Instituto Universitario de la Paz · GREIP</div>
-<nav aria-label="Pie de página" style="display: flex; flex-wrap: wrap; gap: 20px">
-<a href="#inicio" style="color: #FFFFFF">Inicio</a>
-<a href="/agenda" style="color: #FFFFFF">Agenda</a>
-<a href="/organizadores" style="color: #FFFFFF">Organizadores</a>
-<a href="#modalidades" style="color: #FFFFFF">Modalidades</a>
+<div class="foot-bar">
+<div class="foot-brand"><img src="/assets/img/logo-congreso.webp" alt="" width="543" height="640"><span>© 2026 UNIPAZ · Instituto Universitario de la Paz · GREIP</span></div>
+<nav class="foot-nav" aria-label="Pie de página">
+<a href="#inicio">Inicio</a>
+<a href="/agenda">Agenda</a>
+<a href="/organizadores">Organizadores</a>
+<a href="#modalidades">Modalidades</a>
 </nav>
 </div>
 </div>
 </footer>
 
 <div data-if="showReg" hidden>
-<div data-action="closeReg" style="position: fixed; inset: 0; background: rgba(10,26,42,0.66); display: flex; padding: 16px; overflow-y: auto; overscroll-behavior: contain; z-index: 50">
-<div role="dialog" aria-modal="true" aria-labelledby="h-reg" class="reg-dialog" style="width: 100%; max-width: 580px; margin: auto; box-sizing: border-box; background: #FFFFFF; border-radius: 20px; padding: 32px; display: flex; flex-direction: column; gap: 22px; box-shadow: 0 24px 60px rgba(0,0,0,0.25)">
+<div data-action="closeReg" class="reg-wrap">
+<div role="dialog" aria-modal="true" aria-labelledby="h-reg" class="reg-dialog">
 <div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 16px">
 <div>
-<div style="font-size: 14px; font-weight: 600; color: #52667A">Paso 1 de 2 · Selección de modalidad</div>
-<h2 id="h-reg" class="reg-title" style="margin: 4px 0 0; font-family: Manrope, sans-serif; font-weight: 800; font-size: 26px">Inscríbete</h2>
+<div class="reg-step">Paso 1 de 2 · Selección de modalidad</div>
+<h2 id="h-reg" class="reg-title">Inscríbete</h2>
 </div>
-<button type="button" aria-label="Cerrar" data-action="closeReg" style="width: 44px; height: 44px; flex: none; border: 1px solid #D5DEE6; border-radius: 12px; background: #FFFFFF; cursor: pointer; display: flex; align-items: center; justify-content: center; color: #102A43">
+<button type="button" aria-label="Cerrar" data-action="closeReg" class="reg-x">
 <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6 6 18"></path></svg></button>
 </div>
 <fieldset style="border: 0; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 10px">
 <legend style="padding: 0; margin-bottom: 10px; font-weight: 600">¿En qué modalidad deseas participar?</legend>
 
-<label class="soft reg-opt" style="display: flex; gap: 14px; align-items: flex-start; padding: 16px 18px; border: 2px solid #D5DEE6; background: #FFFFFF; border-radius: 14px; cursor: pointer">
+<label class="reg-opt" style="border-color: #D5DEE6; background: #FFFFFF">
 <input type="radio" name="modalidad" value="asistente" data-action="pick" data-index="0" style="width: 20px; height: 20px; margin: 2px 0 0; accent-color: #087E8B; flex: none">
-<span style="display: flex; flex-direction: column; gap: 2px"><strong style="font-family: Manrope, sans-serif; font-size: 17px">Participante / Asistente</strong><span style="font-size: 15px; color: #3E5468">Acceso a las actividades de los dos días. Certificado con 40 % de asistencia.</span></span>
+<span style="display: flex; flex-direction: column; gap: 2px"><strong>Participante / Asistente</strong><span style="font-size: 15px; color: var(--ink-2)">Acceso a las actividades de los dos días. Certificado con 40 % de asistencia.</span></span>
 </label>
 
-<label class="soft reg-opt" style="display: flex; gap: 14px; align-items: flex-start; padding: 16px 18px; border: 2px solid #D5DEE6; background: #FFFFFF; border-radius: 14px; cursor: pointer">
+<label class="reg-opt" style="border-color: #D5DEE6; background: #FFFFFF">
 <input type="radio" name="modalidad" value="oral" data-action="pick" data-index="1" style="width: 20px; height: 20px; margin: 2px 0 0; accent-color: #087E8B; flex: none">
-<span style="display: flex; flex-direction: column; gap: 2px"><strong style="font-family: Manrope, sans-serif; font-size: 17px">Ponente oral</strong><span style="font-size: 15px; color: #3E5468">Presentación virtual de 20 minutos + 5 minutos de preguntas.</span></span>
+<span style="display: flex; flex-direction: column; gap: 2px"><strong>Ponente oral</strong><span style="font-size: 15px; color: var(--ink-2)">Presentación virtual de 20 minutos + 5 minutos de preguntas.</span></span>
 </label>
 
-<label class="soft reg-opt" style="display: flex; gap: 14px; align-items: flex-start; padding: 16px 18px; border: 2px solid #D5DEE6; background: #FFFFFF; border-radius: 14px; cursor: pointer">
+<label class="reg-opt" style="border-color: #D5DEE6; background: #FFFFFF">
 <input type="radio" name="modalidad" value="poster" data-action="pick" data-index="2" style="width: 20px; height: 20px; margin: 2px 0 0; accent-color: #087E8B; flex: none">
-<span style="display: flex; flex-direction: column; gap: 2px"><strong style="font-family: Manrope, sans-serif; font-size: 17px">Póster virtual</strong><span style="font-size: 15px; color: #3E5468">Presentación de póster virtual con preguntas e interacción.</span></span>
+<span style="display: flex; flex-direction: column; gap: 2px"><strong>Póster virtual</strong><span style="font-size: 15px; color: var(--ink-2)">Presentación de póster virtual con preguntas e interacción.</span></span>
 </label>
 
 </fieldset>
 <div data-if="noSel">
-<button type="button" disabled style="min-height: 52px; border: 0; border-radius: 12px; background: #E4EAF0; color: #52667A; font-family: Inter, sans-serif; font-weight: 600; font-size: 16px; cursor: not-allowed">Selecciona una modalidad para continuar</button>
+<button type="button" disabled class="btn" style="min-height: 52px; background: #E4EAF0; color: #52667A; cursor: not-allowed">Selecciona una modalidad para continuar</button>
 </div>
 <div data-if="hasSel" hidden>
-<p style="margin: 0; font-size: 15px; color: #3E5468">Modalidad elegida: <strong style="color: #102A43"><span data-sel-title></span></strong></p>
-<a href="#" target="_blank" rel="noopener" class="lift" style="min-height: 52px; padding: 10px 18px; box-sizing: border-box; text-align: center; display: flex; align-items: center; justify-content: center; gap: 10px; border-radius: 12px; background: #087E8B; color: #FFFFFF; text-decoration: none; font-weight: 700; font-size: 16px"><span>Continuar con la inscripción</span>
+<p style="margin: 0; font-size: 15px; color: var(--ink-2)">Modalidad elegida: <strong style="color: var(--ink)"><span data-sel-title></span></strong></p>
+<a href="#" target="_blank" rel="noopener" class="btn btn-primary" style="min-height: 52px; padding: 10px 18px; text-align: center; font-weight: 700"><span>Continuar con la inscripción</span>
 <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"></path></svg></a>
 </div>
-<p style="margin: 0; font-size: 14px; color: #52667A">El formulario de inscripción se abrirá en una nueva pestaña. Tu inscripción quedará registrada cuando el formulario lo confirme.</p>
+<p style="margin: 0; font-size: 14px; color: var(--ink-3)">El formulario de inscripción se abrirá en una nueva pestaña. Tu inscripción quedará registrada cuando el formulario lo confirme.</p>
 </div>
 </div>
 </div>

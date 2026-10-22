@@ -18,98 +18,92 @@
 <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@600;700;800&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;0,8..60,500;0,8..60,600;1,8..60,400&amp;display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/assets/css/styles.css">
 <script src="/assets/js/main.js" defer></script>
 </head>
 <body data-page="agenda">
 <a class="skip-link" href="#contenido">Saltar al contenido</a>
-<div style="min-height: 100vh; background: #F5F8FA; color: #102A43; font-family: Inter, system-ui, sans-serif; font-size: 17px; line-height: 1.6">
-
-<header class="dark" style="background: #102A43; color: #FFFFFF; position: sticky; top: 0; z-index: 40; box-shadow: 0 1px 0 rgba(255,255,255,0.08)">
-<div style="max-width: 1200px; margin: 0 auto; padding: 12px 24px; display: flex; align-items: center; justify-content: space-between; gap: 16px">
-<a href="/" aria-label="Congreso SST 2026 — ir a Inicio" style="display: flex; align-items: center; gap: 12px; color: #FFFFFF; text-decoration: none">
-<img src="/assets/img/logo-congreso.webp" alt="" width="543" height="640" style="height: 48px; width: auto; display: block">
-<div style="font-family: Manrope, sans-serif; font-weight: 800; font-size: 16px; line-height: 1.15">Congreso SST<br><span style="font-weight: 600; font-size: 13px; color: #C9D6E2">UNIPAZ · 2026</span></div>
+<div class="site">
+<header class="top dark">
+<div class="wrap top-in">
+<a href="/" class="brand" aria-label="Congreso SST 2026 — ir a Inicio">
+<img src="/assets/img/logo-congreso.webp" alt="" width="543" height="640">
+<span class="brand-t">Congreso SST<span>UNIPAZ · 2026</span></span>
 </a>
 <div class="only-desktop">
-<nav aria-label="Navegación principal" style="display: flex; align-items: center; gap: 6px">
-<a href="/" class="ghost" style="color: #FFFFFF; text-decoration: none; font-weight: 500; font-size: 16px; padding: 10px 16px; border-radius: 8px">Inicio</a>
-<a href="#agenda" aria-current="page" class="ghost" style="position: relative; color: #FFFFFF; text-decoration: none; font-weight: 700; font-size: 16px; padding: 10px 16px; border-radius: 8px">Agenda<span aria-hidden="true" style="position: absolute; left: 16px; right: 16px; bottom: 0; height: 3px; background: #D99A27; border-radius: 3px 3px 0 0"></span></a>
-<a href="/organizadores" class="ghost" style="color: #FFFFFF; text-decoration: none; font-weight: 500; font-size: 16px; padding: 10px 16px; border-radius: 8px">Organizadores</a>
-<a href="/#inscripcion" class="lift" style="margin-left: 10px; min-height: 44px; display: inline-flex; align-items: center; padding: 0 22px; border-radius: 10px; background: #087E8B; color: #FFFFFF; text-decoration: none; font-weight: 600; font-size: 16px">Inscríbete</a>
+<nav class="nav" aria-label="Navegación principal">
+<a href="/" class="nl">Inicio</a>
+<a href="#agenda" aria-current="page" class="nl">Agenda</a>
+<a href="/organizadores" class="nl">Organizadores</a>
+<a href="/#inscripcion" class="btn btn-primary">Inscríbete</a>
 </nav>
 </div>
 <div class="only-mobile">
-<div style="display: flex; align-items: center; gap: 8px">
-<a href="/#inscripcion" class="lift" style="min-height: 44px; display: inline-flex; align-items: center; padding: 0 16px; border-radius: 10px; background: #087E8B; color: #FFFFFF; text-decoration: none; font-weight: 600; font-size: 15px">Inscríbete</a>
-<button type="button" aria-label="Abrir menú" aria-controls="menu-movil" aria-expanded="false" data-action="toggleMenu" class="ghost" style="width: 44px; height: 44px; border: 1px solid rgba(255,255,255,0.35); border-radius: 10px; background: transparent; color: #FFFFFF; display: flex; align-items: center; justify-content: center; cursor: pointer">
+<div class="top-m">
+<a href="/#inscripcion" class="btn btn-primary">Inscríbete</a>
+<button type="button" aria-label="Abrir menú" aria-controls="menu-movil" aria-expanded="false" data-action="toggleMenu" class="menu-btn">
 <svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"></path></svg></button>
 </div>
 </div>
 </div>
 <div data-if="menuOpen" id="menu-movil" hidden>
 <div class="only-mobile">
-<nav aria-label="Menú móvil" style="border-top: 1px solid rgba(255,255,255,0.15); padding: 8px 24px 16px; display: flex; flex-direction: column">
-<a href="/" style="color: #FFFFFF; text-decoration: none; font-weight: 500; padding: 14px 0; border-bottom: 1px solid rgba(255,255,255,0.12)">Inicio</a>
-<a href="#agenda" aria-current="page" data-action="closeMenu" style="color: #FFFFFF; text-decoration: none; font-weight: 600; padding: 14px 0; border-bottom: 1px solid rgba(255,255,255,0.12)">Agenda</a>
-<a href="/organizadores" style="color: #FFFFFF; text-decoration: none; font-weight: 500; padding: 14px 0; border-bottom: 1px solid rgba(255,255,255,0.12)">Organizadores</a>
-<a href="/#modalidades" style="color: #FFFFFF; text-decoration: none; font-weight: 500; padding: 14px 0">Modalidades de participación</a>
+<nav class="mnav" aria-label="Menú móvil">
+<a href="/">Inicio</a>
+<a href="#agenda" aria-current="page" data-action="closeMenu">Agenda</a>
+<a href="/organizadores">Organizadores</a>
+<a href="/#modalidades">Modalidades de participación</a>
 </nav>
 </div>
 </div>
 </header>
 
 <main id="contenido">
-<section id="agenda" aria-labelledby="h-ag" class="dark" style="background: #102A43; color: #FFFFFF; position: relative; overflow: hidden">
-<svg aria-hidden="true" width="100%" height="100%" style="position: absolute; inset: 0; pointer-events: none">
-<defs>
-<pattern id="bp-minor" width="20" height="20" patternUnits="userSpaceOnUse"><path d="M20 0H0V20" fill="none" stroke="#9FD3DA" stroke-opacity="0.07" stroke-width="1"></path></pattern>
-<pattern id="bp-major" width="100" height="100" patternUnits="userSpaceOnUse"><rect width="100" height="100" fill="url(#bp-minor)"></rect><path d="M100 0H0V100" fill="none" stroke="#9FD3DA" stroke-opacity="0.14" stroke-width="1"></path></pattern>
-</defs>
-<rect width="100%" height="100%" fill="url(#bp-major)"></rect>
-</svg>
-<div class="hero-stagger" style="position: relative; max-width: 1200px; margin: 0 auto; padding: 64px 24px 72px; display: flex; flex-wrap: wrap; gap: 32px 64px; align-items: flex-end">
-<div style="flex: 1 1 380px; display: flex; flex-direction: column; gap: 14px">
-<div style="display: flex; align-items: center; gap: 10px; font-family: Manrope, sans-serif; font-weight: 800; font-size: 14px; letter-spacing: 0.14em"><span style="width: 24px; height: 3px; background: #D99A27"></span>PROGRAMACIÓN ACADÉMICA</div>
-<h1 id="h-ag" style="margin: 0; font-family: Manrope, sans-serif; font-weight: 800; font-size: clamp(36px, 5vw, 58px); line-height: 1.05; letter-spacing: -0.02em">Agenda del Congreso</h1>
-<div style="font-family: Manrope, sans-serif; font-weight: 800; font-size: 17px; letter-spacing: 0.08em; color: #F0BD5C">29 Y 30 DE OCTUBRE DE 2026 · 100 % VIRTUAL</div>
+<section id="agenda" aria-labelledby="h-ag" class="ph dark">
+<div class="wrap">
+<div class="ph-in hero-stagger">
+<p class="kicker" style="grid-column: 1 / -1"><span>Programación académica</span><span>Hora de Colombia (UTC−5)</span></p>
+<div>
+<h1 id="h-ag">Agenda del Congreso</h1>
+<p class="ph-sub">29 y 30 de octubre de 2026 · 100 % virtual</p>
 </div>
-<div style="flex: 1.35 1 460px; display: flex; flex-direction: column; gap: 10px; color: #DCE5EE; max-width: 68ch">
-<p style="margin: 0">El Congreso se desarrollará durante dos jornadas, en modalidad 100 % virtual, mediante dos salas académicas simultáneas.</p>
-<p style="margin: 0">Las conferencias magistrales e invitadas se transmitirán de manera simultánea en ambas salas, permitiendo la participación de todos los asistentes. Por su parte, las ponencias temáticas se desarrollarán en paralelo, con una presentación en cada sala, de manera que los participantes puedan elegir la temática de su interés.</p>
-<p style="margin: 0">La programación incluye además espacios de descanso y una sesión especial para la presentación de pósteres virtuales.</p>
+<div class="ph-intro">
+<p>El Congreso se desarrollará durante dos jornadas, en modalidad 100 % virtual, mediante dos salas académicas simultáneas.</p>
+<p>Las conferencias magistrales e invitadas se transmitirán de manera simultánea en ambas salas, permitiendo la participación de todos los asistentes. Por su parte, las ponencias temáticas se desarrollarán en paralelo, con una presentación en cada sala, de manera que los participantes puedan elegir la temática de su interés.</p>
+<p>La programación incluye además espacios de descanso y una sesión especial para la presentación de pósteres virtuales.</p>
+</div>
 </div>
 </div>
 </section>
 
-<div style="max-width: 1200px; margin: 0 auto; padding: 40px 24px 0; display: flex; flex-direction: column; gap: 24px">
+<div class="wrap" style="padding-top: clamp(32px, 4vw, 48px); display: flex; flex-direction: column; gap: 24px">
 <div style="display: flex; flex-wrap: wrap; gap: 16px 32px; align-items: center; justify-content: space-between">
 <div role="group" aria-label="Seleccionar jornada" style="display: flex; gap: 8px; flex-wrap: wrap">
 
-<button type="button" aria-pressed="true" data-action="pick" data-index="0" class="lift" style="min-height: 56px; min-width: 180px; padding: 8px 20px; border-radius: 12px; border: 1.5px solid #102A43; background: #102A43; color: #FFFFFF; font-family: Inter, sans-serif; text-align: left; cursor: pointer; display: flex; flex-direction: column; line-height: 1.25">
-<span style="font-family: Manrope, sans-serif; font-weight: 800; font-size: 17px">Día 1</span>
+<button type="button" aria-pressed="true" data-action="pick" data-index="0" style="flex: 1 1 160px; min-width: 0; max-width: 220px; min-height: 56px; padding: 8px 18px; border-radius: 6px; border: 1.5px solid #102A43; background: #102A43; color: #FFFFFF; font-family: var(--sans); text-align: left; cursor: pointer; display: flex; flex-direction: column; line-height: 1.25; transition: background-color .15s ease, color .15s ease">
+<span style="font-weight: 700; font-size: 16px">Día 1</span>
 <span style="font-size: 14px">Jueves 29 de octubre</span>
 </button>
 
-<button type="button" aria-pressed="false" data-action="pick" data-index="1" class="lift" style="min-height: 56px; min-width: 180px; padding: 8px 20px; border-radius: 12px; border: 1.5px solid #102A43; background: #FFFFFF; color: #102A43; font-family: Inter, sans-serif; text-align: left; cursor: pointer; display: flex; flex-direction: column; line-height: 1.25">
-<span style="font-family: Manrope, sans-serif; font-weight: 800; font-size: 17px">Día 2</span>
+<button type="button" aria-pressed="false" data-action="pick" data-index="1" style="flex: 1 1 160px; min-width: 0; max-width: 220px; min-height: 56px; padding: 8px 18px; border-radius: 6px; border: 1.5px solid #102A43; background: #FFFFFF; color: #102A43; font-family: var(--sans); text-align: left; cursor: pointer; display: flex; flex-direction: column; line-height: 1.25; transition: background-color .15s ease, color .15s ease">
+<span style="font-weight: 700; font-size: 16px">Día 2</span>
 <span style="font-size: 14px">Viernes 30 de octubre</span>
 </button>
 
 </div>
-<ul aria-label="Convenciones de la agenda" style="list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 8px">
-<li style="font-size: 13px; font-weight: 700; padding: 3px 10px; border-radius: 6px; background: #D99A27; color: #102A43; border: 1px solid #D99A27">Apertura / Cierre</li>
-<li style="font-size: 13px; font-weight: 700; padding: 3px 10px; border-radius: 6px; background: #087E8B; color: #FFFFFF; border: 1px solid #087E8B">Conferencia · ambas salas</li>
-<li style="font-size: 13px; font-weight: 700; padding: 3px 10px; border-radius: 6px; background: #FFFFFF; color: #102A43; border: 1px solid #102A43">Ponencia · en paralelo</li>
-<li style="font-size: 13px; font-weight: 700; padding: 3px 10px; border-radius: 6px; background: #FBF1DF; color: #6B4A0E; border: 1px solid #D99A27">Pósteres</li>
-<li style="font-size: 13px; font-weight: 700; padding: 3px 10px; border-radius: 6px; background: #EEF2F5; color: #3E5468; border: 1px solid #9FB0BF">Descanso</li>
+<ul class="legend" aria-label="Convenciones de la agenda">
+<li><span class="sw" style="background: #D99A27"></span>Apertura y cierre</li>
+<li><span class="sw" style="background: #087E8B"></span>Conferencia · ambas salas</li>
+<li><span class="sw" style="background: #FFFFFF; box-shadow: inset 0 0 0 1.5px #102A43"></span>Ponencias · en paralelo</li>
+<li><span class="sw" style="background: #FBF3E2; box-shadow: inset 0 0 0 1.5px #D99A27"></span>Pósteres</li>
+<li><span class="sw" style="background: #EEF2F5; box-shadow: inset 0 0 0 1.5px #9FB0BF"></span>Descanso</li>
 </ul>
 </div>
 
 <div data-day-panel="0" id="dia-1">
 <div style="display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 8px 24px; padding-top: 8px">
-<h2 style="margin: 0; font-family: Manrope, sans-serif; font-weight: 800; font-size: clamp(26px, 3vw, 34px); line-height: 1.15">Jueves 29 de octubre de 2026 <span style="color: #52667A; font-weight: 700">— Día 1</span></h2>
+<h2 style="margin: 0; font-family: var(--serif); font-weight: 600; font-size: clamp(28px, 3vw, 38px); line-height: 1.12; letter-spacing: -0.01em">Jueves 29 de octubre de 2026 <span style="color: var(--ink-3); font-weight: 400; font-style: italic">— Día 1</span></h2>
 <div style="display: flex; flex-wrap: wrap; gap: 8px 20px; font-size: 15px; color: #3E5468">
 <span><strong style="color: #102A43">Inicio:</strong> 8:00 a. m. · Apertura oficial y conferencia inaugural</span>
 <span><strong style="color: #102A43">Cierre:</strong> 9:00–10:00 p. m. · Actividad de cierre del día 1</span>
@@ -118,11 +112,11 @@
 </div>
 
 <div class="only-desktop">
-<div role="table" aria-label="Programación del jueves 29 de octubre de 2026" style="border: 1px solid #D5DEE6; border-radius: 18px; background: #FFFFFF; padding: 8px 16px 16px">
-<div role="row" style="display: grid; grid-template-columns: 200px minmax(0, 1fr) minmax(0, 1fr); gap: 10px; position: sticky; top: 71px; background: #FFFFFF; z-index: 1">
+<div role="table" aria-label="Programación del jueves 29 de octubre de 2026" style="border: 1px solid var(--line); border-radius: 8px; background: #FFFFFF; padding: 8px 16px 16px">
+<div role="row" style="display: grid; grid-template-columns: 200px minmax(0, 1fr) minmax(0, 1fr); gap: 10px; position: sticky; top: 72px; background: #FFFFFF; z-index: 1">
 <div role="columnheader" style="padding: 14px 8px; font-size: 13px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: #52667A">Horario</div>
-<div role="columnheader" style="padding: 14px 8px; display: flex; align-items: center; gap: 8px; font-family: Manrope, sans-serif; font-weight: 800; font-size: 16px"><span aria-hidden="true" style="width: 26px; height: 26px; border-radius: 7px; background: #102A43; color: #FFFFFF; font-size: 13px; display: flex; align-items: center; justify-content: center">1</span>Sala 1</div>
-<div role="columnheader" style="padding: 14px 8px; display: flex; align-items: center; gap: 8px; font-family: Manrope, sans-serif; font-weight: 800; font-size: 16px"><span aria-hidden="true" style="width: 26px; height: 26px; border-radius: 7px; background: #102A43; color: #FFFFFF; font-size: 13px; display: flex; align-items: center; justify-content: center">2</span>Sala 2</div>
+<div role="columnheader" style="padding: 14px 8px; display: flex; align-items: center; gap: 8px; font-family: var(--sans); font-weight: 700; font-size: 16px"><span aria-hidden="true" style="width: 26px; height: 26px; border-radius: 4px; background: #102A43; color: #FFFFFF; font-size: 13px; display: flex; align-items: center; justify-content: center">1</span>Sala 1</div>
+<div role="columnheader" style="padding: 14px 8px; display: flex; align-items: center; gap: 8px; font-family: var(--sans); font-weight: 700; font-size: 16px"><span aria-hidden="true" style="width: 26px; height: 26px; border-radius: 4px; background: #102A43; color: #FFFFFF; font-size: 13px; display: flex; align-items: center; justify-content: center">2</span>Sala 2</div>
 </div>
 
 
@@ -135,8 +129,8 @@
 
 <div role="row" style="display: grid; grid-template-columns: 200px minmax(0, 1fr); gap: 10px; padding: 5px 0">
 <div role="rowheader" style="padding: 14px 8px; font-weight: 700; font-size: 16px; font-variant-numeric: tabular-nums">8:00–9:00 a. m.</div>
-<div role="cell" style="min-height: 56px; padding: 12px 18px; border-radius: 12px; background: #102A43; color: #FFFFFF; border: 1px solid #102A43; display: flex; flex-wrap: wrap; align-items: center; gap: 8px 14px">
-<span style="font-size: 13px; font-weight: 700; padding: 3px 10px; border-radius: 6px; background: #D99A27; color: #102A43; border: 1px solid #D99A27">Apertura · Conferencia</span>
+<div role="cell" style="min-height: 56px; padding: 12px 18px; border-radius: 6px; background: #102A43; color: #FFFFFF; border: 1px solid #102A43; display: flex; flex-wrap: wrap; align-items: center; gap: 8px 14px">
+<span style="font-size: 12px; font-weight: 700; letter-spacing: 0.02em; padding: 3px 9px; border-radius: 4px; background: #D99A27; color: #102A43; border: 1px solid #D99A27">Apertura · Conferencia</span>
 <span style="flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 2px"><span style="font-weight: 700; font-size: 16px">Atención a emergencias · título por confirmar</span><span style="font-size: 14px; opacity: 0.9">Ing. Pablo Ochoa · Panamá</span></span>
 <span style="font-size: 14px; opacity: 0.9">Ambas salas</span>
 </div>
@@ -148,8 +142,8 @@
 
 <div role="row" style="display: grid; grid-template-columns: 200px minmax(0, 1fr); gap: 10px; padding: 5px 0">
 <div role="rowheader" style="padding: 14px 8px; font-weight: 700; font-size: 16px; font-variant-numeric: tabular-nums">9:00–10:00 a. m.</div>
-<div role="cell" style="min-height: 56px; padding: 12px 18px; border-radius: 12px; background: #E3F1F3; color: #102A43; border: 1px solid #8CC3CA; display: flex; flex-wrap: wrap; align-items: center; gap: 8px 14px">
-<span style="font-size: 13px; font-weight: 700; padding: 3px 10px; border-radius: 6px; background: #087E8B; color: #FFFFFF; border: 1px solid #087E8B">Conferencia</span>
+<div role="cell" style="min-height: 56px; padding: 12px 18px; border-radius: 6px; background: #E3F1F3; color: #102A43; border: 1px solid #8CC3CA; display: flex; flex-wrap: wrap; align-items: center; gap: 8px 14px">
+<span style="font-size: 12px; font-weight: 700; letter-spacing: 0.02em; padding: 3px 9px; border-radius: 4px; background: #087E8B; color: #FFFFFF; border: 1px solid #087E8B">Conferencia</span>
 <span style="flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 2px"><span style="font-weight: 700; font-size: 16px">Plataforma E-collect</span><span style="font-size: 14px; opacity: 0.9">Claudia Inés Carrero Beltrán · Colombia</span></span>
 <span style="font-size: 14px; opacity: 0.9">Ambas salas</span>
 </div>
@@ -162,12 +156,12 @@
 
 <div role="row" style="display: grid; grid-template-columns: 200px minmax(0, 1fr) minmax(0, 1fr); gap: 10px; padding: 5px 0">
 <div role="rowheader" style="padding: 14px 8px; font-weight: 700; font-size: 16px; font-variant-numeric: tabular-nums">10:00–11:00 a. m.</div>
-<div role="cell" style="min-height: 56px; padding: 12px 18px; border-radius: 12px; background: #FFFFFF; border: 1px solid #B9C7D3; display: flex; flex-wrap: wrap; align-items: center; gap: 8px 14px">
-<span style="font-size: 13px; font-weight: 700; padding: 3px 10px; border-radius: 6px; background: #FFFFFF; color: #102A43; border: 1px solid #102A43">Ponencias</span>
+<div role="cell" style="min-height: 56px; padding: 12px 18px; border-radius: 6px; background: #FFFFFF; border: 1px solid #B9C7D3; display: flex; flex-wrap: wrap; align-items: center; gap: 8px 14px">
+<span style="font-size: 12px; font-weight: 700; letter-spacing: 0.02em; padding: 3px 9px; border-radius: 6px; background: #FFFFFF; color: #102A43; border: 1px solid #102A43">Ponencias</span>
 <span style="font-weight: 600; font-size: 16px; flex: 1; min-width: 0">Ponencias temáticas 1 y 3<span style="display: block; font-weight: 500; font-size: 13px; color: #52667A; margin-top: 2px">20 min + 5 min de preguntas cada una</span></span><span style="font-size: 14px; color: #52667A">Sala 1</span>
 </div>
-<div role="cell" style="min-height: 56px; padding: 12px 18px; border-radius: 12px; background: #FFFFFF; border: 1px solid #B9C7D3; display: flex; flex-wrap: wrap; align-items: center; gap: 8px 14px">
-<span style="font-size: 13px; font-weight: 700; padding: 3px 10px; border-radius: 6px; background: #FFFFFF; color: #102A43; border: 1px solid #102A43">Ponencias</span>
+<div role="cell" style="min-height: 56px; padding: 12px 18px; border-radius: 6px; background: #FFFFFF; border: 1px solid #B9C7D3; display: flex; flex-wrap: wrap; align-items: center; gap: 8px 14px">
+<span style="font-size: 12px; font-weight: 700; letter-spacing: 0.02em; padding: 3px 9px; border-radius: 6px; background: #FFFFFF; color: #102A43; border: 1px solid #102A43">Ponencias</span>
 <span style="font-weight: 600; font-size: 16px; flex: 1; min-width: 0">Ponencias temáticas 2 y 4<span style="display: block; font-weight: 500; font-size: 13px; color: #52667A; margin-top: 2px">20 min + 5 min de preguntas cada una</span></span><span style="font-size: 14px; color: #52667A">Sala 2</span>
 </div>
 </div>
@@ -177,8 +171,8 @@
 
 <div role="row" style="display: grid; grid-template-columns: 200px minmax(0, 1fr); gap: 10px; padding: 5px 0">
 <div role="rowheader" style="padding: 14px 8px; font-weight: 700; font-size: 16px; font-variant-numeric: tabular-nums">11:00 a. m.–12:00 m.</div>
-<div role="cell" style="min-height: 56px; padding: 12px 18px; border-radius: 12px; background: #E3F1F3; color: #102A43; border: 1px solid #8CC3CA; display: flex; flex-wrap: wrap; align-items: center; gap: 8px 14px">
-<span style="font-size: 13px; font-weight: 700; padding: 3px 10px; border-radius: 6px; background: #087E8B; color: #FFFFFF; border: 1px solid #087E8B">Conferencia</span>
+<div role="cell" style="min-height: 56px; padding: 12px 18px; border-radius: 6px; background: #E3F1F3; color: #102A43; border: 1px solid #8CC3CA; display: flex; flex-wrap: wrap; align-items: center; gap: 8px 14px">
+<span style="font-size: 12px; font-weight: 700; letter-spacing: 0.02em; padding: 3px 9px; border-radius: 4px; background: #087E8B; color: #FFFFFF; border: 1px solid #087E8B">Conferencia</span>
 <span style="flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 2px"><span style="font-weight: 700; font-size: 16px">Cultura de emergencia en las empresas: algo de lo que nadie habla, pero que todos necesitan</span><span style="font-size: 14px; opacity: 0.9">Roney De Souza · Brasil</span></span>
 <span style="font-size: 14px; opacity: 0.9">Ambas salas</span>
 </div>
@@ -196,8 +190,8 @@
 
 <div role="row" style="display: grid; grid-template-columns: 200px minmax(0, 1fr); gap: 10px; padding: 5px 0">
 <div role="rowheader" style="padding: 14px 8px; font-weight: 700; font-size: 16px; font-variant-numeric: tabular-nums">12:00 m.–1:00 p. m.</div>
-<div role="cell" style="min-height: 56px; padding: 12px 18px; border-radius: 12px; background: #EEF2F5; color: #3E5468; border: 1px solid #D5DEE6; display: flex; flex-wrap: wrap; align-items: center; gap: 8px 14px">
-<span style="font-size: 13px; font-weight: 700; padding: 3px 10px; border-radius: 6px; background: #FFFFFF; color: #3E5468; border: 1px solid #9FB0BF">Descanso</span>
+<div role="cell" style="min-height: 56px; padding: 12px 18px; border-radius: 6px; background: #EEF2F5; color: #3E5468; border: 1px solid #D5DEE6; display: flex; flex-wrap: wrap; align-items: center; gap: 8px 14px">
+<span style="font-size: 12px; font-weight: 700; letter-spacing: 0.02em; padding: 3px 9px; border-radius: 4px; background: #FFFFFF; color: #3E5468; border: 1px solid #9FB0BF">Descanso</span>
 <span style="flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 2px"><span style="font-weight: 700; font-size: 16px">Descanso</span></span>
 <span style="font-size: 14px; opacity: 0.9"></span>
 </div>
@@ -209,8 +203,8 @@
 
 <div role="row" style="display: grid; grid-template-columns: 200px minmax(0, 1fr); gap: 10px; padding: 5px 0">
 <div role="rowheader" style="padding: 14px 8px; font-weight: 700; font-size: 16px; font-variant-numeric: tabular-nums">1:00–2:00 p. m.</div>
-<div role="cell" style="min-height: 56px; padding: 12px 18px; border-radius: 12px; background: #E3F1F3; color: #102A43; border: 1px solid #8CC3CA; display: flex; flex-wrap: wrap; align-items: center; gap: 8px 14px">
-<span style="font-size: 13px; font-weight: 700; padding: 3px 10px; border-radius: 6px; background: #087E8B; color: #FFFFFF; border: 1px solid #087E8B">Conferencia</span>
+<div role="cell" style="min-height: 56px; padding: 12px 18px; border-radius: 6px; background: #E3F1F3; color: #102A43; border: 1px solid #8CC3CA; display: flex; flex-wrap: wrap; align-items: center; gap: 8px 14px">
+<span style="font-size: 12px; font-weight: 700; letter-spacing: 0.02em; padding: 3px 9px; border-radius: 4px; background: #087E8B; color: #FFFFFF; border: 1px solid #087E8B">Conferencia</span>
 <span style="flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 2px"><span style="font-weight: 700; font-size: 16px">Rigor Léxico y Etimológico en la Gestión de Riesgos</span><span style="font-size: 14px; opacity: 0.9">Carlos Nacache · Panamá</span></span>
 <span style="font-size: 14px; opacity: 0.9">Ambas salas</span>
 </div>
@@ -223,12 +217,12 @@
 
 <div role="row" style="display: grid; grid-template-columns: 200px minmax(0, 1fr) minmax(0, 1fr); gap: 10px; padding: 5px 0">
 <div role="rowheader" style="padding: 14px 8px; font-weight: 700; font-size: 16px; font-variant-numeric: tabular-nums">2:00–3:00 p. m.</div>
-<div role="cell" style="min-height: 56px; padding: 12px 18px; border-radius: 12px; background: #FFFFFF; border: 1px solid #B9C7D3; display: flex; flex-wrap: wrap; align-items: center; gap: 8px 14px">
-<span style="font-size: 13px; font-weight: 700; padding: 3px 10px; border-radius: 6px; background: #FFFFFF; color: #102A43; border: 1px solid #102A43">Ponencias</span>
+<div role="cell" style="min-height: 56px; padding: 12px 18px; border-radius: 6px; background: #FFFFFF; border: 1px solid #B9C7D3; display: flex; flex-wrap: wrap; align-items: center; gap: 8px 14px">
+<span style="font-size: 12px; font-weight: 700; letter-spacing: 0.02em; padding: 3px 9px; border-radius: 6px; background: #FFFFFF; color: #102A43; border: 1px solid #102A43">Ponencias</span>
 <span style="font-weight: 600; font-size: 16px; flex: 1; min-width: 0">Ponencias temáticas 5 y 7<span style="display: block; font-weight: 500; font-size: 13px; color: #52667A; margin-top: 2px">20 min + 5 min de preguntas cada una</span></span><span style="font-size: 14px; color: #52667A">Sala 1</span>
 </div>
-<div role="cell" style="min-height: 56px; padding: 12px 18px; border-radius: 12px; background: #FFFFFF; border: 1px solid #B9C7D3; display: flex; flex-wrap: wrap; align-items: center; gap: 8px 14px">
-<span style="font-size: 13px; font-weight: 700; padding: 3px 10px; border-radius: 6px; background: #FFFFFF; color: #102A43; border: 1px solid #102A43">Ponencias</span>
+<div role="cell" style="min-height: 56px; padding: 12px 18px; border-radius: 6px; background: #FFFFFF; border: 1px solid #B9C7D3; display: flex; flex-wrap: wrap; align-items: center; gap: 8px 14px">
+<span style="font-size: 12px; font-weight: 700; letter-spacing: 0.02em; padding: 3px 9px; border-radius: 6px; background: #FFFFFF; color: #102A43; border: 1px solid #102A43">Ponencias</span>
 <span style="font-weight: 600; font-size: 16px; flex: 1; min-width: 0">Ponencias temáticas 6 y 8<span style="display: block; font-weight: 500; font-size: 13px; color: #52667A; margin-top: 2px">20 min + 5 min de preguntas cada una</span></span><span style="font-size: 14px; color: #52667A">Sala 2</span>
 </div>
 </div>
@@ -239,12 +233,12 @@
 
 <div role="row" style="display: grid; grid-template-columns: 200px minmax(0, 1fr) minmax(0, 1fr); gap: 10px; padding: 5px 0">
 <div role="rowheader" style="padding: 14px 8px; font-weight: 700; font-size: 16px; font-variant-numeric: tabular-nums">3:00–4:00 p. m.</div>
-<div role="cell" style="min-height: 56px; padding: 12px 18px; border-radius: 12px; background: #FFFFFF; border: 1px solid #B9C7D3; display: flex; flex-wrap: wrap; align-items: center; gap: 8px 14px">
-<span style="font-size: 13px; font-weight: 700; padding: 3px 10px; border-radius: 6px; background: #FFFFFF; color: #102A43; border: 1px solid #102A43">Ponencias</span>
+<div role="cell" style="min-height: 56px; padding: 12px 18px; border-radius: 6px; background: #FFFFFF; border: 1px solid #B9C7D3; display: flex; flex-wrap: wrap; align-items: center; gap: 8px 14px">
+<span style="font-size: 12px; font-weight: 700; letter-spacing: 0.02em; padding: 3px 9px; border-radius: 6px; background: #FFFFFF; color: #102A43; border: 1px solid #102A43">Ponencias</span>
 <span style="font-weight: 600; font-size: 16px; flex: 1; min-width: 0">Ponencias temáticas 9 y 11<span style="display: block; font-weight: 500; font-size: 13px; color: #52667A; margin-top: 2px">20 min + 5 min de preguntas cada una</span></span><span style="font-size: 14px; color: #52667A">Sala 1</span>
 </div>
-<div role="cell" style="min-height: 56px; padding: 12px 18px; border-radius: 12px; background: #FFFFFF; border: 1px solid #B9C7D3; display: flex; flex-wrap: wrap; align-items: center; gap: 8px 14px">
-<span style="font-size: 13px; font-weight: 700; padding: 3px 10px; border-radius: 6px; background: #FFFFFF; color: #102A43; border: 1px solid #102A43">Ponencias</span>
+<div role="cell" style="min-height: 56px; padding: 12px 18px; border-radius: 6px; background: #FFFFFF; border: 1px solid #B9C7D3; display: flex; flex-wrap: wrap; align-items: center; gap: 8px 14px">
+<span style="font-size: 12px; font-weight: 700; letter-spacing: 0.02em; padding: 3px 9px; border-radius: 6px; background: #FFFFFF; color: #102A43; border: 1px solid #102A43">Ponencias</span>
 <span style="font-weight: 600; font-size: 16px; flex: 1; min-width: 0">Ponencias temáticas 10 y 12<span style="display: block; font-weight: 500; font-size: 13px; color: #52667A; margin-top: 2px">20 min + 5 min de preguntas cada una</span></span><span style="font-size: 14px; color: #52667A">Sala 2</span>
 </div>
 </div>
@@ -254,8 +248,8 @@
 
 <div role="row" style="display: grid; grid-template-columns: 200px minmax(0, 1fr); gap: 10px; padding: 5px 0">
 <div role="rowheader" style="padding: 14px 8px; font-weight: 700; font-size: 16px; font-variant-numeric: tabular-nums">4:00–5:00 p. m.</div>
-<div role="cell" style="min-height: 56px; padding: 12px 18px; border-radius: 12px; background: #E3F1F3; color: #102A43; border: 1px solid #8CC3CA; display: flex; flex-wrap: wrap; align-items: center; gap: 8px 14px">
-<span style="font-size: 13px; font-weight: 700; padding: 3px 10px; border-radius: 6px; background: #087E8B; color: #FFFFFF; border: 1px solid #087E8B">Conferencia</span>
+<div role="cell" style="min-height: 56px; padding: 12px 18px; border-radius: 6px; background: #E3F1F3; color: #102A43; border: 1px solid #8CC3CA; display: flex; flex-wrap: wrap; align-items: center; gap: 8px 14px">
+<span style="font-size: 12px; font-weight: 700; letter-spacing: 0.02em; padding: 3px 9px; border-radius: 4px; background: #087E8B; color: #FFFFFF; border: 1px solid #087E8B">Conferencia</span>
 <span style="flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 2px"><span style="font-weight: 700; font-size: 16px">Detección de atmósferas peligrosas en espacios confinados</span><span style="font-size: 14px; opacity: 0.9">Moisés López Quintana · Colombia</span></span>
 <span style="font-size: 14px; opacity: 0.9">Ambas salas</span>
 </div>
@@ -267,8 +261,8 @@
 
 <div role="row" style="display: grid; grid-template-columns: 200px minmax(0, 1fr); gap: 10px; padding: 5px 0">
 <div role="rowheader" style="padding: 14px 8px; font-weight: 700; font-size: 16px; font-variant-numeric: tabular-nums">5:00–6:00 p. m.</div>
-<div role="cell" style="min-height: 56px; padding: 12px 18px; border-radius: 12px; background: #EEF2F5; color: #3E5468; border: 1px solid #D5DEE6; display: flex; flex-wrap: wrap; align-items: center; gap: 8px 14px">
-<span style="font-size: 13px; font-weight: 700; padding: 3px 10px; border-radius: 6px; background: #FFFFFF; color: #3E5468; border: 1px solid #9FB0BF">Descanso</span>
+<div role="cell" style="min-height: 56px; padding: 12px 18px; border-radius: 6px; background: #EEF2F5; color: #3E5468; border: 1px solid #D5DEE6; display: flex; flex-wrap: wrap; align-items: center; gap: 8px 14px">
+<span style="font-size: 12px; font-weight: 700; letter-spacing: 0.02em; padding: 3px 9px; border-radius: 4px; background: #FFFFFF; color: #3E5468; border: 1px solid #9FB0BF">Descanso</span>
 <span style="flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 2px"><span style="font-weight: 700; font-size: 16px">Descanso</span></span>
 <span style="font-size: 14px; opacity: 0.9"></span>
 </div>
@@ -286,7 +280,7 @@
 
 <div role="row" style="display: grid; grid-template-columns: 200px minmax(0, 1fr); gap: 10px; padding: 5px 0">
 <div role="rowheader" style="padding: 14px 8px; font-weight: 700; font-size: 16px; font-variant-numeric: tabular-nums">6:00–7:00 p. m.</div>
-<div role="cell" style="min-height: 56px; padding: 12px 18px; border-radius: 12px; background: #FFFFFF; color: #52667A; border: 1px solid #E4EAF0; display: flex; flex-wrap: wrap; align-items: center; gap: 8px 14px">
+<div role="cell" style="min-height: 56px; padding: 12px 18px; border-radius: 6px; background: #FFFFFF; color: #52667A; border: 1px solid #E4EAF0; display: flex; flex-wrap: wrap; align-items: center; gap: 8px 14px">
 
 <span style="flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 2px"><span style="font-weight: 700; font-size: 16px">—</span></span>
 <span style="font-size: 14px; opacity: 0.9"></span>
@@ -299,8 +293,8 @@
 
 <div role="row" style="display: grid; grid-template-columns: 200px minmax(0, 1fr); gap: 10px; padding: 5px 0">
 <div role="rowheader" style="padding: 14px 8px; font-weight: 700; font-size: 16px; font-variant-numeric: tabular-nums">7:00–8:00 p. m.</div>
-<div role="cell" style="min-height: 56px; padding: 12px 18px; border-radius: 12px; background: #E3F1F3; color: #102A43; border: 1px solid #8CC3CA; display: flex; flex-wrap: wrap; align-items: center; gap: 8px 14px">
-<span style="font-size: 13px; font-weight: 700; padding: 3px 10px; border-radius: 6px; background: #087E8B; color: #FFFFFF; border: 1px solid #087E8B">Conferencia</span>
+<div role="cell" style="min-height: 56px; padding: 12px 18px; border-radius: 6px; background: #E3F1F3; color: #102A43; border: 1px solid #8CC3CA; display: flex; flex-wrap: wrap; align-items: center; gap: 8px 14px">
+<span style="font-size: 12px; font-weight: 700; letter-spacing: 0.02em; padding: 3px 9px; border-radius: 4px; background: #087E8B; color: #FFFFFF; border: 1px solid #087E8B">Conferencia</span>
 <span style="flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 2px"><span style="font-weight: 700; font-size: 16px">Cuando el error no es una opción: Seguridad de Procesos y la nueva era de prevención de accidentes mayores en Colombia</span><span style="font-size: 14px; opacity: 0.9">Leonardo Gutiérrez Lobo · Colombia</span></span>
 <span style="font-size: 14px; opacity: 0.9">Ambas salas</span>
 </div>
@@ -312,8 +306,8 @@
 
 <div role="row" style="display: grid; grid-template-columns: 200px minmax(0, 1fr); gap: 10px; padding: 5px 0">
 <div role="rowheader" style="padding: 14px 8px; font-weight: 700; font-size: 16px; font-variant-numeric: tabular-nums">8:00–9:00 p. m.</div>
-<div role="cell" style="min-height: 56px; padding: 12px 18px; border-radius: 12px; background: #E3F1F3; color: #102A43; border: 1px solid #8CC3CA; display: flex; flex-wrap: wrap; align-items: center; gap: 8px 14px">
-<span style="font-size: 13px; font-weight: 700; padding: 3px 10px; border-radius: 6px; background: #087E8B; color: #FFFFFF; border: 1px solid #087E8B">Conferencia</span>
+<div role="cell" style="min-height: 56px; padding: 12px 18px; border-radius: 6px; background: #E3F1F3; color: #102A43; border: 1px solid #8CC3CA; display: flex; flex-wrap: wrap; align-items: center; gap: 8px 14px">
+<span style="font-size: 12px; font-weight: 700; letter-spacing: 0.02em; padding: 3px 9px; border-radius: 4px; background: #087E8B; color: #FFFFFF; border: 1px solid #087E8B">Conferencia</span>
 <span style="flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 2px"><span style="font-weight: 700; font-size: 16px">Prevención de riesgos en SST desde la edad infantil</span><span style="font-size: 14px; opacity: 0.9">Belinda Alberty · Honduras</span></span>
 <span style="font-size: 14px; opacity: 0.9">Ambas salas</span>
 </div>
@@ -325,8 +319,8 @@
 
 <div role="row" style="display: grid; grid-template-columns: 200px minmax(0, 1fr); gap: 10px; padding: 5px 0">
 <div role="rowheader" style="padding: 14px 8px; font-weight: 700; font-size: 16px; font-variant-numeric: tabular-nums">9:00–10:00 p. m.</div>
-<div role="cell" style="min-height: 56px; padding: 12px 18px; border-radius: 12px; background: #102A43; color: #FFFFFF; border: 1px solid #102A43; display: flex; flex-wrap: wrap; align-items: center; gap: 8px 14px">
-<span style="font-size: 13px; font-weight: 700; padding: 3px 10px; border-radius: 6px; background: #D99A27; color: #102A43; border: 1px solid #D99A27">Cierre</span>
+<div role="cell" style="min-height: 56px; padding: 12px 18px; border-radius: 6px; background: #102A43; color: #FFFFFF; border: 1px solid #102A43; display: flex; flex-wrap: wrap; align-items: center; gap: 8px 14px">
+<span style="font-size: 12px; font-weight: 700; letter-spacing: 0.02em; padding: 3px 9px; border-radius: 4px; background: #D99A27; color: #102A43; border: 1px solid #D99A27">Cierre</span>
 <span style="flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 2px"><span style="font-weight: 700; font-size: 16px">Actividad de cierre del día 1</span><span style="font-size: 14px; opacity: 0.9">Elenisa Aldana Mora · Colombia</span></span>
 <span style="font-size: 14px; opacity: 0.9">Ambas salas</span>
 </div>
@@ -350,8 +344,8 @@
 
 <li style="display: flex; flex-direction: column; gap: 6px">
 <div style="font-weight: 700; font-size: 15px; font-variant-numeric: tabular-nums">8:00–9:00 a. m.</div>
-<div style="padding: 14px 16px; border-radius: 12px; background: #102A43; color: #FFFFFF; border: 1px solid #102A43; display: flex; flex-direction: column; gap: 6px">
-<span style="align-self: flex-start; font-size: 12px; font-weight: 700; padding: 2px 8px; border-radius: 6px; background: #D99A27; color: #102A43; border: 1px solid #D99A27">Apertura · Conferencia</span>
+<div style="padding: 14px 16px; border-radius: 6px; background: #102A43; color: #FFFFFF; border: 1px solid #102A43; display: flex; flex-direction: column; gap: 6px">
+<span style="align-self: flex-start; font-size: 12px; font-weight: 700; padding: 2px 8px; border-radius: 4px; background: #D99A27; color: #102A43; border: 1px solid #D99A27">Apertura · Conferencia</span>
 <span style="font-weight: 700">Atención a emergencias · título por confirmar</span>
 <span style="font-size: 14px; opacity: 0.9">Ing. Pablo Ochoa · Panamá</span>
 <span style="font-size: 14px; opacity: 0.9">Ambas salas</span>
@@ -364,8 +358,8 @@
 
 <li style="display: flex; flex-direction: column; gap: 6px">
 <div style="font-weight: 700; font-size: 15px; font-variant-numeric: tabular-nums">9:00–10:00 a. m.</div>
-<div style="padding: 14px 16px; border-radius: 12px; background: #E3F1F3; color: #102A43; border: 1px solid #8CC3CA; display: flex; flex-direction: column; gap: 6px">
-<span style="align-self: flex-start; font-size: 12px; font-weight: 700; padding: 2px 8px; border-radius: 6px; background: #087E8B; color: #FFFFFF; border: 1px solid #087E8B">Conferencia</span>
+<div style="padding: 14px 16px; border-radius: 6px; background: #E3F1F3; color: #102A43; border: 1px solid #8CC3CA; display: flex; flex-direction: column; gap: 6px">
+<span style="align-self: flex-start; font-size: 12px; font-weight: 700; padding: 2px 8px; border-radius: 4px; background: #087E8B; color: #FFFFFF; border: 1px solid #087E8B">Conferencia</span>
 <span style="font-weight: 700">Plataforma E-collect</span>
 <span style="font-size: 14px; opacity: 0.9">Claudia Inés Carrero Beltrán · Colombia</span>
 <span style="font-size: 14px; opacity: 0.9">Ambas salas</span>
@@ -379,9 +373,9 @@
 
 <li style="display: flex; flex-direction: column; gap: 6px">
 <div style="font-weight: 700; font-size: 15px; font-variant-numeric: tabular-nums">10:00–11:00 a. m. <span style="font-weight: 500; color: #52667A">· en paralelo</span></div>
-<div style="padding: 12px 16px; border-radius: 12px; background: #FFFFFF; border: 1px solid #B9C7D3; display: flex; align-items: center; gap: 12px">
+<div style="padding: 12px 16px; border-radius: 6px; background: #FFFFFF; border: 1px solid #B9C7D3; display: flex; align-items: center; gap: 12px">
 <span style="font-size: 13px; font-weight: 800; padding: 3px 9px; border-radius: 6px; background: #102A43; color: #FFFFFF">Sala 1</span><span style="font-weight: 600">Ponencias temáticas 1 y 3<span style="display: block; font-weight: 500; font-size: 13px; color: #52667A; margin-top: 2px">20 min + 5 min de preguntas cada una</span></span></div>
-<div style="padding: 12px 16px; border-radius: 12px; background: #FFFFFF; border: 1px solid #B9C7D3; display: flex; align-items: center; gap: 12px">
+<div style="padding: 12px 16px; border-radius: 6px; background: #FFFFFF; border: 1px solid #B9C7D3; display: flex; align-items: center; gap: 12px">
 <span style="font-size: 13px; font-weight: 800; padding: 3px 9px; border-radius: 6px; background: #102A43; color: #FFFFFF">Sala 2</span><span style="font-weight: 600">Ponencias temáticas 2 y 4<span style="display: block; font-weight: 500; font-size: 13px; color: #52667A; margin-top: 2px">20 min + 5 min de preguntas cada una</span></span></div>
 </li>
 
@@ -390,8 +384,8 @@
 
 <li style="display: flex; flex-direction: column; gap: 6px">
 <div style="font-weight: 700; font-size: 15px; font-variant-numeric: tabular-nums">11:00 a. m.–12:00 m.</div>
-<div style="padding: 14px 16px; border-radius: 12px; background: #E3F1F3; color: #102A43; border: 1px solid #8CC3CA; display: flex; flex-direction: column; gap: 6px">
-<span style="align-self: flex-start; font-size: 12px; font-weight: 700; padding: 2px 8px; border-radius: 6px; background: #087E8B; color: #FFFFFF; border: 1px solid #087E8B">Conferencia</span>
+<div style="padding: 14px 16px; border-radius: 6px; background: #E3F1F3; color: #102A43; border: 1px solid #8CC3CA; display: flex; flex-direction: column; gap: 6px">
+<span style="align-self: flex-start; font-size: 12px; font-weight: 700; padding: 2px 8px; border-radius: 4px; background: #087E8B; color: #FFFFFF; border: 1px solid #087E8B">Conferencia</span>
 <span style="font-weight: 700">Cultura de emergencia en las empresas: algo de lo que nadie habla, pero que todos necesitan</span>
 <span style="font-size: 14px; opacity: 0.9">Roney De Souza · Brasil</span>
 <span style="font-size: 14px; opacity: 0.9">Ambas salas</span>
@@ -410,8 +404,8 @@
 
 <li style="display: flex; flex-direction: column; gap: 6px">
 <div style="font-weight: 700; font-size: 15px; font-variant-numeric: tabular-nums">12:00 m.–1:00 p. m.</div>
-<div style="padding: 14px 16px; border-radius: 12px; background: #EEF2F5; color: #3E5468; border: 1px solid #D5DEE6; display: flex; flex-direction: column; gap: 6px">
-<span style="align-self: flex-start; font-size: 12px; font-weight: 700; padding: 2px 8px; border-radius: 6px; background: #FFFFFF; color: #3E5468; border: 1px solid #9FB0BF">Descanso</span>
+<div style="padding: 14px 16px; border-radius: 6px; background: #EEF2F5; color: #3E5468; border: 1px solid #D5DEE6; display: flex; flex-direction: column; gap: 6px">
+<span style="align-self: flex-start; font-size: 12px; font-weight: 700; padding: 2px 8px; border-radius: 4px; background: #FFFFFF; color: #3E5468; border: 1px solid #9FB0BF">Descanso</span>
 <span style="font-weight: 700">Descanso</span>
 
 <span style="font-size: 14px; opacity: 0.9"></span>
@@ -424,8 +418,8 @@
 
 <li style="display: flex; flex-direction: column; gap: 6px">
 <div style="font-weight: 700; font-size: 15px; font-variant-numeric: tabular-nums">1:00–2:00 p. m.</div>
-<div style="padding: 14px 16px; border-radius: 12px; background: #E3F1F3; color: #102A43; border: 1px solid #8CC3CA; display: flex; flex-direction: column; gap: 6px">
-<span style="align-self: flex-start; font-size: 12px; font-weight: 700; padding: 2px 8px; border-radius: 6px; background: #087E8B; color: #FFFFFF; border: 1px solid #087E8B">Conferencia</span>
+<div style="padding: 14px 16px; border-radius: 6px; background: #E3F1F3; color: #102A43; border: 1px solid #8CC3CA; display: flex; flex-direction: column; gap: 6px">
+<span style="align-self: flex-start; font-size: 12px; font-weight: 700; padding: 2px 8px; border-radius: 4px; background: #087E8B; color: #FFFFFF; border: 1px solid #087E8B">Conferencia</span>
 <span style="font-weight: 700">Rigor Léxico y Etimológico en la Gestión de Riesgos</span>
 <span style="font-size: 14px; opacity: 0.9">Carlos Nacache · Panamá</span>
 <span style="font-size: 14px; opacity: 0.9">Ambas salas</span>
@@ -439,9 +433,9 @@
 
 <li style="display: flex; flex-direction: column; gap: 6px">
 <div style="font-weight: 700; font-size: 15px; font-variant-numeric: tabular-nums">2:00–3:00 p. m. <span style="font-weight: 500; color: #52667A">· en paralelo</span></div>
-<div style="padding: 12px 16px; border-radius: 12px; background: #FFFFFF; border: 1px solid #B9C7D3; display: flex; align-items: center; gap: 12px">
+<div style="padding: 12px 16px; border-radius: 6px; background: #FFFFFF; border: 1px solid #B9C7D3; display: flex; align-items: center; gap: 12px">
 <span style="font-size: 13px; font-weight: 800; padding: 3px 9px; border-radius: 6px; background: #102A43; color: #FFFFFF">Sala 1</span><span style="font-weight: 600">Ponencias temáticas 5 y 7<span style="display: block; font-weight: 500; font-size: 13px; color: #52667A; margin-top: 2px">20 min + 5 min de preguntas cada una</span></span></div>
-<div style="padding: 12px 16px; border-radius: 12px; background: #FFFFFF; border: 1px solid #B9C7D3; display: flex; align-items: center; gap: 12px">
+<div style="padding: 12px 16px; border-radius: 6px; background: #FFFFFF; border: 1px solid #B9C7D3; display: flex; align-items: center; gap: 12px">
 <span style="font-size: 13px; font-weight: 800; padding: 3px 9px; border-radius: 6px; background: #102A43; color: #FFFFFF">Sala 2</span><span style="font-weight: 600">Ponencias temáticas 6 y 8<span style="display: block; font-weight: 500; font-size: 13px; color: #52667A; margin-top: 2px">20 min + 5 min de preguntas cada una</span></span></div>
 </li>
 
@@ -451,9 +445,9 @@
 
 <li style="display: flex; flex-direction: column; gap: 6px">
 <div style="font-weight: 700; font-size: 15px; font-variant-numeric: tabular-nums">3:00–4:00 p. m. <span style="font-weight: 500; color: #52667A">· en paralelo</span></div>
-<div style="padding: 12px 16px; border-radius: 12px; background: #FFFFFF; border: 1px solid #B9C7D3; display: flex; align-items: center; gap: 12px">
+<div style="padding: 12px 16px; border-radius: 6px; background: #FFFFFF; border: 1px solid #B9C7D3; display: flex; align-items: center; gap: 12px">
 <span style="font-size: 13px; font-weight: 800; padding: 3px 9px; border-radius: 6px; background: #102A43; color: #FFFFFF">Sala 1</span><span style="font-weight: 600">Ponencias temáticas 9 y 11<span style="display: block; font-weight: 500; font-size: 13px; color: #52667A; margin-top: 2px">20 min + 5 min de preguntas cada una</span></span></div>
-<div style="padding: 12px 16px; border-radius: 12px; background: #FFFFFF; border: 1px solid #B9C7D3; display: flex; align-items: center; gap: 12px">
+<div style="padding: 12px 16px; border-radius: 6px; background: #FFFFFF; border: 1px solid #B9C7D3; display: flex; align-items: center; gap: 12px">
 <span style="font-size: 13px; font-weight: 800; padding: 3px 9px; border-radius: 6px; background: #102A43; color: #FFFFFF">Sala 2</span><span style="font-weight: 600">Ponencias temáticas 10 y 12<span style="display: block; font-weight: 500; font-size: 13px; color: #52667A; margin-top: 2px">20 min + 5 min de preguntas cada una</span></span></div>
 </li>
 
@@ -462,8 +456,8 @@
 
 <li style="display: flex; flex-direction: column; gap: 6px">
 <div style="font-weight: 700; font-size: 15px; font-variant-numeric: tabular-nums">4:00–5:00 p. m.</div>
-<div style="padding: 14px 16px; border-radius: 12px; background: #E3F1F3; color: #102A43; border: 1px solid #8CC3CA; display: flex; flex-direction: column; gap: 6px">
-<span style="align-self: flex-start; font-size: 12px; font-weight: 700; padding: 2px 8px; border-radius: 6px; background: #087E8B; color: #FFFFFF; border: 1px solid #087E8B">Conferencia</span>
+<div style="padding: 14px 16px; border-radius: 6px; background: #E3F1F3; color: #102A43; border: 1px solid #8CC3CA; display: flex; flex-direction: column; gap: 6px">
+<span style="align-self: flex-start; font-size: 12px; font-weight: 700; padding: 2px 8px; border-radius: 4px; background: #087E8B; color: #FFFFFF; border: 1px solid #087E8B">Conferencia</span>
 <span style="font-weight: 700">Detección de atmósferas peligrosas en espacios confinados</span>
 <span style="font-size: 14px; opacity: 0.9">Moisés López Quintana · Colombia</span>
 <span style="font-size: 14px; opacity: 0.9">Ambas salas</span>
@@ -476,8 +470,8 @@
 
 <li style="display: flex; flex-direction: column; gap: 6px">
 <div style="font-weight: 700; font-size: 15px; font-variant-numeric: tabular-nums">5:00–6:00 p. m.</div>
-<div style="padding: 14px 16px; border-radius: 12px; background: #EEF2F5; color: #3E5468; border: 1px solid #D5DEE6; display: flex; flex-direction: column; gap: 6px">
-<span style="align-self: flex-start; font-size: 12px; font-weight: 700; padding: 2px 8px; border-radius: 6px; background: #FFFFFF; color: #3E5468; border: 1px solid #9FB0BF">Descanso</span>
+<div style="padding: 14px 16px; border-radius: 6px; background: #EEF2F5; color: #3E5468; border: 1px solid #D5DEE6; display: flex; flex-direction: column; gap: 6px">
+<span style="align-self: flex-start; font-size: 12px; font-weight: 700; padding: 2px 8px; border-radius: 4px; background: #FFFFFF; color: #3E5468; border: 1px solid #9FB0BF">Descanso</span>
 <span style="font-weight: 700">Descanso</span>
 
 <span style="font-size: 14px; opacity: 0.9"></span>
@@ -496,7 +490,7 @@
 
 <li style="display: flex; flex-direction: column; gap: 6px">
 <div style="font-weight: 700; font-size: 15px; font-variant-numeric: tabular-nums">6:00–7:00 p. m.</div>
-<div style="padding: 14px 16px; border-radius: 12px; background: #FFFFFF; color: #52667A; border: 1px solid #E4EAF0; display: flex; flex-direction: column; gap: 6px">
+<div style="padding: 14px 16px; border-radius: 6px; background: #FFFFFF; color: #52667A; border: 1px solid #E4EAF0; display: flex; flex-direction: column; gap: 6px">
 
 <span style="font-weight: 700">—</span>
 
@@ -510,8 +504,8 @@
 
 <li style="display: flex; flex-direction: column; gap: 6px">
 <div style="font-weight: 700; font-size: 15px; font-variant-numeric: tabular-nums">7:00–8:00 p. m.</div>
-<div style="padding: 14px 16px; border-radius: 12px; background: #E3F1F3; color: #102A43; border: 1px solid #8CC3CA; display: flex; flex-direction: column; gap: 6px">
-<span style="align-self: flex-start; font-size: 12px; font-weight: 700; padding: 2px 8px; border-radius: 6px; background: #087E8B; color: #FFFFFF; border: 1px solid #087E8B">Conferencia</span>
+<div style="padding: 14px 16px; border-radius: 6px; background: #E3F1F3; color: #102A43; border: 1px solid #8CC3CA; display: flex; flex-direction: column; gap: 6px">
+<span style="align-self: flex-start; font-size: 12px; font-weight: 700; padding: 2px 8px; border-radius: 4px; background: #087E8B; color: #FFFFFF; border: 1px solid #087E8B">Conferencia</span>
 <span style="font-weight: 700">Cuando el error no es una opción: Seguridad de Procesos y la nueva era de prevención de accidentes mayores en Colombia</span>
 <span style="font-size: 14px; opacity: 0.9">Leonardo Gutiérrez Lobo · Colombia</span>
 <span style="font-size: 14px; opacity: 0.9">Ambas salas</span>
@@ -524,8 +518,8 @@
 
 <li style="display: flex; flex-direction: column; gap: 6px">
 <div style="font-weight: 700; font-size: 15px; font-variant-numeric: tabular-nums">8:00–9:00 p. m.</div>
-<div style="padding: 14px 16px; border-radius: 12px; background: #E3F1F3; color: #102A43; border: 1px solid #8CC3CA; display: flex; flex-direction: column; gap: 6px">
-<span style="align-self: flex-start; font-size: 12px; font-weight: 700; padding: 2px 8px; border-radius: 6px; background: #087E8B; color: #FFFFFF; border: 1px solid #087E8B">Conferencia</span>
+<div style="padding: 14px 16px; border-radius: 6px; background: #E3F1F3; color: #102A43; border: 1px solid #8CC3CA; display: flex; flex-direction: column; gap: 6px">
+<span style="align-self: flex-start; font-size: 12px; font-weight: 700; padding: 2px 8px; border-radius: 4px; background: #087E8B; color: #FFFFFF; border: 1px solid #087E8B">Conferencia</span>
 <span style="font-weight: 700">Prevención de riesgos en SST desde la edad infantil</span>
 <span style="font-size: 14px; opacity: 0.9">Belinda Alberty · Honduras</span>
 <span style="font-size: 14px; opacity: 0.9">Ambas salas</span>
@@ -538,8 +532,8 @@
 
 <li style="display: flex; flex-direction: column; gap: 6px">
 <div style="font-weight: 700; font-size: 15px; font-variant-numeric: tabular-nums">9:00–10:00 p. m.</div>
-<div style="padding: 14px 16px; border-radius: 12px; background: #102A43; color: #FFFFFF; border: 1px solid #102A43; display: flex; flex-direction: column; gap: 6px">
-<span style="align-self: flex-start; font-size: 12px; font-weight: 700; padding: 2px 8px; border-radius: 6px; background: #D99A27; color: #102A43; border: 1px solid #D99A27">Cierre</span>
+<div style="padding: 14px 16px; border-radius: 6px; background: #102A43; color: #FFFFFF; border: 1px solid #102A43; display: flex; flex-direction: column; gap: 6px">
+<span style="align-self: flex-start; font-size: 12px; font-weight: 700; padding: 2px 8px; border-radius: 4px; background: #D99A27; color: #102A43; border: 1px solid #D99A27">Cierre</span>
 <span style="font-weight: 700">Actividad de cierre del día 1</span>
 <span style="font-size: 14px; opacity: 0.9">Elenisa Aldana Mora · Colombia</span>
 <span style="font-size: 14px; opacity: 0.9">Ambas salas</span>
@@ -554,7 +548,7 @@
 </div>
 <div data-day-panel="1" id="dia-2" hidden>
 <div style="display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 8px 24px; padding-top: 8px">
-<h2 style="margin: 0; font-family: Manrope, sans-serif; font-weight: 800; font-size: clamp(26px, 3vw, 34px); line-height: 1.15">Viernes 30 de octubre de 2026 <span style="color: #52667A; font-weight: 700">— Día 2</span></h2>
+<h2 style="margin: 0; font-family: var(--serif); font-weight: 600; font-size: clamp(28px, 3vw, 38px); line-height: 1.12; letter-spacing: -0.01em">Viernes 30 de octubre de 2026 <span style="color: var(--ink-3); font-weight: 400; font-style: italic">— Día 2</span></h2>
 <div style="display: flex; flex-wrap: wrap; gap: 8px 20px; font-size: 15px; color: #3E5468">
 <span><strong style="color: #102A43">Inicio:</strong> 8:00 a. m. · Apertura y conferencia</span>
 <span><strong style="color: #102A43">Cierre:</strong> 9:00–10:00 p. m. · Actividad de cierre del Congreso</span>
@@ -563,11 +557,11 @@
 </div>
 
 <div class="only-desktop">
-<div role="table" aria-label="Programación del viernes 30 de octubre de 2026" style="border: 1px solid #D5DEE6; border-radius: 18px; background: #FFFFFF; padding: 8px 16px 16px">
-<div role="row" style="display: grid; grid-template-columns: 200px minmax(0, 1fr) minmax(0, 1fr); gap: 10px; position: sticky; top: 71px; background: #FFFFFF; z-index: 1">
+<div role="table" aria-label="Programación del viernes 30 de octubre de 2026" style="border: 1px solid var(--line); border-radius: 8px; background: #FFFFFF; padding: 8px 16px 16px">
+<div role="row" style="display: grid; grid-template-columns: 200px minmax(0, 1fr) minmax(0, 1fr); gap: 10px; position: sticky; top: 72px; background: #FFFFFF; z-index: 1">
 <div role="columnheader" style="padding: 14px 8px; font-size: 13px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: #52667A">Horario</div>
-<div role="columnheader" style="padding: 14px 8px; display: flex; align-items: center; gap: 8px; font-family: Manrope, sans-serif; font-weight: 800; font-size: 16px"><span aria-hidden="true" style="width: 26px; height: 26px; border-radius: 7px; background: #102A43; color: #FFFFFF; font-size: 13px; display: flex; align-items: center; justify-content: center">1</span>Sala 1</div>
-<div role="columnheader" style="padding: 14px 8px; display: flex; align-items: center; gap: 8px; font-family: Manrope, sans-serif; font-weight: 800; font-size: 16px"><span aria-hidden="true" style="width: 26px; height: 26px; border-radius: 7px; background: #102A43; color: #FFFFFF; font-size: 13px; display: flex; align-items: center; justify-content: center">2</span>Sala 2</div>
+<div role="columnheader" style="padding: 14px 8px; display: flex; align-items: center; gap: 8px; font-family: var(--sans); font-weight: 700; font-size: 16px"><span aria-hidden="true" style="width: 26px; height: 26px; border-radius: 4px; background: #102A43; color: #FFFFFF; font-size: 13px; display: flex; align-items: center; justify-content: center">1</span>Sala 1</div>
+<div role="columnheader" style="padding: 14px 8px; display: flex; align-items: center; gap: 8px; font-family: var(--sans); font-weight: 700; font-size: 16px"><span aria-hidden="true" style="width: 26px; height: 26px; border-radius: 4px; background: #102A43; color: #FFFFFF; font-size: 13px; display: flex; align-items: center; justify-content: center">2</span>Sala 2</div>
 </div>
 
 
@@ -580,8 +574,8 @@
 
 <div role="row" style="display: grid; grid-template-columns: 200px minmax(0, 1fr); gap: 10px; padding: 5px 0">
 <div role="rowheader" style="padding: 14px 8px; font-weight: 700; font-size: 16px; font-variant-numeric: tabular-nums">8:00–9:00 a. m.</div>
-<div role="cell" style="min-height: 56px; padding: 12px 18px; border-radius: 12px; background: #102A43; color: #FFFFFF; border: 1px solid #102A43; display: flex; flex-wrap: wrap; align-items: center; gap: 8px 14px">
-<span style="font-size: 13px; font-weight: 700; padding: 3px 10px; border-radius: 6px; background: #D99A27; color: #102A43; border: 1px solid #D99A27">Apertura · Conferencia</span>
+<div role="cell" style="min-height: 56px; padding: 12px 18px; border-radius: 6px; background: #102A43; color: #FFFFFF; border: 1px solid #102A43; display: flex; flex-wrap: wrap; align-items: center; gap: 8px 14px">
+<span style="font-size: 12px; font-weight: 700; letter-spacing: 0.02em; padding: 3px 9px; border-radius: 4px; background: #D99A27; color: #102A43; border: 1px solid #D99A27">Apertura · Conferencia</span>
 <span style="flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 2px"><span style="font-weight: 700; font-size: 16px">Procedimientos de Gestión Integral e Investigación Avanzada de Incidentes HSEC</span><span style="font-size: 14px; opacity: 0.9">Ing. Fernando M. Torres González, Mg. · Chile</span></span>
 <span style="font-size: 14px; opacity: 0.9">Ambas salas</span>
 </div>
@@ -593,8 +587,8 @@
 
 <div role="row" style="display: grid; grid-template-columns: 200px minmax(0, 1fr); gap: 10px; padding: 5px 0">
 <div role="rowheader" style="padding: 14px 8px; font-weight: 700; font-size: 16px; font-variant-numeric: tabular-nums">9:00–10:00 a. m.</div>
-<div role="cell" style="min-height: 56px; padding: 12px 18px; border-radius: 12px; background: #FBF3E2; color: #102A43; border: 1px solid #E8C77F; display: flex; flex-wrap: wrap; align-items: center; gap: 8px 14px">
-<span style="font-size: 13px; font-weight: 700; padding: 3px 10px; border-radius: 6px; background: #D99A27; color: #102A43; border: 1px solid #D99A27">Pósteres</span>
+<div role="cell" style="min-height: 56px; padding: 12px 18px; border-radius: 6px; background: #FBF3E2; color: #102A43; border: 1px solid #E8C77F; display: flex; flex-wrap: wrap; align-items: center; gap: 8px 14px">
+<span style="font-size: 12px; font-weight: 700; letter-spacing: 0.02em; padding: 3px 9px; border-radius: 4px; background: #D99A27; color: #102A43; border: 1px solid #D99A27">Pósteres</span>
 <span style="flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 2px"><span style="font-weight: 700; font-size: 16px">Jornada de pósteres</span></span>
 <span style="font-size: 14px; opacity: 0.9">Ambas salas</span>
 </div>
@@ -607,12 +601,12 @@
 
 <div role="row" style="display: grid; grid-template-columns: 200px minmax(0, 1fr) minmax(0, 1fr); gap: 10px; padding: 5px 0">
 <div role="rowheader" style="padding: 14px 8px; font-weight: 700; font-size: 16px; font-variant-numeric: tabular-nums">10:00–11:00 a. m.</div>
-<div role="cell" style="min-height: 56px; padding: 12px 18px; border-radius: 12px; background: #FFFFFF; border: 1px solid #B9C7D3; display: flex; flex-wrap: wrap; align-items: center; gap: 8px 14px">
-<span style="font-size: 13px; font-weight: 700; padding: 3px 10px; border-radius: 6px; background: #FFFFFF; color: #102A43; border: 1px solid #102A43">Ponencias</span>
+<div role="cell" style="min-height: 56px; padding: 12px 18px; border-radius: 6px; background: #FFFFFF; border: 1px solid #B9C7D3; display: flex; flex-wrap: wrap; align-items: center; gap: 8px 14px">
+<span style="font-size: 12px; font-weight: 700; letter-spacing: 0.02em; padding: 3px 9px; border-radius: 6px; background: #FFFFFF; color: #102A43; border: 1px solid #102A43">Ponencias</span>
 <span style="font-weight: 600; font-size: 16px; flex: 1; min-width: 0">Ponencias temáticas 13 y 15<span style="display: block; font-weight: 500; font-size: 13px; color: #52667A; margin-top: 2px">20 min + 5 min de preguntas cada una</span></span><span style="font-size: 14px; color: #52667A">Sala 1</span>
 </div>
-<div role="cell" style="min-height: 56px; padding: 12px 18px; border-radius: 12px; background: #FFFFFF; border: 1px solid #B9C7D3; display: flex; flex-wrap: wrap; align-items: center; gap: 8px 14px">
-<span style="font-size: 13px; font-weight: 700; padding: 3px 10px; border-radius: 6px; background: #FFFFFF; color: #102A43; border: 1px solid #102A43">Ponencias</span>
+<div role="cell" style="min-height: 56px; padding: 12px 18px; border-radius: 6px; background: #FFFFFF; border: 1px solid #B9C7D3; display: flex; flex-wrap: wrap; align-items: center; gap: 8px 14px">
+<span style="font-size: 12px; font-weight: 700; letter-spacing: 0.02em; padding: 3px 9px; border-radius: 6px; background: #FFFFFF; color: #102A43; border: 1px solid #102A43">Ponencias</span>
 <span style="font-weight: 600; font-size: 16px; flex: 1; min-width: 0">Ponencias temáticas 14 y 16<span style="display: block; font-weight: 500; font-size: 13px; color: #52667A; margin-top: 2px">20 min + 5 min de preguntas cada una</span></span><span style="font-size: 14px; color: #52667A">Sala 2</span>
 </div>
 </div>
@@ -622,8 +616,8 @@
 
 <div role="row" style="display: grid; grid-template-columns: 200px minmax(0, 1fr); gap: 10px; padding: 5px 0">
 <div role="rowheader" style="padding: 14px 8px; font-weight: 700; font-size: 16px; font-variant-numeric: tabular-nums">11:00 a. m.–12:00 m.</div>
-<div role="cell" style="min-height: 56px; padding: 12px 18px; border-radius: 12px; background: #E3F1F3; color: #102A43; border: 1px solid #8CC3CA; display: flex; flex-wrap: wrap; align-items: center; gap: 8px 14px">
-<span style="font-size: 13px; font-weight: 700; padding: 3px 10px; border-radius: 6px; background: #087E8B; color: #FFFFFF; border: 1px solid #087E8B">Conferencia</span>
+<div role="cell" style="min-height: 56px; padding: 12px 18px; border-radius: 6px; background: #E3F1F3; color: #102A43; border: 1px solid #8CC3CA; display: flex; flex-wrap: wrap; align-items: center; gap: 8px 14px">
+<span style="font-size: 12px; font-weight: 700; letter-spacing: 0.02em; padding: 3px 9px; border-radius: 4px; background: #087E8B; color: #FFFFFF; border: 1px solid #087E8B">Conferencia</span>
 <span style="flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 2px"><span style="font-weight: 700; font-size: 16px">Título por confirmar</span><span style="font-size: 14px; opacity: 0.9">Regis Hernández · Colombia</span></span>
 <span style="font-size: 14px; opacity: 0.9">Ambas salas</span>
 </div>
@@ -641,8 +635,8 @@
 
 <div role="row" style="display: grid; grid-template-columns: 200px minmax(0, 1fr); gap: 10px; padding: 5px 0">
 <div role="rowheader" style="padding: 14px 8px; font-weight: 700; font-size: 16px; font-variant-numeric: tabular-nums">12:00 m.–1:00 p. m.</div>
-<div role="cell" style="min-height: 56px; padding: 12px 18px; border-radius: 12px; background: #EEF2F5; color: #3E5468; border: 1px solid #D5DEE6; display: flex; flex-wrap: wrap; align-items: center; gap: 8px 14px">
-<span style="font-size: 13px; font-weight: 700; padding: 3px 10px; border-radius: 6px; background: #FFFFFF; color: #3E5468; border: 1px solid #9FB0BF">Descanso</span>
+<div role="cell" style="min-height: 56px; padding: 12px 18px; border-radius: 6px; background: #EEF2F5; color: #3E5468; border: 1px solid #D5DEE6; display: flex; flex-wrap: wrap; align-items: center; gap: 8px 14px">
+<span style="font-size: 12px; font-weight: 700; letter-spacing: 0.02em; padding: 3px 9px; border-radius: 4px; background: #FFFFFF; color: #3E5468; border: 1px solid #9FB0BF">Descanso</span>
 <span style="flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 2px"><span style="font-weight: 700; font-size: 16px">Descanso</span></span>
 <span style="font-size: 14px; opacity: 0.9"></span>
 </div>
@@ -654,8 +648,8 @@
 
 <div role="row" style="display: grid; grid-template-columns: 200px minmax(0, 1fr); gap: 10px; padding: 5px 0">
 <div role="rowheader" style="padding: 14px 8px; font-weight: 700; font-size: 16px; font-variant-numeric: tabular-nums">1:00–2:00 p. m.</div>
-<div role="cell" style="min-height: 56px; padding: 12px 18px; border-radius: 12px; background: #E3F1F3; color: #102A43; border: 1px solid #8CC3CA; display: flex; flex-wrap: wrap; align-items: center; gap: 8px 14px">
-<span style="font-size: 13px; font-weight: 700; padding: 3px 10px; border-radius: 6px; background: #087E8B; color: #FFFFFF; border: 1px solid #087E8B">Conferencia</span>
+<div role="cell" style="min-height: 56px; padding: 12px 18px; border-radius: 6px; background: #E3F1F3; color: #102A43; border: 1px solid #8CC3CA; display: flex; flex-wrap: wrap; align-items: center; gap: 8px 14px">
+<span style="font-size: 12px; font-weight: 700; letter-spacing: 0.02em; padding: 3px 9px; border-radius: 4px; background: #087E8B; color: #FFFFFF; border: 1px solid #087E8B">Conferencia</span>
 <span style="flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 2px"><span style="font-weight: 700; font-size: 16px">La toxicología en la Salud Laboral, su pasado y sus desafíos futuros</span><span style="font-size: 14px; opacity: 0.9">Dr. Reynaldo Andrés Concha Maureira · Chile</span></span>
 <span style="font-size: 14px; opacity: 0.9">Ambas salas</span>
 </div>
@@ -668,12 +662,12 @@
 
 <div role="row" style="display: grid; grid-template-columns: 200px minmax(0, 1fr) minmax(0, 1fr); gap: 10px; padding: 5px 0">
 <div role="rowheader" style="padding: 14px 8px; font-weight: 700; font-size: 16px; font-variant-numeric: tabular-nums">2:00–3:00 p. m.</div>
-<div role="cell" style="min-height: 56px; padding: 12px 18px; border-radius: 12px; background: #FFFFFF; border: 1px solid #B9C7D3; display: flex; flex-wrap: wrap; align-items: center; gap: 8px 14px">
-<span style="font-size: 13px; font-weight: 700; padding: 3px 10px; border-radius: 6px; background: #FFFFFF; color: #102A43; border: 1px solid #102A43">Ponencias</span>
+<div role="cell" style="min-height: 56px; padding: 12px 18px; border-radius: 6px; background: #FFFFFF; border: 1px solid #B9C7D3; display: flex; flex-wrap: wrap; align-items: center; gap: 8px 14px">
+<span style="font-size: 12px; font-weight: 700; letter-spacing: 0.02em; padding: 3px 9px; border-radius: 6px; background: #FFFFFF; color: #102A43; border: 1px solid #102A43">Ponencias</span>
 <span style="font-weight: 600; font-size: 16px; flex: 1; min-width: 0">Ponencias temáticas 17 y 19<span style="display: block; font-weight: 500; font-size: 13px; color: #52667A; margin-top: 2px">20 min + 5 min de preguntas cada una</span></span><span style="font-size: 14px; color: #52667A">Sala 1</span>
 </div>
-<div role="cell" style="min-height: 56px; padding: 12px 18px; border-radius: 12px; background: #FFFFFF; border: 1px solid #B9C7D3; display: flex; flex-wrap: wrap; align-items: center; gap: 8px 14px">
-<span style="font-size: 13px; font-weight: 700; padding: 3px 10px; border-radius: 6px; background: #FFFFFF; color: #102A43; border: 1px solid #102A43">Ponencias</span>
+<div role="cell" style="min-height: 56px; padding: 12px 18px; border-radius: 6px; background: #FFFFFF; border: 1px solid #B9C7D3; display: flex; flex-wrap: wrap; align-items: center; gap: 8px 14px">
+<span style="font-size: 12px; font-weight: 700; letter-spacing: 0.02em; padding: 3px 9px; border-radius: 6px; background: #FFFFFF; color: #102A43; border: 1px solid #102A43">Ponencias</span>
 <span style="font-weight: 600; font-size: 16px; flex: 1; min-width: 0">Ponencias temáticas 18 y 20<span style="display: block; font-weight: 500; font-size: 13px; color: #52667A; margin-top: 2px">20 min + 5 min de preguntas cada una</span></span><span style="font-size: 14px; color: #52667A">Sala 2</span>
 </div>
 </div>
@@ -684,12 +678,12 @@
 
 <div role="row" style="display: grid; grid-template-columns: 200px minmax(0, 1fr) minmax(0, 1fr); gap: 10px; padding: 5px 0">
 <div role="rowheader" style="padding: 14px 8px; font-weight: 700; font-size: 16px; font-variant-numeric: tabular-nums">3:00–4:00 p. m.</div>
-<div role="cell" style="min-height: 56px; padding: 12px 18px; border-radius: 12px; background: #FFFFFF; border: 1px solid #B9C7D3; display: flex; flex-wrap: wrap; align-items: center; gap: 8px 14px">
-<span style="font-size: 13px; font-weight: 700; padding: 3px 10px; border-radius: 6px; background: #FFFFFF; color: #102A43; border: 1px solid #102A43">Ponencias</span>
+<div role="cell" style="min-height: 56px; padding: 12px 18px; border-radius: 6px; background: #FFFFFF; border: 1px solid #B9C7D3; display: flex; flex-wrap: wrap; align-items: center; gap: 8px 14px">
+<span style="font-size: 12px; font-weight: 700; letter-spacing: 0.02em; padding: 3px 9px; border-radius: 6px; background: #FFFFFF; color: #102A43; border: 1px solid #102A43">Ponencias</span>
 <span style="font-weight: 600; font-size: 16px; flex: 1; min-width: 0">Ponencias temáticas 21 y 23<span style="display: block; font-weight: 500; font-size: 13px; color: #52667A; margin-top: 2px">20 min + 5 min de preguntas cada una</span></span><span style="font-size: 14px; color: #52667A">Sala 1</span>
 </div>
-<div role="cell" style="min-height: 56px; padding: 12px 18px; border-radius: 12px; background: #FFFFFF; border: 1px solid #B9C7D3; display: flex; flex-wrap: wrap; align-items: center; gap: 8px 14px">
-<span style="font-size: 13px; font-weight: 700; padding: 3px 10px; border-radius: 6px; background: #FFFFFF; color: #102A43; border: 1px solid #102A43">Ponencias</span>
+<div role="cell" style="min-height: 56px; padding: 12px 18px; border-radius: 6px; background: #FFFFFF; border: 1px solid #B9C7D3; display: flex; flex-wrap: wrap; align-items: center; gap: 8px 14px">
+<span style="font-size: 12px; font-weight: 700; letter-spacing: 0.02em; padding: 3px 9px; border-radius: 6px; background: #FFFFFF; color: #102A43; border: 1px solid #102A43">Ponencias</span>
 <span style="font-weight: 600; font-size: 16px; flex: 1; min-width: 0">Ponencias temáticas 22 y 24<span style="display: block; font-weight: 500; font-size: 13px; color: #52667A; margin-top: 2px">20 min + 5 min de preguntas cada una</span></span><span style="font-size: 14px; color: #52667A">Sala 2</span>
 </div>
 </div>
@@ -699,8 +693,8 @@
 
 <div role="row" style="display: grid; grid-template-columns: 200px minmax(0, 1fr); gap: 10px; padding: 5px 0">
 <div role="rowheader" style="padding: 14px 8px; font-weight: 700; font-size: 16px; font-variant-numeric: tabular-nums">4:00–5:00 p. m.</div>
-<div role="cell" style="min-height: 56px; padding: 12px 18px; border-radius: 12px; background: #E3F1F3; color: #102A43; border: 1px solid #8CC3CA; display: flex; flex-wrap: wrap; align-items: center; gap: 8px 14px">
-<span style="font-size: 13px; font-weight: 700; padding: 3px 10px; border-radius: 6px; background: #087E8B; color: #FFFFFF; border: 1px solid #087E8B">Conferencia</span>
+<div role="cell" style="min-height: 56px; padding: 12px 18px; border-radius: 6px; background: #E3F1F3; color: #102A43; border: 1px solid #8CC3CA; display: flex; flex-wrap: wrap; align-items: center; gap: 8px 14px">
+<span style="font-size: 12px; font-weight: 700; letter-spacing: 0.02em; padding: 3px 9px; border-radius: 4px; background: #087E8B; color: #FFFFFF; border: 1px solid #087E8B">Conferencia</span>
 <span style="flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 2px"><span style="font-weight: 700; font-size: 16px">Envejecimiento de la fuerza laboral: el reto emergente de la salud ocupacional</span><span style="font-size: 14px; opacity: 0.9">Eylin Rodríguez · Honduras</span></span>
 <span style="font-size: 14px; opacity: 0.9">Ambas salas</span>
 </div>
@@ -712,8 +706,8 @@
 
 <div role="row" style="display: grid; grid-template-columns: 200px minmax(0, 1fr); gap: 10px; padding: 5px 0">
 <div role="rowheader" style="padding: 14px 8px; font-weight: 700; font-size: 16px; font-variant-numeric: tabular-nums">5:00–6:00 p. m.</div>
-<div role="cell" style="min-height: 56px; padding: 12px 18px; border-radius: 12px; background: #EEF2F5; color: #3E5468; border: 1px solid #D5DEE6; display: flex; flex-wrap: wrap; align-items: center; gap: 8px 14px">
-<span style="font-size: 13px; font-weight: 700; padding: 3px 10px; border-radius: 6px; background: #FFFFFF; color: #3E5468; border: 1px solid #9FB0BF">Descanso</span>
+<div role="cell" style="min-height: 56px; padding: 12px 18px; border-radius: 6px; background: #EEF2F5; color: #3E5468; border: 1px solid #D5DEE6; display: flex; flex-wrap: wrap; align-items: center; gap: 8px 14px">
+<span style="font-size: 12px; font-weight: 700; letter-spacing: 0.02em; padding: 3px 9px; border-radius: 4px; background: #FFFFFF; color: #3E5468; border: 1px solid #9FB0BF">Descanso</span>
 <span style="flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 2px"><span style="font-weight: 700; font-size: 16px">Descanso</span></span>
 <span style="font-size: 14px; opacity: 0.9"></span>
 </div>
@@ -731,7 +725,7 @@
 
 <div role="row" style="display: grid; grid-template-columns: 200px minmax(0, 1fr); gap: 10px; padding: 5px 0">
 <div role="rowheader" style="padding: 14px 8px; font-weight: 700; font-size: 16px; font-variant-numeric: tabular-nums">6:00–7:00 p. m.</div>
-<div role="cell" style="min-height: 56px; padding: 12px 18px; border-radius: 12px; background: #FFFFFF; color: #52667A; border: 1px solid #E4EAF0; display: flex; flex-wrap: wrap; align-items: center; gap: 8px 14px">
+<div role="cell" style="min-height: 56px; padding: 12px 18px; border-radius: 6px; background: #FFFFFF; color: #52667A; border: 1px solid #E4EAF0; display: flex; flex-wrap: wrap; align-items: center; gap: 8px 14px">
 
 <span style="flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 2px"><span style="font-weight: 700; font-size: 16px">—</span></span>
 <span style="font-size: 14px; opacity: 0.9"></span>
@@ -744,8 +738,8 @@
 
 <div role="row" style="display: grid; grid-template-columns: 200px minmax(0, 1fr); gap: 10px; padding: 5px 0">
 <div role="rowheader" style="padding: 14px 8px; font-weight: 700; font-size: 16px; font-variant-numeric: tabular-nums">7:00–8:00 p. m.</div>
-<div role="cell" style="min-height: 56px; padding: 12px 18px; border-radius: 12px; background: #E3F1F3; color: #102A43; border: 1px solid #8CC3CA; display: flex; flex-wrap: wrap; align-items: center; gap: 8px 14px">
-<span style="font-size: 13px; font-weight: 700; padding: 3px 10px; border-radius: 6px; background: #087E8B; color: #FFFFFF; border: 1px solid #087E8B">Conferencia</span>
+<div role="cell" style="min-height: 56px; padding: 12px 18px; border-radius: 6px; background: #E3F1F3; color: #102A43; border: 1px solid #8CC3CA; display: flex; flex-wrap: wrap; align-items: center; gap: 8px 14px">
+<span style="font-size: 12px; font-weight: 700; letter-spacing: 0.02em; padding: 3px 9px; border-radius: 4px; background: #087E8B; color: #FFFFFF; border: 1px solid #087E8B">Conferencia</span>
 <span style="flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 2px"><span style="font-weight: 700; font-size: 16px">Modelo dinámico de riesgos para la minería</span><span style="font-size: 14px; opacity: 0.9">Ing. Fernando M. Torres González, Mg. · Chile</span></span>
 <span style="font-size: 14px; opacity: 0.9">Ambas salas</span>
 </div>
@@ -757,8 +751,8 @@
 
 <div role="row" style="display: grid; grid-template-columns: 200px minmax(0, 1fr); gap: 10px; padding: 5px 0">
 <div role="rowheader" style="padding: 14px 8px; font-weight: 700; font-size: 16px; font-variant-numeric: tabular-nums">8:00–9:00 p. m.</div>
-<div role="cell" style="min-height: 56px; padding: 12px 18px; border-radius: 12px; background: #E3F1F3; color: #102A43; border: 1px solid #8CC3CA; display: flex; flex-wrap: wrap; align-items: center; gap: 8px 14px">
-<span style="font-size: 13px; font-weight: 700; padding: 3px 10px; border-radius: 6px; background: #087E8B; color: #FFFFFF; border: 1px solid #087E8B">Conferencia</span>
+<div role="cell" style="min-height: 56px; padding: 12px 18px; border-radius: 6px; background: #E3F1F3; color: #102A43; border: 1px solid #8CC3CA; display: flex; flex-wrap: wrap; align-items: center; gap: 8px 14px">
+<span style="font-size: 12px; font-weight: 700; letter-spacing: 0.02em; padding: 3px 9px; border-radius: 4px; background: #087E8B; color: #FFFFFF; border: 1px solid #087E8B">Conferencia</span>
 <span style="flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 2px"><span style="font-weight: 700; font-size: 16px">Seguridad en las operaciones marítimas y fluviales, y el papel del profesional y/o especialista en la seguridad y la salud en el trabajo en estos escenarios</span><span style="font-size: 14px; opacity: 0.9">José Fernando Rojas · Colombia</span></span>
 <span style="font-size: 14px; opacity: 0.9">Ambas salas</span>
 </div>
@@ -770,8 +764,8 @@
 
 <div role="row" style="display: grid; grid-template-columns: 200px minmax(0, 1fr); gap: 10px; padding: 5px 0">
 <div role="rowheader" style="padding: 14px 8px; font-weight: 700; font-size: 16px; font-variant-numeric: tabular-nums">9:00–10:00 p. m.</div>
-<div role="cell" style="min-height: 56px; padding: 12px 18px; border-radius: 12px; background: #102A43; color: #FFFFFF; border: 1px solid #102A43; display: flex; flex-wrap: wrap; align-items: center; gap: 8px 14px">
-<span style="font-size: 13px; font-weight: 700; padding: 3px 10px; border-radius: 6px; background: #D99A27; color: #102A43; border: 1px solid #D99A27">Cierre</span>
+<div role="cell" style="min-height: 56px; padding: 12px 18px; border-radius: 6px; background: #102A43; color: #FFFFFF; border: 1px solid #102A43; display: flex; flex-wrap: wrap; align-items: center; gap: 8px 14px">
+<span style="font-size: 12px; font-weight: 700; letter-spacing: 0.02em; padding: 3px 9px; border-radius: 4px; background: #D99A27; color: #102A43; border: 1px solid #D99A27">Cierre</span>
 <span style="flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 2px"><span style="font-weight: 700; font-size: 16px">Ludoprevención – actividad de cierre del Congreso</span><span style="font-size: 14px; opacity: 0.9">Luigi Prado Zapata · Perú</span></span>
 <span style="font-size: 14px; opacity: 0.9">Ambas salas</span>
 </div>
@@ -795,8 +789,8 @@
 
 <li style="display: flex; flex-direction: column; gap: 6px">
 <div style="font-weight: 700; font-size: 15px; font-variant-numeric: tabular-nums">8:00–9:00 a. m.</div>
-<div style="padding: 14px 16px; border-radius: 12px; background: #102A43; color: #FFFFFF; border: 1px solid #102A43; display: flex; flex-direction: column; gap: 6px">
-<span style="align-self: flex-start; font-size: 12px; font-weight: 700; padding: 2px 8px; border-radius: 6px; background: #D99A27; color: #102A43; border: 1px solid #D99A27">Apertura · Conferencia</span>
+<div style="padding: 14px 16px; border-radius: 6px; background: #102A43; color: #FFFFFF; border: 1px solid #102A43; display: flex; flex-direction: column; gap: 6px">
+<span style="align-self: flex-start; font-size: 12px; font-weight: 700; padding: 2px 8px; border-radius: 4px; background: #D99A27; color: #102A43; border: 1px solid #D99A27">Apertura · Conferencia</span>
 <span style="font-weight: 700">Procedimientos de Gestión Integral e Investigación Avanzada de Incidentes HSEC</span>
 <span style="font-size: 14px; opacity: 0.9">Ing. Fernando M. Torres González, Mg. · Chile</span>
 <span style="font-size: 14px; opacity: 0.9">Ambas salas</span>
@@ -809,8 +803,8 @@
 
 <li style="display: flex; flex-direction: column; gap: 6px">
 <div style="font-weight: 700; font-size: 15px; font-variant-numeric: tabular-nums">9:00–10:00 a. m.</div>
-<div style="padding: 14px 16px; border-radius: 12px; background: #FBF3E2; color: #102A43; border: 1px solid #E8C77F; display: flex; flex-direction: column; gap: 6px">
-<span style="align-self: flex-start; font-size: 12px; font-weight: 700; padding: 2px 8px; border-radius: 6px; background: #D99A27; color: #102A43; border: 1px solid #D99A27">Pósteres</span>
+<div style="padding: 14px 16px; border-radius: 6px; background: #FBF3E2; color: #102A43; border: 1px solid #E8C77F; display: flex; flex-direction: column; gap: 6px">
+<span style="align-self: flex-start; font-size: 12px; font-weight: 700; padding: 2px 8px; border-radius: 4px; background: #D99A27; color: #102A43; border: 1px solid #D99A27">Pósteres</span>
 <span style="font-weight: 700">Jornada de pósteres</span>
 
 <span style="font-size: 14px; opacity: 0.9">Ambas salas</span>
@@ -824,9 +818,9 @@
 
 <li style="display: flex; flex-direction: column; gap: 6px">
 <div style="font-weight: 700; font-size: 15px; font-variant-numeric: tabular-nums">10:00–11:00 a. m. <span style="font-weight: 500; color: #52667A">· en paralelo</span></div>
-<div style="padding: 12px 16px; border-radius: 12px; background: #FFFFFF; border: 1px solid #B9C7D3; display: flex; align-items: center; gap: 12px">
+<div style="padding: 12px 16px; border-radius: 6px; background: #FFFFFF; border: 1px solid #B9C7D3; display: flex; align-items: center; gap: 12px">
 <span style="font-size: 13px; font-weight: 800; padding: 3px 9px; border-radius: 6px; background: #102A43; color: #FFFFFF">Sala 1</span><span style="font-weight: 600">Ponencias temáticas 13 y 15<span style="display: block; font-weight: 500; font-size: 13px; color: #52667A; margin-top: 2px">20 min + 5 min de preguntas cada una</span></span></div>
-<div style="padding: 12px 16px; border-radius: 12px; background: #FFFFFF; border: 1px solid #B9C7D3; display: flex; align-items: center; gap: 12px">
+<div style="padding: 12px 16px; border-radius: 6px; background: #FFFFFF; border: 1px solid #B9C7D3; display: flex; align-items: center; gap: 12px">
 <span style="font-size: 13px; font-weight: 800; padding: 3px 9px; border-radius: 6px; background: #102A43; color: #FFFFFF">Sala 2</span><span style="font-weight: 600">Ponencias temáticas 14 y 16<span style="display: block; font-weight: 500; font-size: 13px; color: #52667A; margin-top: 2px">20 min + 5 min de preguntas cada una</span></span></div>
 </li>
 
@@ -835,8 +829,8 @@
 
 <li style="display: flex; flex-direction: column; gap: 6px">
 <div style="font-weight: 700; font-size: 15px; font-variant-numeric: tabular-nums">11:00 a. m.–12:00 m.</div>
-<div style="padding: 14px 16px; border-radius: 12px; background: #E3F1F3; color: #102A43; border: 1px solid #8CC3CA; display: flex; flex-direction: column; gap: 6px">
-<span style="align-self: flex-start; font-size: 12px; font-weight: 700; padding: 2px 8px; border-radius: 6px; background: #087E8B; color: #FFFFFF; border: 1px solid #087E8B">Conferencia</span>
+<div style="padding: 14px 16px; border-radius: 6px; background: #E3F1F3; color: #102A43; border: 1px solid #8CC3CA; display: flex; flex-direction: column; gap: 6px">
+<span style="align-self: flex-start; font-size: 12px; font-weight: 700; padding: 2px 8px; border-radius: 4px; background: #087E8B; color: #FFFFFF; border: 1px solid #087E8B">Conferencia</span>
 <span style="font-weight: 700">Título por confirmar</span>
 <span style="font-size: 14px; opacity: 0.9">Regis Hernández · Colombia</span>
 <span style="font-size: 14px; opacity: 0.9">Ambas salas</span>
@@ -855,8 +849,8 @@
 
 <li style="display: flex; flex-direction: column; gap: 6px">
 <div style="font-weight: 700; font-size: 15px; font-variant-numeric: tabular-nums">12:00 m.–1:00 p. m.</div>
-<div style="padding: 14px 16px; border-radius: 12px; background: #EEF2F5; color: #3E5468; border: 1px solid #D5DEE6; display: flex; flex-direction: column; gap: 6px">
-<span style="align-self: flex-start; font-size: 12px; font-weight: 700; padding: 2px 8px; border-radius: 6px; background: #FFFFFF; color: #3E5468; border: 1px solid #9FB0BF">Descanso</span>
+<div style="padding: 14px 16px; border-radius: 6px; background: #EEF2F5; color: #3E5468; border: 1px solid #D5DEE6; display: flex; flex-direction: column; gap: 6px">
+<span style="align-self: flex-start; font-size: 12px; font-weight: 700; padding: 2px 8px; border-radius: 4px; background: #FFFFFF; color: #3E5468; border: 1px solid #9FB0BF">Descanso</span>
 <span style="font-weight: 700">Descanso</span>
 
 <span style="font-size: 14px; opacity: 0.9"></span>
@@ -869,8 +863,8 @@
 
 <li style="display: flex; flex-direction: column; gap: 6px">
 <div style="font-weight: 700; font-size: 15px; font-variant-numeric: tabular-nums">1:00–2:00 p. m.</div>
-<div style="padding: 14px 16px; border-radius: 12px; background: #E3F1F3; color: #102A43; border: 1px solid #8CC3CA; display: flex; flex-direction: column; gap: 6px">
-<span style="align-self: flex-start; font-size: 12px; font-weight: 700; padding: 2px 8px; border-radius: 6px; background: #087E8B; color: #FFFFFF; border: 1px solid #087E8B">Conferencia</span>
+<div style="padding: 14px 16px; border-radius: 6px; background: #E3F1F3; color: #102A43; border: 1px solid #8CC3CA; display: flex; flex-direction: column; gap: 6px">
+<span style="align-self: flex-start; font-size: 12px; font-weight: 700; padding: 2px 8px; border-radius: 4px; background: #087E8B; color: #FFFFFF; border: 1px solid #087E8B">Conferencia</span>
 <span style="font-weight: 700">La toxicología en la Salud Laboral, su pasado y sus desafíos futuros</span>
 <span style="font-size: 14px; opacity: 0.9">Dr. Reynaldo Andrés Concha Maureira · Chile</span>
 <span style="font-size: 14px; opacity: 0.9">Ambas salas</span>
@@ -884,9 +878,9 @@
 
 <li style="display: flex; flex-direction: column; gap: 6px">
 <div style="font-weight: 700; font-size: 15px; font-variant-numeric: tabular-nums">2:00–3:00 p. m. <span style="font-weight: 500; color: #52667A">· en paralelo</span></div>
-<div style="padding: 12px 16px; border-radius: 12px; background: #FFFFFF; border: 1px solid #B9C7D3; display: flex; align-items: center; gap: 12px">
+<div style="padding: 12px 16px; border-radius: 6px; background: #FFFFFF; border: 1px solid #B9C7D3; display: flex; align-items: center; gap: 12px">
 <span style="font-size: 13px; font-weight: 800; padding: 3px 9px; border-radius: 6px; background: #102A43; color: #FFFFFF">Sala 1</span><span style="font-weight: 600">Ponencias temáticas 17 y 19<span style="display: block; font-weight: 500; font-size: 13px; color: #52667A; margin-top: 2px">20 min + 5 min de preguntas cada una</span></span></div>
-<div style="padding: 12px 16px; border-radius: 12px; background: #FFFFFF; border: 1px solid #B9C7D3; display: flex; align-items: center; gap: 12px">
+<div style="padding: 12px 16px; border-radius: 6px; background: #FFFFFF; border: 1px solid #B9C7D3; display: flex; align-items: center; gap: 12px">
 <span style="font-size: 13px; font-weight: 800; padding: 3px 9px; border-radius: 6px; background: #102A43; color: #FFFFFF">Sala 2</span><span style="font-weight: 600">Ponencias temáticas 18 y 20<span style="display: block; font-weight: 500; font-size: 13px; color: #52667A; margin-top: 2px">20 min + 5 min de preguntas cada una</span></span></div>
 </li>
 
@@ -896,9 +890,9 @@
 
 <li style="display: flex; flex-direction: column; gap: 6px">
 <div style="font-weight: 700; font-size: 15px; font-variant-numeric: tabular-nums">3:00–4:00 p. m. <span style="font-weight: 500; color: #52667A">· en paralelo</span></div>
-<div style="padding: 12px 16px; border-radius: 12px; background: #FFFFFF; border: 1px solid #B9C7D3; display: flex; align-items: center; gap: 12px">
+<div style="padding: 12px 16px; border-radius: 6px; background: #FFFFFF; border: 1px solid #B9C7D3; display: flex; align-items: center; gap: 12px">
 <span style="font-size: 13px; font-weight: 800; padding: 3px 9px; border-radius: 6px; background: #102A43; color: #FFFFFF">Sala 1</span><span style="font-weight: 600">Ponencias temáticas 21 y 23<span style="display: block; font-weight: 500; font-size: 13px; color: #52667A; margin-top: 2px">20 min + 5 min de preguntas cada una</span></span></div>
-<div style="padding: 12px 16px; border-radius: 12px; background: #FFFFFF; border: 1px solid #B9C7D3; display: flex; align-items: center; gap: 12px">
+<div style="padding: 12px 16px; border-radius: 6px; background: #FFFFFF; border: 1px solid #B9C7D3; display: flex; align-items: center; gap: 12px">
 <span style="font-size: 13px; font-weight: 800; padding: 3px 9px; border-radius: 6px; background: #102A43; color: #FFFFFF">Sala 2</span><span style="font-weight: 600">Ponencias temáticas 22 y 24<span style="display: block; font-weight: 500; font-size: 13px; color: #52667A; margin-top: 2px">20 min + 5 min de preguntas cada una</span></span></div>
 </li>
 
@@ -907,8 +901,8 @@
 
 <li style="display: flex; flex-direction: column; gap: 6px">
 <div style="font-weight: 700; font-size: 15px; font-variant-numeric: tabular-nums">4:00–5:00 p. m.</div>
-<div style="padding: 14px 16px; border-radius: 12px; background: #E3F1F3; color: #102A43; border: 1px solid #8CC3CA; display: flex; flex-direction: column; gap: 6px">
-<span style="align-self: flex-start; font-size: 12px; font-weight: 700; padding: 2px 8px; border-radius: 6px; background: #087E8B; color: #FFFFFF; border: 1px solid #087E8B">Conferencia</span>
+<div style="padding: 14px 16px; border-radius: 6px; background: #E3F1F3; color: #102A43; border: 1px solid #8CC3CA; display: flex; flex-direction: column; gap: 6px">
+<span style="align-self: flex-start; font-size: 12px; font-weight: 700; padding: 2px 8px; border-radius: 4px; background: #087E8B; color: #FFFFFF; border: 1px solid #087E8B">Conferencia</span>
 <span style="font-weight: 700">Envejecimiento de la fuerza laboral: el reto emergente de la salud ocupacional</span>
 <span style="font-size: 14px; opacity: 0.9">Eylin Rodríguez · Honduras</span>
 <span style="font-size: 14px; opacity: 0.9">Ambas salas</span>
@@ -921,8 +915,8 @@
 
 <li style="display: flex; flex-direction: column; gap: 6px">
 <div style="font-weight: 700; font-size: 15px; font-variant-numeric: tabular-nums">5:00–6:00 p. m.</div>
-<div style="padding: 14px 16px; border-radius: 12px; background: #EEF2F5; color: #3E5468; border: 1px solid #D5DEE6; display: flex; flex-direction: column; gap: 6px">
-<span style="align-self: flex-start; font-size: 12px; font-weight: 700; padding: 2px 8px; border-radius: 6px; background: #FFFFFF; color: #3E5468; border: 1px solid #9FB0BF">Descanso</span>
+<div style="padding: 14px 16px; border-radius: 6px; background: #EEF2F5; color: #3E5468; border: 1px solid #D5DEE6; display: flex; flex-direction: column; gap: 6px">
+<span style="align-self: flex-start; font-size: 12px; font-weight: 700; padding: 2px 8px; border-radius: 4px; background: #FFFFFF; color: #3E5468; border: 1px solid #9FB0BF">Descanso</span>
 <span style="font-weight: 700">Descanso</span>
 
 <span style="font-size: 14px; opacity: 0.9"></span>
@@ -941,7 +935,7 @@
 
 <li style="display: flex; flex-direction: column; gap: 6px">
 <div style="font-weight: 700; font-size: 15px; font-variant-numeric: tabular-nums">6:00–7:00 p. m.</div>
-<div style="padding: 14px 16px; border-radius: 12px; background: #FFFFFF; color: #52667A; border: 1px solid #E4EAF0; display: flex; flex-direction: column; gap: 6px">
+<div style="padding: 14px 16px; border-radius: 6px; background: #FFFFFF; color: #52667A; border: 1px solid #E4EAF0; display: flex; flex-direction: column; gap: 6px">
 
 <span style="font-weight: 700">—</span>
 
@@ -955,8 +949,8 @@
 
 <li style="display: flex; flex-direction: column; gap: 6px">
 <div style="font-weight: 700; font-size: 15px; font-variant-numeric: tabular-nums">7:00–8:00 p. m.</div>
-<div style="padding: 14px 16px; border-radius: 12px; background: #E3F1F3; color: #102A43; border: 1px solid #8CC3CA; display: flex; flex-direction: column; gap: 6px">
-<span style="align-self: flex-start; font-size: 12px; font-weight: 700; padding: 2px 8px; border-radius: 6px; background: #087E8B; color: #FFFFFF; border: 1px solid #087E8B">Conferencia</span>
+<div style="padding: 14px 16px; border-radius: 6px; background: #E3F1F3; color: #102A43; border: 1px solid #8CC3CA; display: flex; flex-direction: column; gap: 6px">
+<span style="align-self: flex-start; font-size: 12px; font-weight: 700; padding: 2px 8px; border-radius: 4px; background: #087E8B; color: #FFFFFF; border: 1px solid #087E8B">Conferencia</span>
 <span style="font-weight: 700">Modelo dinámico de riesgos para la minería</span>
 <span style="font-size: 14px; opacity: 0.9">Ing. Fernando M. Torres González, Mg. · Chile</span>
 <span style="font-size: 14px; opacity: 0.9">Ambas salas</span>
@@ -969,8 +963,8 @@
 
 <li style="display: flex; flex-direction: column; gap: 6px">
 <div style="font-weight: 700; font-size: 15px; font-variant-numeric: tabular-nums">8:00–9:00 p. m.</div>
-<div style="padding: 14px 16px; border-radius: 12px; background: #E3F1F3; color: #102A43; border: 1px solid #8CC3CA; display: flex; flex-direction: column; gap: 6px">
-<span style="align-self: flex-start; font-size: 12px; font-weight: 700; padding: 2px 8px; border-radius: 6px; background: #087E8B; color: #FFFFFF; border: 1px solid #087E8B">Conferencia</span>
+<div style="padding: 14px 16px; border-radius: 6px; background: #E3F1F3; color: #102A43; border: 1px solid #8CC3CA; display: flex; flex-direction: column; gap: 6px">
+<span style="align-self: flex-start; font-size: 12px; font-weight: 700; padding: 2px 8px; border-radius: 4px; background: #087E8B; color: #FFFFFF; border: 1px solid #087E8B">Conferencia</span>
 <span style="font-weight: 700">Seguridad en las operaciones marítimas y fluviales, y el papel del profesional y/o especialista en la seguridad y la salud en el trabajo en estos escenarios</span>
 <span style="font-size: 14px; opacity: 0.9">José Fernando Rojas · Colombia</span>
 <span style="font-size: 14px; opacity: 0.9">Ambas salas</span>
@@ -983,8 +977,8 @@
 
 <li style="display: flex; flex-direction: column; gap: 6px">
 <div style="font-weight: 700; font-size: 15px; font-variant-numeric: tabular-nums">9:00–10:00 p. m.</div>
-<div style="padding: 14px 16px; border-radius: 12px; background: #102A43; color: #FFFFFF; border: 1px solid #102A43; display: flex; flex-direction: column; gap: 6px">
-<span style="align-self: flex-start; font-size: 12px; font-weight: 700; padding: 2px 8px; border-radius: 6px; background: #D99A27; color: #102A43; border: 1px solid #D99A27">Cierre</span>
+<div style="padding: 14px 16px; border-radius: 6px; background: #102A43; color: #FFFFFF; border: 1px solid #102A43; display: flex; flex-direction: column; gap: 6px">
+<span style="align-self: flex-start; font-size: 12px; font-weight: 700; padding: 2px 8px; border-radius: 4px; background: #D99A27; color: #102A43; border: 1px solid #D99A27">Cierre</span>
 <span style="font-weight: 700">Ludoprevención – actividad de cierre del Congreso</span>
 <span style="font-size: 14px; opacity: 0.9">Luigi Prado Zapata · Perú</span>
 <span style="font-size: 14px; opacity: 0.9">Ambas salas</span>
@@ -997,18 +991,50 @@
 </div>
 
 </div>
-<div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 16px; align-items: center; padding: 8px 0 88px">
+<div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 16px; align-items: center; padding: 8px 0 clamp(72px, 9vw, 112px)">
 <p style="margin: 0; font-size: 14px; color: #52667A">Todos los horarios están en hora de Colombia (UTC−5). Programación sujeta a confirmación de la organización.</p>
-<button type="button" data-action="otherDay" data-label-0="Ver Día 2 · Viernes 30 →" data-label-1="← Ver Día 1 · Jueves 29" class="lift" style="min-height: 48px; padding: 0 20px; border: 1.5px solid #102A43; border-radius: 12px; background: #FFFFFF; color: #102A43; font-family: Inter, sans-serif; font-weight: 600; font-size: 16px; cursor: pointer">Ver Día 2 · Viernes 30 →</button>
+<button type="button" data-action="otherDay" data-label-0="Ver Día 2 · Viernes 30 →" data-label-1="← Ver Día 1 · Jueves 29" class="btn btn-line">Ver Día 2 · Viernes 30 →</button>
 </div>
 </div>
 
 </main>
 
-<footer class="dark" style="background: #102A43; color: #FFFFFF; padding: 36px 0">
-<div style="max-width: 1200px; margin: 0 auto; padding: 0 24px; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 16px; font-size: 14px; color: #C9D6E2">
-<div>© 2026 UNIPAZ · GREIP · <a href="mailto:esp.sst@unipaz.edu.co" style="color: #FFFFFF">esp.sst@unipaz.edu.co</a></div>
-<nav aria-label="Pie de página" style="display: flex; flex-wrap: wrap; gap: 20px"><a href="/" style="color: #FFFFFF">Inicio</a><a href="#agenda" style="color: #FFFFFF">Agenda</a><a href="/organizadores" style="color: #FFFFFF">Organizadores</a><a href="/#modalidades" style="color: #FFFFFF">Modalidades</a></nav>
+<footer id="contacto" aria-labelledby="h-cont" class="foot dark">
+<div class="wrap">
+<div class="foot-grid" data-reveal>
+<div class="foot-lead">
+<p class="fk">Contacto</p>
+<h2 id="h-cont">¿Tienes preguntas sobre el Congreso?</h2>
+<p>Escríbenos o llámanos. También puedes seguir a UNIPAZ en sus redes sociales.</p>
+</div>
+<address>
+<div><p class="fk" style="margin-bottom: 4px">Correo electrónico</p><a href="mailto:esp.sst@unipaz.edu.co">esp.sst@unipaz.edu.co</a></div>
+<div><p class="fk" style="margin-bottom: 4px">Teléfono</p><a href="tel:+576076118210,109">607 - 611 82 10, extensión 109</a></div>
+</address>
+<div>
+<p class="fk" style="margin-bottom: 4px">Ubicación</p>
+<p style="margin: 0">Barrancabermeja, Santander, Colombia</p>
+<p style="margin: 6px 0 0; font-size: 14px; color: var(--on-dark)">Congreso 100 % virtual · hora de Colombia (UTC−5)</p>
+</div>
+<div>
+<p class="fk">Redes sociales · UNIPAZ</p>
+<ul class="social">
+<li><a href="https://www.facebook.com/people/Instituto-Universitario-de-la-Paz/100064522486908/" target="_blank" rel="noopener noreferrer" aria-label="Facebook de UNIPAZ (se abre en una pestaña nueva)"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>Facebook</a></li>
+<li><a href="https://www.instagram.com/unipaznoticias/?hl=es" target="_blank" rel="noopener noreferrer" aria-label="Instagram de UNIPAZ (se abre en una pestaña nueva)"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><path d="M17.5 6.5h.01"></path></svg>Instagram</a></li>
+<li><a href="https://x.com/UNIPAZnoticias" target="_blank" rel="noopener noreferrer" aria-label="X de UNIPAZ (se abre en una pestaña nueva)"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4l16 16M20 4 4 20"></path></svg>X</a></li>
+<li><a href="https://www.youtube.com/channel/UC9EH2zVkgzGZCJWPAw2Dauw" target="_blank" rel="noopener noreferrer" aria-label="YouTube de UNIPAZ (se abre en una pestaña nueva)"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="14" rx="4"></rect><path d="m10 9 5 3-5 3z"></path></svg>YouTube</a></li>
+</ul>
+</div>
+</div>
+<div class="foot-bar">
+<div class="foot-brand"><img src="/assets/img/logo-congreso.webp" alt="" width="543" height="640"><span>© 2026 UNIPAZ · Instituto Universitario de la Paz · GREIP</span></div>
+<nav class="foot-nav" aria-label="Pie de página">
+<a href="/">Inicio</a>
+<a href="#agenda">Agenda</a>
+<a href="/organizadores">Organizadores</a>
+<a href="/#modalidades">Modalidades</a>
+</nav>
+</div>
 </div>
 </footer>
 

@@ -11,7 +11,7 @@ index.html            Inicio: presentación, modalidades, líneas, conferencista
 agenda.html           Agenda de las dos jornadas (pestañas Día 1 / Día 2)
 organizadores.html    Comité Organizador y Comité Científico
 404.html              Página de error
-assets/css/styles.css Estilos base, estados de foco y adaptación a móvil
+assets/css/styles.css Sistema visual (variables de color y tipografía), estados de foco y adaptación a móvil
 assets/js/main.js     Menú móvil, ventana de inscripción y pestañas de la agenda
 assets/img/           Logos (Congreso, UNIPAZ, GREIP), favicon e imagen para redes sociales
 vercel.json           URLs limpias (/agenda) y cabeceras
@@ -33,13 +33,17 @@ Para probarlo en local: `npx serve .` (o cualquier servidor estático) y abre `h
 | Pendiente | Dónde se cambia |
 |---|---|
 | Enlace del formulario de inscripción | `assets/js/main.js` → variable `FORMULARIO` (hoy apunta a la aplicación de Google Apps Script de la organización). Se puede usar un enlace distinto por modalidad en `CONFIG.inscripcion`. |
-| Conferencistas | `index.html`, sección `#conferencistas`: 14 conferencistas tomados del Excel de la organización (14/10/2026). Las fotos van en `assets/img/conferencistas/` (cuadradas, 400 × 400 px, `.webp`); quien no tiene foto muestra sus iniciales. Para agregar una foto, reemplaza el bloque de iniciales de esa persona por `<img src="/assets/img/conferencistas/nombre.webp" alt="Fotografía de Nombre" width="400" height="400" loading="lazy" …>` copiando el estilo de una tarjeta que ya tenga foto. |
+| Conferencistas | `index.html`, sección `#conferencistas`: 14 conferencistas tomados del Excel de la organización (14/10/2026). Las fotos van en `assets/img/conferencistas/` (cuadradas, 400 × 400 px, `.webp`); quien no tiene foto muestra sus iniciales. Para agregar una foto, reemplaza el bloque `<div aria-hidden="true" class="ini">` de esa persona por `<img src="/assets/img/conferencistas/nombre.webp" alt="Fotografía de Nombre" width="400" height="400" loading="lazy" class="portrait">` (el retrato se recorta a 4:5). |
 | Texto de Instituciones | `index.html`, sección `#instituciones`: el texto menciona «Congreso … de Productividad, Desarrollo e Innovación»; verificar con la organización. |
 | Agenda definitiva | `agenda.html`: cada franja aparece dos veces (vista de escritorio y vista móvil) dentro de `#dia-1` y `#dia-2`. Horarios en formato de 12 horas, hora de Colombia (UTC−5). |
 
 ## Página Organizadores
 
-`organizadores.html` (dirección `/organizadores`): Comité Organizador (descripción, funciones e integrantes) y Comité Científico (internacional y nacional). Quien aún no tiene foto muestra sus iniciales. Para poner una foto: guárdala cuadrada en `assets/img/organizadores/` (`.webp`, 400–600 px) y reemplaza el círculo de iniciales de esa persona por un `<img … width="400" height="400" loading="lazy">` con el mismo estilo que el de Reynaldo Concha o Carlos Nacache.
+`organizadores.html` (dirección `/organizadores`): Comité Organizador (descripción, funciones e integrantes) y Comité Científico (internacional y nacional). Quien aún no tiene foto muestra sus iniciales. Para poner una foto: guárdala cuadrada en `assets/img/organizadores/` (`.webp`, 400–600 px) y reemplaza el bloque de iniciales (`class="ini"`) de esa persona por un `<img … width="400" height="400" loading="lazy" class="portrait">`, como el de Reynaldo Concha o Carlos Nacache.
+
+## Diseño
+
+Lenguaje editorial: títulos en **Source Serif 4** y textos de interfaz en **Inter** (Google Fonts); azul marino `#102A43`, turquesa `#087E8B` y ámbar `#D99A27` como acento, definidos como variables al inicio de `assets/css/styles.css`. Filetes finos en lugar de tarjetas con sombra, radios pequeños (4–8 px) y secciones numeradas que alternan fondo blanco y gris azulado.
 
 ## Accesibilidad
 
@@ -47,4 +51,4 @@ Barra de navegación fija al desplazarse. Navegación por teclado (incluida la v
 
 ## Animaciones
 
-Entrada escalonada de la portada, aparición suave de secciones y tarjetas al desplazarse, realce de tarjetas al pasar el cursor, sombra en la barra fija, y transiciones en la ventana de inscripción, el menú móvil y las pestañas de la agenda. Están en `assets/css/styles.css` (bloque «Movimiento») y `assets/js/main.js`; se desactivan si el sistema pide reducir el movimiento, y si JavaScript no carga el contenido se muestra igual.
+Entrada escalonada de la portada, aparición suave de secciones y elementos al desplazarse, sombra en la barra fija, y transiciones en la ventana de inscripción, el menú móvil y las pestañas de la agenda. Están en `assets/css/styles.css` (bloque «Movimiento») y `assets/js/main.js`; se desactivan si el sistema pide reducir el movimiento, y si JavaScript no carga el contenido se muestra igual.

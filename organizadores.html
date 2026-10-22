@@ -18,307 +18,284 @@
 <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@600;700;800&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;0,8..60,500;0,8..60,600;1,8..60,400&amp;display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/assets/css/styles.css">
 <script src="/assets/js/main.js" defer></script>
 </head>
 <body data-page="organizadores">
 <a class="skip-link" href="#contenido">Saltar al contenido</a>
-<div style="min-height: 100vh; background: #F5F8FA; color: #102A43; font-family: Inter, system-ui, sans-serif; font-size: 17px; line-height: 1.6">
-
-<header class="dark" style="background: #102A43; color: #FFFFFF; position: sticky; top: 0; z-index: 40; box-shadow: 0 1px 0 rgba(255,255,255,0.08)">
-<div style="max-width: 1200px; margin: 0 auto; padding: 12px 24px; display: flex; align-items: center; justify-content: space-between; gap: 16px">
-<a href="/" aria-label="Congreso SST 2026 — ir a Inicio" style="display: flex; align-items: center; gap: 12px; color: #FFFFFF; text-decoration: none">
-<img src="/assets/img/logo-congreso.webp" alt="" width="543" height="640" style="height: 48px; width: auto; display: block">
-<div style="font-family: Manrope, sans-serif; font-weight: 800; font-size: 16px; line-height: 1.15">Congreso SST<br><span style="font-weight: 600; font-size: 13px; color: #C9D6E2">UNIPAZ · 2026</span></div>
+<div class="site">
+<header class="top dark">
+<div class="wrap top-in">
+<a href="/" class="brand" aria-label="Congreso SST 2026 — ir a Inicio">
+<img src="/assets/img/logo-congreso.webp" alt="" width="543" height="640">
+<span class="brand-t">Congreso SST<span>UNIPAZ · 2026</span></span>
 </a>
 <div class="only-desktop">
-<nav aria-label="Navegación principal" style="display: flex; align-items: center; gap: 6px">
-<a href="/" class="ghost" style="color: #FFFFFF; text-decoration: none; font-weight: 500; font-size: 16px; padding: 10px 16px; border-radius: 8px">Inicio</a>
-<a href="/agenda" class="ghost" style="color: #FFFFFF; text-decoration: none; font-weight: 500; font-size: 16px; padding: 10px 16px; border-radius: 8px">Agenda</a>
-<a href="#organizadores" aria-current="page" class="ghost" style="position: relative; color: #FFFFFF; text-decoration: none; font-weight: 700; font-size: 16px; padding: 10px 16px; border-radius: 8px">Organizadores<span aria-hidden="true" style="position: absolute; left: 16px; right: 16px; bottom: 0; height: 3px; background: #D99A27; border-radius: 3px 3px 0 0"></span></a>
-<a href="/#inscripcion" class="lift" style="margin-left: 10px; min-height: 44px; display: inline-flex; align-items: center; padding: 0 22px; border-radius: 10px; background: #087E8B; color: #FFFFFF; text-decoration: none; font-weight: 600; font-size: 16px">Inscríbete</a>
+<nav class="nav" aria-label="Navegación principal">
+<a href="/" class="nl">Inicio</a>
+<a href="/agenda" class="nl">Agenda</a>
+<a href="#organizadores" aria-current="page" class="nl">Organizadores</a>
+<a href="/#inscripcion" class="btn btn-primary">Inscríbete</a>
 </nav>
 </div>
 <div class="only-mobile">
-<div style="display: flex; align-items: center; gap: 8px">
-<a href="/#inscripcion" class="lift" style="min-height: 44px; display: inline-flex; align-items: center; padding: 0 16px; border-radius: 10px; background: #087E8B; color: #FFFFFF; text-decoration: none; font-weight: 600; font-size: 15px">Inscríbete</a>
-<button type="button" aria-label="Abrir menú" aria-controls="menu-movil" aria-expanded="false" data-action="toggleMenu" class="ghost" style="width: 44px; height: 44px; border: 1px solid rgba(255,255,255,0.35); border-radius: 10px; background: transparent; color: #FFFFFF; display: flex; align-items: center; justify-content: center; cursor: pointer">
+<div class="top-m">
+<a href="/#inscripcion" class="btn btn-primary">Inscríbete</a>
+<button type="button" aria-label="Abrir menú" aria-controls="menu-movil" aria-expanded="false" data-action="toggleMenu" class="menu-btn">
 <svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"></path></svg></button>
 </div>
 </div>
 </div>
 <div data-if="menuOpen" id="menu-movil" hidden>
 <div class="only-mobile">
-<nav aria-label="Menú móvil" style="border-top: 1px solid rgba(255,255,255,0.15); padding: 8px 24px 16px; display: flex; flex-direction: column">
-<a href="/" style="color: #FFFFFF; text-decoration: none; font-weight: 500; padding: 14px 0; border-bottom: 1px solid rgba(255,255,255,0.12)">Inicio</a>
-<a href="/agenda" style="color: #FFFFFF; text-decoration: none; font-weight: 500; padding: 14px 0; border-bottom: 1px solid rgba(255,255,255,0.12)">Agenda</a>
-<a href="#organizadores" aria-current="page" data-action="closeMenu" style="color: #FFFFFF; text-decoration: none; font-weight: 600; padding: 14px 0; border-bottom: 1px solid rgba(255,255,255,0.12)">Organizadores</a>
-<a href="/#modalidades" style="color: #FFFFFF; text-decoration: none; font-weight: 500; padding: 14px 0">Modalidades de participación</a>
+<nav class="mnav" aria-label="Menú móvil">
+<a href="/">Inicio</a>
+<a href="/agenda">Agenda</a>
+<a href="#organizadores" aria-current="page" data-action="closeMenu">Organizadores</a>
+<a href="/#modalidades">Modalidades de participación</a>
 </nav>
 </div>
 </div>
 </header>
 
 <main id="contenido">
-<section id="organizadores" aria-labelledby="h-org" class="dark" style="background: #102A43; color: #FFFFFF; position: relative; overflow: hidden">
-<svg aria-hidden="true" width="100%" height="100%" style="position: absolute; inset: 0; pointer-events: none">
-<defs>
-<pattern id="bp-minor" width="20" height="20" patternUnits="userSpaceOnUse"><path d="M20 0H0V20" fill="none" stroke="#9FD3DA" stroke-opacity="0.07" stroke-width="1"></path></pattern>
-<pattern id="bp-major" width="100" height="100" patternUnits="userSpaceOnUse"><rect width="100" height="100" fill="url(#bp-minor)"></rect><path d="M100 0H0V100" fill="none" stroke="#9FD3DA" stroke-opacity="0.14" stroke-width="1"></path></pattern>
-</defs>
-<rect width="100%" height="100%" fill="url(#bp-major)"></rect>
-</svg>
-<div class="hero-stagger" style="position: relative; max-width: 1200px; margin: 0 auto; padding: 64px 24px 72px; display: flex; flex-wrap: wrap; gap: 24px 64px; align-items: flex-end">
-<div style="flex: 1 1 380px; display: flex; flex-direction: column; gap: 14px">
-<div style="display: flex; align-items: center; gap: 10px; font-family: Manrope, sans-serif; font-weight: 800; font-size: 14px; letter-spacing: 0.14em; color: #FFFFFF"><span style="width: 24px; height: 3px; background: #D99A27"></span>ORGANIZACIÓN DEL CONGRESO</div>
-<h1 id="h-org" style="margin: 0; font-family: Manrope, sans-serif; font-weight: 800; font-size: clamp(36px, 5vw, 58px); line-height: 1.05; letter-spacing: -0.02em">Organizadores</h1>
-</div>
-<p style="flex: 1.35 1 460px; margin: 0; color: #DCE5EE; max-width: 60ch; font-size: 18px">Conoce al equipo que hace posible el I Congreso Nacional e Internacional de Seguridad y Salud en el Trabajo.</p>
-</div>
-</section>
-
-<section id="comite-organizador" aria-labelledby="h-co" style="padding: 96px 0; background: #FFFFFF">
-<div style="max-width: 1200px; margin: 0 auto; padding: 0 24px; display: flex; flex-direction: column; gap: 44px">
-<div data-reveal style="display: flex; flex-wrap: wrap; gap: 20px 64px; align-items: flex-end">
-<div style="flex: 1 1 340px; display: flex; flex-direction: column; gap: 12px">
-<div style="display: flex; align-items: center; gap: 10px; font-family: Manrope, sans-serif; font-weight: 800; font-size: 14px; letter-spacing: 0.14em; color: #066F7A"><span style="width: 24px; height: 3px; background: #D99A27"></span>EQUIPO DE TRABAJO</div>
-<h2 id="h-co" style="margin: 0; font-family: Manrope, sans-serif; font-weight: 800; font-size: clamp(30px, 3.6vw, 44px); line-height: 1.1; letter-spacing: -0.01em">Comité Organizador</h2>
-</div>
-<p style="flex: 1.4 1 480px; margin: 0; color: #3E5468; max-width: 68ch">El Comité Organizador está conformado por docentes de los programas de Tecnología, Ingeniería y Especialización en Seguridad y Salud en el Trabajo del Instituto Universitario de la Paz – UNIPAZ. Es el equipo responsable de planear, coordinar y ejecutar el Congreso, con el propósito de consolidar un espacio académico de alcance nacional e internacional para la Seguridad y Salud en el Trabajo.</p>
-</div>
-<div style="display: flex; flex-direction: column; gap: 18px">
-<h3 style="margin: 0; display: flex; align-items: center; gap: 12px; font-family: Inter, sans-serif; font-size: 13px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: #066F7A">Funciones<span aria-hidden="true" style="flex: 1; height: 1px; background: #C9DCE4"></span></h3>
-<ul class="fn-grid" style="list-style: none; margin: 0; padding: 0">
-<li data-reveal style="display: flex; gap: 14px; align-items: flex-start; padding: 20px; border: 1px solid #D5DEE6; border-radius: 16px; background: #F5F8FA">
-<div style="width: 44px; height: 44px; flex: none; border-radius: 12px; background: #DDEFF1; display: flex; align-items: center; justify-content: center"><svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#066F7A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="17" rx="2"></rect><path d="M8 2v4M16 2v4M3 10h18M8 14h3M8 17h6"></path></svg></div>
-<p style="margin: 0; font-size: 15px; line-height: 1.5; color: #102A43">Planear y coordinar el desarrollo general del Congreso y su programación académica.</p>
-</li>
-<li data-reveal style="display: flex; gap: 14px; align-items: flex-start; padding: 20px; border: 1px solid #D5DEE6; border-radius: 16px; background: #F5F8FA">
-<div style="width: 44px; height: 44px; flex: none; border-radius: 12px; background: #DDEFF1; display: flex; align-items: center; justify-content: center"><svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#066F7A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M2 12h20M12 2a15 15 0 0 1 0 20M12 2a15 15 0 0 0 0 20"></path></svg></div>
-<p style="margin: 0; font-size: 15px; line-height: 1.5; color: #102A43">Gestionar la participación de conferencistas nacionales e internacionales.</p>
-</li>
-<li data-reveal style="display: flex; gap: 14px; align-items: flex-start; padding: 20px; border: 1px solid #D5DEE6; border-radius: 16px; background: #F5F8FA">
-<div style="width: 44px; height: 44px; flex: none; border-radius: 12px; background: #DDEFF1; display: flex; align-items: center; justify-content: center"><svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#066F7A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><path d="M14 2v6h6M9 15l2 2 4-4"></path></svg></div>
-<p style="margin: 0; font-size: 15px; line-height: 1.5; color: #102A43">Orientar la convocatoria, recepción y evaluación de ponencias y pósteres.</p>
-</li>
-<li data-reveal style="display: flex; gap: 14px; align-items: flex-start; padding: 20px; border: 1px solid #D5DEE6; border-radius: 16px; background: #F5F8FA">
-<div style="width: 44px; height: 44px; flex: none; border-radius: 12px; background: #DDEFF1; display: flex; align-items: center; justify-content: center"><svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#066F7A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11v2a1 1 0 0 0 1 1h2l5 4V6L6 10H4a1 1 0 0 0-1 1z"></path><path d="M15.5 8.5a5 5 0 0 1 0 7M18.5 5.5a9 9 0 0 1 0 13"></path></svg></div>
-<p style="margin: 0; font-size: 15px; line-height: 1.5; color: #102A43">Divulgar el evento ante instituciones, empresas y la comunidad académica.</p>
-</li>
-<li data-reveal style="display: flex; gap: 14px; align-items: flex-start; padding: 20px; border: 1px solid #D5DEE6; border-radius: 16px; background: #F5F8FA">
-<div style="width: 44px; height: 44px; flex: none; border-radius: 12px; background: #DDEFF1; display: flex; align-items: center; justify-content: center"><svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#066F7A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="13" rx="2"></rect><path d="M8 21h8M12 17v4M7 10l3 3 6-6"></path></svg></div>
-<p style="margin: 0; font-size: 15px; line-height: 1.5; color: #102A43">Administrar las inscripciones, la plataforma virtual y la certificación de participantes.</p>
-</li>
-<li data-reveal style="display: flex; gap: 14px; align-items: flex-start; padding: 20px; border: 1px solid #D5DEE6; border-radius: 16px; background: #F5F8FA">
-<div style="width: 44px; height: 44px; flex: none; border-radius: 12px; background: #DDEFF1; display: flex; align-items: center; justify-content: center"><svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#066F7A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"></path><path d="M7 15l4-4 3 3 5-6"></path></svg></div>
-<p style="margin: 0; font-size: 15px; line-height: 1.5; color: #102A43">Coordinar la logística de las jornadas y la consolidación de resultados del evento.</p>
-</li>
-</ul>
-</div>
-<div style="display: flex; flex-direction: column; gap: 18px">
-<h3 style="margin: 0; display: flex; align-items: center; gap: 12px; font-family: Inter, sans-serif; font-size: 13px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: #066F7A">Integrantes<span aria-hidden="true" style="flex: 1; height: 1px; background: #C9DCE4"></span></h3>
-<ul aria-label="Integrantes del Comité Organizador" class="org-grid" style="list-style: none; margin: 0; padding: 0">
-
-<li class="card-hover" data-reveal style="border: 1px solid #D5DEE6; border-radius: 16px; padding: 16px 16px 22px; display: flex; flex-direction: column; gap: 16px; background: #F5F8FA">
-<div style="border-radius: 12px; overflow: hidden; aspect-ratio: 4 / 5; background: #DDEFF1">
-
-<img src="/assets/img/organizadores/junior-romero-medio.webp" alt="Fotografía de Junior Santiago Romero Gelves" width="600" height="800" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; object-position: 50% 20%; display: block">
-
-
-</div>
-<div style="display: flex; flex-direction: column; gap: 10px; padding: 0 4px">
-<span aria-hidden="true" style="width: 28px; height: 3px; background: #D99A27; border-radius: 3px"></span>
-<h4 style="margin: 0; font-family: Manrope, sans-serif; font-weight: 800; font-size: 19px; line-height: 1.25; overflow-wrap: anywhere">Junior Santiago Romero Gelves</h4>
-</div>
-</li>
-
-<li class="card-hover" data-reveal style="border: 1px solid #D5DEE6; border-radius: 16px; padding: 16px 16px 22px; display: flex; flex-direction: column; gap: 16px; background: #F5F8FA">
-<div style="border-radius: 12px; overflow: hidden; aspect-ratio: 4 / 5; background: #DDEFF1">
-
-<img src="/assets/img/organizadores/isis-picon-medio.webp" alt="Fotografía de Isis Johana Picón Murcia" width="600" height="800" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; object-position: 50% 20%; display: block">
-
-
-</div>
-<div style="display: flex; flex-direction: column; gap: 10px; padding: 0 4px">
-<span aria-hidden="true" style="width: 28px; height: 3px; background: #D99A27; border-radius: 3px"></span>
-<h4 style="margin: 0; font-family: Manrope, sans-serif; font-weight: 800; font-size: 19px; line-height: 1.25; overflow-wrap: anywhere">Isis Johana Picón Murcia</h4>
-</div>
-</li>
-
-<li class="card-hover" data-reveal style="border: 1px solid #D5DEE6; border-radius: 16px; padding: 16px 16px 22px; display: flex; flex-direction: column; gap: 16px; background: #F5F8FA">
-<div style="border-radius: 12px; overflow: hidden; aspect-ratio: 4 / 5; background: #DDEFF1">
-
-<img src="/assets/img/organizadores/angie-gomez-medio.webp" alt="Fotografía de Angie Laine Gómez Angulo" width="600" height="800" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; object-position: 50% 20%; display: block">
-
-
-</div>
-<div style="display: flex; flex-direction: column; gap: 10px; padding: 0 4px">
-<span aria-hidden="true" style="width: 28px; height: 3px; background: #D99A27; border-radius: 3px"></span>
-<h4 style="margin: 0; font-family: Manrope, sans-serif; font-weight: 800; font-size: 19px; line-height: 1.25; overflow-wrap: anywhere">Angie Laine Gómez Angulo</h4>
-</div>
-</li>
-
-<li class="card-hover" data-reveal style="border: 1px solid #D5DEE6; border-radius: 16px; padding: 16px 16px 22px; display: flex; flex-direction: column; gap: 16px; background: #F5F8FA">
-<div style="border-radius: 12px; overflow: hidden; aspect-ratio: 4 / 5; background: #DDEFF1">
-
-<img src="/assets/img/organizadores/duball-osorio-medio.webp" alt="Fotografía de Duball Osorio" width="600" height="800" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; object-position: 50% 20%; display: block">
-
-
-</div>
-<div style="display: flex; flex-direction: column; gap: 10px; padding: 0 4px">
-<span aria-hidden="true" style="width: 28px; height: 3px; background: #D99A27; border-radius: 3px"></span>
-<h4 style="margin: 0; font-family: Manrope, sans-serif; font-weight: 800; font-size: 19px; line-height: 1.25; overflow-wrap: anywhere">Duball Osorio</h4>
-</div>
-</li>
-
-<li class="card-hover" data-reveal style="border: 1px solid #D5DEE6; border-radius: 16px; padding: 16px 16px 22px; display: flex; flex-direction: column; gap: 16px; background: #F5F8FA">
-<div style="border-radius: 12px; overflow: hidden; aspect-ratio: 4 / 5; background: #DDEFF1">
-
-<img src="/assets/img/organizadores/sandra-jovel-medio.webp" alt="Fotografía de Sandra Milena Jovel Leal" width="600" height="800" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; object-position: 50% 20%; display: block">
-
-
-</div>
-<div style="display: flex; flex-direction: column; gap: 10px; padding: 0 4px">
-<span aria-hidden="true" style="width: 28px; height: 3px; background: #D99A27; border-radius: 3px"></span>
-<h4 style="margin: 0; font-family: Manrope, sans-serif; font-weight: 800; font-size: 19px; line-height: 1.25; overflow-wrap: anywhere">Sandra Milena Jovel Leal</h4>
-</div>
-</li>
-
-<li class="card-hover" data-reveal style="border: 1px solid #D5DEE6; border-radius: 16px; padding: 16px 16px 22px; display: flex; flex-direction: column; gap: 16px; background: #F5F8FA">
-<div style="border-radius: 12px; overflow: hidden; aspect-ratio: 4 / 5; background: #DDEFF1">
-
-<img src="/assets/img/organizadores/javier-canas-medio.webp" alt="Fotografía de Javier Alonso Cañas Benavides" width="600" height="800" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; object-position: 50% 20%; display: block">
-
-
-</div>
-<div style="display: flex; flex-direction: column; gap: 10px; padding: 0 4px">
-<span aria-hidden="true" style="width: 28px; height: 3px; background: #D99A27; border-radius: 3px"></span>
-<h4 style="margin: 0; font-family: Manrope, sans-serif; font-weight: 800; font-size: 19px; line-height: 1.25; overflow-wrap: anywhere">Javier Alonso Cañas Benavides</h4>
-</div>
-</li>
-
-<li class="card-hover" data-reveal style="border: 1px solid #D5DEE6; border-radius: 16px; padding: 16px 16px 22px; display: flex; flex-direction: column; gap: 16px; background: #F5F8FA">
-<div style="border-radius: 12px; overflow: hidden; aspect-ratio: 4 / 5; background: #DDEFF1">
-
-<img src="/assets/img/organizadores/andres-yepez-medio.webp" alt="Fotografía de Andrés Mauricio Yepez" width="600" height="800" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; object-position: 50% 20%; display: block">
-
-
-</div>
-<div style="display: flex; flex-direction: column; gap: 10px; padding: 0 4px">
-<span aria-hidden="true" style="width: 28px; height: 3px; background: #D99A27; border-radius: 3px"></span>
-<h4 style="margin: 0; font-family: Manrope, sans-serif; font-weight: 800; font-size: 19px; line-height: 1.25; overflow-wrap: anywhere">Andrés Mauricio Yepez</h4>
-</div>
-</li>
-
-<li data-reveal aria-hidden="true" class="org-total" style="border: 1.5px dashed #C9DCE4; border-radius: 16px; padding: 24px; display: flex; flex-direction: column; justify-content: flex-end; gap: 10px; background: #FFFFFF">
-<span style="font-family: Manrope, sans-serif; font-weight: 800; font-size: 44px; line-height: 1; color: #087E8B">7</span>
-<span style="font-size: 15px; line-height: 1.45; color: #3E5468">docentes de los programas de SST de UNIPAZ</span>
-</li>
-</ul>
+<section id="organizadores" aria-labelledby="h-org" class="ph dark">
+<div class="wrap">
+<div class="ph-in hero-stagger">
+<p class="kicker" style="grid-column: 1 / -1"><span>Organización del Congreso</span><span>UNIPAZ · 2026</span></p>
+<h1 id="h-org">Organizadores</h1>
+<div class="ph-intro"><p style="font-size: 18px">Conoce al equipo que hace posible el I Congreso Nacional e Internacional de Seguridad y Salud en el Trabajo.</p></div>
 </div>
 </div>
 </section>
 
-<section id="comite-cientifico" aria-labelledby="h-cc" style="padding: 96px 0; background: #EAF3F7; border-top: 1px solid #D5E4EC">
-<div style="max-width: 1200px; margin: 0 auto; padding: 0 24px; display: flex; flex-direction: column; gap: 44px">
-<div data-reveal style="display: flex; flex-wrap: wrap; gap: 20px 64px; align-items: flex-end">
-<div style="flex: 1 1 340px; display: flex; flex-direction: column; gap: 12px">
-<div style="display: flex; align-items: center; gap: 10px; font-family: Manrope, sans-serif; font-weight: 800; font-size: 14px; letter-spacing: 0.14em; color: #066F7A"><span style="width: 24px; height: 3px; background: #D99A27"></span>RESPALDO ACADÉMICO</div>
-<h2 id="h-cc" style="margin: 0; font-family: Manrope, sans-serif; font-weight: 800; font-size: clamp(30px, 3.6vw, 44px); line-height: 1.1; letter-spacing: -0.01em">Comité Científico</h2>
+<section id="comite-organizador" aria-labelledby="h-co" class="sec">
+<div class="wrap">
+<div class="sec-head" data-reveal>
+<p class="label"><span class="n">01</span>Equipo de trabajo</p>
+<h2 id="h-co" class="h2">Comité Organizador</h2>
+<div class="intro"><p>El Comité Organizador está conformado por docentes de los programas de Tecnología, Ingeniería y Especialización en Seguridad y Salud en el Trabajo del Instituto Universitario de la Paz – UNIPAZ. Es el equipo responsable de planear, coordinar y ejecutar el Congreso, con el propósito de consolidar un espacio académico de alcance nacional e internacional para la Seguridad y Salud en el Trabajo.</p></div>
 </div>
-<div style="flex: 1.4 1 480px; display: flex; flex-direction: column; gap: 12px; max-width: 68ch">
-<p style="margin: 0; color: #3E5468">El Comité Científico es la máxima instancia académica del Congreso. Vela por la calidad científica y la pertinencia de la programación, avala los criterios de evaluación de los trabajos y respalda la selección de las ponencias y pósteres presentados.</p>
-<p style="margin: 0; color: #102A43; font-weight: 600">Está conformado por seis expertos: tres internacionales, provenientes de Honduras, Chile y Panamá, y tres nacionales, coordinadores de los programas de Seguridad y Salud en el Trabajo de UNIPAZ.</p>
-</div>
-</div>
-<div style="display: flex; flex-direction: column; gap: 18px">
-<h3 style="margin: 0; display: flex; align-items: center; gap: 12px; font-family: Inter, sans-serif; font-size: 13px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: #066F7A">Comité Científico Internacional<span aria-hidden="true" style="flex: 1; height: 1px; background: #C9DCE4"></span></h3>
-<ul aria-label="Comité Científico Internacional" class="cc-grid" style="list-style: none; margin: 0; padding: 0">
+<h3 class="sub-h">Funciones</h3>
+<ol class="fns" style="margin-top: 20px">
+<li class="fn" data-reveal><span class="fn-n" aria-hidden="true">01</span><p>Planear y coordinar el desarrollo general del Congreso y su programación académica.</p></li>
+<li class="fn" data-reveal><span class="fn-n" aria-hidden="true">02</span><p>Gestionar la participación de conferencistas nacionales e internacionales.</p></li>
+<li class="fn" data-reveal><span class="fn-n" aria-hidden="true">03</span><p>Orientar la convocatoria, recepción y evaluación de ponencias y pósteres.</p></li>
+<li class="fn" data-reveal><span class="fn-n" aria-hidden="true">04</span><p>Divulgar el evento ante instituciones, empresas y la comunidad académica.</p></li>
+<li class="fn" data-reveal><span class="fn-n" aria-hidden="true">05</span><p>Administrar las inscripciones, la plataforma virtual y la certificación de participantes.</p></li>
+<li class="fn" data-reveal><span class="fn-n" aria-hidden="true">06</span><p>Coordinar la logística de las jornadas y la consolidación de resultados del evento.</p></li>
+</ol>
+<h3 class="sub-h" style="margin-top: clamp(48px, 6vw, 72px)">Integrantes</h3>
+<ul class="org-grid" aria-label="Integrantes del Comité Organizador">
 
-<li class="card-hover" data-reveal style="display: flex; flex-direction: column; align-items: center; text-align: center; gap: 12px; padding: 28px 22px; border: 1px solid #D5DEE6; border-radius: 18px; background: #FFFFFF">
+<li class="org-card" data-reveal>
+
+<img src="/assets/img/organizadores/junior-romero-medio.webp" alt="Fotografía de Junior Santiago Romero Gelves" width="600" height="600" loading="lazy" class="portrait">
 
 
-<div aria-hidden="true" style="width: 112px; height: 112px; flex: none; border-radius: 999px; background: #DDEFF1; color: #066F7A; display: flex; align-items: center; justify-content: center; font-family: Manrope, sans-serif; font-weight: 800; font-size: 34px; letter-spacing: 0.04em; box-shadow: 0 0 0 4px #FFFFFF, 0 0 0 5px #D5DEE6">BA</div>
-
-<h4 style="margin: 6px 0 0; font-family: Manrope, sans-serif; font-weight: 800; font-size: 18px; line-height: 1.3; overflow-wrap: anywhere">Dra. Belinda Alberty</h4>
-<p style="margin: 0; font-size: 14px; line-height: 1.5; color: #3E5468">BAF &amp; Asociados / Universidad Cristiana Evangélica Nuevo Milenio (UCENM)</p>
-<div style="display: inline-flex; align-items: center; gap: 7px; font-size: 13px; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase; color: #066F7A">
-<img src="/assets/img/banderas/honduras.svg" alt="" width="21" height="14" style="width: 21px; height: 14px; border-radius: 2px; box-shadow: 0 0 0 1px rgba(16,42,67,0.16); display: block">Honduras</div>
+<div><i aria-hidden="true"></i><h4>Junior Santiago Romero Gelves</h4></div>
 </li>
 
-<li class="card-hover" data-reveal style="display: flex; flex-direction: column; align-items: center; text-align: center; gap: 12px; padding: 28px 22px; border: 1px solid #D5DEE6; border-radius: 18px; background: #FFFFFF">
+<li class="org-card" data-reveal>
 
-<img src="/assets/img/conferencistas/reynaldo-andres-concha-maureira.webp" alt="Fotografía de Dr. Reynaldo Andrés Concha Maureira" width="400" height="400" loading="lazy" style="width: 112px; height: 112px; flex: none; border-radius: 999px; object-fit: cover; display: block; box-shadow: 0 0 0 4px #FFFFFF, 0 0 0 5px #D5DEE6">
+<img src="/assets/img/organizadores/isis-picon-medio.webp" alt="Fotografía de Isis Johana Picón Murcia" width="600" height="600" loading="lazy" class="portrait">
 
 
-<h4 style="margin: 6px 0 0; font-family: Manrope, sans-serif; font-weight: 800; font-size: 18px; line-height: 1.3; overflow-wrap: anywhere">Dr. Reynaldo Andrés Concha Maureira</h4>
-<p style="margin: 0; font-size: 14px; line-height: 1.5; color: #3E5468">Universidad de Valparaíso / Universidad de Concepción</p>
-<div style="display: inline-flex; align-items: center; gap: 7px; font-size: 13px; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase; color: #066F7A">
-<img src="/assets/img/banderas/chile.svg" alt="" width="21" height="14" style="width: 21px; height: 14px; border-radius: 2px; box-shadow: 0 0 0 1px rgba(16,42,67,0.16); display: block">Chile</div>
+<div><i aria-hidden="true"></i><h4>Isis Johana Picón Murcia</h4></div>
 </li>
 
-<li class="card-hover" data-reveal style="display: flex; flex-direction: column; align-items: center; text-align: center; gap: 12px; padding: 28px 22px; border: 1px solid #D5DEE6; border-radius: 18px; background: #FFFFFF">
+<li class="org-card" data-reveal>
 
-<img src="/assets/img/conferencistas/carlos-nacache.webp" alt="Fotografía de Carlos Nacache" width="400" height="400" loading="lazy" style="width: 112px; height: 112px; flex: none; border-radius: 999px; object-fit: cover; display: block; box-shadow: 0 0 0 4px #FFFFFF, 0 0 0 5px #D5DEE6">
+<img src="/assets/img/organizadores/angie-gomez-medio.webp" alt="Fotografía de Angie Laine Gómez Angulo" width="600" height="600" loading="lazy" class="portrait">
 
 
-<h4 style="margin: 6px 0 0; font-family: Manrope, sans-serif; font-weight: 800; font-size: 18px; line-height: 1.3; overflow-wrap: anywhere">Carlos Nacache</h4>
-<p style="margin: 0; font-size: 14px; line-height: 1.5; color: #3E5468">INADEH / UMECIT</p>
-<div style="display: inline-flex; align-items: center; gap: 7px; font-size: 13px; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase; color: #066F7A">
-<img src="/assets/img/banderas/panama.svg" alt="" width="21" height="14" style="width: 21px; height: 14px; border-radius: 2px; box-shadow: 0 0 0 1px rgba(16,42,67,0.16); display: block">Panamá</div>
+<div><i aria-hidden="true"></i><h4>Angie Laine Gómez Angulo</h4></div>
+</li>
+
+<li class="org-card" data-reveal>
+
+<img src="/assets/img/organizadores/duball-osorio-medio.webp" alt="Fotografía de Duball Osorio" width="600" height="600" loading="lazy" class="portrait">
+
+
+<div><i aria-hidden="true"></i><h4>Duball Osorio</h4></div>
+</li>
+
+<li class="org-card" data-reveal>
+
+<img src="/assets/img/organizadores/sandra-jovel-medio.webp" alt="Fotografía de Sandra Milena Jovel Leal" width="600" height="600" loading="lazy" class="portrait">
+
+
+<div><i aria-hidden="true"></i><h4>Sandra Milena Jovel Leal</h4></div>
+</li>
+
+<li class="org-card" data-reveal>
+
+<img src="/assets/img/organizadores/javier-canas-medio.webp" alt="Fotografía de Javier Alonso Cañas Benavides" width="600" height="600" loading="lazy" class="portrait">
+
+
+<div><i aria-hidden="true"></i><h4>Javier Alonso Cañas Benavides</h4></div>
+</li>
+
+<li class="org-card" data-reveal>
+
+<img src="/assets/img/organizadores/andres-yepez-medio.webp" alt="Fotografía de Andrés Mauricio Yepez" width="600" height="600" loading="lazy" class="portrait">
+
+
+<div><i aria-hidden="true"></i><h4>Andrés Mauricio Yepez</h4></div>
+</li>
+
+<li aria-hidden="true" class="org-total" data-reveal><strong>7</strong><span>docentes de los programas de SST de UNIPAZ</span></li>
+</ul>
+</div>
+</section>
+
+<section id="comite-cientifico" aria-labelledby="h-cc" class="sec sec-mist">
+<div class="wrap">
+<div class="sec-head" data-reveal>
+<p class="label"><span class="n">02</span>Respaldo académico</p>
+<h2 id="h-cc" class="h2">Comité Científico</h2>
+<div class="intro"><p>El Comité Científico es la máxima instancia académica del Congreso. Vela por la calidad científica y la pertinencia de la programación, avala los criterios de evaluación de los trabajos y respalda la selección de las ponencias y pósteres presentados.</p><p><strong>Está conformado por seis expertos: tres internacionales, provenientes de Honduras, Chile y Panamá, y tres nacionales, coordinadores de los programas de Seguridad y Salud en el Trabajo de UNIPAZ.</strong></p></div>
+</div>
+<div class="cc">
+<div>
+<h3 class="sub-h">Comité Científico Internacional</h3>
+<ul class="cc-list" aria-label="Comité Científico Internacional">
+
+<li class="cc-p" data-reveal>
+<div>
+
+
+<div aria-hidden="true" class="ini">BA</div>
+
+</div>
+<div>
+<h4>Dra. Belinda Alberty</h4>
+<p>BAF &amp; Asociados / Universidad Cristiana Evangélica Nuevo Milenio (UCENM)</p>
+<span class="ctry"><img src="/assets/img/banderas/honduras.svg" alt="" width="21" height="14" class="flag">Honduras</span>
+</div>
+</li>
+
+<li class="cc-p" data-reveal>
+<div>
+
+<img src="/assets/img/conferencistas/reynaldo-andres-concha-maureira.webp" alt="Fotografía de Dr. Reynaldo Andrés Concha Maureira" width="400" height="400" loading="lazy" class="portrait">
+
+
+</div>
+<div>
+<h4>Dr. Reynaldo Andrés Concha Maureira</h4>
+<p>Universidad de Valparaíso / Universidad de Concepción</p>
+<span class="ctry"><img src="/assets/img/banderas/chile.svg" alt="" width="21" height="14" class="flag">Chile</span>
+</div>
+</li>
+
+<li class="cc-p" data-reveal>
+<div>
+
+<img src="/assets/img/conferencistas/carlos-nacache.webp" alt="Fotografía de Carlos Nacache" width="400" height="400" loading="lazy" class="portrait">
+
+
+</div>
+<div>
+<h4>Carlos Nacache</h4>
+<p>INADEH / UMECIT</p>
+<span class="ctry"><img src="/assets/img/banderas/panama.svg" alt="" width="21" height="14" class="flag">Panamá</span>
+</div>
 </li>
 
 </ul>
 </div>
-<div style="display: flex; flex-direction: column; gap: 18px">
-<h3 style="margin: 0; display: flex; align-items: center; gap: 12px; font-family: Inter, sans-serif; font-size: 13px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: #066F7A">Comité Científico Nacional<span aria-hidden="true" style="flex: 1; height: 1px; background: #C9DCE4"></span></h3>
-<ul aria-label="Comité Científico Nacional" class="cc-grid" style="list-style: none; margin: 0; padding: 0">
+<div>
+<h3 class="sub-h">Comité Científico Nacional</h3>
+<ul class="cc-list" aria-label="Comité Científico Nacional">
 
-<li class="card-hover" data-reveal style="display: flex; flex-direction: column; align-items: center; text-align: center; gap: 12px; padding: 28px 22px; border: 1px solid #D5DEE6; border-radius: 18px; background: #FFFFFF">
+<li class="cc-p" data-reveal>
+<div>
 
-<img src="/assets/img/organizadores/kelly-galindo.webp" alt="Fotografía de Esp. Kelly Johanna Galindo Madero" width="400" height="400" loading="lazy" style="width: 112px; height: 112px; flex: none; border-radius: 999px; object-fit: cover; display: block; box-shadow: 0 0 0 4px #FFFFFF, 0 0 0 5px #D5DEE6">
+<img src="/assets/img/organizadores/kelly-galindo.webp" alt="Fotografía de Esp. Kelly Johanna Galindo Madero" width="400" height="400" loading="lazy" class="portrait">
 
 
-<h4 style="margin: 6px 0 0; font-family: Manrope, sans-serif; font-weight: 800; font-size: 18px; line-height: 1.3; overflow-wrap: anywhere">Esp. Kelly Johanna Galindo Madero</h4>
-<p style="margin: 0; font-size: 14px; line-height: 1.5; color: #3E5468">Coordinadora, Tecnología en Seguridad y Salud en el Trabajo – UNIPAZ</p>
-<div style="display: inline-flex; align-items: center; gap: 7px; font-size: 13px; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase; color: #066F7A">
-Colombia</div>
+</div>
+<div>
+<h4>Esp. Kelly Johanna Galindo Madero</h4>
+<p>Coordinadora, Tecnología en Seguridad y Salud en el Trabajo – UNIPAZ</p>
+<span class="ctry">Colombia</span>
+</div>
 </li>
 
-<li class="card-hover" data-reveal style="display: flex; flex-direction: column; align-items: center; text-align: center; gap: 12px; padding: 28px 22px; border: 1px solid #D5DEE6; border-radius: 18px; background: #FFFFFF">
+<li class="cc-p" data-reveal>
+<div>
 
-<img src="/assets/img/organizadores/cindy-ramirez.webp" alt="Fotografía de Mg. Cindy Mirley Ramírez Hoyos" width="400" height="400" loading="lazy" style="width: 112px; height: 112px; flex: none; border-radius: 999px; object-fit: cover; display: block; box-shadow: 0 0 0 4px #FFFFFF, 0 0 0 5px #D5DEE6">
+<img src="/assets/img/organizadores/cindy-ramirez.webp" alt="Fotografía de Mg. Cindy Mirley Ramírez Hoyos" width="400" height="400" loading="lazy" class="portrait">
 
 
-<h4 style="margin: 6px 0 0; font-family: Manrope, sans-serif; font-weight: 800; font-size: 18px; line-height: 1.3; overflow-wrap: anywhere">Mg. Cindy Mirley Ramírez Hoyos</h4>
-<p style="margin: 0; font-size: 14px; line-height: 1.5; color: #3E5468">Coordinadora, Ingeniería en Seguridad y Salud en el Trabajo – UNIPAZ</p>
-<div style="display: inline-flex; align-items: center; gap: 7px; font-size: 13px; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase; color: #066F7A">
-Colombia</div>
+</div>
+<div>
+<h4>Mg. Cindy Mirley Ramírez Hoyos</h4>
+<p>Coordinadora, Ingeniería en Seguridad y Salud en el Trabajo – UNIPAZ</p>
+<span class="ctry">Colombia</span>
+</div>
 </li>
 
-<li class="card-hover" data-reveal style="display: flex; flex-direction: column; align-items: center; text-align: center; gap: 12px; padding: 28px 22px; border: 1px solid #D5DEE6; border-radius: 18px; background: #FFFFFF">
+<li class="cc-p" data-reveal>
+<div>
 
-<img src="/assets/img/organizadores/jersan-cely.webp" alt="Fotografía de Mg. Jersan Alonso Cely Infante" width="400" height="400" loading="lazy" style="width: 112px; height: 112px; flex: none; border-radius: 999px; object-fit: cover; display: block; box-shadow: 0 0 0 4px #FFFFFF, 0 0 0 5px #D5DEE6">
+<img src="/assets/img/organizadores/jersan-cely.webp" alt="Fotografía de Mg. Jersan Alonso Cely Infante" width="400" height="400" loading="lazy" class="portrait">
 
 
-<h4 style="margin: 6px 0 0; font-family: Manrope, sans-serif; font-weight: 800; font-size: 18px; line-height: 1.3; overflow-wrap: anywhere">Mg. Jersan Alonso Cely Infante</h4>
-<p style="margin: 0; font-size: 14px; line-height: 1.5; color: #3E5468">Coordinador, Especialización en Seguridad y Salud en el Trabajo – UNIPAZ</p>
-<div style="display: inline-flex; align-items: center; gap: 7px; font-size: 13px; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase; color: #066F7A">
-Colombia</div>
+</div>
+<div>
+<h4>Mg. Jersan Alonso Cely Infante</h4>
+<p>Coordinador, Especialización en Seguridad y Salud en el Trabajo – UNIPAZ</p>
+<span class="ctry">Colombia</span>
+</div>
 </li>
 
 </ul>
+</div>
 </div>
 </div>
 </section>
 
 </main>
 
-<footer class="dark" style="background: #102A43; color: #FFFFFF; padding: 36px 0">
-<div style="max-width: 1200px; margin: 0 auto; padding: 0 24px; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 16px; font-size: 14px; color: #C9D6E2">
-<div>© 2026 UNIPAZ · GREIP · <a href="mailto:esp.sst@unipaz.edu.co" style="color: #FFFFFF">esp.sst@unipaz.edu.co</a></div>
-<nav aria-label="Pie de página" style="display: flex; flex-wrap: wrap; gap: 20px"><a href="/" style="color: #FFFFFF">Inicio</a><a href="/agenda" style="color: #FFFFFF">Agenda</a><a href="#organizadores" style="color: #FFFFFF">Organizadores</a><a href="/#modalidades" style="color: #FFFFFF">Modalidades</a></nav>
+<footer id="contacto" aria-labelledby="h-cont" class="foot dark">
+<div class="wrap">
+<div class="foot-grid" data-reveal>
+<div class="foot-lead">
+<p class="fk">Contacto</p>
+<h2 id="h-cont">¿Tienes preguntas sobre el Congreso?</h2>
+<p>Escríbenos o llámanos. También puedes seguir a UNIPAZ en sus redes sociales.</p>
+</div>
+<address>
+<div><p class="fk" style="margin-bottom: 4px">Correo electrónico</p><a href="mailto:esp.sst@unipaz.edu.co">esp.sst@unipaz.edu.co</a></div>
+<div><p class="fk" style="margin-bottom: 4px">Teléfono</p><a href="tel:+576076118210,109">607 - 611 82 10, extensión 109</a></div>
+</address>
+<div>
+<p class="fk" style="margin-bottom: 4px">Ubicación</p>
+<p style="margin: 0">Barrancabermeja, Santander, Colombia</p>
+<p style="margin: 6px 0 0; font-size: 14px; color: var(--on-dark)">Congreso 100 % virtual · hora de Colombia (UTC−5)</p>
+</div>
+<div>
+<p class="fk">Redes sociales · UNIPAZ</p>
+<ul class="social">
+<li><a href="https://www.facebook.com/people/Instituto-Universitario-de-la-Paz/100064522486908/" target="_blank" rel="noopener noreferrer" aria-label="Facebook de UNIPAZ (se abre en una pestaña nueva)"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>Facebook</a></li>
+<li><a href="https://www.instagram.com/unipaznoticias/?hl=es" target="_blank" rel="noopener noreferrer" aria-label="Instagram de UNIPAZ (se abre en una pestaña nueva)"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><path d="M17.5 6.5h.01"></path></svg>Instagram</a></li>
+<li><a href="https://x.com/UNIPAZnoticias" target="_blank" rel="noopener noreferrer" aria-label="X de UNIPAZ (se abre en una pestaña nueva)"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4l16 16M20 4 4 20"></path></svg>X</a></li>
+<li><a href="https://www.youtube.com/channel/UC9EH2zVkgzGZCJWPAw2Dauw" target="_blank" rel="noopener noreferrer" aria-label="YouTube de UNIPAZ (se abre en una pestaña nueva)"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="14" rx="4"></rect><path d="m10 9 5 3-5 3z"></path></svg>YouTube</a></li>
+</ul>
+</div>
+</div>
+<div class="foot-bar">
+<div class="foot-brand"><img src="/assets/img/logo-congreso.webp" alt="" width="543" height="640"><span>© 2026 UNIPAZ · Instituto Universitario de la Paz · GREIP</span></div>
+<nav class="foot-nav" aria-label="Pie de página">
+<a href="/">Inicio</a>
+<a href="/agenda">Agenda</a>
+<a href="#organizadores">Organizadores</a>
+<a href="/#modalidades">Modalidades</a>
+</nav>
+</div>
 </div>
 </footer>
 
