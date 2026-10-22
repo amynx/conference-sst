@@ -123,10 +123,12 @@ section[id],footer[id]{scroll-margin-top:84px}
 .flags li{display:inline-flex;align-items:center;gap:8px;font-size:14px;color:var(--ink-2)}
 .flag{width:21px;height:14px;border-radius:2px;box-shadow:0 0 0 1px rgba(16,42,67,.16);display:block;flex:none}
 .ctry{display:inline-flex;align-items:center;gap:8px;font-size:12.5px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--ink)}
-.portrait{display:block;width:100%;height:auto;aspect-ratio:4/5;object-fit:cover;object-position:50% 25%;border-radius:4px;background:#E6EDF1}
+.portrait{display:block;width:100%;height:auto;aspect-ratio:4/5;object-fit:cover;object-position:50% 40%;border-radius:2px;background:#E6EDF1}
 .ini{display:flex;align-items:center;justify-content:center;width:100%;aspect-ratio:4/5;border-radius:4px;background:#E3ECF1;color:var(--teal-ink);font-family:var(--serif);font-weight:500;letter-spacing:.02em}
 .feat{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,7fr);gap:clamp(28px,5vw,80px);align-items:center;margin-bottom:clamp(56px,7vw,96px)}
 .feat .ini{font-size:72px}
+.feat .mono{font-size:64px}
+.sp .mono{font-size:26px}
 .feat-k{display:flex;flex-wrap:wrap;gap:6px 18px;font-size:13px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--teal-ink)}
 .feat h3{margin:14px 0 0;font-family:var(--serif);font-weight:600;font-size:clamp(32px,3.6vw,48px);line-height:1.06;letter-spacing:-.012em}
 .aff{display:flex;flex-wrap:wrap;align-items:center;gap:6px 16px;margin-top:12px;padding-bottom:24px;border-bottom:1px solid var(--line);color:var(--ink-2)}
