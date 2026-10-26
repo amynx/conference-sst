@@ -19,7 +19,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;0,8..60,500;0,8..60,600;1,8..60,400&amp;display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/assets/css/styles.css?v=7ba23a2353">
+<link rel="stylesheet" href="/assets/css/styles.css?v=55a0ae537f">
 <script src="/assets/js/main.js?v=47034f02cd" defer></script>
 </head>
 <body data-page="agenda">
@@ -95,7 +95,7 @@
 <ul class="legend" aria-label="Convenciones de la agenda">
 <li><span class="sw" style="background: #D99A27"></span>Apertura y cierre</li>
 <li><span class="sw" style="background: #087E8B"></span>Conferencia · ambas salas</li>
-<li><span class="sw" style="background: #FFFFFF; box-shadow: inset 0 0 0 1.5px #102A43"></span>Ponencias · en paralelo</li>
+<li><span class="sw" style="background: #FFFFFF; box-shadow: inset 0 0 0 1.5px #102A43"></span>Ponencias orales · en paralelo</li>
 <li><span class="sw" style="background: #FBF3E2; box-shadow: inset 0 0 0 1.5px #D99A27"></span>Pósteres</li>
 <li><span class="sw" style="background: #EEF2F5; box-shadow: inset 0 0 0 1.5px #9FB0BF"></span>Descanso</li>
 </ul>
@@ -156,14 +156,32 @@
 
 <div role="row" style="display: grid; grid-template-columns: 200px minmax(0, 1fr) minmax(0, 1fr); gap: 10px; padding: 5px 0">
 <div role="rowheader" style="padding: 14px 8px; font-weight: 700; font-size: 16px; font-variant-numeric: tabular-nums">10:00–11:00 a. m.</div>
-<div role="cell" style="min-height: 56px; padding: 12px 18px; border-radius: 6px; background: #FFFFFF; border: 1px solid #B9C7D3; display: flex; flex-wrap: wrap; align-items: center; gap: 8px 14px">
-<span style="font-size: 12px; font-weight: 700; letter-spacing: 0.02em; padding: 3px 9px; border-radius: 6px; background: #FFFFFF; color: #102A43; border: 1px solid #102A43">Ponencias</span>
-<span style="font-weight: 600; font-size: 16px; flex: 1; min-width: 0">Ponencias temáticas 1 y 3<span style="display: block; font-weight: 500; font-size: 13px; color: #52667A; margin-top: 2px">20 min + 5 min de preguntas cada una</span></span><span style="font-size: 14px; color: #52667A">Sala 1</span>
-</div>
-<div role="cell" style="min-height: 56px; padding: 12px 18px; border-radius: 6px; background: #FFFFFF; border: 1px solid #B9C7D3; display: flex; flex-wrap: wrap; align-items: center; gap: 8px 14px">
-<span style="font-size: 12px; font-weight: 700; letter-spacing: 0.02em; padding: 3px 9px; border-radius: 6px; background: #FFFFFF; color: #102A43; border: 1px solid #102A43">Ponencias</span>
-<span style="font-weight: 600; font-size: 16px; flex: 1; min-width: 0">Ponencias temáticas 2 y 4<span style="display: block; font-weight: 500; font-size: 13px; color: #52667A; margin-top: 2px">20 min + 5 min de preguntas cada una</span></span><span style="font-size: 14px; color: #52667A">Sala 2</span>
-</div>
+<div role="cell" class="pon-cell"><p class="pon-sala">Sala 1</p><ol class="pon-list" aria-label="Ponencias de la Sala 1">
+
+<li class="pon"><span class="pon-tag">Ponencia oral · 20 min + 5 min de preguntas</span>
+<p class="pon-t">Caracterización del sistema de transporte público colectivo urbano (STPCU) y los actores que intervienen en el Distrito Especial de Barrancabermeja</p><p class="pon-a"><strong>Andrea Quintero Miranda</strong> · UNIPAZ</p>
+
+</li>
+
+<li class="pon"><span class="pon-tag">Ponencia oral · 20 min + 5 min de preguntas</span>
+<p class="pon-t">Diseño de un sistema automático para regular la intensidad lumínica en la sala de lectura de la biblioteca de UNIPAZ</p><p class="pon-a"><strong>Manuel Mauricio Mont López</strong> · UNIPAZ</p>
+
+</li>
+
+</ol></div>
+<div role="cell" class="pon-cell"><p class="pon-sala">Sala 2</p><ol class="pon-list" aria-label="Ponencias de la Sala 2">
+
+<li class="pon"><span class="pon-tag">Ponencia oral · 20 min + 5 min de preguntas</span>
+<p class="pon-t">Diseño de arquitectura de software para la plataforma de prevención de riesgo laboral: sector calzado (Bucaramanga)</p><p class="pon-a"><strong>Walter Stiven Carrillo Duarte</strong> · Universidad Cooperativa de Colombia</p>
+
+</li>
+
+<li class="pon"><span class="pon-tag">Ponencia oral · 20 min + 5 min de preguntas</span>
+<p class="pon-t">Modelo matemático y sistema inteligente para la predicción del riesgo cardiovascular basado en el estrés laboral</p><p class="pon-a"><strong>Fredy Angarita Reina</strong> · Universidad Cooperativa de Colombia</p>
+
+</li>
+
+</ol></div>
 </div>
 
 
@@ -217,14 +235,32 @@
 
 <div role="row" style="display: grid; grid-template-columns: 200px minmax(0, 1fr) minmax(0, 1fr); gap: 10px; padding: 5px 0">
 <div role="rowheader" style="padding: 14px 8px; font-weight: 700; font-size: 16px; font-variant-numeric: tabular-nums">2:00–3:00 p. m.</div>
-<div role="cell" style="min-height: 56px; padding: 12px 18px; border-radius: 6px; background: #FFFFFF; border: 1px solid #B9C7D3; display: flex; flex-wrap: wrap; align-items: center; gap: 8px 14px">
-<span style="font-size: 12px; font-weight: 700; letter-spacing: 0.02em; padding: 3px 9px; border-radius: 6px; background: #FFFFFF; color: #102A43; border: 1px solid #102A43">Ponencias</span>
-<span style="font-weight: 600; font-size: 16px; flex: 1; min-width: 0">Ponencias temáticas 5 y 7<span style="display: block; font-weight: 500; font-size: 13px; color: #52667A; margin-top: 2px">20 min + 5 min de preguntas cada una</span></span><span style="font-size: 14px; color: #52667A">Sala 1</span>
-</div>
-<div role="cell" style="min-height: 56px; padding: 12px 18px; border-radius: 6px; background: #FFFFFF; border: 1px solid #B9C7D3; display: flex; flex-wrap: wrap; align-items: center; gap: 8px 14px">
-<span style="font-size: 12px; font-weight: 700; letter-spacing: 0.02em; padding: 3px 9px; border-radius: 6px; background: #FFFFFF; color: #102A43; border: 1px solid #102A43">Ponencias</span>
-<span style="font-weight: 600; font-size: 16px; flex: 1; min-width: 0">Ponencias temáticas 6 y 8<span style="display: block; font-weight: 500; font-size: 13px; color: #52667A; margin-top: 2px">20 min + 5 min de preguntas cada una</span></span><span style="font-size: 14px; color: #52667A">Sala 2</span>
-</div>
+<div role="cell" class="pon-cell"><p class="pon-sala">Sala 1</p><ol class="pon-list" aria-label="Ponencias de la Sala 1">
+
+<li class="pon"><span class="pon-tag">Ponencia oral · 20 min + 5 min de preguntas</span>
+<p class="pon-t">Trabajo informal y salud mental en Colombia: una mirada desde los riesgos psicosociales laborales</p><p class="pon-a"><strong>Jean Carlos Botello Pérez</strong> · UNIPAZ</p>
+
+</li>
+
+<li class="pon"><span class="pon-tag">Ponencia oral · 20 min + 5 min de preguntas</span>
+<p class="pon-t">Evaluación de riesgos ocupacionales en actividades de aprovechamiento de residuos: una perspectiva desde la ingeniería ambiental</p><p class="pon-a"><strong>Marlon Estiven Ríos Ramírez</strong> · UNIPAZ</p>
+
+</li>
+
+</ol></div>
+<div role="cell" class="pon-cell"><p class="pon-sala">Sala 2</p><ol class="pon-list" aria-label="Ponencias de la Sala 2">
+
+<li class="pon"><span class="pon-tag">Ponencia oral · 20 min + 5 min de preguntas</span>
+<p class="pon-t">Neutralizantes en refinación: peligro químico y potencial de sustitución</p><p class="pon-a"><strong>Karol Vanesa Medina Salcedo</strong> · UNIPAZ</p>
+
+</li>
+
+<li class="pon"><span class="pon-tag">Ponencia oral · 20 min + 5 min de preguntas</span>
+<p class="pon-t">Identificación de enfermedades laborales y factores de riesgo en las plazas de mercado en Barrancabermeja</p><p class="pon-a"><strong>Julieth Katherine Martínez Guzmán</strong> · UNIPAZ</p>
+
+</li>
+
+</ol></div>
 </div>
 
 
@@ -233,14 +269,32 @@
 
 <div role="row" style="display: grid; grid-template-columns: 200px minmax(0, 1fr) minmax(0, 1fr); gap: 10px; padding: 5px 0">
 <div role="rowheader" style="padding: 14px 8px; font-weight: 700; font-size: 16px; font-variant-numeric: tabular-nums">3:00–4:00 p. m.</div>
-<div role="cell" style="min-height: 56px; padding: 12px 18px; border-radius: 6px; background: #FFFFFF; border: 1px solid #B9C7D3; display: flex; flex-wrap: wrap; align-items: center; gap: 8px 14px">
-<span style="font-size: 12px; font-weight: 700; letter-spacing: 0.02em; padding: 3px 9px; border-radius: 6px; background: #FFFFFF; color: #102A43; border: 1px solid #102A43">Ponencias</span>
-<span style="font-weight: 600; font-size: 16px; flex: 1; min-width: 0">Ponencias temáticas 9 y 11<span style="display: block; font-weight: 500; font-size: 13px; color: #52667A; margin-top: 2px">20 min + 5 min de preguntas cada una</span></span><span style="font-size: 14px; color: #52667A">Sala 1</span>
-</div>
-<div role="cell" style="min-height: 56px; padding: 12px 18px; border-radius: 6px; background: #FFFFFF; border: 1px solid #B9C7D3; display: flex; flex-wrap: wrap; align-items: center; gap: 8px 14px">
-<span style="font-size: 12px; font-weight: 700; letter-spacing: 0.02em; padding: 3px 9px; border-radius: 6px; background: #FFFFFF; color: #102A43; border: 1px solid #102A43">Ponencias</span>
-<span style="font-weight: 600; font-size: 16px; flex: 1; min-width: 0">Ponencias temáticas 10 y 12<span style="display: block; font-weight: 500; font-size: 13px; color: #52667A; margin-top: 2px">20 min + 5 min de preguntas cada una</span></span><span style="font-size: 14px; color: #52667A">Sala 2</span>
-</div>
+<div role="cell" class="pon-cell"><p class="pon-sala">Sala 1</p><ol class="pon-list" aria-label="Ponencias de la Sala 1">
+
+<li class="pon"><span class="pon-tag">Ponencia oral · 20 min + 5 min de preguntas</span>
+<p class="pon-t">Contexto histórico de los tipos de hidrantes utilizados en Colombia</p><p class="pon-a"><strong>Edgar Julián Cardona Delgado</strong> · UNIPAZ</p>
+
+</li>
+
+<li class="pon"><span class="pon-tag">Ponencia oral · 20 min + 5 min de preguntas</span>
+<p class="pon-t">Diseño de un plan de gestión de riesgo químico a partir de los lineamientos del Sistema Globalmente Armonizado para la empresa Lubricentro Fundadores de la ciudad de Manizales</p><p class="pon-a"><strong>Gonzalo Eduardo Yepes Calderón</strong> · Politécnico Grancolombiano</p>
+
+</li>
+
+</ol></div>
+<div role="cell" class="pon-cell"><p class="pon-sala">Sala 2</p><ol class="pon-list" aria-label="Ponencias de la Sala 2">
+
+<li class="pon"><span class="pon-tag">Ponencia oral · 20 min + 5 min de preguntas</span>
+<p class="pon-t">Análisis del impacto del SG-SST orientado a la prevención de afectaciones a la salud asociadas a la exposición ocupacional a fibra de vidrio en Fibrasing S.A.S.</p><p class="pon-a"><strong>Eliam Moralez Barrera</strong> · Politécnico Grancolombiano</p>
+
+</li>
+
+<li class="pon"><span class="pon-tag">Ponencia oral · 20 min + 5 min de preguntas</span>
+<p class="pon-t">Análisis de la exposición a riesgos biomecánicos y su relación con los trastornos musculoesqueléticos: un enfoque cualitativo basado en revisión documental</p><p class="pon-a"><strong>Brayan Stip Lobo Rincón</strong> · UNIPAZ</p>
+
+</li>
+
+</ol></div>
 </div>
 
 
@@ -373,10 +427,32 @@
 
 <li style="display: flex; flex-direction: column; gap: 6px">
 <div style="font-weight: 700; font-size: 15px; font-variant-numeric: tabular-nums">10:00–11:00 a. m. <span style="font-weight: 500; color: #52667A">· en paralelo</span></div>
-<div style="padding: 12px 16px; border-radius: 6px; background: #FFFFFF; border: 1px solid #B9C7D3; display: flex; align-items: center; gap: 12px">
-<span style="font-size: 13px; font-weight: 800; padding: 3px 9px; border-radius: 6px; background: #102A43; color: #FFFFFF">Sala 1</span><span style="font-weight: 600">Ponencias temáticas 1 y 3<span style="display: block; font-weight: 500; font-size: 13px; color: #52667A; margin-top: 2px">20 min + 5 min de preguntas cada una</span></span></div>
-<div style="padding: 12px 16px; border-radius: 6px; background: #FFFFFF; border: 1px solid #B9C7D3; display: flex; align-items: center; gap: 12px">
-<span style="font-size: 13px; font-weight: 800; padding: 3px 9px; border-radius: 6px; background: #102A43; color: #FFFFFF">Sala 2</span><span style="font-weight: 600">Ponencias temáticas 2 y 4<span style="display: block; font-weight: 500; font-size: 13px; color: #52667A; margin-top: 2px">20 min + 5 min de preguntas cada una</span></span></div>
+<div class="pon-cell"><p class="pon-sala"><span class="pon-badge">Sala 1</span></p><ol class="pon-list" aria-label="Ponencias de la Sala 1">
+
+<li class="pon"><span class="pon-tag">Ponencia oral · 20 min + 5 min de preguntas</span>
+<p class="pon-t">Caracterización del sistema de transporte público colectivo urbano (STPCU) y los actores que intervienen en el Distrito Especial de Barrancabermeja</p><p class="pon-a"><strong>Andrea Quintero Miranda</strong> · UNIPAZ</p>
+
+</li>
+
+<li class="pon"><span class="pon-tag">Ponencia oral · 20 min + 5 min de preguntas</span>
+<p class="pon-t">Diseño de un sistema automático para regular la intensidad lumínica en la sala de lectura de la biblioteca de UNIPAZ</p><p class="pon-a"><strong>Manuel Mauricio Mont López</strong> · UNIPAZ</p>
+
+</li>
+
+</ol></div>
+<div class="pon-cell"><p class="pon-sala"><span class="pon-badge">Sala 2</span></p><ol class="pon-list" aria-label="Ponencias de la Sala 2">
+
+<li class="pon"><span class="pon-tag">Ponencia oral · 20 min + 5 min de preguntas</span>
+<p class="pon-t">Diseño de arquitectura de software para la plataforma de prevención de riesgo laboral: sector calzado (Bucaramanga)</p><p class="pon-a"><strong>Walter Stiven Carrillo Duarte</strong> · Universidad Cooperativa de Colombia</p>
+
+</li>
+
+<li class="pon"><span class="pon-tag">Ponencia oral · 20 min + 5 min de preguntas</span>
+<p class="pon-t">Modelo matemático y sistema inteligente para la predicción del riesgo cardiovascular basado en el estrés laboral</p><p class="pon-a"><strong>Fredy Angarita Reina</strong> · Universidad Cooperativa de Colombia</p>
+
+</li>
+
+</ol></div>
 </li>
 
 
@@ -433,10 +509,32 @@
 
 <li style="display: flex; flex-direction: column; gap: 6px">
 <div style="font-weight: 700; font-size: 15px; font-variant-numeric: tabular-nums">2:00–3:00 p. m. <span style="font-weight: 500; color: #52667A">· en paralelo</span></div>
-<div style="padding: 12px 16px; border-radius: 6px; background: #FFFFFF; border: 1px solid #B9C7D3; display: flex; align-items: center; gap: 12px">
-<span style="font-size: 13px; font-weight: 800; padding: 3px 9px; border-radius: 6px; background: #102A43; color: #FFFFFF">Sala 1</span><span style="font-weight: 600">Ponencias temáticas 5 y 7<span style="display: block; font-weight: 500; font-size: 13px; color: #52667A; margin-top: 2px">20 min + 5 min de preguntas cada una</span></span></div>
-<div style="padding: 12px 16px; border-radius: 6px; background: #FFFFFF; border: 1px solid #B9C7D3; display: flex; align-items: center; gap: 12px">
-<span style="font-size: 13px; font-weight: 800; padding: 3px 9px; border-radius: 6px; background: #102A43; color: #FFFFFF">Sala 2</span><span style="font-weight: 600">Ponencias temáticas 6 y 8<span style="display: block; font-weight: 500; font-size: 13px; color: #52667A; margin-top: 2px">20 min + 5 min de preguntas cada una</span></span></div>
+<div class="pon-cell"><p class="pon-sala"><span class="pon-badge">Sala 1</span></p><ol class="pon-list" aria-label="Ponencias de la Sala 1">
+
+<li class="pon"><span class="pon-tag">Ponencia oral · 20 min + 5 min de preguntas</span>
+<p class="pon-t">Trabajo informal y salud mental en Colombia: una mirada desde los riesgos psicosociales laborales</p><p class="pon-a"><strong>Jean Carlos Botello Pérez</strong> · UNIPAZ</p>
+
+</li>
+
+<li class="pon"><span class="pon-tag">Ponencia oral · 20 min + 5 min de preguntas</span>
+<p class="pon-t">Evaluación de riesgos ocupacionales en actividades de aprovechamiento de residuos: una perspectiva desde la ingeniería ambiental</p><p class="pon-a"><strong>Marlon Estiven Ríos Ramírez</strong> · UNIPAZ</p>
+
+</li>
+
+</ol></div>
+<div class="pon-cell"><p class="pon-sala"><span class="pon-badge">Sala 2</span></p><ol class="pon-list" aria-label="Ponencias de la Sala 2">
+
+<li class="pon"><span class="pon-tag">Ponencia oral · 20 min + 5 min de preguntas</span>
+<p class="pon-t">Neutralizantes en refinación: peligro químico y potencial de sustitución</p><p class="pon-a"><strong>Karol Vanesa Medina Salcedo</strong> · UNIPAZ</p>
+
+</li>
+
+<li class="pon"><span class="pon-tag">Ponencia oral · 20 min + 5 min de preguntas</span>
+<p class="pon-t">Identificación de enfermedades laborales y factores de riesgo en las plazas de mercado en Barrancabermeja</p><p class="pon-a"><strong>Julieth Katherine Martínez Guzmán</strong> · UNIPAZ</p>
+
+</li>
+
+</ol></div>
 </li>
 
 
@@ -445,10 +543,32 @@
 
 <li style="display: flex; flex-direction: column; gap: 6px">
 <div style="font-weight: 700; font-size: 15px; font-variant-numeric: tabular-nums">3:00–4:00 p. m. <span style="font-weight: 500; color: #52667A">· en paralelo</span></div>
-<div style="padding: 12px 16px; border-radius: 6px; background: #FFFFFF; border: 1px solid #B9C7D3; display: flex; align-items: center; gap: 12px">
-<span style="font-size: 13px; font-weight: 800; padding: 3px 9px; border-radius: 6px; background: #102A43; color: #FFFFFF">Sala 1</span><span style="font-weight: 600">Ponencias temáticas 9 y 11<span style="display: block; font-weight: 500; font-size: 13px; color: #52667A; margin-top: 2px">20 min + 5 min de preguntas cada una</span></span></div>
-<div style="padding: 12px 16px; border-radius: 6px; background: #FFFFFF; border: 1px solid #B9C7D3; display: flex; align-items: center; gap: 12px">
-<span style="font-size: 13px; font-weight: 800; padding: 3px 9px; border-radius: 6px; background: #102A43; color: #FFFFFF">Sala 2</span><span style="font-weight: 600">Ponencias temáticas 10 y 12<span style="display: block; font-weight: 500; font-size: 13px; color: #52667A; margin-top: 2px">20 min + 5 min de preguntas cada una</span></span></div>
+<div class="pon-cell"><p class="pon-sala"><span class="pon-badge">Sala 1</span></p><ol class="pon-list" aria-label="Ponencias de la Sala 1">
+
+<li class="pon"><span class="pon-tag">Ponencia oral · 20 min + 5 min de preguntas</span>
+<p class="pon-t">Contexto histórico de los tipos de hidrantes utilizados en Colombia</p><p class="pon-a"><strong>Edgar Julián Cardona Delgado</strong> · UNIPAZ</p>
+
+</li>
+
+<li class="pon"><span class="pon-tag">Ponencia oral · 20 min + 5 min de preguntas</span>
+<p class="pon-t">Diseño de un plan de gestión de riesgo químico a partir de los lineamientos del Sistema Globalmente Armonizado para la empresa Lubricentro Fundadores de la ciudad de Manizales</p><p class="pon-a"><strong>Gonzalo Eduardo Yepes Calderón</strong> · Politécnico Grancolombiano</p>
+
+</li>
+
+</ol></div>
+<div class="pon-cell"><p class="pon-sala"><span class="pon-badge">Sala 2</span></p><ol class="pon-list" aria-label="Ponencias de la Sala 2">
+
+<li class="pon"><span class="pon-tag">Ponencia oral · 20 min + 5 min de preguntas</span>
+<p class="pon-t">Análisis del impacto del SG-SST orientado a la prevención de afectaciones a la salud asociadas a la exposición ocupacional a fibra de vidrio en Fibrasing S.A.S.</p><p class="pon-a"><strong>Eliam Moralez Barrera</strong> · Politécnico Grancolombiano</p>
+
+</li>
+
+<li class="pon"><span class="pon-tag">Ponencia oral · 20 min + 5 min de preguntas</span>
+<p class="pon-t">Análisis de la exposición a riesgos biomecánicos y su relación con los trastornos musculoesqueléticos: un enfoque cualitativo basado en revisión documental</p><p class="pon-a"><strong>Brayan Stip Lobo Rincón</strong> · UNIPAZ</p>
+
+</li>
+
+</ol></div>
 </li>
 
 
@@ -601,14 +721,32 @@
 
 <div role="row" style="display: grid; grid-template-columns: 200px minmax(0, 1fr) minmax(0, 1fr); gap: 10px; padding: 5px 0">
 <div role="rowheader" style="padding: 14px 8px; font-weight: 700; font-size: 16px; font-variant-numeric: tabular-nums">10:00–11:00 a. m.</div>
-<div role="cell" style="min-height: 56px; padding: 12px 18px; border-radius: 6px; background: #FFFFFF; border: 1px solid #B9C7D3; display: flex; flex-wrap: wrap; align-items: center; gap: 8px 14px">
-<span style="font-size: 12px; font-weight: 700; letter-spacing: 0.02em; padding: 3px 9px; border-radius: 6px; background: #FFFFFF; color: #102A43; border: 1px solid #102A43">Ponencias</span>
-<span style="font-weight: 600; font-size: 16px; flex: 1; min-width: 0">Ponencias temáticas 13 y 15<span style="display: block; font-weight: 500; font-size: 13px; color: #52667A; margin-top: 2px">20 min + 5 min de preguntas cada una</span></span><span style="font-size: 14px; color: #52667A">Sala 1</span>
-</div>
-<div role="cell" style="min-height: 56px; padding: 12px 18px; border-radius: 6px; background: #FFFFFF; border: 1px solid #B9C7D3; display: flex; flex-wrap: wrap; align-items: center; gap: 8px 14px">
-<span style="font-size: 12px; font-weight: 700; letter-spacing: 0.02em; padding: 3px 9px; border-radius: 6px; background: #FFFFFF; color: #102A43; border: 1px solid #102A43">Ponencias</span>
-<span style="font-weight: 600; font-size: 16px; flex: 1; min-width: 0">Ponencias temáticas 14 y 16<span style="display: block; font-weight: 500; font-size: 13px; color: #52667A; margin-top: 2px">20 min + 5 min de preguntas cada una</span></span><span style="font-size: 14px; color: #52667A">Sala 2</span>
-</div>
+<div role="cell" class="pon-cell"><p class="pon-sala">Sala 1</p><ol class="pon-list" aria-label="Ponencias de la Sala 1">
+
+<li class="pon"><span class="pon-tag">Ponencia oral · 20 min + 5 min de preguntas</span>
+<p class="pon-t">El riesgo laboral en el campo colombiano: entre la invisibilidad de las condiciones de trabajo y las realidades del territorio</p><p class="pon-a"><strong>Yohanna Milena Rueda Mahecha</strong> · UNIMINUTO – Centro Regional Bucaramanga</p>
+
+</li>
+
+<li class="pon"><span class="pon-tag">Ponencia oral · 20 min + 5 min de preguntas</span>
+<p class="pon-t">Medir para transformar: retos y corresponsabilidad frente al riesgo psicosocial y la salud mental en el trabajo en Colombia</p><p class="pon-a"><strong>Angélica Galán</strong> · UNIPAZ</p>
+
+</li>
+
+</ol></div>
+<div role="cell" class="pon-cell"><p class="pon-sala">Sala 2</p><ol class="pon-list" aria-label="Ponencias de la Sala 2">
+
+<li class="pon"><span class="pon-tag">Ponencia oral · 20 min + 5 min de preguntas</span>
+
+<p class="pon-t pon-pend">Ponencia por confirmar</p>
+</li>
+
+<li class="pon"><span class="pon-tag">Ponencia oral · 20 min + 5 min de preguntas</span>
+<p class="pon-t">Eficacia del comité de convivencia frente a la persecución laboral: un estudio de caso en la Oficina Especial de Barrancabermeja</p><p class="pon-a"><strong>Nicole Dayana Hernández Luna</strong> · UNIPAZ</p>
+
+</li>
+
+</ol></div>
 </div>
 
 
@@ -662,14 +800,32 @@
 
 <div role="row" style="display: grid; grid-template-columns: 200px minmax(0, 1fr) minmax(0, 1fr); gap: 10px; padding: 5px 0">
 <div role="rowheader" style="padding: 14px 8px; font-weight: 700; font-size: 16px; font-variant-numeric: tabular-nums">2:00–3:00 p. m.</div>
-<div role="cell" style="min-height: 56px; padding: 12px 18px; border-radius: 6px; background: #FFFFFF; border: 1px solid #B9C7D3; display: flex; flex-wrap: wrap; align-items: center; gap: 8px 14px">
-<span style="font-size: 12px; font-weight: 700; letter-spacing: 0.02em; padding: 3px 9px; border-radius: 6px; background: #FFFFFF; color: #102A43; border: 1px solid #102A43">Ponencias</span>
-<span style="font-weight: 600; font-size: 16px; flex: 1; min-width: 0">Ponencias temáticas 17 y 19<span style="display: block; font-weight: 500; font-size: 13px; color: #52667A; margin-top: 2px">20 min + 5 min de preguntas cada una</span></span><span style="font-size: 14px; color: #52667A">Sala 1</span>
-</div>
-<div role="cell" style="min-height: 56px; padding: 12px 18px; border-radius: 6px; background: #FFFFFF; border: 1px solid #B9C7D3; display: flex; flex-wrap: wrap; align-items: center; gap: 8px 14px">
-<span style="font-size: 12px; font-weight: 700; letter-spacing: 0.02em; padding: 3px 9px; border-radius: 6px; background: #FFFFFF; color: #102A43; border: 1px solid #102A43">Ponencias</span>
-<span style="font-weight: 600; font-size: 16px; flex: 1; min-width: 0">Ponencias temáticas 18 y 20<span style="display: block; font-weight: 500; font-size: 13px; color: #52667A; margin-top: 2px">20 min + 5 min de preguntas cada una</span></span><span style="font-size: 14px; color: #52667A">Sala 2</span>
-</div>
+<div role="cell" class="pon-cell"><p class="pon-sala">Sala 1</p><ol class="pon-list" aria-label="Ponencias de la Sala 1">
+
+<li class="pon"><span class="pon-tag">Ponencia oral · 20 min + 5 min de preguntas</span>
+
+<p class="pon-t pon-pend">Ponencia por confirmar</p>
+</li>
+
+<li class="pon"><span class="pon-tag">Ponencia oral · 20 min + 5 min de preguntas</span>
+<p class="pon-t">Análisis de la correspondencia entre las prácticas de liderazgo descritas en la literatura y los factores de riesgo y protección psicosocial intralaboral en el personal administrativo de la Corporación Parque Explora en Medellín</p><p class="pon-a"><strong>Daniela Salazar Londoño</strong> · Politécnico Grancolombiano</p>
+
+</li>
+
+</ol></div>
+<div role="cell" class="pon-cell"><p class="pon-sala">Sala 2</p><ol class="pon-list" aria-label="Ponencias de la Sala 2">
+
+<li class="pon"><span class="pon-tag">Ponencia oral · 20 min + 5 min de preguntas</span>
+<p class="pon-t">Impacto de los riesgos psicosociales en el desempeño laboral y estrategias de intervención en seguridad y salud en el trabajo</p><p class="pon-a"><strong>Mayra Alejandra Uribe Caro</strong> · UNIPAZ</p>
+
+</li>
+
+<li class="pon"><span class="pon-tag">Ponencia oral · 20 min + 5 min de preguntas</span>
+<p class="pon-t">Autocuidado integral y consciente: 7 pasos para prevenir el riesgo público en entornos laborales</p><p class="pon-a"><strong>Paola Andrea Ramírez Ávila</strong> · Prohumana Soluciones</p>
+
+</li>
+
+</ol></div>
 </div>
 
 
@@ -678,14 +834,32 @@
 
 <div role="row" style="display: grid; grid-template-columns: 200px minmax(0, 1fr) minmax(0, 1fr); gap: 10px; padding: 5px 0">
 <div role="rowheader" style="padding: 14px 8px; font-weight: 700; font-size: 16px; font-variant-numeric: tabular-nums">3:00–4:00 p. m.</div>
-<div role="cell" style="min-height: 56px; padding: 12px 18px; border-radius: 6px; background: #FFFFFF; border: 1px solid #B9C7D3; display: flex; flex-wrap: wrap; align-items: center; gap: 8px 14px">
-<span style="font-size: 12px; font-weight: 700; letter-spacing: 0.02em; padding: 3px 9px; border-radius: 6px; background: #FFFFFF; color: #102A43; border: 1px solid #102A43">Ponencias</span>
-<span style="font-weight: 600; font-size: 16px; flex: 1; min-width: 0">Ponencias temáticas 21 y 23<span style="display: block; font-weight: 500; font-size: 13px; color: #52667A; margin-top: 2px">20 min + 5 min de preguntas cada una</span></span><span style="font-size: 14px; color: #52667A">Sala 1</span>
-</div>
-<div role="cell" style="min-height: 56px; padding: 12px 18px; border-radius: 6px; background: #FFFFFF; border: 1px solid #B9C7D3; display: flex; flex-wrap: wrap; align-items: center; gap: 8px 14px">
-<span style="font-size: 12px; font-weight: 700; letter-spacing: 0.02em; padding: 3px 9px; border-radius: 6px; background: #FFFFFF; color: #102A43; border: 1px solid #102A43">Ponencias</span>
-<span style="font-weight: 600; font-size: 16px; flex: 1; min-width: 0">Ponencias temáticas 22 y 24<span style="display: block; font-weight: 500; font-size: 13px; color: #52667A; margin-top: 2px">20 min + 5 min de preguntas cada una</span></span><span style="font-size: 14px; color: #52667A">Sala 2</span>
-</div>
+<div role="cell" class="pon-cell"><p class="pon-sala">Sala 1</p><ol class="pon-list" aria-label="Ponencias de la Sala 1">
+
+<li class="pon"><span class="pon-tag">Ponencia oral · 20 min + 5 min de preguntas</span>
+<p class="pon-t">Riesgo biológico en enfermeras durante la atención domiciliaria a pacientes postrados</p><p class="pon-a"><strong>Liz Maryuris Crespo Bustos</strong> · UNIPAZ</p>
+
+</li>
+
+<li class="pon"><span class="pon-tag">Ponencia oral · 20 min + 5 min de preguntas</span>
+<p class="pon-t">El docente como último eslabón: una reflexión sobre el burnout estructural en territorios de conflicto</p><p class="pon-a"><strong>Diana Marcela Castro Vargas</strong> · UNIPAZ</p>
+
+</li>
+
+</ol></div>
+<div role="cell" class="pon-cell"><p class="pon-sala">Sala 2</p><ol class="pon-list" aria-label="Ponencias de la Sala 2">
+
+<li class="pon"><span class="pon-tag">Ponencia oral · 20 min + 5 min de preguntas</span>
+<p class="pon-t">Programa de pausas activas mentales basado en mindfulness para reducir el estrés laboral en la empresa Pelgor SAS</p><p class="pon-a"><strong>Carolina Pulido Gómez</strong> · Politécnico Grancolombiano</p>
+
+</li>
+
+<li class="pon"><span class="pon-tag">Ponencia oral · 20 min + 5 min de preguntas</span>
+<p class="pon-t">Trabajar a distancia, cuidar de cerca: diagnóstico del bienestar y las condiciones laborales en colaboradores de Trobapp de Colombia S.A.S.</p><p class="pon-a"><strong>Angie Yibeth Rubio Camacho</strong> · Politécnico Grancolombiano</p>
+
+</li>
+
+</ol></div>
 </div>
 
 
@@ -818,10 +992,32 @@
 
 <li style="display: flex; flex-direction: column; gap: 6px">
 <div style="font-weight: 700; font-size: 15px; font-variant-numeric: tabular-nums">10:00–11:00 a. m. <span style="font-weight: 500; color: #52667A">· en paralelo</span></div>
-<div style="padding: 12px 16px; border-radius: 6px; background: #FFFFFF; border: 1px solid #B9C7D3; display: flex; align-items: center; gap: 12px">
-<span style="font-size: 13px; font-weight: 800; padding: 3px 9px; border-radius: 6px; background: #102A43; color: #FFFFFF">Sala 1</span><span style="font-weight: 600">Ponencias temáticas 13 y 15<span style="display: block; font-weight: 500; font-size: 13px; color: #52667A; margin-top: 2px">20 min + 5 min de preguntas cada una</span></span></div>
-<div style="padding: 12px 16px; border-radius: 6px; background: #FFFFFF; border: 1px solid #B9C7D3; display: flex; align-items: center; gap: 12px">
-<span style="font-size: 13px; font-weight: 800; padding: 3px 9px; border-radius: 6px; background: #102A43; color: #FFFFFF">Sala 2</span><span style="font-weight: 600">Ponencias temáticas 14 y 16<span style="display: block; font-weight: 500; font-size: 13px; color: #52667A; margin-top: 2px">20 min + 5 min de preguntas cada una</span></span></div>
+<div class="pon-cell"><p class="pon-sala"><span class="pon-badge">Sala 1</span></p><ol class="pon-list" aria-label="Ponencias de la Sala 1">
+
+<li class="pon"><span class="pon-tag">Ponencia oral · 20 min + 5 min de preguntas</span>
+<p class="pon-t">El riesgo laboral en el campo colombiano: entre la invisibilidad de las condiciones de trabajo y las realidades del territorio</p><p class="pon-a"><strong>Yohanna Milena Rueda Mahecha</strong> · UNIMINUTO – Centro Regional Bucaramanga</p>
+
+</li>
+
+<li class="pon"><span class="pon-tag">Ponencia oral · 20 min + 5 min de preguntas</span>
+<p class="pon-t">Medir para transformar: retos y corresponsabilidad frente al riesgo psicosocial y la salud mental en el trabajo en Colombia</p><p class="pon-a"><strong>Angélica Galán</strong> · UNIPAZ</p>
+
+</li>
+
+</ol></div>
+<div class="pon-cell"><p class="pon-sala"><span class="pon-badge">Sala 2</span></p><ol class="pon-list" aria-label="Ponencias de la Sala 2">
+
+<li class="pon"><span class="pon-tag">Ponencia oral · 20 min + 5 min de preguntas</span>
+
+<p class="pon-t pon-pend">Ponencia por confirmar</p>
+</li>
+
+<li class="pon"><span class="pon-tag">Ponencia oral · 20 min + 5 min de preguntas</span>
+<p class="pon-t">Eficacia del comité de convivencia frente a la persecución laboral: un estudio de caso en la Oficina Especial de Barrancabermeja</p><p class="pon-a"><strong>Nicole Dayana Hernández Luna</strong> · UNIPAZ</p>
+
+</li>
+
+</ol></div>
 </li>
 
 
@@ -878,10 +1074,32 @@
 
 <li style="display: flex; flex-direction: column; gap: 6px">
 <div style="font-weight: 700; font-size: 15px; font-variant-numeric: tabular-nums">2:00–3:00 p. m. <span style="font-weight: 500; color: #52667A">· en paralelo</span></div>
-<div style="padding: 12px 16px; border-radius: 6px; background: #FFFFFF; border: 1px solid #B9C7D3; display: flex; align-items: center; gap: 12px">
-<span style="font-size: 13px; font-weight: 800; padding: 3px 9px; border-radius: 6px; background: #102A43; color: #FFFFFF">Sala 1</span><span style="font-weight: 600">Ponencias temáticas 17 y 19<span style="display: block; font-weight: 500; font-size: 13px; color: #52667A; margin-top: 2px">20 min + 5 min de preguntas cada una</span></span></div>
-<div style="padding: 12px 16px; border-radius: 6px; background: #FFFFFF; border: 1px solid #B9C7D3; display: flex; align-items: center; gap: 12px">
-<span style="font-size: 13px; font-weight: 800; padding: 3px 9px; border-radius: 6px; background: #102A43; color: #FFFFFF">Sala 2</span><span style="font-weight: 600">Ponencias temáticas 18 y 20<span style="display: block; font-weight: 500; font-size: 13px; color: #52667A; margin-top: 2px">20 min + 5 min de preguntas cada una</span></span></div>
+<div class="pon-cell"><p class="pon-sala"><span class="pon-badge">Sala 1</span></p><ol class="pon-list" aria-label="Ponencias de la Sala 1">
+
+<li class="pon"><span class="pon-tag">Ponencia oral · 20 min + 5 min de preguntas</span>
+
+<p class="pon-t pon-pend">Ponencia por confirmar</p>
+</li>
+
+<li class="pon"><span class="pon-tag">Ponencia oral · 20 min + 5 min de preguntas</span>
+<p class="pon-t">Análisis de la correspondencia entre las prácticas de liderazgo descritas en la literatura y los factores de riesgo y protección psicosocial intralaboral en el personal administrativo de la Corporación Parque Explora en Medellín</p><p class="pon-a"><strong>Daniela Salazar Londoño</strong> · Politécnico Grancolombiano</p>
+
+</li>
+
+</ol></div>
+<div class="pon-cell"><p class="pon-sala"><span class="pon-badge">Sala 2</span></p><ol class="pon-list" aria-label="Ponencias de la Sala 2">
+
+<li class="pon"><span class="pon-tag">Ponencia oral · 20 min + 5 min de preguntas</span>
+<p class="pon-t">Impacto de los riesgos psicosociales en el desempeño laboral y estrategias de intervención en seguridad y salud en el trabajo</p><p class="pon-a"><strong>Mayra Alejandra Uribe Caro</strong> · UNIPAZ</p>
+
+</li>
+
+<li class="pon"><span class="pon-tag">Ponencia oral · 20 min + 5 min de preguntas</span>
+<p class="pon-t">Autocuidado integral y consciente: 7 pasos para prevenir el riesgo público en entornos laborales</p><p class="pon-a"><strong>Paola Andrea Ramírez Ávila</strong> · Prohumana Soluciones</p>
+
+</li>
+
+</ol></div>
 </li>
 
 
@@ -890,10 +1108,32 @@
 
 <li style="display: flex; flex-direction: column; gap: 6px">
 <div style="font-weight: 700; font-size: 15px; font-variant-numeric: tabular-nums">3:00–4:00 p. m. <span style="font-weight: 500; color: #52667A">· en paralelo</span></div>
-<div style="padding: 12px 16px; border-radius: 6px; background: #FFFFFF; border: 1px solid #B9C7D3; display: flex; align-items: center; gap: 12px">
-<span style="font-size: 13px; font-weight: 800; padding: 3px 9px; border-radius: 6px; background: #102A43; color: #FFFFFF">Sala 1</span><span style="font-weight: 600">Ponencias temáticas 21 y 23<span style="display: block; font-weight: 500; font-size: 13px; color: #52667A; margin-top: 2px">20 min + 5 min de preguntas cada una</span></span></div>
-<div style="padding: 12px 16px; border-radius: 6px; background: #FFFFFF; border: 1px solid #B9C7D3; display: flex; align-items: center; gap: 12px">
-<span style="font-size: 13px; font-weight: 800; padding: 3px 9px; border-radius: 6px; background: #102A43; color: #FFFFFF">Sala 2</span><span style="font-weight: 600">Ponencias temáticas 22 y 24<span style="display: block; font-weight: 500; font-size: 13px; color: #52667A; margin-top: 2px">20 min + 5 min de preguntas cada una</span></span></div>
+<div class="pon-cell"><p class="pon-sala"><span class="pon-badge">Sala 1</span></p><ol class="pon-list" aria-label="Ponencias de la Sala 1">
+
+<li class="pon"><span class="pon-tag">Ponencia oral · 20 min + 5 min de preguntas</span>
+<p class="pon-t">Riesgo biológico en enfermeras durante la atención domiciliaria a pacientes postrados</p><p class="pon-a"><strong>Liz Maryuris Crespo Bustos</strong> · UNIPAZ</p>
+
+</li>
+
+<li class="pon"><span class="pon-tag">Ponencia oral · 20 min + 5 min de preguntas</span>
+<p class="pon-t">El docente como último eslabón: una reflexión sobre el burnout estructural en territorios de conflicto</p><p class="pon-a"><strong>Diana Marcela Castro Vargas</strong> · UNIPAZ</p>
+
+</li>
+
+</ol></div>
+<div class="pon-cell"><p class="pon-sala"><span class="pon-badge">Sala 2</span></p><ol class="pon-list" aria-label="Ponencias de la Sala 2">
+
+<li class="pon"><span class="pon-tag">Ponencia oral · 20 min + 5 min de preguntas</span>
+<p class="pon-t">Programa de pausas activas mentales basado en mindfulness para reducir el estrés laboral en la empresa Pelgor SAS</p><p class="pon-a"><strong>Carolina Pulido Gómez</strong> · Politécnico Grancolombiano</p>
+
+</li>
+
+<li class="pon"><span class="pon-tag">Ponencia oral · 20 min + 5 min de preguntas</span>
+<p class="pon-t">Trabajar a distancia, cuidar de cerca: diagnóstico del bienestar y las condiciones laborales en colaboradores de Trobapp de Colombia S.A.S.</p><p class="pon-a"><strong>Angie Yibeth Rubio Camacho</strong> · Politécnico Grancolombiano</p>
+
+</li>
+
+</ol></div>
 </li>
 
 
