@@ -442,3 +442,75 @@
   var t0 = now(), tabs = $$('button[data-action="pick"]');
   if (tabs.length === 2 && t0 >= toDate('2026-10-30T00:00') && t0 < END && location.hash !== '#dia-1') tabs[1].click();
 })();
+
+/* ===== Cuenta regresiva antes del pie (todas las páginas) ===== */
+(function () {
+  'use strict';
+  var sec = document.querySelector('[data-countdown-section]');
+  if (!sec) return;
+  var toDate = function (l) { return new Date(l + ':00-05:00'); };
+  var START = toDate('2026-10-29T08:00'), END = toDate('2026-10-30T22:00');
+  var sim = /[?&]ahora=([0-9T:\-]+)/.exec(location.search), t0 = Date.now();
+  var simAt = sim ? toDate(decodeURIComponent(sim[1]).slice(0, 16)) : null;
+  var now = function () { return simAt ? new Date(simAt.getTime() + (Date.now() - t0)) : new Date(); };
+  var SES = [];
+  try { SES = JSON.parse((document.getElementById('sesiones-data') || {}).textContent || '[]'); } catch (e) { SES = []; }
+  var el = function (k) { return sec.querySelector('[data-cd="' + k + '"]'); };
+  var D = el('d'), Hh = el('h'), M = el('m'), S = el('s');
+  var title = sec.querySelector('[data-cd-title]'), sub = sec.querySelector('[data-cd-sub]'), live = sec.querySelector('[data-cd-live]');
+  var pad = function (n) { return (n < 10 ? '0' : '') + n; };
+  var esc = function (t) { return String(t).replace(/[&<>"]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]; }); };
+  var state = '';
+  var render = function () {
+    var t = now();
+    if (t < START) {
+      var s = Math.max(0, Math.floor((START - t) / 1000));
+      D.textContent = pad(Math.floor(s / 86400)); Hh.textContent = pad(Math.floor(s % 86400 / 3600));
+      M.textContent = pad(Math.floor(s % 3600 / 60)); S.textContent = pad(s % 60);
+      if (state !== 'pre') { state = 'pre'; sec.classList.remove('is-live', 'is-over'); }
+      return;
+    }
+    if (t < END) {
+      var cur = SES.filter(function (x) { return toDate(x.ini) <= t && t < toDate(x.fin); });
+      var html = '<p class="live-k"><span class="live-dot" aria-hidden="true"></span>En vivo ahora</p>';
+      if (cur.length && cur[0].sala === 'ambas') html += '<p class="cd-live-t">' + esc(cur[0].titulo) + '</p>';
+      else if (cur.length) html += '<p class="cd-live-t">Ponencias orales en las dos salas</p>';
+      else html += '<p class="cd-live-t">El Congreso continúa en breve</p>';
+      if (live.innerHTML !== html) live.innerHTML = html;
+      if (state !== 'live') {
+        state = 'live'; sec.classList.add('is-live'); sec.classList.remove('is-over');
+        title.textContent = 'El Congreso está en curso';
+        sub.textContent = 'Consulta la agenda para ver qué ocurre en cada sala. Aún puedes inscribirte gratis.';
+      }
+      return;
+    }
+    if (state !== 'over') {
+      state = 'over'; sec.classList.add('is-over'); sec.classList.remove('is-live');
+      title.textContent = 'Gracias por acompañarnos';
+      sub.textContent = 'El I Congreso Nacional e Internacional en SST se realizó el 29 y 30 de octubre de 2026.';
+      live.innerHTML = '<p class="cd-live-t">Pronto compartiremos las memorias del Congreso.</p>';
+      Array.prototype.forEach.call(sec.querySelectorAll('.cd-cta .btn-primary, [data-ics-event]'), function (b) { b.hidden = true; });
+    }
+  };
+  render();
+  setInterval(render, 1000);
+
+  /* Calendario: las dos jornadas completas */
+  var btn = sec.querySelector('[data-ics-event]');
+  if (btn) btn.addEventListener('click', function () {
+    var stamp = new Date().toISOString().replace(/[-:]/g, '').replace(/\.\d{3}/, '');
+    var u = function (l) { return toDate(l).toISOString().replace(/[-:]/g, '').replace(/\.\d{3}/, ''); };
+    var ev = function (id, a, b, n) {
+      return ['BEGIN:VEVENT', 'UID:' + id + '@cnisstunipaz.com', 'DTSTAMP:' + stamp, 'DTSTART:' + u(a), 'DTEND:' + u(b),
+        'SUMMARY:I Congreso Nacional e Internacional en SST · Día ' + n,
+        'DESCRIPTION:Congreso virtual de UNIPAZ\\, inscripción gratuita. Agenda: https://cnisstunipaz.com/agenda',
+        'LOCATION:Virtual · cnisstunipaz.com', 'BEGIN:VALARM', 'TRIGGER:-PT30M', 'ACTION:DISPLAY', 'DESCRIPTION:El Congreso comienza en 30 minutos', 'END:VALARM', 'END:VEVENT'].join('\r\n');
+    };
+    var ics = ['BEGIN:VCALENDAR', 'VERSION:2.0', 'PRODID:-//UNIPAZ//Congreso SST 2026//ES', 'CALSCALE:GREGORIAN', 'METHOD:PUBLISH',
+      ev('congreso-dia-1', '2026-10-29T08:00', '2026-10-29T22:00', 1), ev('congreso-dia-2', '2026-10-30T08:00', '2026-10-30T22:00', 2), 'END:VCALENDAR'].join('\r\n') + '\r\n';
+    var a = document.createElement('a');
+    a.href = URL.createObjectURL(new Blob([ics], { type: 'text/calendar;charset=utf-8' }));
+    a.download = 'congreso-sst-2026.ics'; document.body.appendChild(a); a.click();
+    setTimeout(function () { URL.revokeObjectURL(a.href); a.remove(); }, 500);
+  });
+})();
