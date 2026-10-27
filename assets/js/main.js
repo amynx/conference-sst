@@ -274,6 +274,18 @@
   var favBtns = $$('[data-fav]');
   favBtns.forEach(function (b) { b.addEventListener('click', function () { toggle(b.getAttribute('data-fav')); }); });
 
+  /* ---------- Enlaces de calendario por sesión y «Copiar enlace» (páginas de conferencista) ---------- */
+  $$('[data-gcal]').forEach(function (a) { var x = byId[a.getAttribute('data-gcal')]; if (x) a.href = gcal(x); });
+  $$('[data-ics]').forEach(function (b) { b.addEventListener('click', function () { var x = byId[b.getAttribute('data-ics')]; if (x) download([x]); }); });
+  $$('[data-copy]').forEach(function (b) {
+    b.addEventListener('click', function () {
+      var url = b.getAttribute('data-copy'), label = b.textContent;
+      var done = function () { b.textContent = 'Enlace copiado'; setTimeout(function () { b.textContent = label; }, 2200); };
+      if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(url).then(done, function () { prompt('Copia este enlace:', url); });
+      else prompt('Copia este enlace:', url);
+    });
+  });
+
   /* ---------- Panel «Mi agenda» ---------- */
   var panel = null, fab = null, lastFocus = null, host = document.querySelector('.site') || document.body;
   if (favBtns.length) {
@@ -325,13 +337,25 @@
 
   /* ---------- Filtros de la agenda ---------- */
   var chips = $$('[data-filter]'), filter = 'todo';
+  var lsel = $('[data-linea-filter]'), linea = '';
+  var lm = /[?&]linea=(\d+)/.exec(location.search);
+  if (lsel && lm && lsel.querySelector('option[value="' + lm[1] + '"]')) { linea = lm[1]; lsel.value = linea; }
   var applyFilter = function () {
     chips.forEach(function (c) { c.setAttribute('aria-pressed', String(c.getAttribute('data-filter') === filter)); });
+    if (lsel) lsel.classList.toggle('on', !!linea);
+    var lineOff = function (el) { return !!linea && el.getAttribute('data-linea') !== linea; };
     $$('.pon-cell[data-sala]').forEach(function (c) { c.classList.toggle('is-dim', (filter === '1' || filter === '2') && c.getAttribute('data-sala') !== filter); });
-    $$('.pon[data-sid]').forEach(function (li) { li.classList.toggle('is-dim', filter === 'mia' && !has(li.getAttribute('data-sid'))); });
-    $$('[role="cell"][data-sid], li > div[data-sid]').forEach(function (c) { var id = c.getAttribute('data-sid'); c.classList.toggle('is-dim', filter === 'mia' && !(id && has(id))); });
+    $$('.pon[data-sid]').forEach(function (li) { li.classList.toggle('is-dim', (filter === 'mia' && !has(li.getAttribute('data-sid'))) || lineOff(li)); });
+    $$('[role="cell"][data-sid], li > div[data-sid]').forEach(function (c) {
+      var id = c.getAttribute('data-sid');
+      c.classList.toggle('is-dim', (filter === 'mia' && !(id && has(id))) || lineOff(c));
+    });
   };
   chips.forEach(function (c) { c.addEventListener('click', function () { filter = c.getAttribute('data-filter'); applyFilter(); }); });
+  if (lsel) lsel.addEventListener('change', function () {
+    linea = lsel.value; applyFilter();
+    try { history.replaceState(null, '', location.pathname + (linea ? '?linea=' + linea : '') + location.hash); } catch (e) { /* sin historial */ }
+  });
 
   function sync() {
     favBtns.forEach(function (b) {

@@ -19,8 +19,8 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;0,8..60,500;0,8..60,600;1,8..60,400&amp;display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/assets/css/styles.css?v=3175998564">
-<script src="/assets/js/main.js?v=de39e67e7e" defer></script>
+<link rel="stylesheet" href="/assets/css/styles.css?v=405aeedc1e">
+<script src="/assets/js/main.js?v=51f04d827e" defer></script>
 </head>
 <body data-page="agenda">
 <a class="skip-link" href="#contenido">Saltar al contenido</a>
@@ -109,6 +109,18 @@
 <button type="button" class="chip" data-filter="2" aria-pressed="false">Sala 2</button>
 <button type="button" class="chip" data-filter="mia" aria-pressed="false">Mi agenda<span class="cnt" data-fav-count>0</span></button>
 </div>
+<label class="lsel">Línea temática<select data-linea-filter aria-label="Filtrar por línea temática">
+<option value="">Todas</option>
+<option value="1">01 · Innovación (3)</option>
+<option value="2">02 · Riesgos emergentes (7)</option>
+<option value="3">03 · Salud y bienestar (5)</option>
+<option value="5">05 · Gestión y liderazgo (3)</option>
+<option value="6">06 · Psicosociología (6)</option>
+<option value="7">07 · Controles de ingeniería (1)</option>
+<option value="8">08 · Alto riesgo (4)</option>
+<option value="9">09 · Futuro del trabajo (4)</option>
+<option value="10">10 · Emergencias (3)</option>
+</select></label>
 <p class="afilt-note">Marca con <strong>Agregar a mi agenda</strong> lo que quieres ver y descárgalo a tu calendario. No necesitas registrarte.</p>
 </div>
 
@@ -140,9 +152,9 @@
 
 <div role="row" data-ini="2026-10-29T08:00" data-fin="2026-10-29T09:00" style="display: grid; grid-template-columns: 200px minmax(0, 1fr); gap: 10px; padding: 5px 0">
 <div role="rowheader" style="padding: 14px 8px; font-weight: 700; font-size: 16px; font-variant-numeric: tabular-nums">8:00–9:00 a. m.</div>
-<div role="cell" data-sid="d1-0800" style="min-height: 56px; padding: 12px 18px; border-radius: 6px; background: #102A43; color: #FFFFFF; border: 1px solid #102A43; display: flex; flex-wrap: wrap; align-items: center; gap: 8px 14px">
+<div role="cell" data-sid="d1-0800" data-linea="10" style="min-height: 56px; padding: 12px 18px; border-radius: 6px; background: #102A43; color: #FFFFFF; border: 1px solid #102A43; display: flex; flex-wrap: wrap; align-items: center; gap: 8px 14px">
 <span style="font-size: 12px; font-weight: 700; letter-spacing: 0.02em; padding: 3px 9px; border-radius: 4px; background: #D99A27; color: #102A43; border: 1px solid #D99A27">Apertura · Conferencia</span>
-<span style="flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 2px"><span style="font-weight: 700; font-size: 16px">Programa Piloto “ESCUELA SEGURA”: una mirada a lo aprendido en los sismos vividos en la región</span><span style="font-size: 14px; opacity: 0.9">Ing. Pablo Ochoa · Panamá</span></span>
+<span style="flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 2px"><span style="font-weight: 700; font-size: 16px">Programa Piloto “ESCUELA SEGURA”: una mirada a lo aprendido en los sismos vividos en la región</span><span style="font-size: 14px; opacity: 0.9">Ing. Pablo Ochoa · Panamá</span><span class="ln ln-dark" style="--lc: #C23B32" title="Línea temática 10: Prevención, atención y respuesta a emergencias"><i aria-hidden="true"></i><span><span class="sr-only">Línea temática </span><b>10</b> · Emergencias</span></span></span>
 <span style="font-size: 14px; opacity: 0.9">Ambas salas</span>
 <button type="button" class="fav fav-row" data-fav="d1-0800" aria-pressed="false"><svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9z"></path></svg><span class="fav-l">Agregar a mi agenda</span><span class="sr-only">: Programa Piloto “ESCUELA SEGURA”: una mirada a lo aprendido en los sismos vividos en la región</span></button>
 </div>
@@ -154,9 +166,9 @@
 
 <div role="row" data-ini="2026-10-29T09:00" data-fin="2026-10-29T10:00" style="display: grid; grid-template-columns: 200px minmax(0, 1fr); gap: 10px; padding: 5px 0">
 <div role="rowheader" style="padding: 14px 8px; font-weight: 700; font-size: 16px; font-variant-numeric: tabular-nums">9:00–10:00 a. m.</div>
-<div role="cell" data-sid="d1-0900" style="min-height: 56px; padding: 12px 18px; border-radius: 6px; background: #E3F1F3; color: #102A43; border: 1px solid #8CC3CA; display: flex; flex-wrap: wrap; align-items: center; gap: 8px 14px">
+<div role="cell" data-sid="d1-0900" data-linea="1" style="min-height: 56px; padding: 12px 18px; border-radius: 6px; background: #E3F1F3; color: #102A43; border: 1px solid #8CC3CA; display: flex; flex-wrap: wrap; align-items: center; gap: 8px 14px">
 <span style="font-size: 12px; font-weight: 700; letter-spacing: 0.02em; padding: 3px 9px; border-radius: 4px; background: #087E8B; color: #FFFFFF; border: 1px solid #087E8B">Conferencia</span>
-<span style="flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 2px"><span style="font-weight: 700; font-size: 16px">Uso de la plataforma de eCollection (modalidad virtual)</span><span style="font-size: 14px; opacity: 0.9">Claudia Inés Carrero Beltrán · Colombia</span></span>
+<span style="flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 2px"><span style="font-weight: 700; font-size: 16px">Uso de la plataforma de eCollection (modalidad virtual)</span><span style="font-size: 14px; opacity: 0.9">Claudia Inés Carrero Beltrán · Colombia</span><span class="ln ln-dark" style="--lc: #2F6DB5" title="Línea temática 01: Transformación e innovación en SST"><i aria-hidden="true"></i><span><span class="sr-only">Línea temática </span><b>01</b> · Innovación</span></span></span>
 <span style="font-size: 14px; opacity: 0.9">Ambas salas</span>
 <button type="button" class="fav fav-row" data-fav="d1-0900" aria-pressed="false"><svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9z"></path></svg><span class="fav-l">Agregar a mi agenda</span><span class="sr-only">: Uso de la plataforma de eCollection (modalidad virtual)</span></button>
 </div>
@@ -171,30 +183,34 @@
 <div role="rowheader" style="padding: 14px 8px; font-weight: 700; font-size: 16px; font-variant-numeric: tabular-nums">10:00–11:00 a. m.</div>
 <div role="cell" class="pon-cell" data-sala="1"><p class="pon-sala">Sala 1</p><ol class="pon-list" aria-label="Ponencias de la Sala 1">
 
-<li class="pon" data-sid="d1-1000-s1-1"><span class="pon-tag">Ponencia oral · 20 min + 5 min de preguntas</span>
+<li class="pon" data-sid="d1-1000-s1-1" data-linea="9"><span class="pon-tag">Ponencia oral · 20 min + 5 min de preguntas</span>
 <p class="pon-t">Caracterización del sistema de transporte público colectivo urbano (STPCU) y los actores que intervienen en el Distrito Especial de Barrancabermeja</p><p class="pon-a"><strong>Andrea Quintero Miranda</strong> · UNIPAZ</p>
 
+<span class="ln" style="--lc: #5F6B7A" title="Línea temática 09: Futuro del trabajo y desarrollo profesional"><i aria-hidden="true"></i><span><span class="sr-only">Línea temática </span><b>09</b> · Futuro del trabajo</span></span>
 <button type="button" class="fav" data-fav="d1-1000-s1-1" aria-pressed="false"><svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9z"></path></svg><span class="fav-l">Agregar a mi agenda</span><span class="sr-only">: Caracterización del sistema de transporte público colectivo urbano (STPCU) y los actores que intervienen en el Distrito Especial de Barrancabermeja</span></button>
 </li>
 
-<li class="pon" data-sid="d1-1000-s1-2"><span class="pon-tag">Ponencia oral · 20 min + 5 min de preguntas</span>
+<li class="pon" data-sid="d1-1000-s1-2" data-linea="7"><span class="pon-tag">Ponencia oral · 20 min + 5 min de preguntas</span>
 <p class="pon-t">Diseño de un sistema automático para regular la intensidad lumínica en la sala de lectura de la biblioteca de UNIPAZ</p><p class="pon-a"><strong>Manuel Mauricio Mont López</strong> · UNIPAZ</p>
 
+<span class="ln" style="--lc: #2D7F8E" title="Línea temática 07: Controles de ingeniería y nuevas tecnologías"><i aria-hidden="true"></i><span><span class="sr-only">Línea temática </span><b>07</b> · Controles de ingeniería</span></span>
 <button type="button" class="fav" data-fav="d1-1000-s1-2" aria-pressed="false"><svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9z"></path></svg><span class="fav-l">Agregar a mi agenda</span><span class="sr-only">: Diseño de un sistema automático para regular la intensidad lumínica en la sala de lectura de la biblioteca de UNIPAZ</span></button>
 </li>
 
 </ol></div>
 <div role="cell" class="pon-cell" data-sala="2"><p class="pon-sala">Sala 2</p><ol class="pon-list" aria-label="Ponencias de la Sala 2">
 
-<li class="pon" data-sid="d1-1000-s2-1"><span class="pon-tag">Ponencia oral · 20 min + 5 min de preguntas</span>
+<li class="pon" data-sid="d1-1000-s2-1" data-linea="1"><span class="pon-tag">Ponencia oral · 20 min + 5 min de preguntas</span>
 <p class="pon-t">Diseño de arquitectura de software para la plataforma de prevención de riesgo laboral: sector calzado (Bucaramanga)</p><p class="pon-a"><strong>Walter Stiven Carrillo Duarte</strong> · Universidad Cooperativa de Colombia</p>
 
+<span class="ln" style="--lc: #2F6DB5" title="Línea temática 01: Transformación e innovación en SST"><i aria-hidden="true"></i><span><span class="sr-only">Línea temática </span><b>01</b> · Innovación</span></span>
 <button type="button" class="fav" data-fav="d1-1000-s2-1" aria-pressed="false"><svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9z"></path></svg><span class="fav-l">Agregar a mi agenda</span><span class="sr-only">: Diseño de arquitectura de software para la plataforma de prevención de riesgo laboral: sector calzado (Bucaramanga)</span></button>
 </li>
 
-<li class="pon" data-sid="d1-1000-s2-2"><span class="pon-tag">Ponencia oral · 20 min + 5 min de preguntas</span>
+<li class="pon" data-sid="d1-1000-s2-2" data-linea="1"><span class="pon-tag">Ponencia oral · 20 min + 5 min de preguntas</span>
 <p class="pon-t">Modelo matemático y sistema inteligente para la predicción del riesgo cardiovascular basado en el estrés laboral</p><p class="pon-a"><strong>Fredy Angarita Reina</strong> · Universidad Cooperativa de Colombia</p>
 
+<span class="ln" style="--lc: #2F6DB5" title="Línea temática 01: Transformación e innovación en SST"><i aria-hidden="true"></i><span><span class="sr-only">Línea temática </span><b>01</b> · Innovación</span></span>
 <button type="button" class="fav" data-fav="d1-1000-s2-2" aria-pressed="false"><svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9z"></path></svg><span class="fav-l">Agregar a mi agenda</span><span class="sr-only">: Modelo matemático y sistema inteligente para la predicción del riesgo cardiovascular basado en el estrés laboral</span></button>
 </li>
 
@@ -206,9 +222,9 @@
 
 <div role="row" data-ini="2026-10-29T11:00" data-fin="2026-10-29T12:00" style="display: grid; grid-template-columns: 200px minmax(0, 1fr); gap: 10px; padding: 5px 0">
 <div role="rowheader" style="padding: 14px 8px; font-weight: 700; font-size: 16px; font-variant-numeric: tabular-nums">11:00 a. m.–12:00 m.</div>
-<div role="cell" data-sid="d1-1100" style="min-height: 56px; padding: 12px 18px; border-radius: 6px; background: #E3F1F3; color: #102A43; border: 1px solid #8CC3CA; display: flex; flex-wrap: wrap; align-items: center; gap: 8px 14px">
+<div role="cell" data-sid="d1-1100" data-linea="10" style="min-height: 56px; padding: 12px 18px; border-radius: 6px; background: #E3F1F3; color: #102A43; border: 1px solid #8CC3CA; display: flex; flex-wrap: wrap; align-items: center; gap: 8px 14px">
 <span style="font-size: 12px; font-weight: 700; letter-spacing: 0.02em; padding: 3px 9px; border-radius: 4px; background: #087E8B; color: #FFFFFF; border: 1px solid #087E8B">Conferencia</span>
-<span style="flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 2px"><span style="font-weight: 700; font-size: 16px">Cultura de emergencia en las empresas: algo de lo que nadie habla, pero que todos necesitan</span><span style="font-size: 14px; opacity: 0.9">Roney De Souza · Brasil</span></span>
+<span style="flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 2px"><span style="font-weight: 700; font-size: 16px">Cultura de emergencia en las empresas: algo de lo que nadie habla, pero que todos necesitan</span><span style="font-size: 14px; opacity: 0.9">Roney De Souza · Brasil</span><span class="ln ln-dark" style="--lc: #C23B32" title="Línea temática 10: Prevención, atención y respuesta a emergencias"><i aria-hidden="true"></i><span><span class="sr-only">Línea temática </span><b>10</b> · Emergencias</span></span></span>
 <span style="font-size: 14px; opacity: 0.9">Ambas salas</span>
 <button type="button" class="fav fav-row" data-fav="d1-1100" aria-pressed="false"><svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9z"></path></svg><span class="fav-l">Agregar a mi agenda</span><span class="sr-only">: Cultura de emergencia en las empresas: algo de lo que nadie habla, pero que todos necesitan</span></button>
 </div>
@@ -226,7 +242,7 @@
 
 <div role="row" data-ini="2026-10-29T12:00" data-fin="2026-10-29T13:00" style="display: grid; grid-template-columns: 200px minmax(0, 1fr); gap: 10px; padding: 5px 0">
 <div role="rowheader" style="padding: 14px 8px; font-weight: 700; font-size: 16px; font-variant-numeric: tabular-nums">12:00 m.–1:00 p. m.</div>
-<div role="cell" data-sid="" style="min-height: 56px; padding: 12px 18px; border-radius: 6px; background: #EEF2F5; color: #3E5468; border: 1px solid #D5DEE6; display: flex; flex-wrap: wrap; align-items: center; gap: 8px 14px">
+<div role="cell" data-sid="" data-linea="0" style="min-height: 56px; padding: 12px 18px; border-radius: 6px; background: #EEF2F5; color: #3E5468; border: 1px solid #D5DEE6; display: flex; flex-wrap: wrap; align-items: center; gap: 8px 14px">
 <span style="font-size: 12px; font-weight: 700; letter-spacing: 0.02em; padding: 3px 9px; border-radius: 4px; background: #FFFFFF; color: #3E5468; border: 1px solid #9FB0BF">Descanso</span>
 <span style="flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 2px"><span style="font-weight: 700; font-size: 16px">Descanso</span></span>
 <span style="font-size: 14px; opacity: 0.9"></span>
@@ -240,9 +256,9 @@
 
 <div role="row" data-ini="2026-10-29T13:00" data-fin="2026-10-29T14:00" style="display: grid; grid-template-columns: 200px minmax(0, 1fr); gap: 10px; padding: 5px 0">
 <div role="rowheader" style="padding: 14px 8px; font-weight: 700; font-size: 16px; font-variant-numeric: tabular-nums">1:00–2:00 p. m.</div>
-<div role="cell" data-sid="d1-1300" style="min-height: 56px; padding: 12px 18px; border-radius: 6px; background: #E3F1F3; color: #102A43; border: 1px solid #8CC3CA; display: flex; flex-wrap: wrap; align-items: center; gap: 8px 14px">
+<div role="cell" data-sid="d1-1300" data-linea="5" style="min-height: 56px; padding: 12px 18px; border-radius: 6px; background: #E3F1F3; color: #102A43; border: 1px solid #8CC3CA; display: flex; flex-wrap: wrap; align-items: center; gap: 8px 14px">
 <span style="font-size: 12px; font-weight: 700; letter-spacing: 0.02em; padding: 3px 9px; border-radius: 4px; background: #087E8B; color: #FFFFFF; border: 1px solid #087E8B">Conferencia</span>
-<span style="flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 2px"><span style="font-weight: 700; font-size: 16px">Rigor Léxico y Etimológico en la Gestión de Riesgos</span><span style="font-size: 14px; opacity: 0.9">Carlos Nacache · Panamá</span></span>
+<span style="flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 2px"><span style="font-weight: 700; font-size: 16px">Rigor Léxico y Etimológico en la Gestión de Riesgos</span><span style="font-size: 14px; opacity: 0.9">Carlos Nacache · Panamá</span><span class="ln ln-dark" style="--lc: #55589F" title="Línea temática 05: Gestión estratégica y liderazgo en SST"><i aria-hidden="true"></i><span><span class="sr-only">Línea temática </span><b>05</b> · Gestión y liderazgo</span></span></span>
 <span style="font-size: 14px; opacity: 0.9">Ambas salas</span>
 <button type="button" class="fav fav-row" data-fav="d1-1300" aria-pressed="false"><svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9z"></path></svg><span class="fav-l">Agregar a mi agenda</span><span class="sr-only">: Rigor Léxico y Etimológico en la Gestión de Riesgos</span></button>
 </div>
@@ -257,30 +273,34 @@
 <div role="rowheader" style="padding: 14px 8px; font-weight: 700; font-size: 16px; font-variant-numeric: tabular-nums">2:00–3:00 p. m.</div>
 <div role="cell" class="pon-cell" data-sala="1"><p class="pon-sala">Sala 1</p><ol class="pon-list" aria-label="Ponencias de la Sala 1">
 
-<li class="pon" data-sid="d1-1400-s1-1"><span class="pon-tag">Ponencia oral · 20 min + 5 min de preguntas</span>
+<li class="pon" data-sid="d1-1400-s1-1" data-linea="6"><span class="pon-tag">Ponencia oral · 20 min + 5 min de preguntas</span>
 <p class="pon-t">Medir para transformar: retos y corresponsabilidad frente al riesgo psicosocial y la salud mental en el trabajo en Colombia</p><p class="pon-a"><strong>Angélica Galán</strong> · UNIPAZ</p>
 
+<span class="ln" style="--lc: #9A4782" title="Línea temática 06: Psicosociología del trabajo y las organizaciones"><i aria-hidden="true"></i><span><span class="sr-only">Línea temática </span><b>06</b> · Psicosociología</span></span>
 <button type="button" class="fav" data-fav="d1-1400-s1-1" aria-pressed="false"><svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9z"></path></svg><span class="fav-l">Agregar a mi agenda</span><span class="sr-only">: Medir para transformar: retos y corresponsabilidad frente al riesgo psicosocial y la salud mental en el trabajo en Colombia</span></button>
 </li>
 
-<li class="pon" data-sid="d1-1400-s1-2"><span class="pon-tag">Ponencia oral · 20 min + 5 min de preguntas</span>
+<li class="pon" data-sid="d1-1400-s1-2" data-linea="2"><span class="pon-tag">Ponencia oral · 20 min + 5 min de preguntas</span>
 <p class="pon-t">Evaluación de riesgos ocupacionales en actividades de aprovechamiento de residuos: una perspectiva desde la ingeniería ambiental</p><p class="pon-a"><strong>Marlon Estiven Ríos Ramírez</strong> · UNIPAZ</p>
 
+<span class="ln" style="--lc: #B5532B" title="Línea temática 02: Riesgos emergentes en SST"><i aria-hidden="true"></i><span><span class="sr-only">Línea temática </span><b>02</b> · Riesgos emergentes</span></span>
 <button type="button" class="fav" data-fav="d1-1400-s1-2" aria-pressed="false"><svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9z"></path></svg><span class="fav-l">Agregar a mi agenda</span><span class="sr-only">: Evaluación de riesgos ocupacionales en actividades de aprovechamiento de residuos: una perspectiva desde la ingeniería ambiental</span></button>
 </li>
 
 </ol></div>
 <div role="cell" class="pon-cell" data-sala="2"><p class="pon-sala">Sala 2</p><ol class="pon-list" aria-label="Ponencias de la Sala 2">
 
-<li class="pon" data-sid="d1-1400-s2-1"><span class="pon-tag">Ponencia oral · 20 min + 5 min de preguntas</span>
+<li class="pon" data-sid="d1-1400-s2-1" data-linea="2"><span class="pon-tag">Ponencia oral · 20 min + 5 min de preguntas</span>
 <p class="pon-t">Neutralizantes en refinación: peligro químico y potencial de sustitución</p><p class="pon-a"><strong>Karol Vanesa Medina Salcedo</strong> · UNIPAZ</p>
 
+<span class="ln" style="--lc: #B5532B" title="Línea temática 02: Riesgos emergentes en SST"><i aria-hidden="true"></i><span><span class="sr-only">Línea temática </span><b>02</b> · Riesgos emergentes</span></span>
 <button type="button" class="fav" data-fav="d1-1400-s2-1" aria-pressed="false"><svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9z"></path></svg><span class="fav-l">Agregar a mi agenda</span><span class="sr-only">: Neutralizantes en refinación: peligro químico y potencial de sustitución</span></button>
 </li>
 
-<li class="pon" data-sid="d1-1400-s2-2"><span class="pon-tag">Ponencia oral · 20 min + 5 min de preguntas</span>
+<li class="pon" data-sid="d1-1400-s2-2" data-linea="3"><span class="pon-tag">Ponencia oral · 20 min + 5 min de preguntas</span>
 <p class="pon-t">Identificación de enfermedades laborales y factores de riesgo en las plazas de mercado en Barrancabermeja</p><p class="pon-a"><strong>Julieth Katherine Martínez Guzmán</strong> · UNIPAZ</p>
 
+<span class="ln" style="--lc: #2E8A64" title="Línea temática 03: Salud integral, bienestar y factor humano"><i aria-hidden="true"></i><span><span class="sr-only">Línea temática </span><b>03</b> · Salud y bienestar</span></span>
 <button type="button" class="fav" data-fav="d1-1400-s2-2" aria-pressed="false"><svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9z"></path></svg><span class="fav-l">Agregar a mi agenda</span><span class="sr-only">: Identificación de enfermedades laborales y factores de riesgo en las plazas de mercado en Barrancabermeja</span></button>
 </li>
 
@@ -295,30 +315,34 @@
 <div role="rowheader" style="padding: 14px 8px; font-weight: 700; font-size: 16px; font-variant-numeric: tabular-nums">3:00–4:00 p. m.</div>
 <div role="cell" class="pon-cell" data-sala="1"><p class="pon-sala">Sala 1</p><ol class="pon-list" aria-label="Ponencias de la Sala 1">
 
-<li class="pon" data-sid="d1-1500-s1-1"><span class="pon-tag">Ponencia oral · 20 min + 5 min de preguntas</span>
+<li class="pon" data-sid="d1-1500-s1-1" data-linea="10"><span class="pon-tag">Ponencia oral · 20 min + 5 min de preguntas</span>
 <p class="pon-t">Contexto histórico de los tipos de hidrantes utilizados en Colombia</p><p class="pon-a"><strong>Edgar Julián Cardona Delgado</strong> · UNIPAZ</p>
 
+<span class="ln" style="--lc: #C23B32" title="Línea temática 10: Prevención, atención y respuesta a emergencias"><i aria-hidden="true"></i><span><span class="sr-only">Línea temática </span><b>10</b> · Emergencias</span></span>
 <button type="button" class="fav" data-fav="d1-1500-s1-1" aria-pressed="false"><svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9z"></path></svg><span class="fav-l">Agregar a mi agenda</span><span class="sr-only">: Contexto histórico de los tipos de hidrantes utilizados en Colombia</span></button>
 </li>
 
-<li class="pon" data-sid="d1-1500-s1-2"><span class="pon-tag">Ponencia oral · 20 min + 5 min de preguntas</span>
+<li class="pon" data-sid="d1-1500-s1-2" data-linea="2"><span class="pon-tag">Ponencia oral · 20 min + 5 min de preguntas</span>
 <p class="pon-t">Diseño de un plan de gestión de riesgo químico a partir de los lineamientos del Sistema Globalmente Armonizado para la empresa Lubricentro Fundadores de la ciudad de Manizales</p><p class="pon-a"><strong>Gonzalo Eduardo Yepes Calderón</strong> · Politécnico Grancolombiano</p>
 
+<span class="ln" style="--lc: #B5532B" title="Línea temática 02: Riesgos emergentes en SST"><i aria-hidden="true"></i><span><span class="sr-only">Línea temática </span><b>02</b> · Riesgos emergentes</span></span>
 <button type="button" class="fav" data-fav="d1-1500-s1-2" aria-pressed="false"><svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9z"></path></svg><span class="fav-l">Agregar a mi agenda</span><span class="sr-only">: Diseño de un plan de gestión de riesgo químico a partir de los lineamientos del Sistema Globalmente Armonizado para la empresa Lubricentro Fundadores de la ciudad de Manizales</span></button>
 </li>
 
 </ol></div>
 <div role="cell" class="pon-cell" data-sala="2"><p class="pon-sala">Sala 2</p><ol class="pon-list" aria-label="Ponencias de la Sala 2">
 
-<li class="pon" data-sid="d1-1500-s2-1"><span class="pon-tag">Ponencia oral · 20 min + 5 min de preguntas</span>
+<li class="pon" data-sid="d1-1500-s2-1" data-linea="5"><span class="pon-tag">Ponencia oral · 20 min + 5 min de preguntas</span>
 <p class="pon-t">Análisis del impacto del SG-SST orientado a la prevención de afectaciones a la salud asociadas a la exposición ocupacional a fibra de vidrio en Fibrasing S.A.S.</p><p class="pon-a"><strong>Eliam Moralez Barrera</strong> · Politécnico Grancolombiano</p>
 
+<span class="ln" style="--lc: #55589F" title="Línea temática 05: Gestión estratégica y liderazgo en SST"><i aria-hidden="true"></i><span><span class="sr-only">Línea temática </span><b>05</b> · Gestión y liderazgo</span></span>
 <button type="button" class="fav" data-fav="d1-1500-s2-1" aria-pressed="false"><svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9z"></path></svg><span class="fav-l">Agregar a mi agenda</span><span class="sr-only">: Análisis del impacto del SG-SST orientado a la prevención de afectaciones a la salud asociadas a la exposición ocupacional a fibra de vidrio en Fibrasing S.A.S.</span></button>
 </li>
 
-<li class="pon" data-sid="d1-1500-s2-2"><span class="pon-tag">Ponencia oral · 20 min + 5 min de preguntas</span>
+<li class="pon" data-sid="d1-1500-s2-2" data-linea="3"><span class="pon-tag">Ponencia oral · 20 min + 5 min de preguntas</span>
 <p class="pon-t">Análisis de la exposición a riesgos biomecánicos y su relación con los trastornos musculoesqueléticos: un enfoque cualitativo basado en revisión documental</p><p class="pon-a"><strong>Brayan Stip Lobo Rincón</strong> · UNIPAZ</p>
 
+<span class="ln" style="--lc: #2E8A64" title="Línea temática 03: Salud integral, bienestar y factor humano"><i aria-hidden="true"></i><span><span class="sr-only">Línea temática </span><b>03</b> · Salud y bienestar</span></span>
 <button type="button" class="fav" data-fav="d1-1500-s2-2" aria-pressed="false"><svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9z"></path></svg><span class="fav-l">Agregar a mi agenda</span><span class="sr-only">: Análisis de la exposición a riesgos biomecánicos y su relación con los trastornos musculoesqueléticos: un enfoque cualitativo basado en revisión documental</span></button>
 </li>
 
@@ -330,9 +354,9 @@
 
 <div role="row" data-ini="2026-10-29T16:00" data-fin="2026-10-29T17:00" style="display: grid; grid-template-columns: 200px minmax(0, 1fr); gap: 10px; padding: 5px 0">
 <div role="rowheader" style="padding: 14px 8px; font-weight: 700; font-size: 16px; font-variant-numeric: tabular-nums">4:00–5:00 p. m.</div>
-<div role="cell" data-sid="d1-1600" style="min-height: 56px; padding: 12px 18px; border-radius: 6px; background: #E3F1F3; color: #102A43; border: 1px solid #8CC3CA; display: flex; flex-wrap: wrap; align-items: center; gap: 8px 14px">
+<div role="cell" data-sid="d1-1600" data-linea="8" style="min-height: 56px; padding: 12px 18px; border-radius: 6px; background: #E3F1F3; color: #102A43; border: 1px solid #8CC3CA; display: flex; flex-wrap: wrap; align-items: center; gap: 8px 14px">
 <span style="font-size: 12px; font-weight: 700; letter-spacing: 0.02em; padding: 3px 9px; border-radius: 4px; background: #087E8B; color: #FFFFFF; border: 1px solid #087E8B">Conferencia</span>
-<span style="flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 2px"><span style="font-weight: 700; font-size: 16px">Detección de atmósferas peligrosas en espacios confinados</span><span style="font-size: 14px; opacity: 0.9">Moisés López Quintana · Colombia</span></span>
+<span style="flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 2px"><span style="font-weight: 700; font-size: 16px">Detección de atmósferas peligrosas en espacios confinados</span><span style="font-size: 14px; opacity: 0.9">Moisés López Quintana · Colombia</span><span class="ln ln-dark" style="--lc: #8C6A16" title="Línea temática 08: Tareas de alto riesgo y operaciones especiales"><i aria-hidden="true"></i><span><span class="sr-only">Línea temática </span><b>08</b> · Alto riesgo</span></span></span>
 <span style="font-size: 14px; opacity: 0.9">Ambas salas</span>
 <button type="button" class="fav fav-row" data-fav="d1-1600" aria-pressed="false"><svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9z"></path></svg><span class="fav-l">Agregar a mi agenda</span><span class="sr-only">: Detección de atmósferas peligrosas en espacios confinados</span></button>
 </div>
@@ -344,7 +368,7 @@
 
 <div role="row" data-ini="2026-10-29T17:00" data-fin="2026-10-29T18:00" style="display: grid; grid-template-columns: 200px minmax(0, 1fr); gap: 10px; padding: 5px 0">
 <div role="rowheader" style="padding: 14px 8px; font-weight: 700; font-size: 16px; font-variant-numeric: tabular-nums">5:00–6:00 p. m.</div>
-<div role="cell" data-sid="" style="min-height: 56px; padding: 12px 18px; border-radius: 6px; background: #EEF2F5; color: #3E5468; border: 1px solid #D5DEE6; display: flex; flex-wrap: wrap; align-items: center; gap: 8px 14px">
+<div role="cell" data-sid="" data-linea="0" style="min-height: 56px; padding: 12px 18px; border-radius: 6px; background: #EEF2F5; color: #3E5468; border: 1px solid #D5DEE6; display: flex; flex-wrap: wrap; align-items: center; gap: 8px 14px">
 <span style="font-size: 12px; font-weight: 700; letter-spacing: 0.02em; padding: 3px 9px; border-radius: 4px; background: #FFFFFF; color: #3E5468; border: 1px solid #9FB0BF">Descanso</span>
 <span style="flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 2px"><span style="font-weight: 700; font-size: 16px">Descanso</span></span>
 <span style="font-size: 14px; opacity: 0.9"></span>
@@ -364,7 +388,7 @@
 
 <div role="row" data-ini="2026-10-29T18:00" data-fin="2026-10-29T19:00" style="display: grid; grid-template-columns: 200px minmax(0, 1fr); gap: 10px; padding: 5px 0">
 <div role="rowheader" style="padding: 14px 8px; font-weight: 700; font-size: 16px; font-variant-numeric: tabular-nums">6:00–7:00 p. m.</div>
-<div role="cell" data-sid="" style="min-height: 56px; padding: 12px 18px; border-radius: 6px; background: #FFFFFF; color: #52667A; border: 1px solid #E4EAF0; display: flex; flex-wrap: wrap; align-items: center; gap: 8px 14px">
+<div role="cell" data-sid="" data-linea="0" style="min-height: 56px; padding: 12px 18px; border-radius: 6px; background: #FFFFFF; color: #52667A; border: 1px solid #E4EAF0; display: flex; flex-wrap: wrap; align-items: center; gap: 8px 14px">
 
 <span style="flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 2px"><span style="font-weight: 700; font-size: 16px">—</span></span>
 <span style="font-size: 14px; opacity: 0.9"></span>
@@ -378,9 +402,9 @@
 
 <div role="row" data-ini="2026-10-29T19:00" data-fin="2026-10-29T20:00" style="display: grid; grid-template-columns: 200px minmax(0, 1fr); gap: 10px; padding: 5px 0">
 <div role="rowheader" style="padding: 14px 8px; font-weight: 700; font-size: 16px; font-variant-numeric: tabular-nums">7:00–8:00 p. m.</div>
-<div role="cell" data-sid="d1-1900" style="min-height: 56px; padding: 12px 18px; border-radius: 6px; background: #E3F1F3; color: #102A43; border: 1px solid #8CC3CA; display: flex; flex-wrap: wrap; align-items: center; gap: 8px 14px">
+<div role="cell" data-sid="d1-1900" data-linea="2" style="min-height: 56px; padding: 12px 18px; border-radius: 6px; background: #E3F1F3; color: #102A43; border: 1px solid #8CC3CA; display: flex; flex-wrap: wrap; align-items: center; gap: 8px 14px">
 <span style="font-size: 12px; font-weight: 700; letter-spacing: 0.02em; padding: 3px 9px; border-radius: 4px; background: #087E8B; color: #FFFFFF; border: 1px solid #087E8B">Conferencia</span>
-<span style="flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 2px"><span style="font-weight: 700; font-size: 16px">Cuando el error no es una opción: Seguridad de Procesos y la nueva era de prevención de accidentes mayores en Colombia</span><span style="font-size: 14px; opacity: 0.9">Leonardo Gutiérrez Lobo · Colombia</span></span>
+<span style="flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 2px"><span style="font-weight: 700; font-size: 16px">Cuando el error no es una opción: Seguridad de Procesos y la nueva era de prevención de accidentes mayores en Colombia</span><span style="font-size: 14px; opacity: 0.9">Leonardo Gutiérrez Lobo · Colombia</span><span class="ln ln-dark" style="--lc: #B5532B" title="Línea temática 02: Riesgos emergentes en SST"><i aria-hidden="true"></i><span><span class="sr-only">Línea temática </span><b>02</b> · Riesgos emergentes</span></span></span>
 <span style="font-size: 14px; opacity: 0.9">Ambas salas</span>
 <button type="button" class="fav fav-row" data-fav="d1-1900" aria-pressed="false"><svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9z"></path></svg><span class="fav-l">Agregar a mi agenda</span><span class="sr-only">: Cuando el error no es una opción: Seguridad de Procesos y la nueva era de prevención de accidentes mayores en Colombia</span></button>
 </div>
@@ -392,9 +416,9 @@
 
 <div role="row" data-ini="2026-10-29T20:00" data-fin="2026-10-29T21:00" style="display: grid; grid-template-columns: 200px minmax(0, 1fr); gap: 10px; padding: 5px 0">
 <div role="rowheader" style="padding: 14px 8px; font-weight: 700; font-size: 16px; font-variant-numeric: tabular-nums">8:00–9:00 p. m.</div>
-<div role="cell" data-sid="d1-2000" style="min-height: 56px; padding: 12px 18px; border-radius: 6px; background: #E3F1F3; color: #102A43; border: 1px solid #8CC3CA; display: flex; flex-wrap: wrap; align-items: center; gap: 8px 14px">
+<div role="cell" data-sid="d1-2000" data-linea="3" style="min-height: 56px; padding: 12px 18px; border-radius: 6px; background: #E3F1F3; color: #102A43; border: 1px solid #8CC3CA; display: flex; flex-wrap: wrap; align-items: center; gap: 8px 14px">
 <span style="font-size: 12px; font-weight: 700; letter-spacing: 0.02em; padding: 3px 9px; border-radius: 4px; background: #087E8B; color: #FFFFFF; border: 1px solid #087E8B">Conferencia</span>
-<span style="flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 2px"><span style="font-weight: 700; font-size: 16px">ERGOKIDS: prevención temprana de trastornos musculoesqueléticos desde la edad escolar hacia una vida laboral saludable</span><span style="font-size: 14px; opacity: 0.9">Belinda Alberty · Honduras</span></span>
+<span style="flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 2px"><span style="font-weight: 700; font-size: 16px">ERGOKIDS: prevención temprana de trastornos musculoesqueléticos desde la edad escolar hacia una vida laboral saludable</span><span style="font-size: 14px; opacity: 0.9">Belinda Alberty · Honduras</span><span class="ln ln-dark" style="--lc: #2E8A64" title="Línea temática 03: Salud integral, bienestar y factor humano"><i aria-hidden="true"></i><span><span class="sr-only">Línea temática </span><b>03</b> · Salud y bienestar</span></span></span>
 <span style="font-size: 14px; opacity: 0.9">Ambas salas</span>
 <button type="button" class="fav fav-row" data-fav="d1-2000" aria-pressed="false"><svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9z"></path></svg><span class="fav-l">Agregar a mi agenda</span><span class="sr-only">: ERGOKIDS: prevención temprana de trastornos musculoesqueléticos desde la edad escolar hacia una vida laboral saludable</span></button>
 </div>
@@ -406,7 +430,7 @@
 
 <div role="row" data-ini="2026-10-29T21:00" data-fin="2026-10-29T22:00" style="display: grid; grid-template-columns: 200px minmax(0, 1fr); gap: 10px; padding: 5px 0">
 <div role="rowheader" style="padding: 14px 8px; font-weight: 700; font-size: 16px; font-variant-numeric: tabular-nums">9:00–10:00 p. m.</div>
-<div role="cell" data-sid="d1-2100" style="min-height: 56px; padding: 12px 18px; border-radius: 6px; background: #102A43; color: #FFFFFF; border: 1px solid #102A43; display: flex; flex-wrap: wrap; align-items: center; gap: 8px 14px">
+<div role="cell" data-sid="d1-2100" data-linea="0" style="min-height: 56px; padding: 12px 18px; border-radius: 6px; background: #102A43; color: #FFFFFF; border: 1px solid #102A43; display: flex; flex-wrap: wrap; align-items: center; gap: 8px 14px">
 <span style="font-size: 12px; font-weight: 700; letter-spacing: 0.02em; padding: 3px 9px; border-radius: 4px; background: #D99A27; color: #102A43; border: 1px solid #D99A27">Cierre</span>
 <span style="flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 2px"><span style="font-weight: 700; font-size: 16px">Actividad de cierre del día 1</span><span style="font-size: 14px; opacity: 0.9">Elenisa Aldana Mora · Colombia</span></span>
 <span style="font-size: 14px; opacity: 0.9">Ambas salas</span>
@@ -432,10 +456,11 @@
 
 <li data-ini="2026-10-29T08:00" data-fin="2026-10-29T09:00" style="display: flex; flex-direction: column; gap: 6px">
 <div style="font-weight: 700; font-size: 15px; font-variant-numeric: tabular-nums">8:00–9:00 a. m.</div>
-<div data-sid="d1-0800" style="padding: 14px 16px; border-radius: 6px; background: #102A43; color: #FFFFFF; border: 1px solid #102A43; display: flex; flex-direction: column; gap: 6px">
+<div data-sid="d1-0800" data-linea="10" style="padding: 14px 16px; border-radius: 6px; background: #102A43; color: #FFFFFF; border: 1px solid #102A43; display: flex; flex-direction: column; gap: 6px">
 <span style="align-self: flex-start; font-size: 12px; font-weight: 700; padding: 2px 8px; border-radius: 4px; background: #D99A27; color: #102A43; border: 1px solid #D99A27">Apertura · Conferencia</span>
 <span style="font-weight: 700">Programa Piloto “ESCUELA SEGURA”: una mirada a lo aprendido en los sismos vividos en la región</span>
 <span style="font-size: 14px; opacity: 0.9">Ing. Pablo Ochoa · Panamá</span>
+<span class="ln ln-dark" style="--lc: #C23B32" title="Línea temática 10: Prevención, atención y respuesta a emergencias"><i aria-hidden="true"></i><span><span class="sr-only">Línea temática </span><b>10</b> · Emergencias</span></span>
 <span style="font-size: 14px; opacity: 0.9">Ambas salas</span>
 <button type="button" class="fav fav-row" style="align-self: flex-start" data-fav="d1-0800" aria-pressed="false"><svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9z"></path></svg><span class="fav-l">Agregar a mi agenda</span><span class="sr-only">: Programa Piloto “ESCUELA SEGURA”: una mirada a lo aprendido en los sismos vividos en la región</span></button>
 </div>
@@ -447,10 +472,11 @@
 
 <li data-ini="2026-10-29T09:00" data-fin="2026-10-29T10:00" style="display: flex; flex-direction: column; gap: 6px">
 <div style="font-weight: 700; font-size: 15px; font-variant-numeric: tabular-nums">9:00–10:00 a. m.</div>
-<div data-sid="d1-0900" style="padding: 14px 16px; border-radius: 6px; background: #E3F1F3; color: #102A43; border: 1px solid #8CC3CA; display: flex; flex-direction: column; gap: 6px">
+<div data-sid="d1-0900" data-linea="1" style="padding: 14px 16px; border-radius: 6px; background: #E3F1F3; color: #102A43; border: 1px solid #8CC3CA; display: flex; flex-direction: column; gap: 6px">
 <span style="align-self: flex-start; font-size: 12px; font-weight: 700; padding: 2px 8px; border-radius: 4px; background: #087E8B; color: #FFFFFF; border: 1px solid #087E8B">Conferencia</span>
 <span style="font-weight: 700">Uso de la plataforma de eCollection (modalidad virtual)</span>
 <span style="font-size: 14px; opacity: 0.9">Claudia Inés Carrero Beltrán · Colombia</span>
+<span class="ln ln-dark" style="--lc: #2F6DB5" title="Línea temática 01: Transformación e innovación en SST"><i aria-hidden="true"></i><span><span class="sr-only">Línea temática </span><b>01</b> · Innovación</span></span>
 <span style="font-size: 14px; opacity: 0.9">Ambas salas</span>
 <button type="button" class="fav fav-row" style="align-self: flex-start" data-fav="d1-0900" aria-pressed="false"><svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9z"></path></svg><span class="fav-l">Agregar a mi agenda</span><span class="sr-only">: Uso de la plataforma de eCollection (modalidad virtual)</span></button>
 </div>
@@ -465,30 +491,34 @@
 <div style="font-weight: 700; font-size: 15px; font-variant-numeric: tabular-nums">10:00–11:00 a. m. <span style="font-weight: 500; color: #52667A">· en paralelo</span></div>
 <div class="pon-cell" data-sala="1"><p class="pon-sala"><span class="pon-badge">Sala 1</span></p><ol class="pon-list" aria-label="Ponencias de la Sala 1">
 
-<li class="pon" data-sid="d1-1000-s1-1"><span class="pon-tag">Ponencia oral · 20 min + 5 min de preguntas</span>
+<li class="pon" data-sid="d1-1000-s1-1" data-linea="9"><span class="pon-tag">Ponencia oral · 20 min + 5 min de preguntas</span>
 <p class="pon-t">Caracterización del sistema de transporte público colectivo urbano (STPCU) y los actores que intervienen en el Distrito Especial de Barrancabermeja</p><p class="pon-a"><strong>Andrea Quintero Miranda</strong> · UNIPAZ</p>
 
+<span class="ln" style="--lc: #5F6B7A" title="Línea temática 09: Futuro del trabajo y desarrollo profesional"><i aria-hidden="true"></i><span><span class="sr-only">Línea temática </span><b>09</b> · Futuro del trabajo</span></span>
 <button type="button" class="fav" data-fav="d1-1000-s1-1" aria-pressed="false"><svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9z"></path></svg><span class="fav-l">Agregar a mi agenda</span><span class="sr-only">: Caracterización del sistema de transporte público colectivo urbano (STPCU) y los actores que intervienen en el Distrito Especial de Barrancabermeja</span></button>
 </li>
 
-<li class="pon" data-sid="d1-1000-s1-2"><span class="pon-tag">Ponencia oral · 20 min + 5 min de preguntas</span>
+<li class="pon" data-sid="d1-1000-s1-2" data-linea="7"><span class="pon-tag">Ponencia oral · 20 min + 5 min de preguntas</span>
 <p class="pon-t">Diseño de un sistema automático para regular la intensidad lumínica en la sala de lectura de la biblioteca de UNIPAZ</p><p class="pon-a"><strong>Manuel Mauricio Mont López</strong> · UNIPAZ</p>
 
+<span class="ln" style="--lc: #2D7F8E" title="Línea temática 07: Controles de ingeniería y nuevas tecnologías"><i aria-hidden="true"></i><span><span class="sr-only">Línea temática </span><b>07</b> · Controles de ingeniería</span></span>
 <button type="button" class="fav" data-fav="d1-1000-s1-2" aria-pressed="false"><svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9z"></path></svg><span class="fav-l">Agregar a mi agenda</span><span class="sr-only">: Diseño de un sistema automático para regular la intensidad lumínica en la sala de lectura de la biblioteca de UNIPAZ</span></button>
 </li>
 
 </ol></div>
 <div class="pon-cell" data-sala="2"><p class="pon-sala"><span class="pon-badge">Sala 2</span></p><ol class="pon-list" aria-label="Ponencias de la Sala 2">
 
-<li class="pon" data-sid="d1-1000-s2-1"><span class="pon-tag">Ponencia oral · 20 min + 5 min de preguntas</span>
+<li class="pon" data-sid="d1-1000-s2-1" data-linea="1"><span class="pon-tag">Ponencia oral · 20 min + 5 min de preguntas</span>
 <p class="pon-t">Diseño de arquitectura de software para la plataforma de prevención de riesgo laboral: sector calzado (Bucaramanga)</p><p class="pon-a"><strong>Walter Stiven Carrillo Duarte</strong> · Universidad Cooperativa de Colombia</p>
 
+<span class="ln" style="--lc: #2F6DB5" title="Línea temática 01: Transformación e innovación en SST"><i aria-hidden="true"></i><span><span class="sr-only">Línea temática </span><b>01</b> · Innovación</span></span>
 <button type="button" class="fav" data-fav="d1-1000-s2-1" aria-pressed="false"><svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9z"></path></svg><span class="fav-l">Agregar a mi agenda</span><span class="sr-only">: Diseño de arquitectura de software para la plataforma de prevención de riesgo laboral: sector calzado (Bucaramanga)</span></button>
 </li>
 
-<li class="pon" data-sid="d1-1000-s2-2"><span class="pon-tag">Ponencia oral · 20 min + 5 min de preguntas</span>
+<li class="pon" data-sid="d1-1000-s2-2" data-linea="1"><span class="pon-tag">Ponencia oral · 20 min + 5 min de preguntas</span>
 <p class="pon-t">Modelo matemático y sistema inteligente para la predicción del riesgo cardiovascular basado en el estrés laboral</p><p class="pon-a"><strong>Fredy Angarita Reina</strong> · Universidad Cooperativa de Colombia</p>
 
+<span class="ln" style="--lc: #2F6DB5" title="Línea temática 01: Transformación e innovación en SST"><i aria-hidden="true"></i><span><span class="sr-only">Línea temática </span><b>01</b> · Innovación</span></span>
 <button type="button" class="fav" data-fav="d1-1000-s2-2" aria-pressed="false"><svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9z"></path></svg><span class="fav-l">Agregar a mi agenda</span><span class="sr-only">: Modelo matemático y sistema inteligente para la predicción del riesgo cardiovascular basado en el estrés laboral</span></button>
 </li>
 
@@ -500,10 +530,11 @@
 
 <li data-ini="2026-10-29T11:00" data-fin="2026-10-29T12:00" style="display: flex; flex-direction: column; gap: 6px">
 <div style="font-weight: 700; font-size: 15px; font-variant-numeric: tabular-nums">11:00 a. m.–12:00 m.</div>
-<div data-sid="d1-1100" style="padding: 14px 16px; border-radius: 6px; background: #E3F1F3; color: #102A43; border: 1px solid #8CC3CA; display: flex; flex-direction: column; gap: 6px">
+<div data-sid="d1-1100" data-linea="10" style="padding: 14px 16px; border-radius: 6px; background: #E3F1F3; color: #102A43; border: 1px solid #8CC3CA; display: flex; flex-direction: column; gap: 6px">
 <span style="align-self: flex-start; font-size: 12px; font-weight: 700; padding: 2px 8px; border-radius: 4px; background: #087E8B; color: #FFFFFF; border: 1px solid #087E8B">Conferencia</span>
 <span style="font-weight: 700">Cultura de emergencia en las empresas: algo de lo que nadie habla, pero que todos necesitan</span>
 <span style="font-size: 14px; opacity: 0.9">Roney De Souza · Brasil</span>
+<span class="ln ln-dark" style="--lc: #C23B32" title="Línea temática 10: Prevención, atención y respuesta a emergencias"><i aria-hidden="true"></i><span><span class="sr-only">Línea temática </span><b>10</b> · Emergencias</span></span>
 <span style="font-size: 14px; opacity: 0.9">Ambas salas</span>
 <button type="button" class="fav fav-row" style="align-self: flex-start" data-fav="d1-1100" aria-pressed="false"><svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9z"></path></svg><span class="fav-l">Agregar a mi agenda</span><span class="sr-only">: Cultura de emergencia en las empresas: algo de lo que nadie habla, pero que todos necesitan</span></button>
 </div>
@@ -521,9 +552,10 @@
 
 <li data-ini="2026-10-29T12:00" data-fin="2026-10-29T13:00" style="display: flex; flex-direction: column; gap: 6px">
 <div style="font-weight: 700; font-size: 15px; font-variant-numeric: tabular-nums">12:00 m.–1:00 p. m.</div>
-<div data-sid="" style="padding: 14px 16px; border-radius: 6px; background: #EEF2F5; color: #3E5468; border: 1px solid #D5DEE6; display: flex; flex-direction: column; gap: 6px">
+<div data-sid="" data-linea="0" style="padding: 14px 16px; border-radius: 6px; background: #EEF2F5; color: #3E5468; border: 1px solid #D5DEE6; display: flex; flex-direction: column; gap: 6px">
 <span style="align-self: flex-start; font-size: 12px; font-weight: 700; padding: 2px 8px; border-radius: 4px; background: #FFFFFF; color: #3E5468; border: 1px solid #9FB0BF">Descanso</span>
 <span style="font-weight: 700">Descanso</span>
+
 
 <span style="font-size: 14px; opacity: 0.9"></span>
 
@@ -536,10 +568,11 @@
 
 <li data-ini="2026-10-29T13:00" data-fin="2026-10-29T14:00" style="display: flex; flex-direction: column; gap: 6px">
 <div style="font-weight: 700; font-size: 15px; font-variant-numeric: tabular-nums">1:00–2:00 p. m.</div>
-<div data-sid="d1-1300" style="padding: 14px 16px; border-radius: 6px; background: #E3F1F3; color: #102A43; border: 1px solid #8CC3CA; display: flex; flex-direction: column; gap: 6px">
+<div data-sid="d1-1300" data-linea="5" style="padding: 14px 16px; border-radius: 6px; background: #E3F1F3; color: #102A43; border: 1px solid #8CC3CA; display: flex; flex-direction: column; gap: 6px">
 <span style="align-self: flex-start; font-size: 12px; font-weight: 700; padding: 2px 8px; border-radius: 4px; background: #087E8B; color: #FFFFFF; border: 1px solid #087E8B">Conferencia</span>
 <span style="font-weight: 700">Rigor Léxico y Etimológico en la Gestión de Riesgos</span>
 <span style="font-size: 14px; opacity: 0.9">Carlos Nacache · Panamá</span>
+<span class="ln ln-dark" style="--lc: #55589F" title="Línea temática 05: Gestión estratégica y liderazgo en SST"><i aria-hidden="true"></i><span><span class="sr-only">Línea temática </span><b>05</b> · Gestión y liderazgo</span></span>
 <span style="font-size: 14px; opacity: 0.9">Ambas salas</span>
 <button type="button" class="fav fav-row" style="align-self: flex-start" data-fav="d1-1300" aria-pressed="false"><svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9z"></path></svg><span class="fav-l">Agregar a mi agenda</span><span class="sr-only">: Rigor Léxico y Etimológico en la Gestión de Riesgos</span></button>
 </div>
@@ -554,30 +587,34 @@
 <div style="font-weight: 700; font-size: 15px; font-variant-numeric: tabular-nums">2:00–3:00 p. m. <span style="font-weight: 500; color: #52667A">· en paralelo</span></div>
 <div class="pon-cell" data-sala="1"><p class="pon-sala"><span class="pon-badge">Sala 1</span></p><ol class="pon-list" aria-label="Ponencias de la Sala 1">
 
-<li class="pon" data-sid="d1-1400-s1-1"><span class="pon-tag">Ponencia oral · 20 min + 5 min de preguntas</span>
+<li class="pon" data-sid="d1-1400-s1-1" data-linea="6"><span class="pon-tag">Ponencia oral · 20 min + 5 min de preguntas</span>
 <p class="pon-t">Medir para transformar: retos y corresponsabilidad frente al riesgo psicosocial y la salud mental en el trabajo en Colombia</p><p class="pon-a"><strong>Angélica Galán</strong> · UNIPAZ</p>
 
+<span class="ln" style="--lc: #9A4782" title="Línea temática 06: Psicosociología del trabajo y las organizaciones"><i aria-hidden="true"></i><span><span class="sr-only">Línea temática </span><b>06</b> · Psicosociología</span></span>
 <button type="button" class="fav" data-fav="d1-1400-s1-1" aria-pressed="false"><svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9z"></path></svg><span class="fav-l">Agregar a mi agenda</span><span class="sr-only">: Medir para transformar: retos y corresponsabilidad frente al riesgo psicosocial y la salud mental en el trabajo en Colombia</span></button>
 </li>
 
-<li class="pon" data-sid="d1-1400-s1-2"><span class="pon-tag">Ponencia oral · 20 min + 5 min de preguntas</span>
+<li class="pon" data-sid="d1-1400-s1-2" data-linea="2"><span class="pon-tag">Ponencia oral · 20 min + 5 min de preguntas</span>
 <p class="pon-t">Evaluación de riesgos ocupacionales en actividades de aprovechamiento de residuos: una perspectiva desde la ingeniería ambiental</p><p class="pon-a"><strong>Marlon Estiven Ríos Ramírez</strong> · UNIPAZ</p>
 
+<span class="ln" style="--lc: #B5532B" title="Línea temática 02: Riesgos emergentes en SST"><i aria-hidden="true"></i><span><span class="sr-only">Línea temática </span><b>02</b> · Riesgos emergentes</span></span>
 <button type="button" class="fav" data-fav="d1-1400-s1-2" aria-pressed="false"><svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9z"></path></svg><span class="fav-l">Agregar a mi agenda</span><span class="sr-only">: Evaluación de riesgos ocupacionales en actividades de aprovechamiento de residuos: una perspectiva desde la ingeniería ambiental</span></button>
 </li>
 
 </ol></div>
 <div class="pon-cell" data-sala="2"><p class="pon-sala"><span class="pon-badge">Sala 2</span></p><ol class="pon-list" aria-label="Ponencias de la Sala 2">
 
-<li class="pon" data-sid="d1-1400-s2-1"><span class="pon-tag">Ponencia oral · 20 min + 5 min de preguntas</span>
+<li class="pon" data-sid="d1-1400-s2-1" data-linea="2"><span class="pon-tag">Ponencia oral · 20 min + 5 min de preguntas</span>
 <p class="pon-t">Neutralizantes en refinación: peligro químico y potencial de sustitución</p><p class="pon-a"><strong>Karol Vanesa Medina Salcedo</strong> · UNIPAZ</p>
 
+<span class="ln" style="--lc: #B5532B" title="Línea temática 02: Riesgos emergentes en SST"><i aria-hidden="true"></i><span><span class="sr-only">Línea temática </span><b>02</b> · Riesgos emergentes</span></span>
 <button type="button" class="fav" data-fav="d1-1400-s2-1" aria-pressed="false"><svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9z"></path></svg><span class="fav-l">Agregar a mi agenda</span><span class="sr-only">: Neutralizantes en refinación: peligro químico y potencial de sustitución</span></button>
 </li>
 
-<li class="pon" data-sid="d1-1400-s2-2"><span class="pon-tag">Ponencia oral · 20 min + 5 min de preguntas</span>
+<li class="pon" data-sid="d1-1400-s2-2" data-linea="3"><span class="pon-tag">Ponencia oral · 20 min + 5 min de preguntas</span>
 <p class="pon-t">Identificación de enfermedades laborales y factores de riesgo en las plazas de mercado en Barrancabermeja</p><p class="pon-a"><strong>Julieth Katherine Martínez Guzmán</strong> · UNIPAZ</p>
 
+<span class="ln" style="--lc: #2E8A64" title="Línea temática 03: Salud integral, bienestar y factor humano"><i aria-hidden="true"></i><span><span class="sr-only">Línea temática </span><b>03</b> · Salud y bienestar</span></span>
 <button type="button" class="fav" data-fav="d1-1400-s2-2" aria-pressed="false"><svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9z"></path></svg><span class="fav-l">Agregar a mi agenda</span><span class="sr-only">: Identificación de enfermedades laborales y factores de riesgo en las plazas de mercado en Barrancabermeja</span></button>
 </li>
 
@@ -592,30 +629,34 @@
 <div style="font-weight: 700; font-size: 15px; font-variant-numeric: tabular-nums">3:00–4:00 p. m. <span style="font-weight: 500; color: #52667A">· en paralelo</span></div>
 <div class="pon-cell" data-sala="1"><p class="pon-sala"><span class="pon-badge">Sala 1</span></p><ol class="pon-list" aria-label="Ponencias de la Sala 1">
 
-<li class="pon" data-sid="d1-1500-s1-1"><span class="pon-tag">Ponencia oral · 20 min + 5 min de preguntas</span>
+<li class="pon" data-sid="d1-1500-s1-1" data-linea="10"><span class="pon-tag">Ponencia oral · 20 min + 5 min de preguntas</span>
 <p class="pon-t">Contexto histórico de los tipos de hidrantes utilizados en Colombia</p><p class="pon-a"><strong>Edgar Julián Cardona Delgado</strong> · UNIPAZ</p>
 
+<span class="ln" style="--lc: #C23B32" title="Línea temática 10: Prevención, atención y respuesta a emergencias"><i aria-hidden="true"></i><span><span class="sr-only">Línea temática </span><b>10</b> · Emergencias</span></span>
 <button type="button" class="fav" data-fav="d1-1500-s1-1" aria-pressed="false"><svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9z"></path></svg><span class="fav-l">Agregar a mi agenda</span><span class="sr-only">: Contexto histórico de los tipos de hidrantes utilizados en Colombia</span></button>
 </li>
 
-<li class="pon" data-sid="d1-1500-s1-2"><span class="pon-tag">Ponencia oral · 20 min + 5 min de preguntas</span>
+<li class="pon" data-sid="d1-1500-s1-2" data-linea="2"><span class="pon-tag">Ponencia oral · 20 min + 5 min de preguntas</span>
 <p class="pon-t">Diseño de un plan de gestión de riesgo químico a partir de los lineamientos del Sistema Globalmente Armonizado para la empresa Lubricentro Fundadores de la ciudad de Manizales</p><p class="pon-a"><strong>Gonzalo Eduardo Yepes Calderón</strong> · Politécnico Grancolombiano</p>
 
+<span class="ln" style="--lc: #B5532B" title="Línea temática 02: Riesgos emergentes en SST"><i aria-hidden="true"></i><span><span class="sr-only">Línea temática </span><b>02</b> · Riesgos emergentes</span></span>
 <button type="button" class="fav" data-fav="d1-1500-s1-2" aria-pressed="false"><svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9z"></path></svg><span class="fav-l">Agregar a mi agenda</span><span class="sr-only">: Diseño de un plan de gestión de riesgo químico a partir de los lineamientos del Sistema Globalmente Armonizado para la empresa Lubricentro Fundadores de la ciudad de Manizales</span></button>
 </li>
 
 </ol></div>
 <div class="pon-cell" data-sala="2"><p class="pon-sala"><span class="pon-badge">Sala 2</span></p><ol class="pon-list" aria-label="Ponencias de la Sala 2">
 
-<li class="pon" data-sid="d1-1500-s2-1"><span class="pon-tag">Ponencia oral · 20 min + 5 min de preguntas</span>
+<li class="pon" data-sid="d1-1500-s2-1" data-linea="5"><span class="pon-tag">Ponencia oral · 20 min + 5 min de preguntas</span>
 <p class="pon-t">Análisis del impacto del SG-SST orientado a la prevención de afectaciones a la salud asociadas a la exposición ocupacional a fibra de vidrio en Fibrasing S.A.S.</p><p class="pon-a"><strong>Eliam Moralez Barrera</strong> · Politécnico Grancolombiano</p>
 
+<span class="ln" style="--lc: #55589F" title="Línea temática 05: Gestión estratégica y liderazgo en SST"><i aria-hidden="true"></i><span><span class="sr-only">Línea temática </span><b>05</b> · Gestión y liderazgo</span></span>
 <button type="button" class="fav" data-fav="d1-1500-s2-1" aria-pressed="false"><svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9z"></path></svg><span class="fav-l">Agregar a mi agenda</span><span class="sr-only">: Análisis del impacto del SG-SST orientado a la prevención de afectaciones a la salud asociadas a la exposición ocupacional a fibra de vidrio en Fibrasing S.A.S.</span></button>
 </li>
 
-<li class="pon" data-sid="d1-1500-s2-2"><span class="pon-tag">Ponencia oral · 20 min + 5 min de preguntas</span>
+<li class="pon" data-sid="d1-1500-s2-2" data-linea="3"><span class="pon-tag">Ponencia oral · 20 min + 5 min de preguntas</span>
 <p class="pon-t">Análisis de la exposición a riesgos biomecánicos y su relación con los trastornos musculoesqueléticos: un enfoque cualitativo basado en revisión documental</p><p class="pon-a"><strong>Brayan Stip Lobo Rincón</strong> · UNIPAZ</p>
 
+<span class="ln" style="--lc: #2E8A64" title="Línea temática 03: Salud integral, bienestar y factor humano"><i aria-hidden="true"></i><span><span class="sr-only">Línea temática </span><b>03</b> · Salud y bienestar</span></span>
 <button type="button" class="fav" data-fav="d1-1500-s2-2" aria-pressed="false"><svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9z"></path></svg><span class="fav-l">Agregar a mi agenda</span><span class="sr-only">: Análisis de la exposición a riesgos biomecánicos y su relación con los trastornos musculoesqueléticos: un enfoque cualitativo basado en revisión documental</span></button>
 </li>
 
@@ -627,10 +668,11 @@
 
 <li data-ini="2026-10-29T16:00" data-fin="2026-10-29T17:00" style="display: flex; flex-direction: column; gap: 6px">
 <div style="font-weight: 700; font-size: 15px; font-variant-numeric: tabular-nums">4:00–5:00 p. m.</div>
-<div data-sid="d1-1600" style="padding: 14px 16px; border-radius: 6px; background: #E3F1F3; color: #102A43; border: 1px solid #8CC3CA; display: flex; flex-direction: column; gap: 6px">
+<div data-sid="d1-1600" data-linea="8" style="padding: 14px 16px; border-radius: 6px; background: #E3F1F3; color: #102A43; border: 1px solid #8CC3CA; display: flex; flex-direction: column; gap: 6px">
 <span style="align-self: flex-start; font-size: 12px; font-weight: 700; padding: 2px 8px; border-radius: 4px; background: #087E8B; color: #FFFFFF; border: 1px solid #087E8B">Conferencia</span>
 <span style="font-weight: 700">Detección de atmósferas peligrosas en espacios confinados</span>
 <span style="font-size: 14px; opacity: 0.9">Moisés López Quintana · Colombia</span>
+<span class="ln ln-dark" style="--lc: #8C6A16" title="Línea temática 08: Tareas de alto riesgo y operaciones especiales"><i aria-hidden="true"></i><span><span class="sr-only">Línea temática </span><b>08</b> · Alto riesgo</span></span>
 <span style="font-size: 14px; opacity: 0.9">Ambas salas</span>
 <button type="button" class="fav fav-row" style="align-self: flex-start" data-fav="d1-1600" aria-pressed="false"><svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9z"></path></svg><span class="fav-l">Agregar a mi agenda</span><span class="sr-only">: Detección de atmósferas peligrosas en espacios confinados</span></button>
 </div>
@@ -642,9 +684,10 @@
 
 <li data-ini="2026-10-29T17:00" data-fin="2026-10-29T18:00" style="display: flex; flex-direction: column; gap: 6px">
 <div style="font-weight: 700; font-size: 15px; font-variant-numeric: tabular-nums">5:00–6:00 p. m.</div>
-<div data-sid="" style="padding: 14px 16px; border-radius: 6px; background: #EEF2F5; color: #3E5468; border: 1px solid #D5DEE6; display: flex; flex-direction: column; gap: 6px">
+<div data-sid="" data-linea="0" style="padding: 14px 16px; border-radius: 6px; background: #EEF2F5; color: #3E5468; border: 1px solid #D5DEE6; display: flex; flex-direction: column; gap: 6px">
 <span style="align-self: flex-start; font-size: 12px; font-weight: 700; padding: 2px 8px; border-radius: 4px; background: #FFFFFF; color: #3E5468; border: 1px solid #9FB0BF">Descanso</span>
 <span style="font-weight: 700">Descanso</span>
+
 
 <span style="font-size: 14px; opacity: 0.9"></span>
 
@@ -663,9 +706,10 @@
 
 <li data-ini="2026-10-29T18:00" data-fin="2026-10-29T19:00" style="display: flex; flex-direction: column; gap: 6px">
 <div style="font-weight: 700; font-size: 15px; font-variant-numeric: tabular-nums">6:00–7:00 p. m.</div>
-<div data-sid="" style="padding: 14px 16px; border-radius: 6px; background: #FFFFFF; color: #52667A; border: 1px solid #E4EAF0; display: flex; flex-direction: column; gap: 6px">
+<div data-sid="" data-linea="0" style="padding: 14px 16px; border-radius: 6px; background: #FFFFFF; color: #52667A; border: 1px solid #E4EAF0; display: flex; flex-direction: column; gap: 6px">
 
 <span style="font-weight: 700">—</span>
+
 
 <span style="font-size: 14px; opacity: 0.9"></span>
 
@@ -678,10 +722,11 @@
 
 <li data-ini="2026-10-29T19:00" data-fin="2026-10-29T20:00" style="display: flex; flex-direction: column; gap: 6px">
 <div style="font-weight: 700; font-size: 15px; font-variant-numeric: tabular-nums">7:00–8:00 p. m.</div>
-<div data-sid="d1-1900" style="padding: 14px 16px; border-radius: 6px; background: #E3F1F3; color: #102A43; border: 1px solid #8CC3CA; display: flex; flex-direction: column; gap: 6px">
+<div data-sid="d1-1900" data-linea="2" style="padding: 14px 16px; border-radius: 6px; background: #E3F1F3; color: #102A43; border: 1px solid #8CC3CA; display: flex; flex-direction: column; gap: 6px">
 <span style="align-self: flex-start; font-size: 12px; font-weight: 700; padding: 2px 8px; border-radius: 4px; background: #087E8B; color: #FFFFFF; border: 1px solid #087E8B">Conferencia</span>
 <span style="font-weight: 700">Cuando el error no es una opción: Seguridad de Procesos y la nueva era de prevención de accidentes mayores en Colombia</span>
 <span style="font-size: 14px; opacity: 0.9">Leonardo Gutiérrez Lobo · Colombia</span>
+<span class="ln ln-dark" style="--lc: #B5532B" title="Línea temática 02: Riesgos emergentes en SST"><i aria-hidden="true"></i><span><span class="sr-only">Línea temática </span><b>02</b> · Riesgos emergentes</span></span>
 <span style="font-size: 14px; opacity: 0.9">Ambas salas</span>
 <button type="button" class="fav fav-row" style="align-self: flex-start" data-fav="d1-1900" aria-pressed="false"><svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9z"></path></svg><span class="fav-l">Agregar a mi agenda</span><span class="sr-only">: Cuando el error no es una opción: Seguridad de Procesos y la nueva era de prevención de accidentes mayores en Colombia</span></button>
 </div>
@@ -693,10 +738,11 @@
 
 <li data-ini="2026-10-29T20:00" data-fin="2026-10-29T21:00" style="display: flex; flex-direction: column; gap: 6px">
 <div style="font-weight: 700; font-size: 15px; font-variant-numeric: tabular-nums">8:00–9:00 p. m.</div>
-<div data-sid="d1-2000" style="padding: 14px 16px; border-radius: 6px; background: #E3F1F3; color: #102A43; border: 1px solid #8CC3CA; display: flex; flex-direction: column; gap: 6px">
+<div data-sid="d1-2000" data-linea="3" style="padding: 14px 16px; border-radius: 6px; background: #E3F1F3; color: #102A43; border: 1px solid #8CC3CA; display: flex; flex-direction: column; gap: 6px">
 <span style="align-self: flex-start; font-size: 12px; font-weight: 700; padding: 2px 8px; border-radius: 4px; background: #087E8B; color: #FFFFFF; border: 1px solid #087E8B">Conferencia</span>
 <span style="font-weight: 700">ERGOKIDS: prevención temprana de trastornos musculoesqueléticos desde la edad escolar hacia una vida laboral saludable</span>
 <span style="font-size: 14px; opacity: 0.9">Belinda Alberty · Honduras</span>
+<span class="ln ln-dark" style="--lc: #2E8A64" title="Línea temática 03: Salud integral, bienestar y factor humano"><i aria-hidden="true"></i><span><span class="sr-only">Línea temática </span><b>03</b> · Salud y bienestar</span></span>
 <span style="font-size: 14px; opacity: 0.9">Ambas salas</span>
 <button type="button" class="fav fav-row" style="align-self: flex-start" data-fav="d1-2000" aria-pressed="false"><svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9z"></path></svg><span class="fav-l">Agregar a mi agenda</span><span class="sr-only">: ERGOKIDS: prevención temprana de trastornos musculoesqueléticos desde la edad escolar hacia una vida laboral saludable</span></button>
 </div>
@@ -708,10 +754,11 @@
 
 <li data-ini="2026-10-29T21:00" data-fin="2026-10-29T22:00" style="display: flex; flex-direction: column; gap: 6px">
 <div style="font-weight: 700; font-size: 15px; font-variant-numeric: tabular-nums">9:00–10:00 p. m.</div>
-<div data-sid="d1-2100" style="padding: 14px 16px; border-radius: 6px; background: #102A43; color: #FFFFFF; border: 1px solid #102A43; display: flex; flex-direction: column; gap: 6px">
+<div data-sid="d1-2100" data-linea="0" style="padding: 14px 16px; border-radius: 6px; background: #102A43; color: #FFFFFF; border: 1px solid #102A43; display: flex; flex-direction: column; gap: 6px">
 <span style="align-self: flex-start; font-size: 12px; font-weight: 700; padding: 2px 8px; border-radius: 4px; background: #D99A27; color: #102A43; border: 1px solid #D99A27">Cierre</span>
 <span style="font-weight: 700">Actividad de cierre del día 1</span>
 <span style="font-size: 14px; opacity: 0.9">Elenisa Aldana Mora · Colombia</span>
+
 <span style="font-size: 14px; opacity: 0.9">Ambas salas</span>
 <button type="button" class="fav fav-row" style="align-self: flex-start" data-fav="d1-2100" aria-pressed="false"><svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9z"></path></svg><span class="fav-l">Agregar a mi agenda</span><span class="sr-only">: Actividad de cierre del día 1</span></button>
 </div>
@@ -751,9 +798,9 @@
 
 <div role="row" data-ini="2026-10-30T08:00" data-fin="2026-10-30T09:00" style="display: grid; grid-template-columns: 200px minmax(0, 1fr); gap: 10px; padding: 5px 0">
 <div role="rowheader" style="padding: 14px 8px; font-weight: 700; font-size: 16px; font-variant-numeric: tabular-nums">8:00–9:00 a. m.</div>
-<div role="cell" data-sid="d2-0800" style="min-height: 56px; padding: 12px 18px; border-radius: 6px; background: #102A43; color: #FFFFFF; border: 1px solid #102A43; display: flex; flex-wrap: wrap; align-items: center; gap: 8px 14px">
+<div role="cell" data-sid="d2-0800" data-linea="5" style="min-height: 56px; padding: 12px 18px; border-radius: 6px; background: #102A43; color: #FFFFFF; border: 1px solid #102A43; display: flex; flex-wrap: wrap; align-items: center; gap: 8px 14px">
 <span style="font-size: 12px; font-weight: 700; letter-spacing: 0.02em; padding: 3px 9px; border-radius: 4px; background: #D99A27; color: #102A43; border: 1px solid #D99A27">Apertura · Conferencia</span>
-<span style="flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 2px"><span style="font-weight: 700; font-size: 16px">Procedimientos de Gestión Integral e Investigación Avanzada de Incidentes HSEC</span><span style="font-size: 14px; opacity: 0.9">Ing. Fernando M. Torres González, Mg. · Chile</span></span>
+<span style="flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 2px"><span style="font-weight: 700; font-size: 16px">Procedimientos de Gestión Integral e Investigación Avanzada de Incidentes HSEC</span><span style="font-size: 14px; opacity: 0.9">Ing. Fernando M. Torres González, Mg. · Chile</span><span class="ln ln-dark" style="--lc: #55589F" title="Línea temática 05: Gestión estratégica y liderazgo en SST"><i aria-hidden="true"></i><span><span class="sr-only">Línea temática </span><b>05</b> · Gestión y liderazgo</span></span></span>
 <span style="font-size: 14px; opacity: 0.9">Ambas salas</span>
 <button type="button" class="fav fav-row" data-fav="d2-0800" aria-pressed="false"><svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9z"></path></svg><span class="fav-l">Agregar a mi agenda</span><span class="sr-only">: Procedimientos de Gestión Integral e Investigación Avanzada de Incidentes HSEC</span></button>
 </div>
@@ -765,7 +812,7 @@
 
 <div role="row" data-ini="2026-10-30T09:00" data-fin="2026-10-30T10:00" style="display: grid; grid-template-columns: 200px minmax(0, 1fr); gap: 10px; padding: 5px 0">
 <div role="rowheader" style="padding: 14px 8px; font-weight: 700; font-size: 16px; font-variant-numeric: tabular-nums">9:00–10:00 a. m.</div>
-<div role="cell" data-sid="d2-0900" style="min-height: 56px; padding: 12px 18px; border-radius: 6px; background: #FBF3E2; color: #102A43; border: 1px solid #E8C77F; display: flex; flex-wrap: wrap; align-items: center; gap: 8px 14px">
+<div role="cell" data-sid="d2-0900" data-linea="0" style="min-height: 56px; padding: 12px 18px; border-radius: 6px; background: #FBF3E2; color: #102A43; border: 1px solid #E8C77F; display: flex; flex-wrap: wrap; align-items: center; gap: 8px 14px">
 <span style="font-size: 12px; font-weight: 700; letter-spacing: 0.02em; padding: 3px 9px; border-radius: 4px; background: #D99A27; color: #102A43; border: 1px solid #D99A27">Pósteres</span>
 <span style="flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 2px"><span style="font-weight: 700; font-size: 16px">Jornada de pósteres</span></span>
 <span style="font-size: 14px; opacity: 0.9">Ambas salas</span>
@@ -782,30 +829,34 @@
 <div role="rowheader" style="padding: 14px 8px; font-weight: 700; font-size: 16px; font-variant-numeric: tabular-nums">10:00–11:00 a. m.</div>
 <div role="cell" class="pon-cell" data-sala="1"><p class="pon-sala">Sala 1</p><ol class="pon-list" aria-label="Ponencias de la Sala 1">
 
-<li class="pon" data-sid="d2-1000-s1-1"><span class="pon-tag">Ponencia oral · 20 min + 5 min de preguntas</span>
+<li class="pon" data-sid="d2-1000-s1-1" data-linea="9"><span class="pon-tag">Ponencia oral · 20 min + 5 min de preguntas</span>
 <p class="pon-t">El riesgo laboral en el campo colombiano: entre la invisibilidad de las condiciones de trabajo y las realidades del territorio</p><p class="pon-a"><strong>Yohanna Milena Rueda Mahecha</strong> · UNIMINUTO – Centro Regional Bucaramanga</p>
 
+<span class="ln" style="--lc: #5F6B7A" title="Línea temática 09: Futuro del trabajo y desarrollo profesional"><i aria-hidden="true"></i><span><span class="sr-only">Línea temática </span><b>09</b> · Futuro del trabajo</span></span>
 <button type="button" class="fav" data-fav="d2-1000-s1-1" aria-pressed="false"><svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9z"></path></svg><span class="fav-l">Agregar a mi agenda</span><span class="sr-only">: El riesgo laboral en el campo colombiano: entre la invisibilidad de las condiciones de trabajo y las realidades del territorio</span></button>
 </li>
 
-<li class="pon" data-sid="d2-1000-s1-2"><span class="pon-tag">Ponencia oral · 20 min + 5 min de preguntas</span>
+<li class="pon" data-sid="d2-1000-s1-2" data-linea="8"><span class="pon-tag">Ponencia oral · 20 min + 5 min de preguntas</span>
 <p class="pon-t">DRON MINE RESCUE</p><p class="pon-a"><strong>Nicolas Enrique Gutiérrez Pérez</strong> · Unipaz</p>
 
+<span class="ln" style="--lc: #8C6A16" title="Línea temática 08: Tareas de alto riesgo y operaciones especiales"><i aria-hidden="true"></i><span><span class="sr-only">Línea temática </span><b>08</b> · Alto riesgo</span></span>
 <button type="button" class="fav" data-fav="d2-1000-s1-2" aria-pressed="false"><svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9z"></path></svg><span class="fav-l">Agregar a mi agenda</span><span class="sr-only">: DRON MINE RESCUE</span></button>
 </li>
 
 </ol></div>
 <div role="cell" class="pon-cell" data-sala="2"><p class="pon-sala">Sala 2</p><ol class="pon-list" aria-label="Ponencias de la Sala 2">
 
-<li class="pon" data-sid="d2-1000-s2-1"><span class="pon-tag">Ponencia oral · 20 min + 5 min de preguntas</span>
+<li class="pon" data-sid="d2-1000-s2-1" data-linea="3"><span class="pon-tag">Ponencia oral · 20 min + 5 min de preguntas</span>
 <p class="pon-t">Autocuidado integral y consciente: 7 pasos para prevenir el riesgo público en entornos laborales</p><p class="pon-a"><strong>Paola Andrea Ramírez Ávila</strong> · Prohumana Soluciones</p>
 
+<span class="ln" style="--lc: #2E8A64" title="Línea temática 03: Salud integral, bienestar y factor humano"><i aria-hidden="true"></i><span><span class="sr-only">Línea temática </span><b>03</b> · Salud y bienestar</span></span>
 <button type="button" class="fav" data-fav="d2-1000-s2-1" aria-pressed="false"><svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9z"></path></svg><span class="fav-l">Agregar a mi agenda</span><span class="sr-only">: Autocuidado integral y consciente: 7 pasos para prevenir el riesgo público en entornos laborales</span></button>
 </li>
 
-<li class="pon" data-sid="d2-1000-s2-2"><span class="pon-tag">Ponencia oral · 20 min + 5 min de preguntas</span>
+<li class="pon" data-sid="d2-1000-s2-2" data-linea="2"><span class="pon-tag">Ponencia oral · 20 min + 5 min de preguntas</span>
 <p class="pon-t">Riesgos biológicos, químicos y físicos asociados al manejo de residuos sólidos, aguas residuales y residuos electrónicos: una revisión bibliográfica</p><p class="pon-a"><strong>Angie karolay Rozo fuentes</strong> · UNIPAZ</p>
 
+<span class="ln" style="--lc: #B5532B" title="Línea temática 02: Riesgos emergentes en SST"><i aria-hidden="true"></i><span><span class="sr-only">Línea temática </span><b>02</b> · Riesgos emergentes</span></span>
 <button type="button" class="fav" data-fav="d2-1000-s2-2" aria-pressed="false"><svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9z"></path></svg><span class="fav-l">Agregar a mi agenda</span><span class="sr-only">: Riesgos biológicos, químicos y físicos asociados al manejo de residuos sólidos, aguas residuales y residuos electrónicos: una revisión bibliográfica</span></button>
 </li>
 
@@ -817,7 +868,7 @@
 
 <div role="row" data-ini="2026-10-30T11:00" data-fin="2026-10-30T12:00" style="display: grid; grid-template-columns: 200px minmax(0, 1fr); gap: 10px; padding: 5px 0">
 <div role="rowheader" style="padding: 14px 8px; font-weight: 700; font-size: 16px; font-variant-numeric: tabular-nums">11:00 a. m.–12:00 m.</div>
-<div role="cell" data-sid="d2-1100" style="min-height: 56px; padding: 12px 18px; border-radius: 6px; background: #E3F1F3; color: #102A43; border: 1px solid #8CC3CA; display: flex; flex-wrap: wrap; align-items: center; gap: 8px 14px">
+<div role="cell" data-sid="d2-1100" data-linea="0" style="min-height: 56px; padding: 12px 18px; border-radius: 6px; background: #E3F1F3; color: #102A43; border: 1px solid #8CC3CA; display: flex; flex-wrap: wrap; align-items: center; gap: 8px 14px">
 <span style="font-size: 12px; font-weight: 700; letter-spacing: 0.02em; padding: 3px 9px; border-radius: 4px; background: #087E8B; color: #FFFFFF; border: 1px solid #087E8B">Conferencia</span>
 <span style="flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 2px"><span style="font-weight: 700; font-size: 16px">Título por confirmar</span><span style="font-size: 14px; opacity: 0.9">Regis Hernández · Colombia</span></span>
 <span style="font-size: 14px; opacity: 0.9">Ambas salas</span>
@@ -837,7 +888,7 @@
 
 <div role="row" data-ini="2026-10-30T12:00" data-fin="2026-10-30T13:00" style="display: grid; grid-template-columns: 200px minmax(0, 1fr); gap: 10px; padding: 5px 0">
 <div role="rowheader" style="padding: 14px 8px; font-weight: 700; font-size: 16px; font-variant-numeric: tabular-nums">12:00 m.–1:00 p. m.</div>
-<div role="cell" data-sid="" style="min-height: 56px; padding: 12px 18px; border-radius: 6px; background: #EEF2F5; color: #3E5468; border: 1px solid #D5DEE6; display: flex; flex-wrap: wrap; align-items: center; gap: 8px 14px">
+<div role="cell" data-sid="" data-linea="0" style="min-height: 56px; padding: 12px 18px; border-radius: 6px; background: #EEF2F5; color: #3E5468; border: 1px solid #D5DEE6; display: flex; flex-wrap: wrap; align-items: center; gap: 8px 14px">
 <span style="font-size: 12px; font-weight: 700; letter-spacing: 0.02em; padding: 3px 9px; border-radius: 4px; background: #FFFFFF; color: #3E5468; border: 1px solid #9FB0BF">Descanso</span>
 <span style="flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 2px"><span style="font-weight: 700; font-size: 16px">Descanso</span></span>
 <span style="font-size: 14px; opacity: 0.9"></span>
@@ -851,9 +902,9 @@
 
 <div role="row" data-ini="2026-10-30T13:00" data-fin="2026-10-30T14:00" style="display: grid; grid-template-columns: 200px minmax(0, 1fr); gap: 10px; padding: 5px 0">
 <div role="rowheader" style="padding: 14px 8px; font-weight: 700; font-size: 16px; font-variant-numeric: tabular-nums">1:00–2:00 p. m.</div>
-<div role="cell" data-sid="d2-1300" style="min-height: 56px; padding: 12px 18px; border-radius: 6px; background: #E3F1F3; color: #102A43; border: 1px solid #8CC3CA; display: flex; flex-wrap: wrap; align-items: center; gap: 8px 14px">
+<div role="cell" data-sid="d2-1300" data-linea="2" style="min-height: 56px; padding: 12px 18px; border-radius: 6px; background: #E3F1F3; color: #102A43; border: 1px solid #8CC3CA; display: flex; flex-wrap: wrap; align-items: center; gap: 8px 14px">
 <span style="font-size: 12px; font-weight: 700; letter-spacing: 0.02em; padding: 3px 9px; border-radius: 4px; background: #087E8B; color: #FFFFFF; border: 1px solid #087E8B">Conferencia</span>
-<span style="flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 2px"><span style="font-weight: 700; font-size: 16px">La toxicología en la Salud Laboral, su pasado y sus desafíos futuros</span><span style="font-size: 14px; opacity: 0.9">Dr. Reynaldo Andrés Concha Maureira · Chile</span></span>
+<span style="flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 2px"><span style="font-weight: 700; font-size: 16px">La toxicología en la Salud Laboral, su pasado y sus desafíos futuros</span><span style="font-size: 14px; opacity: 0.9">Dr. Reynaldo Andrés Concha Maureira · Chile</span><span class="ln ln-dark" style="--lc: #B5532B" title="Línea temática 02: Riesgos emergentes en SST"><i aria-hidden="true"></i><span><span class="sr-only">Línea temática </span><b>02</b> · Riesgos emergentes</span></span></span>
 <span style="font-size: 14px; opacity: 0.9">Ambas salas</span>
 <button type="button" class="fav fav-row" data-fav="d2-1300" aria-pressed="false"><svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9z"></path></svg><span class="fav-l">Agregar a mi agenda</span><span class="sr-only">: La toxicología en la Salud Laboral, su pasado y sus desafíos futuros</span></button>
 </div>
@@ -868,30 +919,34 @@
 <div role="rowheader" style="padding: 14px 8px; font-weight: 700; font-size: 16px; font-variant-numeric: tabular-nums">2:00–3:00 p. m.</div>
 <div role="cell" class="pon-cell" data-sala="1"><p class="pon-sala">Sala 1</p><ol class="pon-list" aria-label="Ponencias de la Sala 1">
 
-<li class="pon" data-sid="d2-1400-s1-1"><span class="pon-tag">Ponencia oral · 20 min + 5 min de preguntas</span>
+<li class="pon" data-sid="d2-1400-s1-1" data-linea="6"><span class="pon-tag">Ponencia oral · 20 min + 5 min de preguntas</span>
 <p class="pon-t">Eficacia del comité de convivencia frente a la persecución laboral: un estudio de caso en la Oficina Especial de Barrancabermeja</p><p class="pon-a"><strong>Nicole Dayana Hernández Luna</strong> · UNIPAZ</p>
 
+<span class="ln" style="--lc: #9A4782" title="Línea temática 06: Psicosociología del trabajo y las organizaciones"><i aria-hidden="true"></i><span><span class="sr-only">Línea temática </span><b>06</b> · Psicosociología</span></span>
 <button type="button" class="fav" data-fav="d2-1400-s1-1" aria-pressed="false"><svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9z"></path></svg><span class="fav-l">Agregar a mi agenda</span><span class="sr-only">: Eficacia del comité de convivencia frente a la persecución laboral: un estudio de caso en la Oficina Especial de Barrancabermeja</span></button>
 </li>
 
-<li class="pon" data-sid="d2-1400-s1-2"><span class="pon-tag">Ponencia oral · 20 min + 5 min de preguntas</span>
+<li class="pon" data-sid="d2-1400-s1-2" data-linea="6"><span class="pon-tag">Ponencia oral · 20 min + 5 min de preguntas</span>
 <p class="pon-t">Análisis de la correspondencia entre las prácticas de liderazgo descritas en la literatura y los factores de riesgo y protección psicosocial intralaboral en el personal administrativo de la Corporación Parque Explora en Medellín</p><p class="pon-a"><strong>Daniela Salazar Londoño</strong> · Politécnico Grancolombiano</p>
 
+<span class="ln" style="--lc: #9A4782" title="Línea temática 06: Psicosociología del trabajo y las organizaciones"><i aria-hidden="true"></i><span><span class="sr-only">Línea temática </span><b>06</b> · Psicosociología</span></span>
 <button type="button" class="fav" data-fav="d2-1400-s1-2" aria-pressed="false"><svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9z"></path></svg><span class="fav-l">Agregar a mi agenda</span><span class="sr-only">: Análisis de la correspondencia entre las prácticas de liderazgo descritas en la literatura y los factores de riesgo y protección psicosocial intralaboral en el personal administrativo de la Corporación Parque Explora en Medellín</span></button>
 </li>
 
 </ol></div>
 <div role="cell" class="pon-cell" data-sala="2"><p class="pon-sala">Sala 2</p><ol class="pon-list" aria-label="Ponencias de la Sala 2">
 
-<li class="pon" data-sid="d2-1400-s2-1"><span class="pon-tag">Ponencia oral · 20 min + 5 min de preguntas</span>
+<li class="pon" data-sid="d2-1400-s2-1" data-linea="6"><span class="pon-tag">Ponencia oral · 20 min + 5 min de preguntas</span>
 <p class="pon-t">Impacto de los riesgos psicosociales en el desempeño laboral y estrategias de intervención en seguridad y salud en el trabajo</p><p class="pon-a"><strong>Mayra Alejandra Uribe Caro</strong> · UNIPAZ</p>
 
+<span class="ln" style="--lc: #9A4782" title="Línea temática 06: Psicosociología del trabajo y las organizaciones"><i aria-hidden="true"></i><span><span class="sr-only">Línea temática </span><b>06</b> · Psicosociología</span></span>
 <button type="button" class="fav" data-fav="d2-1400-s2-1" aria-pressed="false"><svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9z"></path></svg><span class="fav-l">Agregar a mi agenda</span><span class="sr-only">: Impacto de los riesgos psicosociales en el desempeño laboral y estrategias de intervención en seguridad y salud en el trabajo</span></button>
 </li>
 
-<li class="pon" data-sid="d2-1400-s2-2"><span class="pon-tag">Ponencia oral · 20 min + 5 min de preguntas</span>
+<li class="pon" data-sid="d2-1400-s2-2" data-linea="6"><span class="pon-tag">Ponencia oral · 20 min + 5 min de preguntas</span>
 <p class="pon-t">Trabajo informal y salud mental en Colombia: una mirada desde los riesgos psicosociales laborales</p><p class="pon-a"><strong>Jean Carlos Botello Pérez</strong> · UNIPAZ</p>
 
+<span class="ln" style="--lc: #9A4782" title="Línea temática 06: Psicosociología del trabajo y las organizaciones"><i aria-hidden="true"></i><span><span class="sr-only">Línea temática </span><b>06</b> · Psicosociología</span></span>
 <button type="button" class="fav" data-fav="d2-1400-s2-2" aria-pressed="false"><svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9z"></path></svg><span class="fav-l">Agregar a mi agenda</span><span class="sr-only">: Trabajo informal y salud mental en Colombia: una mirada desde los riesgos psicosociales laborales</span></button>
 </li>
 
@@ -906,30 +961,34 @@
 <div role="rowheader" style="padding: 14px 8px; font-weight: 700; font-size: 16px; font-variant-numeric: tabular-nums">3:00–4:00 p. m.</div>
 <div role="cell" class="pon-cell" data-sala="1"><p class="pon-sala">Sala 1</p><ol class="pon-list" aria-label="Ponencias de la Sala 1">
 
-<li class="pon" data-sid="d2-1500-s1-1"><span class="pon-tag">Ponencia oral · 20 min + 5 min de preguntas</span>
+<li class="pon" data-sid="d2-1500-s1-1" data-linea="2"><span class="pon-tag">Ponencia oral · 20 min + 5 min de preguntas</span>
 <p class="pon-t">Riesgo biológico en enfermeras durante la atención domiciliaria a pacientes postrados</p><p class="pon-a"><strong>Liz Maryuris Crespo Bustos</strong> · UNIPAZ</p>
 
+<span class="ln" style="--lc: #B5532B" title="Línea temática 02: Riesgos emergentes en SST"><i aria-hidden="true"></i><span><span class="sr-only">Línea temática </span><b>02</b> · Riesgos emergentes</span></span>
 <button type="button" class="fav" data-fav="d2-1500-s1-1" aria-pressed="false"><svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9z"></path></svg><span class="fav-l">Agregar a mi agenda</span><span class="sr-only">: Riesgo biológico en enfermeras durante la atención domiciliaria a pacientes postrados</span></button>
 </li>
 
-<li class="pon" data-sid="d2-1500-s1-2"><span class="pon-tag">Ponencia oral · 20 min + 5 min de preguntas</span>
+<li class="pon" data-sid="d2-1500-s1-2" data-linea="6"><span class="pon-tag">Ponencia oral · 20 min + 5 min de preguntas</span>
 <p class="pon-t">El docente como último eslabón: una reflexión sobre el burnout estructural en territorios de conflicto</p><p class="pon-a"><strong>Diana Marcela Castro Vargas</strong> · UNIPAZ</p>
 
+<span class="ln" style="--lc: #9A4782" title="Línea temática 06: Psicosociología del trabajo y las organizaciones"><i aria-hidden="true"></i><span><span class="sr-only">Línea temática </span><b>06</b> · Psicosociología</span></span>
 <button type="button" class="fav" data-fav="d2-1500-s1-2" aria-pressed="false"><svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9z"></path></svg><span class="fav-l">Agregar a mi agenda</span><span class="sr-only">: El docente como último eslabón: una reflexión sobre el burnout estructural en territorios de conflicto</span></button>
 </li>
 
 </ol></div>
 <div role="cell" class="pon-cell" data-sala="2"><p class="pon-sala">Sala 2</p><ol class="pon-list" aria-label="Ponencias de la Sala 2">
 
-<li class="pon" data-sid="d2-1500-s2-1"><span class="pon-tag">Ponencia oral · 20 min + 5 min de preguntas</span>
+<li class="pon" data-sid="d2-1500-s2-1" data-linea="3"><span class="pon-tag">Ponencia oral · 20 min + 5 min de preguntas</span>
 <p class="pon-t">Programa de pausas activas mentales basado en mindfulness para reducir el estrés laboral en la empresa Pelgor SAS</p><p class="pon-a"><strong>Carolina Pulido Gómez</strong> · Politécnico Grancolombiano</p>
 
+<span class="ln" style="--lc: #2E8A64" title="Línea temática 03: Salud integral, bienestar y factor humano"><i aria-hidden="true"></i><span><span class="sr-only">Línea temática </span><b>03</b> · Salud y bienestar</span></span>
 <button type="button" class="fav" data-fav="d2-1500-s2-1" aria-pressed="false"><svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9z"></path></svg><span class="fav-l">Agregar a mi agenda</span><span class="sr-only">: Programa de pausas activas mentales basado en mindfulness para reducir el estrés laboral en la empresa Pelgor SAS</span></button>
 </li>
 
-<li class="pon" data-sid="d2-1500-s2-2"><span class="pon-tag">Ponencia oral · 20 min + 5 min de preguntas</span>
+<li class="pon" data-sid="d2-1500-s2-2" data-linea="9"><span class="pon-tag">Ponencia oral · 20 min + 5 min de preguntas</span>
 <p class="pon-t">Trabajar a distancia, cuidar de cerca: diagnóstico del bienestar y las condiciones laborales en colaboradores de Trobapp de Colombia S.A.S.</p><p class="pon-a"><strong>Angie Yibeth Rubio Camacho</strong> · Politécnico Grancolombiano</p>
 
+<span class="ln" style="--lc: #5F6B7A" title="Línea temática 09: Futuro del trabajo y desarrollo profesional"><i aria-hidden="true"></i><span><span class="sr-only">Línea temática </span><b>09</b> · Futuro del trabajo</span></span>
 <button type="button" class="fav" data-fav="d2-1500-s2-2" aria-pressed="false"><svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9z"></path></svg><span class="fav-l">Agregar a mi agenda</span><span class="sr-only">: Trabajar a distancia, cuidar de cerca: diagnóstico del bienestar y las condiciones laborales en colaboradores de Trobapp de Colombia S.A.S.</span></button>
 </li>
 
@@ -941,9 +1000,9 @@
 
 <div role="row" data-ini="2026-10-30T16:00" data-fin="2026-10-30T17:00" style="display: grid; grid-template-columns: 200px minmax(0, 1fr); gap: 10px; padding: 5px 0">
 <div role="rowheader" style="padding: 14px 8px; font-weight: 700; font-size: 16px; font-variant-numeric: tabular-nums">4:00–5:00 p. m.</div>
-<div role="cell" data-sid="d2-1600" style="min-height: 56px; padding: 12px 18px; border-radius: 6px; background: #E3F1F3; color: #102A43; border: 1px solid #8CC3CA; display: flex; flex-wrap: wrap; align-items: center; gap: 8px 14px">
+<div role="cell" data-sid="d2-1600" data-linea="9" style="min-height: 56px; padding: 12px 18px; border-radius: 6px; background: #E3F1F3; color: #102A43; border: 1px solid #8CC3CA; display: flex; flex-wrap: wrap; align-items: center; gap: 8px 14px">
 <span style="font-size: 12px; font-weight: 700; letter-spacing: 0.02em; padding: 3px 9px; border-radius: 4px; background: #087E8B; color: #FFFFFF; border: 1px solid #087E8B">Conferencia</span>
-<span style="flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 2px"><span style="font-weight: 700; font-size: 16px">Envejecimiento de la fuerza laboral: el reto emergente de la salud ocupacional</span><span style="font-size: 14px; opacity: 0.9">Eylin Rodríguez · Honduras</span></span>
+<span style="flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 2px"><span style="font-weight: 700; font-size: 16px">Envejecimiento de la fuerza laboral: el reto emergente de la salud ocupacional</span><span style="font-size: 14px; opacity: 0.9">Eylin Rodríguez · Honduras</span><span class="ln ln-dark" style="--lc: #5F6B7A" title="Línea temática 09: Futuro del trabajo y desarrollo profesional"><i aria-hidden="true"></i><span><span class="sr-only">Línea temática </span><b>09</b> · Futuro del trabajo</span></span></span>
 <span style="font-size: 14px; opacity: 0.9">Ambas salas</span>
 <button type="button" class="fav fav-row" data-fav="d2-1600" aria-pressed="false"><svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9z"></path></svg><span class="fav-l">Agregar a mi agenda</span><span class="sr-only">: Envejecimiento de la fuerza laboral: el reto emergente de la salud ocupacional</span></button>
 </div>
@@ -955,7 +1014,7 @@
 
 <div role="row" data-ini="2026-10-30T17:00" data-fin="2026-10-30T18:00" style="display: grid; grid-template-columns: 200px minmax(0, 1fr); gap: 10px; padding: 5px 0">
 <div role="rowheader" style="padding: 14px 8px; font-weight: 700; font-size: 16px; font-variant-numeric: tabular-nums">5:00–6:00 p. m.</div>
-<div role="cell" data-sid="" style="min-height: 56px; padding: 12px 18px; border-radius: 6px; background: #EEF2F5; color: #3E5468; border: 1px solid #D5DEE6; display: flex; flex-wrap: wrap; align-items: center; gap: 8px 14px">
+<div role="cell" data-sid="" data-linea="0" style="min-height: 56px; padding: 12px 18px; border-radius: 6px; background: #EEF2F5; color: #3E5468; border: 1px solid #D5DEE6; display: flex; flex-wrap: wrap; align-items: center; gap: 8px 14px">
 <span style="font-size: 12px; font-weight: 700; letter-spacing: 0.02em; padding: 3px 9px; border-radius: 4px; background: #FFFFFF; color: #3E5468; border: 1px solid #9FB0BF">Descanso</span>
 <span style="flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 2px"><span style="font-weight: 700; font-size: 16px">Descanso</span></span>
 <span style="font-size: 14px; opacity: 0.9"></span>
@@ -975,7 +1034,7 @@
 
 <div role="row" data-ini="2026-10-30T18:00" data-fin="2026-10-30T19:00" style="display: grid; grid-template-columns: 200px minmax(0, 1fr); gap: 10px; padding: 5px 0">
 <div role="rowheader" style="padding: 14px 8px; font-weight: 700; font-size: 16px; font-variant-numeric: tabular-nums">6:00–7:00 p. m.</div>
-<div role="cell" data-sid="" style="min-height: 56px; padding: 12px 18px; border-radius: 6px; background: #FFFFFF; color: #52667A; border: 1px solid #E4EAF0; display: flex; flex-wrap: wrap; align-items: center; gap: 8px 14px">
+<div role="cell" data-sid="" data-linea="0" style="min-height: 56px; padding: 12px 18px; border-radius: 6px; background: #FFFFFF; color: #52667A; border: 1px solid #E4EAF0; display: flex; flex-wrap: wrap; align-items: center; gap: 8px 14px">
 
 <span style="flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 2px"><span style="font-weight: 700; font-size: 16px">—</span></span>
 <span style="font-size: 14px; opacity: 0.9"></span>
@@ -989,9 +1048,9 @@
 
 <div role="row" data-ini="2026-10-30T19:00" data-fin="2026-10-30T20:00" style="display: grid; grid-template-columns: 200px minmax(0, 1fr); gap: 10px; padding: 5px 0">
 <div role="rowheader" style="padding: 14px 8px; font-weight: 700; font-size: 16px; font-variant-numeric: tabular-nums">7:00–8:00 p. m.</div>
-<div role="cell" data-sid="d2-1900" style="min-height: 56px; padding: 12px 18px; border-radius: 6px; background: #E3F1F3; color: #102A43; border: 1px solid #8CC3CA; display: flex; flex-wrap: wrap; align-items: center; gap: 8px 14px">
+<div role="cell" data-sid="d2-1900" data-linea="8" style="min-height: 56px; padding: 12px 18px; border-radius: 6px; background: #E3F1F3; color: #102A43; border: 1px solid #8CC3CA; display: flex; flex-wrap: wrap; align-items: center; gap: 8px 14px">
 <span style="font-size: 12px; font-weight: 700; letter-spacing: 0.02em; padding: 3px 9px; border-radius: 4px; background: #087E8B; color: #FFFFFF; border: 1px solid #087E8B">Conferencia</span>
-<span style="flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 2px"><span style="font-weight: 700; font-size: 16px">Modelo dinámico de riesgos para la minería</span><span style="font-size: 14px; opacity: 0.9">Ing. Fernando M. Torres González, Mg. · Chile</span></span>
+<span style="flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 2px"><span style="font-weight: 700; font-size: 16px">Modelo dinámico de riesgos para la minería</span><span style="font-size: 14px; opacity: 0.9">Ing. Fernando M. Torres González, Mg. · Chile</span><span class="ln ln-dark" style="--lc: #8C6A16" title="Línea temática 08: Tareas de alto riesgo y operaciones especiales"><i aria-hidden="true"></i><span><span class="sr-only">Línea temática </span><b>08</b> · Alto riesgo</span></span></span>
 <span style="font-size: 14px; opacity: 0.9">Ambas salas</span>
 <button type="button" class="fav fav-row" data-fav="d2-1900" aria-pressed="false"><svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9z"></path></svg><span class="fav-l">Agregar a mi agenda</span><span class="sr-only">: Modelo dinámico de riesgos para la minería</span></button>
 </div>
@@ -1003,9 +1062,9 @@
 
 <div role="row" data-ini="2026-10-30T20:00" data-fin="2026-10-30T21:00" style="display: grid; grid-template-columns: 200px minmax(0, 1fr); gap: 10px; padding: 5px 0">
 <div role="rowheader" style="padding: 14px 8px; font-weight: 700; font-size: 16px; font-variant-numeric: tabular-nums">8:00–9:00 p. m.</div>
-<div role="cell" data-sid="d2-2000" style="min-height: 56px; padding: 12px 18px; border-radius: 6px; background: #E3F1F3; color: #102A43; border: 1px solid #8CC3CA; display: flex; flex-wrap: wrap; align-items: center; gap: 8px 14px">
+<div role="cell" data-sid="d2-2000" data-linea="8" style="min-height: 56px; padding: 12px 18px; border-radius: 6px; background: #E3F1F3; color: #102A43; border: 1px solid #8CC3CA; display: flex; flex-wrap: wrap; align-items: center; gap: 8px 14px">
 <span style="font-size: 12px; font-weight: 700; letter-spacing: 0.02em; padding: 3px 9px; border-radius: 4px; background: #087E8B; color: #FFFFFF; border: 1px solid #087E8B">Conferencia</span>
-<span style="flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 2px"><span style="font-weight: 700; font-size: 16px">Seguridad en las operaciones marítimas y fluviales, y el papel del profesional y/o especialista en la seguridad y la salud en el trabajo en estos escenarios</span><span style="font-size: 14px; opacity: 0.9">José Fernando Rojas · Colombia</span></span>
+<span style="flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 2px"><span style="font-weight: 700; font-size: 16px">Seguridad en las operaciones marítimas y fluviales, y el papel del profesional y/o especialista en la seguridad y la salud en el trabajo en estos escenarios</span><span style="font-size: 14px; opacity: 0.9">José Fernando Rojas · Colombia</span><span class="ln ln-dark" style="--lc: #8C6A16" title="Línea temática 08: Tareas de alto riesgo y operaciones especiales"><i aria-hidden="true"></i><span><span class="sr-only">Línea temática </span><b>08</b> · Alto riesgo</span></span></span>
 <span style="font-size: 14px; opacity: 0.9">Ambas salas</span>
 <button type="button" class="fav fav-row" data-fav="d2-2000" aria-pressed="false"><svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9z"></path></svg><span class="fav-l">Agregar a mi agenda</span><span class="sr-only">: Seguridad en las operaciones marítimas y fluviales, y el papel del profesional y/o especialista en la seguridad y la salud en el trabajo en estos escenarios</span></button>
 </div>
@@ -1017,7 +1076,7 @@
 
 <div role="row" data-ini="2026-10-30T21:00" data-fin="2026-10-30T22:00" style="display: grid; grid-template-columns: 200px minmax(0, 1fr); gap: 10px; padding: 5px 0">
 <div role="rowheader" style="padding: 14px 8px; font-weight: 700; font-size: 16px; font-variant-numeric: tabular-nums">9:00–10:00 p. m.</div>
-<div role="cell" data-sid="d2-2100" style="min-height: 56px; padding: 12px 18px; border-radius: 6px; background: #102A43; color: #FFFFFF; border: 1px solid #102A43; display: flex; flex-wrap: wrap; align-items: center; gap: 8px 14px">
+<div role="cell" data-sid="d2-2100" data-linea="0" style="min-height: 56px; padding: 12px 18px; border-radius: 6px; background: #102A43; color: #FFFFFF; border: 1px solid #102A43; display: flex; flex-wrap: wrap; align-items: center; gap: 8px 14px">
 <span style="font-size: 12px; font-weight: 700; letter-spacing: 0.02em; padding: 3px 9px; border-radius: 4px; background: #D99A27; color: #102A43; border: 1px solid #D99A27">Cierre</span>
 <span style="flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 2px"><span style="font-weight: 700; font-size: 16px">Ludoprevención – actividad de cierre del Congreso</span><span style="font-size: 14px; opacity: 0.9">Luigi Prado Zapata · Perú</span></span>
 <span style="font-size: 14px; opacity: 0.9">Ambas salas</span>
@@ -1043,10 +1102,11 @@
 
 <li data-ini="2026-10-30T08:00" data-fin="2026-10-30T09:00" style="display: flex; flex-direction: column; gap: 6px">
 <div style="font-weight: 700; font-size: 15px; font-variant-numeric: tabular-nums">8:00–9:00 a. m.</div>
-<div data-sid="d2-0800" style="padding: 14px 16px; border-radius: 6px; background: #102A43; color: #FFFFFF; border: 1px solid #102A43; display: flex; flex-direction: column; gap: 6px">
+<div data-sid="d2-0800" data-linea="5" style="padding: 14px 16px; border-radius: 6px; background: #102A43; color: #FFFFFF; border: 1px solid #102A43; display: flex; flex-direction: column; gap: 6px">
 <span style="align-self: flex-start; font-size: 12px; font-weight: 700; padding: 2px 8px; border-radius: 4px; background: #D99A27; color: #102A43; border: 1px solid #D99A27">Apertura · Conferencia</span>
 <span style="font-weight: 700">Procedimientos de Gestión Integral e Investigación Avanzada de Incidentes HSEC</span>
 <span style="font-size: 14px; opacity: 0.9">Ing. Fernando M. Torres González, Mg. · Chile</span>
+<span class="ln ln-dark" style="--lc: #55589F" title="Línea temática 05: Gestión estratégica y liderazgo en SST"><i aria-hidden="true"></i><span><span class="sr-only">Línea temática </span><b>05</b> · Gestión y liderazgo</span></span>
 <span style="font-size: 14px; opacity: 0.9">Ambas salas</span>
 <button type="button" class="fav fav-row" style="align-self: flex-start" data-fav="d2-0800" aria-pressed="false"><svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9z"></path></svg><span class="fav-l">Agregar a mi agenda</span><span class="sr-only">: Procedimientos de Gestión Integral e Investigación Avanzada de Incidentes HSEC</span></button>
 </div>
@@ -1058,9 +1118,10 @@
 
 <li data-ini="2026-10-30T09:00" data-fin="2026-10-30T10:00" style="display: flex; flex-direction: column; gap: 6px">
 <div style="font-weight: 700; font-size: 15px; font-variant-numeric: tabular-nums">9:00–10:00 a. m.</div>
-<div data-sid="d2-0900" style="padding: 14px 16px; border-radius: 6px; background: #FBF3E2; color: #102A43; border: 1px solid #E8C77F; display: flex; flex-direction: column; gap: 6px">
+<div data-sid="d2-0900" data-linea="0" style="padding: 14px 16px; border-radius: 6px; background: #FBF3E2; color: #102A43; border: 1px solid #E8C77F; display: flex; flex-direction: column; gap: 6px">
 <span style="align-self: flex-start; font-size: 12px; font-weight: 700; padding: 2px 8px; border-radius: 4px; background: #D99A27; color: #102A43; border: 1px solid #D99A27">Pósteres</span>
 <span style="font-weight: 700">Jornada de pósteres</span>
+
 
 <span style="font-size: 14px; opacity: 0.9">Ambas salas</span>
 <button type="button" class="fav fav-row" style="align-self: flex-start" data-fav="d2-0900" aria-pressed="false"><svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9z"></path></svg><span class="fav-l">Agregar a mi agenda</span><span class="sr-only">: Jornada de pósteres</span></button>
@@ -1076,30 +1137,34 @@
 <div style="font-weight: 700; font-size: 15px; font-variant-numeric: tabular-nums">10:00–11:00 a. m. <span style="font-weight: 500; color: #52667A">· en paralelo</span></div>
 <div class="pon-cell" data-sala="1"><p class="pon-sala"><span class="pon-badge">Sala 1</span></p><ol class="pon-list" aria-label="Ponencias de la Sala 1">
 
-<li class="pon" data-sid="d2-1000-s1-1"><span class="pon-tag">Ponencia oral · 20 min + 5 min de preguntas</span>
+<li class="pon" data-sid="d2-1000-s1-1" data-linea="9"><span class="pon-tag">Ponencia oral · 20 min + 5 min de preguntas</span>
 <p class="pon-t">El riesgo laboral en el campo colombiano: entre la invisibilidad de las condiciones de trabajo y las realidades del territorio</p><p class="pon-a"><strong>Yohanna Milena Rueda Mahecha</strong> · UNIMINUTO – Centro Regional Bucaramanga</p>
 
+<span class="ln" style="--lc: #5F6B7A" title="Línea temática 09: Futuro del trabajo y desarrollo profesional"><i aria-hidden="true"></i><span><span class="sr-only">Línea temática </span><b>09</b> · Futuro del trabajo</span></span>
 <button type="button" class="fav" data-fav="d2-1000-s1-1" aria-pressed="false"><svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9z"></path></svg><span class="fav-l">Agregar a mi agenda</span><span class="sr-only">: El riesgo laboral en el campo colombiano: entre la invisibilidad de las condiciones de trabajo y las realidades del territorio</span></button>
 </li>
 
-<li class="pon" data-sid="d2-1000-s1-2"><span class="pon-tag">Ponencia oral · 20 min + 5 min de preguntas</span>
+<li class="pon" data-sid="d2-1000-s1-2" data-linea="8"><span class="pon-tag">Ponencia oral · 20 min + 5 min de preguntas</span>
 <p class="pon-t">DRON MINE RESCUE</p><p class="pon-a"><strong>Nicolas Enrique Gutiérrez Pérez</strong> · Unipaz</p>
 
+<span class="ln" style="--lc: #8C6A16" title="Línea temática 08: Tareas de alto riesgo y operaciones especiales"><i aria-hidden="true"></i><span><span class="sr-only">Línea temática </span><b>08</b> · Alto riesgo</span></span>
 <button type="button" class="fav" data-fav="d2-1000-s1-2" aria-pressed="false"><svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9z"></path></svg><span class="fav-l">Agregar a mi agenda</span><span class="sr-only">: DRON MINE RESCUE</span></button>
 </li>
 
 </ol></div>
 <div class="pon-cell" data-sala="2"><p class="pon-sala"><span class="pon-badge">Sala 2</span></p><ol class="pon-list" aria-label="Ponencias de la Sala 2">
 
-<li class="pon" data-sid="d2-1000-s2-1"><span class="pon-tag">Ponencia oral · 20 min + 5 min de preguntas</span>
+<li class="pon" data-sid="d2-1000-s2-1" data-linea="3"><span class="pon-tag">Ponencia oral · 20 min + 5 min de preguntas</span>
 <p class="pon-t">Autocuidado integral y consciente: 7 pasos para prevenir el riesgo público en entornos laborales</p><p class="pon-a"><strong>Paola Andrea Ramírez Ávila</strong> · Prohumana Soluciones</p>
 
+<span class="ln" style="--lc: #2E8A64" title="Línea temática 03: Salud integral, bienestar y factor humano"><i aria-hidden="true"></i><span><span class="sr-only">Línea temática </span><b>03</b> · Salud y bienestar</span></span>
 <button type="button" class="fav" data-fav="d2-1000-s2-1" aria-pressed="false"><svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9z"></path></svg><span class="fav-l">Agregar a mi agenda</span><span class="sr-only">: Autocuidado integral y consciente: 7 pasos para prevenir el riesgo público en entornos laborales</span></button>
 </li>
 
-<li class="pon" data-sid="d2-1000-s2-2"><span class="pon-tag">Ponencia oral · 20 min + 5 min de preguntas</span>
+<li class="pon" data-sid="d2-1000-s2-2" data-linea="2"><span class="pon-tag">Ponencia oral · 20 min + 5 min de preguntas</span>
 <p class="pon-t">Riesgos biológicos, químicos y físicos asociados al manejo de residuos sólidos, aguas residuales y residuos electrónicos: una revisión bibliográfica</p><p class="pon-a"><strong>Angie karolay Rozo fuentes</strong> · UNIPAZ</p>
 
+<span class="ln" style="--lc: #B5532B" title="Línea temática 02: Riesgos emergentes en SST"><i aria-hidden="true"></i><span><span class="sr-only">Línea temática </span><b>02</b> · Riesgos emergentes</span></span>
 <button type="button" class="fav" data-fav="d2-1000-s2-2" aria-pressed="false"><svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9z"></path></svg><span class="fav-l">Agregar a mi agenda</span><span class="sr-only">: Riesgos biológicos, químicos y físicos asociados al manejo de residuos sólidos, aguas residuales y residuos electrónicos: una revisión bibliográfica</span></button>
 </li>
 
@@ -1111,10 +1176,11 @@
 
 <li data-ini="2026-10-30T11:00" data-fin="2026-10-30T12:00" style="display: flex; flex-direction: column; gap: 6px">
 <div style="font-weight: 700; font-size: 15px; font-variant-numeric: tabular-nums">11:00 a. m.–12:00 m.</div>
-<div data-sid="d2-1100" style="padding: 14px 16px; border-radius: 6px; background: #E3F1F3; color: #102A43; border: 1px solid #8CC3CA; display: flex; flex-direction: column; gap: 6px">
+<div data-sid="d2-1100" data-linea="0" style="padding: 14px 16px; border-radius: 6px; background: #E3F1F3; color: #102A43; border: 1px solid #8CC3CA; display: flex; flex-direction: column; gap: 6px">
 <span style="align-self: flex-start; font-size: 12px; font-weight: 700; padding: 2px 8px; border-radius: 4px; background: #087E8B; color: #FFFFFF; border: 1px solid #087E8B">Conferencia</span>
 <span style="font-weight: 700">Título por confirmar</span>
 <span style="font-size: 14px; opacity: 0.9">Regis Hernández · Colombia</span>
+
 <span style="font-size: 14px; opacity: 0.9">Ambas salas</span>
 <button type="button" class="fav fav-row" style="align-self: flex-start" data-fav="d2-1100" aria-pressed="false"><svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9z"></path></svg><span class="fav-l">Agregar a mi agenda</span><span class="sr-only">: Título por confirmar</span></button>
 </div>
@@ -1132,9 +1198,10 @@
 
 <li data-ini="2026-10-30T12:00" data-fin="2026-10-30T13:00" style="display: flex; flex-direction: column; gap: 6px">
 <div style="font-weight: 700; font-size: 15px; font-variant-numeric: tabular-nums">12:00 m.–1:00 p. m.</div>
-<div data-sid="" style="padding: 14px 16px; border-radius: 6px; background: #EEF2F5; color: #3E5468; border: 1px solid #D5DEE6; display: flex; flex-direction: column; gap: 6px">
+<div data-sid="" data-linea="0" style="padding: 14px 16px; border-radius: 6px; background: #EEF2F5; color: #3E5468; border: 1px solid #D5DEE6; display: flex; flex-direction: column; gap: 6px">
 <span style="align-self: flex-start; font-size: 12px; font-weight: 700; padding: 2px 8px; border-radius: 4px; background: #FFFFFF; color: #3E5468; border: 1px solid #9FB0BF">Descanso</span>
 <span style="font-weight: 700">Descanso</span>
+
 
 <span style="font-size: 14px; opacity: 0.9"></span>
 
@@ -1147,10 +1214,11 @@
 
 <li data-ini="2026-10-30T13:00" data-fin="2026-10-30T14:00" style="display: flex; flex-direction: column; gap: 6px">
 <div style="font-weight: 700; font-size: 15px; font-variant-numeric: tabular-nums">1:00–2:00 p. m.</div>
-<div data-sid="d2-1300" style="padding: 14px 16px; border-radius: 6px; background: #E3F1F3; color: #102A43; border: 1px solid #8CC3CA; display: flex; flex-direction: column; gap: 6px">
+<div data-sid="d2-1300" data-linea="2" style="padding: 14px 16px; border-radius: 6px; background: #E3F1F3; color: #102A43; border: 1px solid #8CC3CA; display: flex; flex-direction: column; gap: 6px">
 <span style="align-self: flex-start; font-size: 12px; font-weight: 700; padding: 2px 8px; border-radius: 4px; background: #087E8B; color: #FFFFFF; border: 1px solid #087E8B">Conferencia</span>
 <span style="font-weight: 700">La toxicología en la Salud Laboral, su pasado y sus desafíos futuros</span>
 <span style="font-size: 14px; opacity: 0.9">Dr. Reynaldo Andrés Concha Maureira · Chile</span>
+<span class="ln ln-dark" style="--lc: #B5532B" title="Línea temática 02: Riesgos emergentes en SST"><i aria-hidden="true"></i><span><span class="sr-only">Línea temática </span><b>02</b> · Riesgos emergentes</span></span>
 <span style="font-size: 14px; opacity: 0.9">Ambas salas</span>
 <button type="button" class="fav fav-row" style="align-self: flex-start" data-fav="d2-1300" aria-pressed="false"><svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9z"></path></svg><span class="fav-l">Agregar a mi agenda</span><span class="sr-only">: La toxicología en la Salud Laboral, su pasado y sus desafíos futuros</span></button>
 </div>
@@ -1165,30 +1233,34 @@
 <div style="font-weight: 700; font-size: 15px; font-variant-numeric: tabular-nums">2:00–3:00 p. m. <span style="font-weight: 500; color: #52667A">· en paralelo</span></div>
 <div class="pon-cell" data-sala="1"><p class="pon-sala"><span class="pon-badge">Sala 1</span></p><ol class="pon-list" aria-label="Ponencias de la Sala 1">
 
-<li class="pon" data-sid="d2-1400-s1-1"><span class="pon-tag">Ponencia oral · 20 min + 5 min de preguntas</span>
+<li class="pon" data-sid="d2-1400-s1-1" data-linea="6"><span class="pon-tag">Ponencia oral · 20 min + 5 min de preguntas</span>
 <p class="pon-t">Eficacia del comité de convivencia frente a la persecución laboral: un estudio de caso en la Oficina Especial de Barrancabermeja</p><p class="pon-a"><strong>Nicole Dayana Hernández Luna</strong> · UNIPAZ</p>
 
+<span class="ln" style="--lc: #9A4782" title="Línea temática 06: Psicosociología del trabajo y las organizaciones"><i aria-hidden="true"></i><span><span class="sr-only">Línea temática </span><b>06</b> · Psicosociología</span></span>
 <button type="button" class="fav" data-fav="d2-1400-s1-1" aria-pressed="false"><svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9z"></path></svg><span class="fav-l">Agregar a mi agenda</span><span class="sr-only">: Eficacia del comité de convivencia frente a la persecución laboral: un estudio de caso en la Oficina Especial de Barrancabermeja</span></button>
 </li>
 
-<li class="pon" data-sid="d2-1400-s1-2"><span class="pon-tag">Ponencia oral · 20 min + 5 min de preguntas</span>
+<li class="pon" data-sid="d2-1400-s1-2" data-linea="6"><span class="pon-tag">Ponencia oral · 20 min + 5 min de preguntas</span>
 <p class="pon-t">Análisis de la correspondencia entre las prácticas de liderazgo descritas en la literatura y los factores de riesgo y protección psicosocial intralaboral en el personal administrativo de la Corporación Parque Explora en Medellín</p><p class="pon-a"><strong>Daniela Salazar Londoño</strong> · Politécnico Grancolombiano</p>
 
+<span class="ln" style="--lc: #9A4782" title="Línea temática 06: Psicosociología del trabajo y las organizaciones"><i aria-hidden="true"></i><span><span class="sr-only">Línea temática </span><b>06</b> · Psicosociología</span></span>
 <button type="button" class="fav" data-fav="d2-1400-s1-2" aria-pressed="false"><svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9z"></path></svg><span class="fav-l">Agregar a mi agenda</span><span class="sr-only">: Análisis de la correspondencia entre las prácticas de liderazgo descritas en la literatura y los factores de riesgo y protección psicosocial intralaboral en el personal administrativo de la Corporación Parque Explora en Medellín</span></button>
 </li>
 
 </ol></div>
 <div class="pon-cell" data-sala="2"><p class="pon-sala"><span class="pon-badge">Sala 2</span></p><ol class="pon-list" aria-label="Ponencias de la Sala 2">
 
-<li class="pon" data-sid="d2-1400-s2-1"><span class="pon-tag">Ponencia oral · 20 min + 5 min de preguntas</span>
+<li class="pon" data-sid="d2-1400-s2-1" data-linea="6"><span class="pon-tag">Ponencia oral · 20 min + 5 min de preguntas</span>
 <p class="pon-t">Impacto de los riesgos psicosociales en el desempeño laboral y estrategias de intervención en seguridad y salud en el trabajo</p><p class="pon-a"><strong>Mayra Alejandra Uribe Caro</strong> · UNIPAZ</p>
 
+<span class="ln" style="--lc: #9A4782" title="Línea temática 06: Psicosociología del trabajo y las organizaciones"><i aria-hidden="true"></i><span><span class="sr-only">Línea temática </span><b>06</b> · Psicosociología</span></span>
 <button type="button" class="fav" data-fav="d2-1400-s2-1" aria-pressed="false"><svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9z"></path></svg><span class="fav-l">Agregar a mi agenda</span><span class="sr-only">: Impacto de los riesgos psicosociales en el desempeño laboral y estrategias de intervención en seguridad y salud en el trabajo</span></button>
 </li>
 
-<li class="pon" data-sid="d2-1400-s2-2"><span class="pon-tag">Ponencia oral · 20 min + 5 min de preguntas</span>
+<li class="pon" data-sid="d2-1400-s2-2" data-linea="6"><span class="pon-tag">Ponencia oral · 20 min + 5 min de preguntas</span>
 <p class="pon-t">Trabajo informal y salud mental en Colombia: una mirada desde los riesgos psicosociales laborales</p><p class="pon-a"><strong>Jean Carlos Botello Pérez</strong> · UNIPAZ</p>
 
+<span class="ln" style="--lc: #9A4782" title="Línea temática 06: Psicosociología del trabajo y las organizaciones"><i aria-hidden="true"></i><span><span class="sr-only">Línea temática </span><b>06</b> · Psicosociología</span></span>
 <button type="button" class="fav" data-fav="d2-1400-s2-2" aria-pressed="false"><svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9z"></path></svg><span class="fav-l">Agregar a mi agenda</span><span class="sr-only">: Trabajo informal y salud mental en Colombia: una mirada desde los riesgos psicosociales laborales</span></button>
 </li>
 
@@ -1203,30 +1275,34 @@
 <div style="font-weight: 700; font-size: 15px; font-variant-numeric: tabular-nums">3:00–4:00 p. m. <span style="font-weight: 500; color: #52667A">· en paralelo</span></div>
 <div class="pon-cell" data-sala="1"><p class="pon-sala"><span class="pon-badge">Sala 1</span></p><ol class="pon-list" aria-label="Ponencias de la Sala 1">
 
-<li class="pon" data-sid="d2-1500-s1-1"><span class="pon-tag">Ponencia oral · 20 min + 5 min de preguntas</span>
+<li class="pon" data-sid="d2-1500-s1-1" data-linea="2"><span class="pon-tag">Ponencia oral · 20 min + 5 min de preguntas</span>
 <p class="pon-t">Riesgo biológico en enfermeras durante la atención domiciliaria a pacientes postrados</p><p class="pon-a"><strong>Liz Maryuris Crespo Bustos</strong> · UNIPAZ</p>
 
+<span class="ln" style="--lc: #B5532B" title="Línea temática 02: Riesgos emergentes en SST"><i aria-hidden="true"></i><span><span class="sr-only">Línea temática </span><b>02</b> · Riesgos emergentes</span></span>
 <button type="button" class="fav" data-fav="d2-1500-s1-1" aria-pressed="false"><svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9z"></path></svg><span class="fav-l">Agregar a mi agenda</span><span class="sr-only">: Riesgo biológico en enfermeras durante la atención domiciliaria a pacientes postrados</span></button>
 </li>
 
-<li class="pon" data-sid="d2-1500-s1-2"><span class="pon-tag">Ponencia oral · 20 min + 5 min de preguntas</span>
+<li class="pon" data-sid="d2-1500-s1-2" data-linea="6"><span class="pon-tag">Ponencia oral · 20 min + 5 min de preguntas</span>
 <p class="pon-t">El docente como último eslabón: una reflexión sobre el burnout estructural en territorios de conflicto</p><p class="pon-a"><strong>Diana Marcela Castro Vargas</strong> · UNIPAZ</p>
 
+<span class="ln" style="--lc: #9A4782" title="Línea temática 06: Psicosociología del trabajo y las organizaciones"><i aria-hidden="true"></i><span><span class="sr-only">Línea temática </span><b>06</b> · Psicosociología</span></span>
 <button type="button" class="fav" data-fav="d2-1500-s1-2" aria-pressed="false"><svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9z"></path></svg><span class="fav-l">Agregar a mi agenda</span><span class="sr-only">: El docente como último eslabón: una reflexión sobre el burnout estructural en territorios de conflicto</span></button>
 </li>
 
 </ol></div>
 <div class="pon-cell" data-sala="2"><p class="pon-sala"><span class="pon-badge">Sala 2</span></p><ol class="pon-list" aria-label="Ponencias de la Sala 2">
 
-<li class="pon" data-sid="d2-1500-s2-1"><span class="pon-tag">Ponencia oral · 20 min + 5 min de preguntas</span>
+<li class="pon" data-sid="d2-1500-s2-1" data-linea="3"><span class="pon-tag">Ponencia oral · 20 min + 5 min de preguntas</span>
 <p class="pon-t">Programa de pausas activas mentales basado en mindfulness para reducir el estrés laboral en la empresa Pelgor SAS</p><p class="pon-a"><strong>Carolina Pulido Gómez</strong> · Politécnico Grancolombiano</p>
 
+<span class="ln" style="--lc: #2E8A64" title="Línea temática 03: Salud integral, bienestar y factor humano"><i aria-hidden="true"></i><span><span class="sr-only">Línea temática </span><b>03</b> · Salud y bienestar</span></span>
 <button type="button" class="fav" data-fav="d2-1500-s2-1" aria-pressed="false"><svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9z"></path></svg><span class="fav-l">Agregar a mi agenda</span><span class="sr-only">: Programa de pausas activas mentales basado en mindfulness para reducir el estrés laboral en la empresa Pelgor SAS</span></button>
 </li>
 
-<li class="pon" data-sid="d2-1500-s2-2"><span class="pon-tag">Ponencia oral · 20 min + 5 min de preguntas</span>
+<li class="pon" data-sid="d2-1500-s2-2" data-linea="9"><span class="pon-tag">Ponencia oral · 20 min + 5 min de preguntas</span>
 <p class="pon-t">Trabajar a distancia, cuidar de cerca: diagnóstico del bienestar y las condiciones laborales en colaboradores de Trobapp de Colombia S.A.S.</p><p class="pon-a"><strong>Angie Yibeth Rubio Camacho</strong> · Politécnico Grancolombiano</p>
 
+<span class="ln" style="--lc: #5F6B7A" title="Línea temática 09: Futuro del trabajo y desarrollo profesional"><i aria-hidden="true"></i><span><span class="sr-only">Línea temática </span><b>09</b> · Futuro del trabajo</span></span>
 <button type="button" class="fav" data-fav="d2-1500-s2-2" aria-pressed="false"><svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9z"></path></svg><span class="fav-l">Agregar a mi agenda</span><span class="sr-only">: Trabajar a distancia, cuidar de cerca: diagnóstico del bienestar y las condiciones laborales en colaboradores de Trobapp de Colombia S.A.S.</span></button>
 </li>
 
@@ -1238,10 +1314,11 @@
 
 <li data-ini="2026-10-30T16:00" data-fin="2026-10-30T17:00" style="display: flex; flex-direction: column; gap: 6px">
 <div style="font-weight: 700; font-size: 15px; font-variant-numeric: tabular-nums">4:00–5:00 p. m.</div>
-<div data-sid="d2-1600" style="padding: 14px 16px; border-radius: 6px; background: #E3F1F3; color: #102A43; border: 1px solid #8CC3CA; display: flex; flex-direction: column; gap: 6px">
+<div data-sid="d2-1600" data-linea="9" style="padding: 14px 16px; border-radius: 6px; background: #E3F1F3; color: #102A43; border: 1px solid #8CC3CA; display: flex; flex-direction: column; gap: 6px">
 <span style="align-self: flex-start; font-size: 12px; font-weight: 700; padding: 2px 8px; border-radius: 4px; background: #087E8B; color: #FFFFFF; border: 1px solid #087E8B">Conferencia</span>
 <span style="font-weight: 700">Envejecimiento de la fuerza laboral: el reto emergente de la salud ocupacional</span>
 <span style="font-size: 14px; opacity: 0.9">Eylin Rodríguez · Honduras</span>
+<span class="ln ln-dark" style="--lc: #5F6B7A" title="Línea temática 09: Futuro del trabajo y desarrollo profesional"><i aria-hidden="true"></i><span><span class="sr-only">Línea temática </span><b>09</b> · Futuro del trabajo</span></span>
 <span style="font-size: 14px; opacity: 0.9">Ambas salas</span>
 <button type="button" class="fav fav-row" style="align-self: flex-start" data-fav="d2-1600" aria-pressed="false"><svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9z"></path></svg><span class="fav-l">Agregar a mi agenda</span><span class="sr-only">: Envejecimiento de la fuerza laboral: el reto emergente de la salud ocupacional</span></button>
 </div>
@@ -1253,9 +1330,10 @@
 
 <li data-ini="2026-10-30T17:00" data-fin="2026-10-30T18:00" style="display: flex; flex-direction: column; gap: 6px">
 <div style="font-weight: 700; font-size: 15px; font-variant-numeric: tabular-nums">5:00–6:00 p. m.</div>
-<div data-sid="" style="padding: 14px 16px; border-radius: 6px; background: #EEF2F5; color: #3E5468; border: 1px solid #D5DEE6; display: flex; flex-direction: column; gap: 6px">
+<div data-sid="" data-linea="0" style="padding: 14px 16px; border-radius: 6px; background: #EEF2F5; color: #3E5468; border: 1px solid #D5DEE6; display: flex; flex-direction: column; gap: 6px">
 <span style="align-self: flex-start; font-size: 12px; font-weight: 700; padding: 2px 8px; border-radius: 4px; background: #FFFFFF; color: #3E5468; border: 1px solid #9FB0BF">Descanso</span>
 <span style="font-weight: 700">Descanso</span>
+
 
 <span style="font-size: 14px; opacity: 0.9"></span>
 
@@ -1274,9 +1352,10 @@
 
 <li data-ini="2026-10-30T18:00" data-fin="2026-10-30T19:00" style="display: flex; flex-direction: column; gap: 6px">
 <div style="font-weight: 700; font-size: 15px; font-variant-numeric: tabular-nums">6:00–7:00 p. m.</div>
-<div data-sid="" style="padding: 14px 16px; border-radius: 6px; background: #FFFFFF; color: #52667A; border: 1px solid #E4EAF0; display: flex; flex-direction: column; gap: 6px">
+<div data-sid="" data-linea="0" style="padding: 14px 16px; border-radius: 6px; background: #FFFFFF; color: #52667A; border: 1px solid #E4EAF0; display: flex; flex-direction: column; gap: 6px">
 
 <span style="font-weight: 700">—</span>
+
 
 <span style="font-size: 14px; opacity: 0.9"></span>
 
@@ -1289,10 +1368,11 @@
 
 <li data-ini="2026-10-30T19:00" data-fin="2026-10-30T20:00" style="display: flex; flex-direction: column; gap: 6px">
 <div style="font-weight: 700; font-size: 15px; font-variant-numeric: tabular-nums">7:00–8:00 p. m.</div>
-<div data-sid="d2-1900" style="padding: 14px 16px; border-radius: 6px; background: #E3F1F3; color: #102A43; border: 1px solid #8CC3CA; display: flex; flex-direction: column; gap: 6px">
+<div data-sid="d2-1900" data-linea="8" style="padding: 14px 16px; border-radius: 6px; background: #E3F1F3; color: #102A43; border: 1px solid #8CC3CA; display: flex; flex-direction: column; gap: 6px">
 <span style="align-self: flex-start; font-size: 12px; font-weight: 700; padding: 2px 8px; border-radius: 4px; background: #087E8B; color: #FFFFFF; border: 1px solid #087E8B">Conferencia</span>
 <span style="font-weight: 700">Modelo dinámico de riesgos para la minería</span>
 <span style="font-size: 14px; opacity: 0.9">Ing. Fernando M. Torres González, Mg. · Chile</span>
+<span class="ln ln-dark" style="--lc: #8C6A16" title="Línea temática 08: Tareas de alto riesgo y operaciones especiales"><i aria-hidden="true"></i><span><span class="sr-only">Línea temática </span><b>08</b> · Alto riesgo</span></span>
 <span style="font-size: 14px; opacity: 0.9">Ambas salas</span>
 <button type="button" class="fav fav-row" style="align-self: flex-start" data-fav="d2-1900" aria-pressed="false"><svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9z"></path></svg><span class="fav-l">Agregar a mi agenda</span><span class="sr-only">: Modelo dinámico de riesgos para la minería</span></button>
 </div>
@@ -1304,10 +1384,11 @@
 
 <li data-ini="2026-10-30T20:00" data-fin="2026-10-30T21:00" style="display: flex; flex-direction: column; gap: 6px">
 <div style="font-weight: 700; font-size: 15px; font-variant-numeric: tabular-nums">8:00–9:00 p. m.</div>
-<div data-sid="d2-2000" style="padding: 14px 16px; border-radius: 6px; background: #E3F1F3; color: #102A43; border: 1px solid #8CC3CA; display: flex; flex-direction: column; gap: 6px">
+<div data-sid="d2-2000" data-linea="8" style="padding: 14px 16px; border-radius: 6px; background: #E3F1F3; color: #102A43; border: 1px solid #8CC3CA; display: flex; flex-direction: column; gap: 6px">
 <span style="align-self: flex-start; font-size: 12px; font-weight: 700; padding: 2px 8px; border-radius: 4px; background: #087E8B; color: #FFFFFF; border: 1px solid #087E8B">Conferencia</span>
 <span style="font-weight: 700">Seguridad en las operaciones marítimas y fluviales, y el papel del profesional y/o especialista en la seguridad y la salud en el trabajo en estos escenarios</span>
 <span style="font-size: 14px; opacity: 0.9">José Fernando Rojas · Colombia</span>
+<span class="ln ln-dark" style="--lc: #8C6A16" title="Línea temática 08: Tareas de alto riesgo y operaciones especiales"><i aria-hidden="true"></i><span><span class="sr-only">Línea temática </span><b>08</b> · Alto riesgo</span></span>
 <span style="font-size: 14px; opacity: 0.9">Ambas salas</span>
 <button type="button" class="fav fav-row" style="align-self: flex-start" data-fav="d2-2000" aria-pressed="false"><svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9z"></path></svg><span class="fav-l">Agregar a mi agenda</span><span class="sr-only">: Seguridad en las operaciones marítimas y fluviales, y el papel del profesional y/o especialista en la seguridad y la salud en el trabajo en estos escenarios</span></button>
 </div>
@@ -1319,10 +1400,11 @@
 
 <li data-ini="2026-10-30T21:00" data-fin="2026-10-30T22:00" style="display: flex; flex-direction: column; gap: 6px">
 <div style="font-weight: 700; font-size: 15px; font-variant-numeric: tabular-nums">9:00–10:00 p. m.</div>
-<div data-sid="d2-2100" style="padding: 14px 16px; border-radius: 6px; background: #102A43; color: #FFFFFF; border: 1px solid #102A43; display: flex; flex-direction: column; gap: 6px">
+<div data-sid="d2-2100" data-linea="0" style="padding: 14px 16px; border-radius: 6px; background: #102A43; color: #FFFFFF; border: 1px solid #102A43; display: flex; flex-direction: column; gap: 6px">
 <span style="align-self: flex-start; font-size: 12px; font-weight: 700; padding: 2px 8px; border-radius: 4px; background: #D99A27; color: #102A43; border: 1px solid #D99A27">Cierre</span>
 <span style="font-weight: 700">Ludoprevención – actividad de cierre del Congreso</span>
 <span style="font-size: 14px; opacity: 0.9">Luigi Prado Zapata · Perú</span>
+
 <span style="font-size: 14px; opacity: 0.9">Ambas salas</span>
 <button type="button" class="fav fav-row" style="align-self: flex-start" data-fav="d2-2100" aria-pressed="false"><svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9z"></path></svg><span class="fav-l">Agregar a mi agenda</span><span class="sr-only">: Ludoprevención – actividad de cierre del Congreso</span></button>
 </div>
@@ -1381,7 +1463,7 @@
 </div>
 </footer>
 
-<script type="application/json" id="sesiones-data">[{"id": "d1-0800", "dia": 0, "ini": "2026-10-29T08:00", "fin": "2026-10-29T09:00", "sala": "ambas", "tipo": "conferencia", "orden": 0, "titulo": "Programa Piloto “ESCUELA SEGURA”: una mirada a lo aprendido en los sismos vividos en la región", "ponente": "Ing. Pablo Ochoa · Panamá", "inst": ""}, {"id": "d1-0900", "dia": 0, "ini": "2026-10-29T09:00", "fin": "2026-10-29T10:00", "sala": "ambas", "tipo": "conferencia", "orden": 0, "titulo": "Uso de la plataforma de eCollection (modalidad virtual)", "ponente": "Claudia Inés Carrero Beltrán · Colombia", "inst": ""}, {"id": "d1-1000-s1-1", "dia": 0, "ini": "2026-10-29T10:00", "fin": "2026-10-29T11:00", "sala": "1", "tipo": "ponencia", "orden": 1, "titulo": "Caracterización del sistema de transporte público colectivo urbano (STPCU) y los actores que intervienen en el Distrito Especial de Barrancabermeja", "ponente": "Andrea Quintero Miranda", "inst": "UNIPAZ"}, {"id": "d1-1000-s1-2", "dia": 0, "ini": "2026-10-29T10:00", "fin": "2026-10-29T11:00", "sala": "1", "tipo": "ponencia", "orden": 2, "titulo": "Diseño de un sistema automático para regular la intensidad lumínica en la sala de lectura de la biblioteca de UNIPAZ", "ponente": "Manuel Mauricio Mont López", "inst": "UNIPAZ"}, {"id": "d1-1000-s2-1", "dia": 0, "ini": "2026-10-29T10:00", "fin": "2026-10-29T11:00", "sala": "2", "tipo": "ponencia", "orden": 1, "titulo": "Diseño de arquitectura de software para la plataforma de prevención de riesgo laboral: sector calzado (Bucaramanga)", "ponente": "Walter Stiven Carrillo Duarte", "inst": "Universidad Cooperativa de Colombia"}, {"id": "d1-1000-s2-2", "dia": 0, "ini": "2026-10-29T10:00", "fin": "2026-10-29T11:00", "sala": "2", "tipo": "ponencia", "orden": 2, "titulo": "Modelo matemático y sistema inteligente para la predicción del riesgo cardiovascular basado en el estrés laboral", "ponente": "Fredy Angarita Reina", "inst": "Universidad Cooperativa de Colombia"}, {"id": "d1-1100", "dia": 0, "ini": "2026-10-29T11:00", "fin": "2026-10-29T12:00", "sala": "ambas", "tipo": "conferencia", "orden": 0, "titulo": "Cultura de emergencia en las empresas: algo de lo que nadie habla, pero que todos necesitan", "ponente": "Roney De Souza · Brasil", "inst": ""}, {"id": "d1-1300", "dia": 0, "ini": "2026-10-29T13:00", "fin": "2026-10-29T14:00", "sala": "ambas", "tipo": "conferencia", "orden": 0, "titulo": "Rigor Léxico y Etimológico en la Gestión de Riesgos", "ponente": "Carlos Nacache · Panamá", "inst": ""}, {"id": "d1-1400-s1-1", "dia": 0, "ini": "2026-10-29T14:00", "fin": "2026-10-29T15:00", "sala": "1", "tipo": "ponencia", "orden": 1, "titulo": "Medir para transformar: retos y corresponsabilidad frente al riesgo psicosocial y la salud mental en el trabajo en Colombia", "ponente": "Angélica Galán", "inst": "UNIPAZ"}, {"id": "d1-1400-s1-2", "dia": 0, "ini": "2026-10-29T14:00", "fin": "2026-10-29T15:00", "sala": "1", "tipo": "ponencia", "orden": 2, "titulo": "Evaluación de riesgos ocupacionales en actividades de aprovechamiento de residuos: una perspectiva desde la ingeniería ambiental", "ponente": "Marlon Estiven Ríos Ramírez", "inst": "UNIPAZ"}, {"id": "d1-1400-s2-1", "dia": 0, "ini": "2026-10-29T14:00", "fin": "2026-10-29T15:00", "sala": "2", "tipo": "ponencia", "orden": 1, "titulo": "Neutralizantes en refinación: peligro químico y potencial de sustitución", "ponente": "Karol Vanesa Medina Salcedo", "inst": "UNIPAZ"}, {"id": "d1-1400-s2-2", "dia": 0, "ini": "2026-10-29T14:00", "fin": "2026-10-29T15:00", "sala": "2", "tipo": "ponencia", "orden": 2, "titulo": "Identificación de enfermedades laborales y factores de riesgo en las plazas de mercado en Barrancabermeja", "ponente": "Julieth Katherine Martínez Guzmán", "inst": "UNIPAZ"}, {"id": "d1-1500-s1-1", "dia": 0, "ini": "2026-10-29T15:00", "fin": "2026-10-29T16:00", "sala": "1", "tipo": "ponencia", "orden": 1, "titulo": "Contexto histórico de los tipos de hidrantes utilizados en Colombia", "ponente": "Edgar Julián Cardona Delgado", "inst": "UNIPAZ"}, {"id": "d1-1500-s1-2", "dia": 0, "ini": "2026-10-29T15:00", "fin": "2026-10-29T16:00", "sala": "1", "tipo": "ponencia", "orden": 2, "titulo": "Diseño de un plan de gestión de riesgo químico a partir de los lineamientos del Sistema Globalmente Armonizado para la empresa Lubricentro Fundadores de la ciudad de Manizales", "ponente": "Gonzalo Eduardo Yepes Calderón", "inst": "Politécnico Grancolombiano"}, {"id": "d1-1500-s2-1", "dia": 0, "ini": "2026-10-29T15:00", "fin": "2026-10-29T16:00", "sala": "2", "tipo": "ponencia", "orden": 1, "titulo": "Análisis del impacto del SG-SST orientado a la prevención de afectaciones a la salud asociadas a la exposición ocupacional a fibra de vidrio en Fibrasing S.A.S.", "ponente": "Eliam Moralez Barrera", "inst": "Politécnico Grancolombiano"}, {"id": "d1-1500-s2-2", "dia": 0, "ini": "2026-10-29T15:00", "fin": "2026-10-29T16:00", "sala": "2", "tipo": "ponencia", "orden": 2, "titulo": "Análisis de la exposición a riesgos biomecánicos y su relación con los trastornos musculoesqueléticos: un enfoque cualitativo basado en revisión documental", "ponente": "Brayan Stip Lobo Rincón", "inst": "UNIPAZ"}, {"id": "d1-1600", "dia": 0, "ini": "2026-10-29T16:00", "fin": "2026-10-29T17:00", "sala": "ambas", "tipo": "conferencia", "orden": 0, "titulo": "Detección de atmósferas peligrosas en espacios confinados", "ponente": "Moisés López Quintana · Colombia", "inst": ""}, {"id": "d1-1900", "dia": 0, "ini": "2026-10-29T19:00", "fin": "2026-10-29T20:00", "sala": "ambas", "tipo": "conferencia", "orden": 0, "titulo": "Cuando el error no es una opción: Seguridad de Procesos y la nueva era de prevención de accidentes mayores en Colombia", "ponente": "Leonardo Gutiérrez Lobo · Colombia", "inst": ""}, {"id": "d1-2000", "dia": 0, "ini": "2026-10-29T20:00", "fin": "2026-10-29T21:00", "sala": "ambas", "tipo": "conferencia", "orden": 0, "titulo": "ERGOKIDS: prevención temprana de trastornos musculoesqueléticos desde la edad escolar hacia una vida laboral saludable", "ponente": "Belinda Alberty · Honduras", "inst": ""}, {"id": "d1-2100", "dia": 0, "ini": "2026-10-29T21:00", "fin": "2026-10-29T22:00", "sala": "ambas", "tipo": "cierre", "orden": 0, "titulo": "Actividad de cierre del día 1", "ponente": "Elenisa Aldana Mora · Colombia", "inst": ""}, {"id": "d2-0800", "dia": 1, "ini": "2026-10-30T08:00", "fin": "2026-10-30T09:00", "sala": "ambas", "tipo": "conferencia", "orden": 0, "titulo": "Procedimientos de Gestión Integral e Investigación Avanzada de Incidentes HSEC", "ponente": "Ing. Fernando M. Torres González, Mg. · Chile", "inst": ""}, {"id": "d2-0900", "dia": 1, "ini": "2026-10-30T09:00", "fin": "2026-10-30T10:00", "sala": "ambas", "tipo": "posteres", "orden": 0, "titulo": "Jornada de pósteres", "ponente": "", "inst": ""}, {"id": "d2-1000-s1-1", "dia": 1, "ini": "2026-10-30T10:00", "fin": "2026-10-30T11:00", "sala": "1", "tipo": "ponencia", "orden": 1, "titulo": "El riesgo laboral en el campo colombiano: entre la invisibilidad de las condiciones de trabajo y las realidades del territorio", "ponente": "Yohanna Milena Rueda Mahecha", "inst": "UNIMINUTO – Centro Regional Bucaramanga"}, {"id": "d2-1000-s1-2", "dia": 1, "ini": "2026-10-30T10:00", "fin": "2026-10-30T11:00", "sala": "1", "tipo": "ponencia", "orden": 2, "titulo": "DRON MINE RESCUE", "ponente": "Nicolas Enrique Gutiérrez Pérez", "inst": "Unipaz"}, {"id": "d2-1000-s2-1", "dia": 1, "ini": "2026-10-30T10:00", "fin": "2026-10-30T11:00", "sala": "2", "tipo": "ponencia", "orden": 1, "titulo": "Autocuidado integral y consciente: 7 pasos para prevenir el riesgo público en entornos laborales", "ponente": "Paola Andrea Ramírez Ávila", "inst": "Prohumana Soluciones"}, {"id": "d2-1000-s2-2", "dia": 1, "ini": "2026-10-30T10:00", "fin": "2026-10-30T11:00", "sala": "2", "tipo": "ponencia", "orden": 2, "titulo": "Riesgos biológicos, químicos y físicos asociados al manejo de residuos sólidos, aguas residuales y residuos electrónicos: una revisión bibliográfica", "ponente": "Angie karolay Rozo fuentes", "inst": "UNIPAZ"}, {"id": "d2-1100", "dia": 1, "ini": "2026-10-30T11:00", "fin": "2026-10-30T12:00", "sala": "ambas", "tipo": "conferencia", "orden": 0, "titulo": "Título por confirmar", "ponente": "Regis Hernández · Colombia", "inst": ""}, {"id": "d2-1300", "dia": 1, "ini": "2026-10-30T13:00", "fin": "2026-10-30T14:00", "sala": "ambas", "tipo": "conferencia", "orden": 0, "titulo": "La toxicología en la Salud Laboral, su pasado y sus desafíos futuros", "ponente": "Dr. Reynaldo Andrés Concha Maureira · Chile", "inst": ""}, {"id": "d2-1400-s1-1", "dia": 1, "ini": "2026-10-30T14:00", "fin": "2026-10-30T15:00", "sala": "1", "tipo": "ponencia", "orden": 1, "titulo": "Eficacia del comité de convivencia frente a la persecución laboral: un estudio de caso en la Oficina Especial de Barrancabermeja", "ponente": "Nicole Dayana Hernández Luna", "inst": "UNIPAZ"}, {"id": "d2-1400-s1-2", "dia": 1, "ini": "2026-10-30T14:00", "fin": "2026-10-30T15:00", "sala": "1", "tipo": "ponencia", "orden": 2, "titulo": "Análisis de la correspondencia entre las prácticas de liderazgo descritas en la literatura y los factores de riesgo y protección psicosocial intralaboral en el personal administrativo de la Corporación Parque Explora en Medellín", "ponente": "Daniela Salazar Londoño", "inst": "Politécnico Grancolombiano"}, {"id": "d2-1400-s2-1", "dia": 1, "ini": "2026-10-30T14:00", "fin": "2026-10-30T15:00", "sala": "2", "tipo": "ponencia", "orden": 1, "titulo": "Impacto de los riesgos psicosociales en el desempeño laboral y estrategias de intervención en seguridad y salud en el trabajo", "ponente": "Mayra Alejandra Uribe Caro", "inst": "UNIPAZ"}, {"id": "d2-1400-s2-2", "dia": 1, "ini": "2026-10-30T14:00", "fin": "2026-10-30T15:00", "sala": "2", "tipo": "ponencia", "orden": 2, "titulo": "Trabajo informal y salud mental en Colombia: una mirada desde los riesgos psicosociales laborales", "ponente": "Jean Carlos Botello Pérez", "inst": "UNIPAZ"}, {"id": "d2-1500-s1-1", "dia": 1, "ini": "2026-10-30T15:00", "fin": "2026-10-30T16:00", "sala": "1", "tipo": "ponencia", "orden": 1, "titulo": "Riesgo biológico en enfermeras durante la atención domiciliaria a pacientes postrados", "ponente": "Liz Maryuris Crespo Bustos", "inst": "UNIPAZ"}, {"id": "d2-1500-s1-2", "dia": 1, "ini": "2026-10-30T15:00", "fin": "2026-10-30T16:00", "sala": "1", "tipo": "ponencia", "orden": 2, "titulo": "El docente como último eslabón: una reflexión sobre el burnout estructural en territorios de conflicto", "ponente": "Diana Marcela Castro Vargas", "inst": "UNIPAZ"}, {"id": "d2-1500-s2-1", "dia": 1, "ini": "2026-10-30T15:00", "fin": "2026-10-30T16:00", "sala": "2", "tipo": "ponencia", "orden": 1, "titulo": "Programa de pausas activas mentales basado en mindfulness para reducir el estrés laboral en la empresa Pelgor SAS", "ponente": "Carolina Pulido Gómez", "inst": "Politécnico Grancolombiano"}, {"id": "d2-1500-s2-2", "dia": 1, "ini": "2026-10-30T15:00", "fin": "2026-10-30T16:00", "sala": "2", "tipo": "ponencia", "orden": 2, "titulo": "Trabajar a distancia, cuidar de cerca: diagnóstico del bienestar y las condiciones laborales en colaboradores de Trobapp de Colombia S.A.S.", "ponente": "Angie Yibeth Rubio Camacho", "inst": "Politécnico Grancolombiano"}, {"id": "d2-1600", "dia": 1, "ini": "2026-10-30T16:00", "fin": "2026-10-30T17:00", "sala": "ambas", "tipo": "conferencia", "orden": 0, "titulo": "Envejecimiento de la fuerza laboral: el reto emergente de la salud ocupacional", "ponente": "Eylin Rodríguez · Honduras", "inst": ""}, {"id": "d2-1900", "dia": 1, "ini": "2026-10-30T19:00", "fin": "2026-10-30T20:00", "sala": "ambas", "tipo": "conferencia", "orden": 0, "titulo": "Modelo dinámico de riesgos para la minería", "ponente": "Ing. Fernando M. Torres González, Mg. · Chile", "inst": ""}, {"id": "d2-2000", "dia": 1, "ini": "2026-10-30T20:00", "fin": "2026-10-30T21:00", "sala": "ambas", "tipo": "conferencia", "orden": 0, "titulo": "Seguridad en las operaciones marítimas y fluviales, y el papel del profesional y/o especialista en la seguridad y la salud en el trabajo en estos escenarios", "ponente": "José Fernando Rojas · Colombia", "inst": ""}, {"id": "d2-2100", "dia": 1, "ini": "2026-10-30T21:00", "fin": "2026-10-30T22:00", "sala": "ambas", "tipo": "cierre", "orden": 0, "titulo": "Ludoprevención – actividad de cierre del Congreso", "ponente": "Luigi Prado Zapata · Perú", "inst": ""}]</script>
+<script type="application/json" id="sesiones-data">[{"id": "d1-0800", "dia": 0, "ini": "2026-10-29T08:00", "fin": "2026-10-29T09:00", "sala": "ambas", "tipo": "conferencia", "orden": 0, "titulo": "Programa Piloto “ESCUELA SEGURA”: una mirada a lo aprendido en los sismos vividos en la región", "ponente": "Ing. Pablo Ochoa · Panamá", "inst": "", "linea": 10}, {"id": "d1-0900", "dia": 0, "ini": "2026-10-29T09:00", "fin": "2026-10-29T10:00", "sala": "ambas", "tipo": "conferencia", "orden": 0, "titulo": "Uso de la plataforma de eCollection (modalidad virtual)", "ponente": "Claudia Inés Carrero Beltrán · Colombia", "inst": "", "linea": 1}, {"id": "d1-1000-s1-1", "dia": 0, "ini": "2026-10-29T10:00", "fin": "2026-10-29T11:00", "sala": "1", "tipo": "ponencia", "orden": 1, "titulo": "Caracterización del sistema de transporte público colectivo urbano (STPCU) y los actores que intervienen en el Distrito Especial de Barrancabermeja", "ponente": "Andrea Quintero Miranda", "inst": "UNIPAZ", "linea": 9}, {"id": "d1-1000-s1-2", "dia": 0, "ini": "2026-10-29T10:00", "fin": "2026-10-29T11:00", "sala": "1", "tipo": "ponencia", "orden": 2, "titulo": "Diseño de un sistema automático para regular la intensidad lumínica en la sala de lectura de la biblioteca de UNIPAZ", "ponente": "Manuel Mauricio Mont López", "inst": "UNIPAZ", "linea": 7}, {"id": "d1-1000-s2-1", "dia": 0, "ini": "2026-10-29T10:00", "fin": "2026-10-29T11:00", "sala": "2", "tipo": "ponencia", "orden": 1, "titulo": "Diseño de arquitectura de software para la plataforma de prevención de riesgo laboral: sector calzado (Bucaramanga)", "ponente": "Walter Stiven Carrillo Duarte", "inst": "Universidad Cooperativa de Colombia", "linea": 1}, {"id": "d1-1000-s2-2", "dia": 0, "ini": "2026-10-29T10:00", "fin": "2026-10-29T11:00", "sala": "2", "tipo": "ponencia", "orden": 2, "titulo": "Modelo matemático y sistema inteligente para la predicción del riesgo cardiovascular basado en el estrés laboral", "ponente": "Fredy Angarita Reina", "inst": "Universidad Cooperativa de Colombia", "linea": 1}, {"id": "d1-1100", "dia": 0, "ini": "2026-10-29T11:00", "fin": "2026-10-29T12:00", "sala": "ambas", "tipo": "conferencia", "orden": 0, "titulo": "Cultura de emergencia en las empresas: algo de lo que nadie habla, pero que todos necesitan", "ponente": "Roney De Souza · Brasil", "inst": "", "linea": 10}, {"id": "d1-1300", "dia": 0, "ini": "2026-10-29T13:00", "fin": "2026-10-29T14:00", "sala": "ambas", "tipo": "conferencia", "orden": 0, "titulo": "Rigor Léxico y Etimológico en la Gestión de Riesgos", "ponente": "Carlos Nacache · Panamá", "inst": "", "linea": 5}, {"id": "d1-1400-s1-1", "dia": 0, "ini": "2026-10-29T14:00", "fin": "2026-10-29T15:00", "sala": "1", "tipo": "ponencia", "orden": 1, "titulo": "Medir para transformar: retos y corresponsabilidad frente al riesgo psicosocial y la salud mental en el trabajo en Colombia", "ponente": "Angélica Galán", "inst": "UNIPAZ", "linea": 6}, {"id": "d1-1400-s1-2", "dia": 0, "ini": "2026-10-29T14:00", "fin": "2026-10-29T15:00", "sala": "1", "tipo": "ponencia", "orden": 2, "titulo": "Evaluación de riesgos ocupacionales en actividades de aprovechamiento de residuos: una perspectiva desde la ingeniería ambiental", "ponente": "Marlon Estiven Ríos Ramírez", "inst": "UNIPAZ", "linea": 2}, {"id": "d1-1400-s2-1", "dia": 0, "ini": "2026-10-29T14:00", "fin": "2026-10-29T15:00", "sala": "2", "tipo": "ponencia", "orden": 1, "titulo": "Neutralizantes en refinación: peligro químico y potencial de sustitución", "ponente": "Karol Vanesa Medina Salcedo", "inst": "UNIPAZ", "linea": 2}, {"id": "d1-1400-s2-2", "dia": 0, "ini": "2026-10-29T14:00", "fin": "2026-10-29T15:00", "sala": "2", "tipo": "ponencia", "orden": 2, "titulo": "Identificación de enfermedades laborales y factores de riesgo en las plazas de mercado en Barrancabermeja", "ponente": "Julieth Katherine Martínez Guzmán", "inst": "UNIPAZ", "linea": 3}, {"id": "d1-1500-s1-1", "dia": 0, "ini": "2026-10-29T15:00", "fin": "2026-10-29T16:00", "sala": "1", "tipo": "ponencia", "orden": 1, "titulo": "Contexto histórico de los tipos de hidrantes utilizados en Colombia", "ponente": "Edgar Julián Cardona Delgado", "inst": "UNIPAZ", "linea": 10}, {"id": "d1-1500-s1-2", "dia": 0, "ini": "2026-10-29T15:00", "fin": "2026-10-29T16:00", "sala": "1", "tipo": "ponencia", "orden": 2, "titulo": "Diseño de un plan de gestión de riesgo químico a partir de los lineamientos del Sistema Globalmente Armonizado para la empresa Lubricentro Fundadores de la ciudad de Manizales", "ponente": "Gonzalo Eduardo Yepes Calderón", "inst": "Politécnico Grancolombiano", "linea": 2}, {"id": "d1-1500-s2-1", "dia": 0, "ini": "2026-10-29T15:00", "fin": "2026-10-29T16:00", "sala": "2", "tipo": "ponencia", "orden": 1, "titulo": "Análisis del impacto del SG-SST orientado a la prevención de afectaciones a la salud asociadas a la exposición ocupacional a fibra de vidrio en Fibrasing S.A.S.", "ponente": "Eliam Moralez Barrera", "inst": "Politécnico Grancolombiano", "linea": 5}, {"id": "d1-1500-s2-2", "dia": 0, "ini": "2026-10-29T15:00", "fin": "2026-10-29T16:00", "sala": "2", "tipo": "ponencia", "orden": 2, "titulo": "Análisis de la exposición a riesgos biomecánicos y su relación con los trastornos musculoesqueléticos: un enfoque cualitativo basado en revisión documental", "ponente": "Brayan Stip Lobo Rincón", "inst": "UNIPAZ", "linea": 3}, {"id": "d1-1600", "dia": 0, "ini": "2026-10-29T16:00", "fin": "2026-10-29T17:00", "sala": "ambas", "tipo": "conferencia", "orden": 0, "titulo": "Detección de atmósferas peligrosas en espacios confinados", "ponente": "Moisés López Quintana · Colombia", "inst": "", "linea": 8}, {"id": "d1-1900", "dia": 0, "ini": "2026-10-29T19:00", "fin": "2026-10-29T20:00", "sala": "ambas", "tipo": "conferencia", "orden": 0, "titulo": "Cuando el error no es una opción: Seguridad de Procesos y la nueva era de prevención de accidentes mayores en Colombia", "ponente": "Leonardo Gutiérrez Lobo · Colombia", "inst": "", "linea": 2}, {"id": "d1-2000", "dia": 0, "ini": "2026-10-29T20:00", "fin": "2026-10-29T21:00", "sala": "ambas", "tipo": "conferencia", "orden": 0, "titulo": "ERGOKIDS: prevención temprana de trastornos musculoesqueléticos desde la edad escolar hacia una vida laboral saludable", "ponente": "Belinda Alberty · Honduras", "inst": "", "linea": 3}, {"id": "d1-2100", "dia": 0, "ini": "2026-10-29T21:00", "fin": "2026-10-29T22:00", "sala": "ambas", "tipo": "cierre", "orden": 0, "titulo": "Actividad de cierre del día 1", "ponente": "Elenisa Aldana Mora · Colombia", "inst": "", "linea": 0}, {"id": "d2-0800", "dia": 1, "ini": "2026-10-30T08:00", "fin": "2026-10-30T09:00", "sala": "ambas", "tipo": "conferencia", "orden": 0, "titulo": "Procedimientos de Gestión Integral e Investigación Avanzada de Incidentes HSEC", "ponente": "Ing. Fernando M. Torres González, Mg. · Chile", "inst": "", "linea": 5}, {"id": "d2-0900", "dia": 1, "ini": "2026-10-30T09:00", "fin": "2026-10-30T10:00", "sala": "ambas", "tipo": "posteres", "orden": 0, "titulo": "Jornada de pósteres", "ponente": "", "inst": "", "linea": 0}, {"id": "d2-1000-s1-1", "dia": 1, "ini": "2026-10-30T10:00", "fin": "2026-10-30T11:00", "sala": "1", "tipo": "ponencia", "orden": 1, "titulo": "El riesgo laboral en el campo colombiano: entre la invisibilidad de las condiciones de trabajo y las realidades del territorio", "ponente": "Yohanna Milena Rueda Mahecha", "inst": "UNIMINUTO – Centro Regional Bucaramanga", "linea": 9}, {"id": "d2-1000-s1-2", "dia": 1, "ini": "2026-10-30T10:00", "fin": "2026-10-30T11:00", "sala": "1", "tipo": "ponencia", "orden": 2, "titulo": "DRON MINE RESCUE", "ponente": "Nicolas Enrique Gutiérrez Pérez", "inst": "Unipaz", "linea": 8}, {"id": "d2-1000-s2-1", "dia": 1, "ini": "2026-10-30T10:00", "fin": "2026-10-30T11:00", "sala": "2", "tipo": "ponencia", "orden": 1, "titulo": "Autocuidado integral y consciente: 7 pasos para prevenir el riesgo público en entornos laborales", "ponente": "Paola Andrea Ramírez Ávila", "inst": "Prohumana Soluciones", "linea": 3}, {"id": "d2-1000-s2-2", "dia": 1, "ini": "2026-10-30T10:00", "fin": "2026-10-30T11:00", "sala": "2", "tipo": "ponencia", "orden": 2, "titulo": "Riesgos biológicos, químicos y físicos asociados al manejo de residuos sólidos, aguas residuales y residuos electrónicos: una revisión bibliográfica", "ponente": "Angie karolay Rozo fuentes", "inst": "UNIPAZ", "linea": 2}, {"id": "d2-1100", "dia": 1, "ini": "2026-10-30T11:00", "fin": "2026-10-30T12:00", "sala": "ambas", "tipo": "conferencia", "orden": 0, "titulo": "Título por confirmar", "ponente": "Regis Hernández · Colombia", "inst": "", "linea": 0}, {"id": "d2-1300", "dia": 1, "ini": "2026-10-30T13:00", "fin": "2026-10-30T14:00", "sala": "ambas", "tipo": "conferencia", "orden": 0, "titulo": "La toxicología en la Salud Laboral, su pasado y sus desafíos futuros", "ponente": "Dr. Reynaldo Andrés Concha Maureira · Chile", "inst": "", "linea": 2}, {"id": "d2-1400-s1-1", "dia": 1, "ini": "2026-10-30T14:00", "fin": "2026-10-30T15:00", "sala": "1", "tipo": "ponencia", "orden": 1, "titulo": "Eficacia del comité de convivencia frente a la persecución laboral: un estudio de caso en la Oficina Especial de Barrancabermeja", "ponente": "Nicole Dayana Hernández Luna", "inst": "UNIPAZ", "linea": 6}, {"id": "d2-1400-s1-2", "dia": 1, "ini": "2026-10-30T14:00", "fin": "2026-10-30T15:00", "sala": "1", "tipo": "ponencia", "orden": 2, "titulo": "Análisis de la correspondencia entre las prácticas de liderazgo descritas en la literatura y los factores de riesgo y protección psicosocial intralaboral en el personal administrativo de la Corporación Parque Explora en Medellín", "ponente": "Daniela Salazar Londoño", "inst": "Politécnico Grancolombiano", "linea": 6}, {"id": "d2-1400-s2-1", "dia": 1, "ini": "2026-10-30T14:00", "fin": "2026-10-30T15:00", "sala": "2", "tipo": "ponencia", "orden": 1, "titulo": "Impacto de los riesgos psicosociales en el desempeño laboral y estrategias de intervención en seguridad y salud en el trabajo", "ponente": "Mayra Alejandra Uribe Caro", "inst": "UNIPAZ", "linea": 6}, {"id": "d2-1400-s2-2", "dia": 1, "ini": "2026-10-30T14:00", "fin": "2026-10-30T15:00", "sala": "2", "tipo": "ponencia", "orden": 2, "titulo": "Trabajo informal y salud mental en Colombia: una mirada desde los riesgos psicosociales laborales", "ponente": "Jean Carlos Botello Pérez", "inst": "UNIPAZ", "linea": 6}, {"id": "d2-1500-s1-1", "dia": 1, "ini": "2026-10-30T15:00", "fin": "2026-10-30T16:00", "sala": "1", "tipo": "ponencia", "orden": 1, "titulo": "Riesgo biológico en enfermeras durante la atención domiciliaria a pacientes postrados", "ponente": "Liz Maryuris Crespo Bustos", "inst": "UNIPAZ", "linea": 2}, {"id": "d2-1500-s1-2", "dia": 1, "ini": "2026-10-30T15:00", "fin": "2026-10-30T16:00", "sala": "1", "tipo": "ponencia", "orden": 2, "titulo": "El docente como último eslabón: una reflexión sobre el burnout estructural en territorios de conflicto", "ponente": "Diana Marcela Castro Vargas", "inst": "UNIPAZ", "linea": 6}, {"id": "d2-1500-s2-1", "dia": 1, "ini": "2026-10-30T15:00", "fin": "2026-10-30T16:00", "sala": "2", "tipo": "ponencia", "orden": 1, "titulo": "Programa de pausas activas mentales basado en mindfulness para reducir el estrés laboral en la empresa Pelgor SAS", "ponente": "Carolina Pulido Gómez", "inst": "Politécnico Grancolombiano", "linea": 3}, {"id": "d2-1500-s2-2", "dia": 1, "ini": "2026-10-30T15:00", "fin": "2026-10-30T16:00", "sala": "2", "tipo": "ponencia", "orden": 2, "titulo": "Trabajar a distancia, cuidar de cerca: diagnóstico del bienestar y las condiciones laborales en colaboradores de Trobapp de Colombia S.A.S.", "ponente": "Angie Yibeth Rubio Camacho", "inst": "Politécnico Grancolombiano", "linea": 9}, {"id": "d2-1600", "dia": 1, "ini": "2026-10-30T16:00", "fin": "2026-10-30T17:00", "sala": "ambas", "tipo": "conferencia", "orden": 0, "titulo": "Envejecimiento de la fuerza laboral: el reto emergente de la salud ocupacional", "ponente": "Eylin Rodríguez · Honduras", "inst": "", "linea": 9}, {"id": "d2-1900", "dia": 1, "ini": "2026-10-30T19:00", "fin": "2026-10-30T20:00", "sala": "ambas", "tipo": "conferencia", "orden": 0, "titulo": "Modelo dinámico de riesgos para la minería", "ponente": "Ing. Fernando M. Torres González, Mg. · Chile", "inst": "", "linea": 8}, {"id": "d2-2000", "dia": 1, "ini": "2026-10-30T20:00", "fin": "2026-10-30T21:00", "sala": "ambas", "tipo": "conferencia", "orden": 0, "titulo": "Seguridad en las operaciones marítimas y fluviales, y el papel del profesional y/o especialista en la seguridad y la salud en el trabajo en estos escenarios", "ponente": "José Fernando Rojas · Colombia", "inst": "", "linea": 8}, {"id": "d2-2100", "dia": 1, "ini": "2026-10-30T21:00", "fin": "2026-10-30T22:00", "sala": "ambas", "tipo": "cierre", "orden": 0, "titulo": "Ludoprevención – actividad de cierre del Congreso", "ponente": "Luigi Prado Zapata · Perú", "inst": "", "linea": 0}]</script>
 </div>
 </body>
 </html>

@@ -41,6 +41,14 @@ Para probarlo en local: `npx serve .` (o cualquier servidor estático) y abre `h
 
 `organizadores.html` (dirección `/organizadores`): Comité Organizador (descripción, funciones e integrantes) y Comité Científico (internacional y nacional). Quien aún no tiene foto muestra sus iniciales. Para poner una foto: guárdala cuadrada en `assets/img/organizadores/` (`.webp`, 400–600 px) y reemplaza el bloque de iniciales (`class="ini"`) de esa persona por un `<img … width="400" height="400" loading="lazy" class="portrait">`, como el de Reynaldo Concha o Carlos Nacache.
 
+## Funciones del sitio
+
+- **Mi agenda** (`assets/js/main.js`, bloque «v3»): cada actividad tiene «Agregar a mi agenda»; la selección se guarda solo en el navegador (sin registro), se exporta a Google Calendar o .ics y muestra el avance hacia el 25 % de ponencias del certificado.
+- **Modo en vivo**: franja «En vivo ahora / A continuación» durante el 29 y 30 de octubre y cuenta regresiva en Inicio. Para probar otro momento: añadir `?ahora=2026-10-29T10:10` a la dirección.
+- **Enlaces de las salas**: `assets/js/main.js` → variable `SALAS` (`'1'` y `'2'`). Vacíos, el sitio indica que se publicarán antes del inicio.
+- **Líneas temáticas**: cada actividad lleva su línea (clasificación propuesta, por validar); la agenda se filtra con `/agenda?linea=6`.
+- **Páginas de conferencista**: `/conferencistas/<nombre>`, con piezas para redes en `assets/img/compartir/` (`-post.jpg` 1080×1350 y `-og.jpg` 1200×630 para la vista previa del enlace).
+
 ## Diseño
 
 Lenguaje editorial: títulos en **Source Serif 4** y textos de interfaz en **Inter** (Google Fonts); azul marino `#102A43`, turquesa `#087E8B` y ámbar `#D99A27` como acento, definidos como variables al inicio de `assets/css/styles.css`. Filetes finos en lugar de tarjetas con sombra, radios pequeños (4–8 px) y secciones numeradas que alternan fondo blanco y gris azulado.
