@@ -51,7 +51,7 @@ Para probarlo en local: `npx serve .` (o cualquier servidor estático) y abre `h
 
 ## Analítica (Google Analytics 4)
 
-El código está en `assets/js/main.js` (módulo final). Se activa al escribir el ID de medición en `var GA_ID = 'G-…'` y solo mide en cnisstunipaz.com (para pruebas en otro dominio, agrega `?ga=1`). Eventos propios:
+El código está en `assets/js/main.js` (módulo final). Se activa al definir el ID de medición en `var GA_ID` (actual: G-9HKC180MB8) y solo mide en cnisstunipaz.com (para pruebas en otro dominio, agrega `?ga=1`). Eventos propios:
 
 | Evento | Cuándo | Parámetros |
 |---|---|---|

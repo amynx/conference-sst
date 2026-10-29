@@ -517,7 +517,7 @@
    ingreso_sesion · inscripcion_abrir · inscripcion_modalidad · inscripcion_continuar · agenda_agregar · agenda_quitar
    calendario_exportar · share · filtro_agenda · red_social */
 (function () {
-  var GA_ID = ''; // ID de medición de GA4 (G-XXXXXXXXXX)
+  var GA_ID = 'G-9HKC180MB8'; // ID de medición de GA4 (propiedad «Congreso SST UNIPAZ 2026»)
   var host = location.hostname.replace(/^www\./, '');
   var debug = /[?&]ga=1\b/.test(location.search);
   if (!GA_ID || (host !== 'cnisstunipaz.com' && !debug)) { window.cnisstTrack = function () {}; return; }
