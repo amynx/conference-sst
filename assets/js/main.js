@@ -243,7 +243,7 @@
   var details = function (s) {
     var t = kindTxt(s) + (s.ponente ? ' · ' + s.ponente + (s.inst ? ' (' + s.inst + ')' : '') : '') + '\n' + salaTxt(s) + ' · I Congreso Nacional e Internacional en SST · UNIPAZ';
     if (s.tipo === 'ponencia') t += '\nPonencia oral de 20 min + 5 min de preguntas' + (s.exacta ? '.' : ' (' + (s.orden === 1 ? 'primera' : 'segunda') + ' ponencia de la sala en esta franja).');
-    if (s.link) t += '\nUnirse por Google Meet: ' + s.link;
+    if (s.link) t += '\nIngreso (asistencia y conexión): ' + s.link;
     return t + '\nhttps://cnisstunipaz.com/agenda';
   };
   var ics = function (list) {
@@ -330,7 +330,7 @@
       html += '<article class="mia-item"><p class="mia-when">' + range(s) + ' · ' + salaTxt(s) + ' · ' + kindTxt(s) + '</p>' +
         '<p class="mia-t">' + esc(s.titulo) + '</p>' + (s.ponente ? '<p class="mia-a">' + esc(s.ponente) + (s.inst ? ' · ' + esc(s.inst) : '') + '</p>' : '') +
         (clash.length ? '<p class="mia-clash">Cruce: a la misma hora marcaste una ponencia en la ' + salaTxt(clash[0]) + '.</p>' : '') +
-        '<p class="mia-links">' + (s.link ? '<a href="' + esc(s.link) + '" target="_blank" rel="noopener">Unirse por Meet</a>' : '') + '<a href="' + gcal(s) + '" target="_blank" rel="noopener">Google Calendar</a><button type="button" data-mia-one="' + s.id + '">.ics</button><button type="button" data-mia-rm="' + s.id + '">Quitar</button></p></article>';
+        '<p class="mia-links">' + (s.link ? '<a href="' + esc(s.link) + '" target="_blank" rel="noopener">Ingresar a la sesión</a>' : '') + '<a href="' + gcal(s) + '" target="_blank" rel="noopener">Google Calendar</a><button type="button" data-mia-one="' + s.id + '">.ics</button><button type="button" data-mia-rm="' + s.id + '">Quitar</button></p></article>';
     });
     box.innerHTML = html;
   }
@@ -376,7 +376,7 @@
     return fut.length ? fut.filter(function (s) { return s.ini === fut[0].ini; }) : [];
   };
   var join = function (x, label) {
-    return x.link ? ' <a class="live-join" href="' + esc(x.link) + '" target="_blank" rel="noopener">' + (label || 'Unirse') + '<span class="sr-only">: ' + esc(x.titulo) + '</span></a>' : '';
+    return x.link ? ' <a class="live-join" href="' + esc(x.link) + '" target="_blank" rel="noopener">' + (label || 'Ingresar') + '<span class="sr-only">: ' + esc(x.titulo) + '</span></a>' : '';
   };
   var describe = function (list) {
     if (!list.length) return '';
@@ -388,7 +388,7 @@
   };
   var joinBtns = function (list) {
     var x = list.length && list[0].sala === 'ambas' ? list[0] : null;
-    return x && x.link ? '<a class="btn btn-primary" href="' + esc(x.link) + '" target="_blank" rel="noopener">Unirse por Google Meet</a>' : '';
+    return x && x.link ? '<a class="btn btn-primary" href="' + esc(x.link) + '" target="_blank" rel="noopener">Ingresar a la sesión</a>' : '';
   };
   var isBreak = function (t) {
     var d = new Date(t.getTime() - 5 * 36e5), h = d.getUTCHours();
