@@ -49,6 +49,20 @@ Para probarlo en local: `npx serve .` (o cualquier servidor estático) y abre `h
 - **Líneas temáticas**: cada actividad lleva su línea (clasificación propuesta, por validar); la agenda se filtra con `/agenda?linea=6`.
 - **Páginas de conferencista**: `/conferencistas/<nombre>`, con piezas para redes en `assets/img/compartir/` (`-post.jpg` 1080×1350 y `-og.jpg` 1200×630 para la vista previa del enlace).
 
+## Analítica (Google Analytics 4)
+
+El código está en `assets/js/main.js` (módulo final). Se activa al escribir el ID de medición en `var GA_ID = 'G-…'` y solo mide en cnisstunipaz.com (para pruebas en otro dominio, agrega `?ga=1`). Eventos propios:
+
+| Evento | Cuándo | Parámetros |
+|---|---|---|
+| `ingreso_sesion` | Clic en «Ingresar a la sesión» (agenda, en vivo, Mi agenda, conferencista) | sesion_id, sesion_titulo, sesion_tipo, sala, dia, linea, origen |
+| `inscripcion_abrir` / `inscripcion_modalidad` / `inscripcion_continuar` | Embudo de inscripción | origen, modalidad |
+| `agenda_agregar` / `agenda_quitar` | Mi agenda | sesion_* |
+| `calendario_exportar` | .ics o Google Calendar | formato, alcance |
+| `share` | Compartir o descargar la pieza de un conferencista | method, item_id |
+| `filtro_agenda` | Filtros de sala, Mi agenda o línea | filtro, linea |
+| `red_social` | Enlaces a redes de UNIPAZ en el pie | red |
+
 ## Diseño
 
 Lenguaje editorial: títulos en **Source Serif 4** y textos de interfaz en **Inter** (Google Fonts); azul marino `#102A43`, turquesa `#087E8B` y ámbar `#D99A27` como acento, definidos como variables al inicio de `assets/css/styles.css`. Filetes finos en lugar de tarjetas con sombra, radios pequeños (4–8 px) y secciones numeradas que alternan fondo blanco y gris azulado.

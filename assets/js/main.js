@@ -510,3 +510,84 @@
     setTimeout(function () { URL.revokeObjectURL(a.href); a.remove(); }, 500);
   });
 })();
+
+/* ===== Google Analytics 4 — medición del Congreso =====
+   Sin cookies propias ni inicio de sesión. Solo se activa en cnisstunipaz.com (o con ?ga=1 para pruebas).
+   Eventos propios (nombres en español, parámetros registrables como dimensiones personalizadas):
+   ingreso_sesion · inscripcion_abrir · inscripcion_modalidad · inscripcion_continuar · agenda_agregar · agenda_quitar
+   calendario_exportar · share · filtro_agenda · red_social */
+(function () {
+  var GA_ID = ''; // ID de medición de GA4 (G-XXXXXXXXXX)
+  var host = location.hostname.replace(/^www\./, '');
+  var debug = /[?&]ga=1\b/.test(location.search);
+  if (!GA_ID || (host !== 'cnisstunipaz.com' && !debug)) { window.cnisstTrack = function () {}; return; }
+
+  var s = document.createElement('script');
+  s.async = true; s.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA_ID;
+  document.head.appendChild(s);
+  window.dataLayer = window.dataLayer || [];
+  window.gtag = function () { window.dataLayer.push(arguments); };
+  gtag('js', new Date());
+  gtag('config', GA_ID, { tipo_pagina: document.body.getAttribute('data-page') || '', debug_mode: debug || undefined });
+
+  var page = document.body.getAttribute('data-page') || '';
+  var track = window.cnisstTrack = function (name, params) {
+    params = params || {}; params.pagina = page;
+    gtag('event', name, params);
+  };
+
+  // Sesiones por enlace: el enlace de cada actividad es único, así se sabe a qué sesión entra la persona
+  var byLink = {}, byId = {};
+  try {
+    var el = document.getElementById('sesiones-data');
+    (el ? JSON.parse(el.textContent) : []).forEach(function (x) { if (x.link) byLink[x.link] = x; byId[x.id] = x; });
+  } catch (e) {}
+  var sesParams = function (x) {
+    return x ? { sesion_id: x.id, sesion_titulo: (x.titulo || '').slice(0, 100), sesion_tipo: x.tipo, sala: x.sala,
+      dia: x.dia === 0 ? 'jueves_29' : 'viernes_30', linea: x.linea ? String(x.linea) : '' } : {};
+  };
+  var origen = function (t) {
+    if (t.closest('.live')) return 'en_vivo';
+    if (t.closest('.mia')) return 'mi_agenda';
+    if (t.closest('[data-countdown-section]')) return 'cuenta_regresiva';
+    return page;
+  };
+  var modalidad = function () {
+    var r = document.querySelector('input[name="modalidad"]:checked');
+    return r ? r.value : '';
+  };
+  var RED = [[/linkedin\.com\/sharing/, 'linkedin'], [/twitter\.com\/intent|x\.com\/intent/, 'x'], [/facebook\.com\/sharer/, 'facebook'], [/wa\.me\//, 'whatsapp']];
+  var slug = (location.pathname.match(/\/conferencistas\/([\w-]+)/) || [])[1] || '';
+
+  // Fase de captura: se registra antes de que otros manejadores cambien el estado
+  document.addEventListener('click', function (e) {
+    var t = e.target.closest('a, button'); if (!t) return;
+    var href = t.getAttribute('href') || '';
+    if (byLink[href]) return track('ingreso_sesion', Object.assign(sesParams(byLink[href]), { origen: origen(t) }));
+    if (t.closest('[data-if="hasSel"]') && t.tagName === 'A' && href && href !== '#') return track('inscripcion_continuar', { modalidad: modalidad() });
+    if (/meet\.google\.com\/|script\.google\.com\/.*\/exec\?qr=/.test(href)) return track('ingreso_sesion', { origen: origen(t) });
+    if (t.matches('[data-action="openReg"]')) return track('inscripcion_abrir', { origen: origen(t) });
+    if (t.hasAttribute('data-fav')) {
+      var on = t.getAttribute('aria-pressed') === 'true';
+      return track(on ? 'agenda_quitar' : 'agenda_agregar', sesParams(byId[t.getAttribute('data-fav')]));
+    }
+    if (t.hasAttribute('data-mia-rm')) return track('agenda_quitar', Object.assign(sesParams(byId[t.getAttribute('data-mia-rm')]), { origen: 'mi_agenda' }));
+    if (t.hasAttribute('data-mia-ics')) return track('calendario_exportar', { formato: 'ics', alcance: 'mi_agenda' });
+    if (t.hasAttribute('data-mia-one')) return track('calendario_exportar', Object.assign(sesParams(byId[t.getAttribute('data-mia-one')]), { formato: 'ics', alcance: 'una' }));
+    if (t.hasAttribute('data-ics')) return track('calendario_exportar', Object.assign(sesParams(byId[t.getAttribute('data-ics')]), { formato: 'ics', alcance: 'una' }));
+    if (t.hasAttribute('data-ics-event')) return track('calendario_exportar', { formato: 'ics', alcance: 'congreso', origen: origen(t) });
+    if (/calendar\.google\.com/.test(href)) return track('calendario_exportar', Object.assign(sesParams(byId[t.getAttribute('data-gcal')]), { formato: 'google', alcance: t.hasAttribute('data-gcal') ? 'una' : 'mi_agenda' }));
+    for (var i = 0; i < RED.length; i++) if (RED[i][0].test(href)) return track('share', { method: RED[i][1], content_type: 'conferencista', item_id: slug });
+    if (t.hasAttribute('data-copy')) return track('share', { method: 'copiar_enlace', content_type: 'conferencista', item_id: slug });
+    if (t.hasAttribute('download') && /compartir\//.test(href)) return track('share', { method: 'descargar_imagen', content_type: 'conferencista', item_id: slug });
+    if (t.hasAttribute('data-filter')) return track('filtro_agenda', { filtro: { mia: 'mi_agenda', todo: 'todas' }[t.getAttribute('data-filter')] || 'sala_' + t.getAttribute('data-filter') });
+    var m = href.match(/(instagram|youtube|facebook|x)\.com\/(?!sharer|intent)/);
+    if (m && t.closest('footer')) return track('red_social', { red: m[1] });
+  }, true);
+
+  document.addEventListener('change', function (e) {
+    var t = e.target;
+    if (t.matches('[data-linea-filter]')) track('filtro_agenda', { filtro: 'linea', linea: t.value || 'todas' });
+    if (t.matches('input[name="modalidad"]')) track('inscripcion_modalidad', { modalidad: t.value });
+  }, true);
+})();
