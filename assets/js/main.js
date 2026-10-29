@@ -170,7 +170,7 @@
 (function () {
   'use strict';
 
-  /* ===== CONFIGURACIÓN =====
+  /* ===== CONFIGURACIÓN (SALAS ya no se usa: cada actividad trae su enlace de Meet en sesiones-data) =====
      Enlaces de conexión de cada sala virtual. Mientras estén vacíos, el sitio muestra
      «El enlace se publicará antes del inicio» en lugar del botón «Entrar». */
   var SALAS = {
@@ -242,9 +242,8 @@
   var fold = function (line) { var out = []; while (line.length > 74) { out.push(line.slice(0, 74)); line = ' ' + line.slice(74); } out.push(line); return out.join('\r\n'); };
   var details = function (s) {
     var t = kindTxt(s) + (s.ponente ? ' · ' + s.ponente + (s.inst ? ' (' + s.inst + ')' : '') : '') + '\n' + salaTxt(s) + ' · I Congreso Nacional e Internacional en SST · UNIPAZ';
-    if (s.tipo === 'ponencia') t += '\nPonencia de 20 min + 5 min de preguntas dentro de esta franja (' + (s.orden === 1 ? 'primera' : 'segunda') + ' de la sala).';
-    var link = s.sala === 'ambas' ? (SALAS['1'] || SALAS['2']) : SALAS[s.sala];
-    if (link) t += '\nEnlace: ' + link;
+    if (s.tipo === 'ponencia') t += '\nPonencia oral de 20 min + 5 min de preguntas' + (s.exacta ? '.' : ' (' + (s.orden === 1 ? 'primera' : 'segunda') + ' ponencia de la sala en esta franja).');
+    if (s.link) t += '\nUnirse por Google Meet: ' + s.link;
     return t + '\nhttps://cnisstunipaz.com/agenda';
   };
   var ics = function (list) {
@@ -253,8 +252,9 @@
     list.forEach(function (s) {
       L.push('BEGIN:VEVENT', 'UID:' + s.id + '@cnisstunipaz.com', 'DTSTAMP:' + stamp, 'DTSTART:' + utc(s.ini), 'DTEND:' + utc(s.fin),
         fold('SUMMARY:' + icsText(s.titulo)), fold('DESCRIPTION:' + icsText(details(s))),
-        fold('LOCATION:' + icsText(salaTxt(s) + ' (virtual)')), 'END:VEVENT');
+        fold('LOCATION:' + icsText(s.link || salaTxt(s) + ' (virtual)')), s.link ? fold('URL:' + s.link) : '', 'END:VEVENT');
     });
+    L = L.filter(function (x) { return x !== ''; });
     L.push('END:VCALENDAR');
     return L.join('\r\n') + '\r\n';
   };
@@ -267,7 +267,7 @@
   };
   var gcal = function (s) {
     return 'https://calendar.google.com/calendar/render?action=TEMPLATE&text=' + encodeURIComponent(s.titulo) +
-      '&dates=' + utc(s.ini) + '/' + utc(s.fin) + '&details=' + encodeURIComponent(details(s)) + '&location=' + encodeURIComponent(salaTxt(s) + ' (virtual)');
+      '&dates=' + utc(s.ini) + '/' + utc(s.fin) + '&details=' + encodeURIComponent(details(s)) + '&location=' + encodeURIComponent(s.link || salaTxt(s) + ' (virtual)');
   };
 
   /* ---------- Botones «Agregar a mi agenda» ---------- */
@@ -330,7 +330,7 @@
       html += '<article class="mia-item"><p class="mia-when">' + range(s) + ' · ' + salaTxt(s) + ' · ' + kindTxt(s) + '</p>' +
         '<p class="mia-t">' + esc(s.titulo) + '</p>' + (s.ponente ? '<p class="mia-a">' + esc(s.ponente) + (s.inst ? ' · ' + esc(s.inst) : '') + '</p>' : '') +
         (clash.length ? '<p class="mia-clash">Cruce: a la misma hora marcaste una ponencia en la ' + salaTxt(clash[0]) + '.</p>' : '') +
-        '<p class="mia-links"><a href="' + gcal(s) + '" target="_blank" rel="noopener">Google Calendar</a><button type="button" data-mia-one="' + s.id + '">.ics</button><button type="button" data-mia-rm="' + s.id + '">Quitar</button></p></article>';
+        '<p class="mia-links">' + (s.link ? '<a href="' + esc(s.link) + '" target="_blank" rel="noopener">Unirse por Meet</a>' : '') + '<a href="' + gcal(s) + '" target="_blank" rel="noopener">Google Calendar</a><button type="button" data-mia-one="' + s.id + '">.ics</button><button type="button" data-mia-rm="' + s.id + '">Quitar</button></p></article>';
     });
     box.innerHTML = html;
   }
@@ -375,24 +375,20 @@
     var fut = SES.filter(function (s) { return toDate(s.ini) > t; }).sort(function (a, b) { return a.ini < b.ini ? -1 : 1; });
     return fut.length ? fut.filter(function (s) { return s.ini === fut[0].ini; }) : [];
   };
+  var join = function (x, label) {
+    return x.link ? ' <a class="live-join" href="' + esc(x.link) + '" target="_blank" rel="noopener">' + (label || 'Unirse') + '<span class="sr-only">: ' + esc(x.titulo) + '</span></a>' : '';
+  };
   var describe = function (list) {
     if (!list.length) return '';
-    if (list[0].sala !== 'ambas') return '<p class="live-t">Ponencias orales en paralelo</p>' + ['1', '2'].map(function (n) {
-      var xs = list.filter(function (s) { return s.sala === n; });
-      return xs.length ? '<p class="live-a"><strong>Sala ' + n + ':</strong> ' + xs.map(function (s) { return esc(s.ponente); }).join(' y ') + '</p>' : '';
-    }).join('');
     if (list[0].sala === 'ambas') return '<p class="live-t">' + esc(list[0].titulo) + '</p><p class="live-a">' + esc(list[0].ponente) + ' · Ambas salas</p>';
-    return ['1', '2'].map(function (n) {
+    return '<p class="live-t">Ponencias orales en paralelo</p>' + ['1', '2'].map(function (n) {
       var xs = list.filter(function (s) { return s.sala === n; });
-      return xs.length ? '<p class="live-a"><strong>Sala ' + n + ':</strong> ' + xs.map(function (s) { return esc(s.ponente); }).join(' y ') + '</p>' : '';
+      return xs.length ? '<p class="live-a"><strong>Sala ' + n + ':</strong> ' + xs.map(function (s) { return esc(s.ponente) + join(s); }).join(' · ') + '</p>' : '';
     }).join('');
   };
-  var joinBtns = function () {
-    if (!SALAS['1'] && !SALAS['2']) return '<span class="live-pend">Los enlaces de las salas se publicarán antes del inicio</span>';
-    return ['1', '2'].map(function (n) {
-      return SALAS[n] ? '<a class="btn btn-primary" href="' + esc(SALAS[n]) + '" target="_blank" rel="noopener">Entrar a la Sala ' + n + '</a>'
-        : '<span class="live-pend">Sala ' + n + ': el enlace se publicará antes del inicio</span>';
-    }).join('');
+  var joinBtns = function (list) {
+    var x = list.length && list[0].sala === 'ambas' ? list[0] : null;
+    return x && x.link ? '<a class="btn btn-primary" href="' + esc(x.link) + '" target="_blank" rel="noopener">Unirse por Google Meet</a>' : '';
   };
   var isBreak = function (t) {
     var d = new Date(t.getTime() - 5 * 36e5), h = d.getUTCHours();
@@ -420,7 +416,7 @@
       var body = cur.length ? '<p class="live-k"><span class="live-dot" aria-hidden="true"></span>En vivo ahora · ' + range(cur[0]) + '</p>' + describe(cur)
         : '<p class="live-k">' + (isBreak(t) ? 'Descanso' : 'En pausa') + '</p><p class="live-a">El Congreso continúa en breve.</p>';
       if (nxt.length) body += '<p class="live-next"><strong>A continuación · ' + range(nxt[0]) + '</strong> ' + (nxt[0].sala === 'ambas' ? esc(nxt[0].titulo) : 'Ponencias orales en ambas salas') + '</p>';
-      banner.innerHTML = '<div class="wrap live-in"><div class="live-body">' + body + '</div><div class="live-cta">' + joinBtns() + '<a class="btn btn-quiet" href="/agenda">Ver agenda</a></div></div>';
+      banner.innerHTML = '<div class="wrap live-in"><div class="live-body">' + body + '</div><div class="live-cta">' + joinBtns(cur) + '<a class="btn btn-quiet" href="/agenda">Ver agenda</a></div></div>';
       banner.hidden = false;
     } else if (t >= END) {
       banner.innerHTML = '<div class="wrap live-in"><div class="live-body"><p class="live-k">El Congreso ha concluido</p><p class="live-a">Gracias por acompañarnos el 29 y 30 de octubre de 2026.</p></div></div>';
