@@ -460,6 +460,8 @@ section[id],footer[id]{scroll-margin-top:84px}
 .ag-sala .pon .ag-foot-wrap{margin-top:14px;flex:1;display:flex;flex-direction:column;justify-content:flex-end}
 .pon-tag{display:none}
 .ag-sala .pon .ag-kind{text-transform:none;letter-spacing:.01em;font-size:13px}
+.ag-sala .pon.pon-poster{background:#FBF5E8;border-radius:0 0 6px 6px}
+.ag-sala .pon.pon-poster .ag-kind{color:#8A5A0B}
 .ag-m-time .now-badge{color:#FFFFFF}
 .ag-time .now-badge{display:table;margin:8px 0 0}
 .ag-m{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:12px}

@@ -380,14 +380,17 @@
   };
   var describe = function (list) {
     if (!list.length) return '';
-    if (list[0].sala === 'ambas') return '<p class="live-t">' + esc(list[0].titulo) + '</p><p class="live-a">' + esc(list[0].ponente) + ' · Ambas salas</p>';
-    return '<p class="live-t">Ponencias orales en paralelo</p>' + ['1', '2'].map(function (n) {
-      var xs = list.filter(function (s) { return s.sala === n; });
-      return xs.length ? '<p class="live-a"><strong>Sala ' + n + ':</strong> ' + xs.map(function (s) { return esc(s.ponente) + join(s); }).join(' · ') + '</p>' : '';
+    var amb = list.filter(function (s) { return s.sala === 'ambas'; }), par = list.filter(function (s) { return s.sala !== 'ambas'; });
+    if (!par.length) return '<p class="live-t">' + esc(amb[0].titulo) + '</p><p class="live-a">' + (amb[0].ponente ? esc(amb[0].ponente) + ' · ' : '') + 'Ambas salas</p>';
+    // una actividad compartida que se extiende en una sala mientras la otra tiene ponencias (p. ej. pósteres hasta las 10:30)
+    return '<p class="live-t">' + (amb.length ? 'Actividades en paralelo' : 'Ponencias orales en paralelo') + '</p>' + ['1', '2'].map(function (n) {
+      var xs = par.filter(function (s) { return s.sala === n; });
+      if (xs.length) return '<p class="live-a"><strong>Sala ' + n + ':</strong> ' + xs.map(function (s) { return esc(s.ponente) + join(s); }).join(' · ') + '</p>';
+      return amb.length ? '<p class="live-a"><strong>Sala ' + n + ':</strong> ' + esc(amb[0].titulo) + join(amb[0]) + '</p>' : '';
     }).join('');
   };
   var joinBtns = function (list) {
-    var x = list.length && list[0].sala === 'ambas' ? list[0] : null;
+    var x = list.length && list.every(function (s) { return s.sala === 'ambas'; }) ? list[0] : null;
     return x && x.link ? '<a class="btn btn-primary" href="' + esc(x.link) + '" target="_blank" rel="noopener">Ingresar a la sesión</a>' : '';
   };
   var isBreak = function (t) {
@@ -413,7 +416,7 @@
     if (cd) cd.textContent = countdown(t);
     var cur = nowAt(t), nxt = nextAfter(t);
     if (t >= START && t < END) {
-      var body = cur.length ? '<p class="live-k"><span class="live-dot" aria-hidden="true"></span>En vivo ahora · ' + range(cur[0]) + '</p>' + describe(cur)
+      var body = cur.length ? '<p class="live-k"><span class="live-dot" aria-hidden="true"></span>En vivo ahora · ' + range(cur.filter(function (s) { return s.sala !== 'ambas'; })[0] || cur[0]) + '</p>' + describe(cur)
         : '<p class="live-k">' + (isBreak(t) ? 'Descanso' : 'En pausa') + '</p><p class="live-a">El Congreso continúa en breve.</p>';
       if (nxt.length) body += '<p class="live-next"><strong>A continuación · ' + range(nxt[0]) + '</strong> ' + (nxt[0].sala === 'ambas' ? esc(nxt[0].titulo) : 'Ponencias orales en ambas salas') + '</p>';
       banner.innerHTML = '<div class="wrap live-in"><div class="live-body">' + body + '</div><div class="live-cta">' + joinBtns(cur) + '<a class="btn btn-quiet" href="/agenda">Ver agenda</a></div></div>';
